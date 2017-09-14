@@ -1,0 +1,310 @@
+<!doctype html>
+<html class="docs-html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>ICSSHS-UI</title>
+    <!--项目全局样式-->
+    <link href="../../../web/projects/themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+    <link href="../../../web/projects/themes-default/resources/css/css3-hsui.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../../../web/dcresources/icons/action/themes-default/icon-action.css">
+    <!--说明文档样式,实际应用中请不要引用-->
+    <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+    <script src="../../../web/projects/themes-default/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+    <div class="docs-page-masthead">
+        <h1>Jpjs</h1>
+        <p class="docs-lead">提供简单、极致的模块化开发体验</p>
+    </div>
+    <h2>定义</h2>
+    <p>Jpjs对模块化作了一些潜在规约，即潜规则：</p>
+    <ul>
+        <li>潜规则1：在<code>jpjs.define</code>定义模块时，可以通过<code>export</code>和<code>return</code>导出模块，我们称之为export模块和return模块。</li>
+        <li>潜规则2：在<code>jpjs.define</code>定义模块时，实现函数内部通过<code>require('modname')</code>和<code>module['modname']</code>分别导入export模块和return模块。</li>
+        <li>潜规则3：在模块化过程中，形如<code>widge.select</code>我们称之为简单模块，形如<code>@select</code>我们称之为组件模块，即包含多个模块，组件模块加载时的多个js文件会进行cdn合并。</li>
+    </ul>
+    <h2>配置</h2>
+    <p>通过<code>jpjs.config(obj)</code>进行模块加载器全局配置，相关属性说明如下：</p>
+    <ul>
+        <li><code>charset  {string} </code>字符集编码</li>
+        <li><code>normailzeNames  {object} </code>各个简单模块的js版本</li>
+        <li><code>isDebug  {boolean} </code>是否开启调试模式，开启则模块加载js文件script标签仍然保留。</li>
+        <li><code>basepath  {string} </code>基础路径配置，组件模块主路径（备用）</li>
+        <li><code>comboHost  {string} </code>基础路径配置，组件模块主路径（首选）</li>
+        <li><code>comboPath  {string} </code>基础路径配置，组件模块副路径，最后模块js文件的绝对路径=(comboHost||basepath)+comboPath</li>
+        <li><code>map  {object} </code>某些模块指定映射的路径，指定此配置的模块直接通过映射路径加载js文件，而不是通过上述基础路径配置</li>
+        <li><code>combos  {object} </code>组件模块依赖配置，正式环境时通过此配置进行js文件cdn合并，组件模块用@符号标识，普通模块按路径字符串标识。</li>
+        <li><code>preload  {string | array} </code>真预加载，可预加载简单模块和组件模块(要求在jspjs.config.combos里做组件配置)</li>
+        <li><code>preCombo  {string | array} </code>假预加载，在此定义的简单或组件模块在加载器加载过程中直接跳过不再重复加载,所以要求在页面必须引入预加载的模块js(cdn合并或单独引入)</li>
+    </ul>
+    <div class="docs-example">
+        <div class="docs-area">
+         此配置在页面全局配置，要求在jpjs.use()调用之前。
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre><code>
+            jpjs.config({
+                isDebug:true,
+                charset: window.CONFIG.CHARSET,
+                normailzeNames: {
+                    "drag.js": "20141113",
+                    "popup.js": "20141113",
+                    "select.js": "20141113",
+                    "dataSource.js": "20141113",
+                },
+                basepath: 'http://cdn1.597.cs/min/??'+'js/Test/js/',
+                comboHost: 'http://cdn1.597.cs/min/??',
+                comboPath: 'js/Test/js/',
+                map: {
+                    zepto: 'zepto.min',
+                    jquery: 'jquery.min'
+                },
+                combos: {
+                    '@drag': 'tools.drag',
+                    '@popup': 'tools.popup',
+                    '@select': 'widge.select',
+                    '@dataSource': 'tools.dataSource',
+                    '@select': ['@popup', '@dataSource', 'widge.select']
+                },
+                preload: 'jquery, base.util, base.class, base.shape',
+                preCombo: 'jquery, base.util, base.class, base.shape, base.event, base.attribute, base.aspect, tools.cookie'
+            });
+        </code></pre>
+    </div>
+
+    <div class="docs-highlight">
+        <pre><code></code></pre>
+    </div>
+
+    <h2>模块定义</h2>
+    <p>通过<code>window.define(module, deplist, factory)</code>进行模块定义，相关参数说明如下：</p>
+    <ul>
+        <li><code>module  {string} </code>模块名称，以基础路径配置为基准，格式按照<code>'widge.select'</code>形式定义，与”widge/select.js”文件对应。</li>
+        <li><code>deplist  {string | array} </code>依赖模块列表，形如 <code>['widge.popup', 'module.dataSource']</code>或<code>'widge.popup,module.dataSource'</code>,注：只能是简单模块名。</li>
+        <li><code>factory  {function} </code>模块实现函数，factory函数包含三个参数<code>require</code>, <code>exports</code>，<code> module</code>，用法和seajs差不多，唯一区别在于它可以用module导入define定义的对象模块（define通过return而不是exports导出的模块）。使用如var $=module[‘jQuery’];   注意：无论是require或module方式导入的模块，都需要配置依赖模块deplist。</li>
+    </ul>
+    <p>注意：</p>
+    <ul>
+        <li>若<code>deplist</code>参数未定义，则<code>factory</code>factory为第二参数。</li>
+        <li>无论是<code>require</code>或<code>module</code>方式导入的模块，一般需要配置依赖模块，除了预加载的模块<code>deplist</code>。</li>
+    </ul>
+
+    <div class="docs-example">
+        <div class="docs-area">
+            模块定义：
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre><code>
+            define('widge.select',['widge.popup', 'module.dataSource'],function(require, exports, module){
+                var $ = module['jquery'], <span class="docs-color-muted"> //预加载的模块</span>
+                dataSource = require('module.dataSource').dataSource, <span class="docs-color-muted"> //依赖的exports模块</span>
+                popup = module['widge.popup'],<span class="docs-color-muted"> //依赖的return模块</span>
+                <span class="docs-color-muted">/*.........业务代码，省略n行..............*/</span>
+                return select; <span class="docs-color-muted"> //通过return方式定义的，我们称之为return模块</span>
+            });
+        </code></pre>
+    </div>
+
+    <h2>模块调用</h2>
+    <h3>通过<code>jpjs.use(deplist, factory)</code>进行模块调用</h3>
+    <p>相关参数说明如下：</p>
+    <ul>
+        <li><code>deplist  {string | array} </code>调用模块列表，形如 <code>['widge.popup', 'module.dataSource']</code>或<code>'widge.popup,module.dataSource'</code>,注：可以用普通模块名和组件模块名。</li>
+        <li><code>factory  {function} </code>模块实现函数，factory函数包含三个参数<code>require</code>, <code>exports</code>，<code> module</code>，用法和seajs差不多，唯一区别在于它可以用module导入define定义的对象模块（define通过return而不是exports导出的模块）。使用如var $=module[‘jQuery’];   注意：无论是require或module方式导入的模块，都需要配置依赖模块deplist。</li>
+    </ul>
+    <p>注意：</p>
+    <ul>
+        <li>若<code>deplist</code>参数未定义，则<code>factory</code>factory为第一参数。</li>
+        <li>在<code>jpjs.use</code>中无论是<code>require</code>或<code>module</code>方式导入模块，一般需要配置依赖模块，除了预加载模块。</li>
+        <li>若<code>deplist</code>的模块是普通模块列表，则<code>factory</code>实现函数里有多个参数依次对应<code>deplist</code>里的每个模块。</li>
+        <li>若<code>deplist</code>的模块是组件模块，则<code>factory</code>实现函数里有<code>m</code>参数，用于加载组件模块里面所有的依赖模块。</li>
+        <li>若<code>deplist</code>的模块是组件模块列表，则<code>factory</code>实现函数里用m参数进行获取对应的简单模块对象，例如 var =testjs=m[‘module.testjs’];</li>
+        <li>若<code>deplist</code>参数没有传递，但在<code>jpjs.config()</code>里有配置预加载<code>preload</code>和<code>preCombo</code>，则factory实现函数也可有对应的模块参数如jpjs.use(function($){})。</li>
+        <li>在<code>jpjs.use</code>加载组件模块时候回进行js文件cdn合并，如果普通模块就不会。如果<code>jpjs.config.preMods</code>配置简单模块集合，则会一个个加载，如果配置组件模块则会cdn合并加载。</li>
+        <li>在使用<code>jpjs.use</code>时可能出现未修复bug，无法执行回调或报错，此时可以在<code>jpjs.config.preload</code>做任意模块预加载配置即可解决。</li>
+    </ul>
+    <div class="docs-example">
+        <div class="docs-area">
+            全局配置代码：
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre><code>
+            jpjs.config({
+            isDebug:true,
+            charset: 'utf-8',
+            normailzeNames: {
+                "one.js": "201700913",
+                "two.js": "201700913",
+                "three.js": "201700913",
+                "three0.js": "201700913",
+                "three1.js": "201700913",
+                "single.js": "201700913",
+                "jpjs.js": "201700913",
+                "version.js": "201700913"
+            },
+            basepath: 'http://cdn1.597.cs/min/??'+'js/Test/js/',
+            comboHost: 'http://cdn1.597.cs/min/??',
+            comboPath: 'js/Test/js/',
+            map: {
+            zepto: 'zepto.min',
+            jquery: 'jquery.min'
+            },
+            combos: {
+                '@two': 'module.two',
+                '@three': ['module.three0', 'module.three1'],
+                '@one': ['@three', '@two', 'module.one'],
+                '@single': 'module.single',
+                '@singleTest': ['module.single','module.testjs']
+            },
+            preload: 'jquery,zepto',
+            preCombo: 'jquery,zepto'
+            });
+        </code></pre>
+    </div>
+    <div class="docs-example">
+        <div class="docs-area">
+            模块定义代码：
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre><code>
+            <span class="docs-color-muted">/*--- http://cdn1.597.cs/min/js/Test/js/module/testjs.js 文件---*/</span>
+            define('module.testjs',function (require, exports, module) {
+                exports.showName = function () {
+                    console.log('testjs....');
+                };
+                return exports;
+            });
+        </code></pre>
+        <pre><code>
+            <span class="docs-color-muted">/*--- http://cdn1.597.cs/min/js/Test/js/module/single.js 文件---*/</span>
+            define('module.single',function (require, exports, module) {
+                exports.showName = function () {
+                    console.log('single....');
+                };
+                return exports;
+            });
+        </code></pre>
+        <pre><code>
+            <span class="docs-color-muted">/*--- http://cdn1.597.cs/min/js/Test/js/module/one.js 文件---*/</span>
+            define('module.one',['module.two','module.three'],function (require, exports, module) {
+                var two = module['module.two'], three = module['module.three'];
+                    exports.showName = function () {
+                    console.log('one....');
+                    two.showName();
+                    three.showName();
+                };
+                return exports;
+            });
+        </code></pre>
+        <pre><code>
+            <span class="docs-color-muted">/*--- http://cdn1.597.cs/min/js/Test/js/module/two.js 文件---*/</span>
+            define('module.two',function (require, exports, module) {
+                exports.showName = function () {
+                    console.log('two....');
+                };
+                return exports;
+            });
+        </code></pre>
+        <pre><code>
+            <span class="docs-color-muted">/*--- http://cdn1.597.cs/min/js/Test/js/module/three.js 文件---*/</span>
+            define('module.three',['module.three0','module.three1'],function (require, exports, module) {
+                var three0 = module['module.three0'], three1 = module['module.three1'];
+                    exports.showName = function () {
+                    console.log('three....');
+                    three0.showName();
+                    three1.showName();
+                };
+                return exports;
+            });
+        </code></pre>
+        <pre><code>
+            <span class="docs-color-muted">/*--- http://cdn1.597.cs/min/js/Test/js/module/three0.js 文件---*/</span>
+            define('module.three0',function (require, exports, module) {
+                exports.showName = function () {
+                     console.log('three0....');
+                };
+                return exports;
+            });
+        </code></pre>
+        <pre><code>
+            <span class="docs-color-muted">/*--- http://cdn1.597.cs/min/js/Test/js/module/three1.js 文件---*/</span>
+            define('module.three1',function (require, exports, module) {
+                exports.showName = function () {
+                    console.log('three1....');
+                };
+                return exports;
+            });
+        </code></pre>
+    </div>
+    <div class="docs-example">
+        <div class="docs-area">
+            模块调用代码：
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre><code>
+            <span class="docs-color-muted">/*---------------- 单个简单模块调用 -------------------*/</span>
+            jpjs.use('module.testjs', function (test) {
+                test.showName();
+            });
+        </code></pre>
+        <pre><code>
+            <span class="docs-color-muted">/*---------------- 多个简单模块调用 -------------------*/</span>
+            jpjs.use('module.single,module.testjs', function (single,testjs) {
+                testjs.showName();
+                single.showName();
+            });
+        </code></pre>
+        <pre><code>
+            <span class="docs-color-muted">/*----------- 单个简单模块用组件形式调用 ---------------*/</span>
+            jpjs.use('@single', function (m) {
+                var single = m['module.single'];
+                single.showName();
+            });
+        </code></pre>
+        <pre><code>
+            <span class="docs-color-muted">/*----------------- 单个组件模块调用 ---------------------*/</span>
+            jpjs.use('@one', function (m) {
+                var one = m['module.one'];
+                one.showName();
+            });
+        </code></pre>
+        <pre><code>
+            <span class="docs-color-muted">/*------------------ 多个组件模块调用 --------------------*/</span>
+            jpjs.use('@one,@single', function (m) {
+                var one = m['module.one'];
+                var single = m['module.single'];
+                one.showName();
+                single.showName();
+            });
+        </code></pre>
+    </div>
+
+    <h3>通过<code>jpjs.loadJS(path, callback, isAsync){</code>进行模块调用</h3>
+    <p>相关参数说明如下：</p>
+    <ul>
+        <li><code>path  {string} </code>调用模块js绝对路径，形如 <code>'http://cdn.597.cs/min/js/v2/nonModular/v2-resume.js?v=20151014010'</code></li>
+        <li><code>callback  {function} </code>加载完成回调函数，<code>callback</code>中含有<code>path</code>参数，表示成功回调的js绝对路径。</li>
+        <li><code>isAsync  {boolean} </code>是否异步，默认为<code>true</code>。</li>
+    </ul>
+    <div class="docs-example">
+        <div class="docs-area">
+            调用代码：
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre><code>
+            jpjs.loadJS('http://cdn.597.cs/min/js/v2/nonModular/v2-resume.js?v=20151014010',function(path){
+                console.log(path)
+            });
+        </code></pre>
+    </div>
+
+</div>
+</body>
+</html>
