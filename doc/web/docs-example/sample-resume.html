@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="docs-html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>HSUI-MOBILE</title>
+    <meta name="description" content="ICSSHS-MUI for webapp">
+    <meta name="keywords" content="ICSSHS-MUI for webapp">
+    <meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+    <meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+
+    <!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+    <!--针对IOS 浏览器的设置-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="apple-touch-icon" href="../../resources/icons/icon.png">
+    <link rel="apple-touch-icon" href="../../resources/icons/icon@72.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="../../resources/icons/icon@2x.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="../../resources/icons/icon@114.png" sizes="144x144">
+    <link rel="apple-touch-startup-image" href="../../undefined">
+
+
+    <!--项目全局样式-->
+    <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+    <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+
+
+    <!--说明文档样式,实际应用中请不要引用-->
+    <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+    <link rel="stylesheet" type="text/css" href="../../resources/css/zTreeStyle.css">
+    <script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+
+</head>
+<body>
+<div class="docs-content ">
+    <div class="docs-page-masthead">
+        <h1>简历页面</h1>
+
+        <p class="docs-lead">简历页面聚合了整个前端框架的常用功能，前端业务逻辑相对复杂。</p>
+    </div>
+    <h2>整体效果</h2>
+    <div class="docs-themes-list">
+        <a href="#" target="_blank" class="docs-themes-item clearfix">
+            <p class="docs-item-img" title="滑动广告背景">
+                <img src="../../resources/images/web/resume_full.png" alt="" width="300"/>
+            </p>
+
+            <h2 class="docs-item-title" style="margin-top:0;">简历页-部分效果图</h2>
+
+            <p class="docs-item-author">主要包含以下功能：</p>
+
+            <div class="docs-item-text">
+                <ul style="width:200px;float:left;margin-top:0;">
+                    <li>基本资料编辑</li>
+                    <li>求职意向编辑</li>
+                    <li>自我评价编辑</li>
+                    <li>工作经历编辑</li>
+                </ul>
+                <ul style="width:200px;float:left;margin-top:0;">
+                    <li>教育培训经历编辑</li>
+                    <li>项目经验编辑</li>
+                    <li>语言能力编辑</li>
+                    <li>技能专长编辑</li>
+                </ul>
+                <ul style="width:200px;float:left;margin-top:0;">
+                    <li>证书编辑</li>
+                    <li>其他信息编辑</li>
+                    <li>我的作品编辑</li>
+                    <li>实践经验编辑</li>
+                </ul>
+            </div>
+        </a>
+    </div>
+    <h2>功能代码</h2>
+
+    <p>由于代码量庞大，现在只列举一个简单模块实现代码，其余功能及调用方式类似。</p>
+    <div class="docs-example">
+        <div class="docs-area">
+            自我评价编辑：只包括一种组件，即文本框输入组件。
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre><code>
+            var appraiseRules = {   <span class="docs-color-muted">//表单元素验证规则规约</span>
+                txtAppraise: {
+                max: 300
+            }
+            },
+            appraiseErrorMsg = {    <span class="docs-color-muted">//表单元素验证提示规约</span>
+                txtAppraise: '&lt;em&gt;&lt;/em&gt;&lt;i&gt;&lt;/i&gt;不能超过300个字'
+            };
+
+            var appraiseEditor = new editResume({   <span class="docs-color-muted">//编辑器对象实例化</span>
+            element: $('#appraiseInfor'),
+            normalName: '.resume-item',
+            validators: {
+            rules: appraiseRules,
+            errorMessages: appraiseErrorMsg,
+            errorElement: '',
+            keepKey: true,
+            isCache: false
+            }
+            }),
+
+            appraiseValidator = appraiseEditor.getValidator();  <span class="docs-color-muted">//获取编辑器对象的验证器</span>
+
+            appraiseEditor.clearData = function () {    <span class="docs-color-muted">//表单重置函数</span>
+                this.resetForm(true);
+                this.getElement('txtAppraise').resetWatermark();
+            }
+
+            var appraiseTemplate = [    <span class="docs-color-muted">//自我评价信息的默认显示模板</span>
+                '&lt;p class="infor"&gt;&lt;span class="topicContent"&gt;{content}&lt;/span&gt;&lt;/p&gt;',
+            ].join(''),
+            appraisetit = appraiseEditor.getDom('.resume-tit');
+            appraiseEditor.updatePreview = function (e) {   <span class="docs-color-muted">//自我评价编辑器更新显示模板函数</span>
+                var appraise = this._normal.children('.other-box'),
+                dataObj = {//textarea[name="txtAppraise"]的值
+                content: this.getElement('txtAppraise').val()
+            };
+            appraisetit.attr('data-content', dataObj.content);
+            if (dataObj.content) {
+                appraise.show();
+                if (appraise.children().length) {
+                    this.getDom('.appraiseContent').html(dataObj.content);
+                } else {
+                    appraise.html(util.string.replace(appraiseTemplate, dataObj));
+                }
+                } else {
+                    appraise.hide();
+                    if (appraise.children().length) {
+                        this.getDom('.appraiseContent').html(dataObj.content);
+                    } else {
+                        appraise.empty();
+                    }
+                }
+                updateRightSideList(2, true);
+                this.show();
+            }
+            appraiseEditor.resetData = function () {    <span class="docs-color-muted">//自我评价信息模板更新编辑器输入框</span>
+                var attr = appraisetit.attr('data-content');
+                if (attr) {
+                this.getElement('txtAppraise').val(attr);
+                }
+            }
+            appraiseEditor.on('init', function () {     <span class="docs-color-muted">//编辑器编辑按钮触发事件</span>
+                appraiseValidator.addDomCache(true);
+                this.resetData();
+            });
+            appraiseEditor.on('cancel', function () {   <span class="docs-color-muted">//编辑器取消按钮触发的事件</span>
+                this.resetData();
+            });
+            appraiseEditor.on('submit', function (e) {  <span class="docs-color-muted">//编辑器提交按钮触发的事件</span>
+                this.saveSubmit(e);
+            });
+            appraiseEditor.saveSubmit = function (e) {  <span class="docs-color-muted">//保存操作函数</span>
+                var btn = e ? $(e.currentTarget) : this._submitButton,
+                self = this;
+                appraiseValidator.submit({
+                    callback: function (valid) {
+                    self.resultStatus = valid;
+                    btn.submitForm({
+                        beforeSubmit: valid,
+                        data: {
+                            resume_id: resume_id
+                        },
+                        success: function (result) {
+                            if (result && result.error) {
+                                self.resultStatus = false;
+                                confirmBox.alert(result.error, null, {title: '保存失败'});
+                                return;
+                            }
+                            updateResumeTime(result.update_time);
+                            appraiseEditor.updatePreview(result);
+                        },
+                        clearForm: false
+                    });
+                    }
+                });
+            };
+        </code></pre>
+    </div>
+</div>
+</body>
+</html>
