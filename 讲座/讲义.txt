@@ -1,0 +1,23 @@
+﻿*目的
+*自我介绍
+
+*前端开发的问题  6-16
+     以前现在
+     
+*模块化规范 17-18
+   commonJs   http://javascript.ruanyifeng.com/nodejs/module.html
+    amd  requireJs
+    cmd  seaJs
+
+*模块化的效果 开发便利 页面"按需加载"js
+
+*案例：
+https://www.taobao.com/ 
+http://47.94.15.170:3000/PersonalSite/index.html
+
+*597框架
+  网站 http://xm.597.com/
+  文档 http://47.94.15.170:3000/frontframework/index.html
+      架构，目录，案例CodeRepot_597.doc          
+  简历 http://xm.597.com/person/resume.html
+

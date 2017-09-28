@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        window.CONFIG = {
+            HOST: 'file:///H:/规整/Test/',
+            COMBOPATH: '/js/'
+        }
+    </script>
+    <script src="js/version.js"></script>
+    <script src="js/jpjs.js"></script>
+    <script src="js/global.js"></script>
+    <!--<script src="js/module/single.js"></script>-->
+    <script>
+        /*---------------- 单个简单模块调用 begin -------------------*/
+       /* jpjs.config({
+        preload: 'module.testjs'
+        });
+        jpjs.use('module.testjs', function (test) {
+        test.showName();
+        });*/
+       /*---------------- 单个简单模块调用 end -------------------*/
+
+       /*---------------- 单个简单模块用组件模块形式调用 begin -------------------*/
+        //要求：启动的模块js必须配置预加载???
+       /*jpjs.config({
+          preload: 'module.single'
+       });*/
+       /*jpjs.use('@single', function (m) {
+           var single = m['module.single'];
+           single.showName();
+       });*/
+       /*---------------- 单个简单模块用组件形式调用 end -------------------*/
+
+       /*---------------- 单个组件模块调用 begin -------------------*/
+        //要求：1、必须对组件模块依赖的模块做version配置，如"three0.js": "201700913"
+        //      2、由于js加载采用<script src="http://www.mm.com/js/1.js,2.js,3.js...">
+        //         方式加载，这种方式只有cdn部署的服务才能支持
+        //      3、启动模块简单模块名必须配置jpjs.config.preload预加载
+        /*        jpjs.config({
+         //         preload: 'module.one'
+         preload: 'module.single'
+         });
+         jpjs.use('@one', function (m) {
+         var one = m['module.one'];
+         one.showName();
+         });*/
+        /*---------------- 单个组件模块调用 end -------------------*/
+
+        /*---------------- 单个组件模块以简单模块形式调用 begin -------------------*/
+
+                jpjs.config({
+         //         preload: 'module.one'
+         preload: 'module.single'
+         });
+         jpjs.use('module.one', function (one) {
+             console.log(one);
+             one.showName();
+         });
+        /*---------------- 单个组件模块以简单模块形式调用 end -------------------*/
+    </script>
+</head>
+<body>
+测试首页
+</body>
+</html>
