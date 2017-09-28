@@ -1,0 +1,221 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2014-05
+======================================*/
+
+@import url('reset.css');
+* {
+	box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+	font-size: 16px;
+	line-height: 1.428571429;
+	color: #333333;
+}
+body, div, input, button {
+	font-family: "Microsoft YaHei";
+}
+input {
+	vertical-align: middle !important;
+}
+.h-l-hide {
+	display: none;
+}
+.h-l-link {
+	text-align: center;
+	display: block;
+	margin: 10px;
+	color: #666;
+	text-decoration: underline;
+}
+.h-l-link:hover {
+	color: #0B81EF;
+}
+.h-l-text-right {
+	text-align: right;
+}
+/*layout*/
+.h-l-page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/*header*/
+.h-l-header {
+	padding: 10px;
+}
+.h-l-header .h-l-logo img{height:40px; margin-right:0.25rem;}
+.h-l-header .h-l-logo { font-size:20px; line-height:40px; text-align:center;}
+
+
+
+
+
+/*表单*/
+.h-l-form-area {
+	padding: 15px;
+	z-index: 9999;
+	border-radius: 4px;
+	background:#fff;
+}
+.h-l-form-title {
+	color: #999;
+	border-bottom: 1px solid #ececec;
+	padding: 10px 0;
+	margin-bottom: 20px;
+}
+.h-l-form-item {
+	margin-bottom: 15px;
+}
+.h-l-table {
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+	margin: 15px 0;
+}
+.h-l-row {
+	display: table-row;
+}
+.h-l-col {
+	display: table-cell;
+	width: 50%;
+}
+.h-l-form-item label {
+	float: left;
+	padding-top: 10px;
+}
+/*input:text*/
+
+.h-l-input-text {
+	border: 1px solid #d9d9d9;
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	padding-left: 60px !important;
+	font-size: 18px;
+	color: #444;
+	vertical-align: middle !important;
+	border-radius: 3px;
+}
+.h-l-icon-user {
+	background: url(images/login/icon-user.png) no-repeat, url(images/login/bg-input.png) repeat-x;
+}
+.h-l-icon-pw {
+	background: url(images/login/icon-pw.png) no-repeat, url(images/login/bg-input.png) repeat-x;
+}
+.h-l-input-text:focus {
+	border: 1px solid #3ca0e8;
+}
+.h-l-input-text:focus:hover {
+	border: 1px solid #3ca0e8;
+}
+/*btn*/
+.h-l-input-btn {
+	display: block;
+	height: 48px;
+	line-height: 48px;
+	width: 100%;
+	background: #498bf4;
+	border: 1px solid #3079ed;
+	font-size: 20px;
+	color: #fff;
+	border-radius: 3px;
+	letter-spacing: 0px;
+	text-decoration: none;
+	color: #fff !important;
+	text-align: center;
+}
+.h-l-input-btn:hover {
+	background-color: #276cff;
+	border-color: #1765e2;
+	color: #fff;
+}
+.h-l-input-btn:active {
+	background-color: #2b87f0;
+	border-color: #0050cf;
+	color: #fff;
+}
+.h-l-input-btn.h-l-disable {
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+	cursor: not-allowed;
+}
+/*用户信息*/
+.h-l-user-info {
+}
+.h-l-user-header {
+	float: left;
+	width: 80px;
+	padding-bottom: 10px;
+}
+.h-l-user-header img {
+	border-radius: 50%;
+	width: 64px;
+	height: 64px;
+	border: 4px solid #fff;
+}
+.h-l-user-text {
+	margin-left: 80px;
+	text-align: left;
+	padding-top: 4px;
+}
+.h-l-user-name {
+	color: #666;
+	font-size: 22px;
+}
+.h-l-user-id {
+	font-weight: 400;
+	color: #999;
+	padding-left: 10px;
+	font-size: 22px;
+}
+.h-l-user-company {
+	font-size: 12px;
+	color: #999;
+	padding-bottom: 20px;
+	display: block;
+}
+/*loading icon*/
+.h-l-icon-loading {
+	background: url(images/login/loading.gif) no-repeat center center;
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+}
+
+/*---------------------------------
+	errorTxt
+---------------------------------*/
+
+.h-l-errorTxt {
+	background: #ffffe3;
+	border: 1px dashed #ff6600;
+	padding: 6px;
+	color: #666;
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	top: 180px;
+	z-index:999;
+}
+.h-l-errorTxt span {
+	color: #f00;
+}
+/*---------------------------------
+	footer
+---------------------------------*/
+.h-l-footer {
+	text-align: center;
+}
+.h-l-footer .h-l-copyRight {
+	font-size: 12px;
+	color: #999;
+}

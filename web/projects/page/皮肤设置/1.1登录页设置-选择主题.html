@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ICSSHS-UI</title>
+<link href="../../themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css" />
+<!--页面布局样式,框架页面发现包含以下样式，否则布局会错乱-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+	background: #f9f9f9;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.h-panel { }
+</style>
+</head>
+<body>
+<!-- 布局 +++++++++++++++++++++++++开始+++++++++++++++++++++++++++++++++++++++-->
+<div class="h-box" style="height:100%;">
+    <div class="h-box-item h-panel"  style=" width:auto;  left: 5px; right: 5px; top: 5px; bottom:5px; ">
+        
+        <!--面板头部-->
+        <div class="h-panel-header">
+            <div class=" h-pull-left">
+                <div class="h-panel-title">
+                    登录页设置
+                </div>
+            </div>
+            <div class="  h-row-col2-r">
+            </div>
+        </div>
+        <!--面板主体内容-->
+        <div class="h-panel-body ">
+            <!--
+	 <div class=" h-border-b ">
+			<p class=" c-container "><span class=" h-color-muted">选择登录页模式,可以选择有登录页面的，也可以选择自定义设置直接跳转直接进入系统！</span></p>
+		 </div> -->
+            
+            <div  class="h-layout-box  " style="position: absolute;bottom:32px;left: 0; right: 0;top: 38px; overflow: auto;">
+                <div class="  c-selected c-box c-skin-h" >
+                    <div class="  c-col-l " >
+                        <img alt="" src="images/login-slidebanner.jpg">
+                    </div>
+                    <div class=" h-col-r " style="">
+                        <p class="c-title ">登录页-带滑动广告背景</p>
+                        <p class=" c-logintxt-h c-txt-muted " >系统默认主题，点击菜单从左侧全屏滑出导航菜单，支持多系统切换、支持无限级菜单（其中一级菜单及二级菜单需要提供特定格式的图标）、支持多种皮肤颜色的选择系统默认主题，点击菜单从左侧全屏滑出导航菜单，支持多系统切换、支持无限级菜单（其中一级菜单及二级菜单需要提供特定格式的图标）、支持多种皮肤颜色的选择</p>
+                        <div class=" c-btn-p">
+                            <div class="c-left">
+                                <span class="h-icon h-icon-success"></span> <span class="h-alert-text h-color-success h-font-b "> <strong>当前使用 </strong> </span>
+                            </div>
+                            <div class="  c-btn-right">
+                                <a class="h-btn"  href="#"> <span class="h-btn-content"> <span class="h-icon c-icon-install"></span> 设置参数 </span> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="   c-box c-skin-h" >
+                    <div class="  c-col-l " >
+                        <img alt="" src="images/login-simple.jpg">
+                    </div>
+                    <div class=" h-col-r " style="">
+                        <p class="c-title ">登录页--简洁型</p>
+                        <p class=" c-logintxt-h c-txt-muted" >简洁型的登录页面，没有复杂的轮显图，简单明了，适合后台管理系统，点击菜单从左侧全屏滑出导航菜单，</p>
+                        <div class=" c-btn-p">
+                            <div class="c-left">
+                                <a class="h-btn"  href="#"> <span class="h-btn-content"> <span class="h-icon c-icon-selected"></span> 设为当前 </span> </a>
+                            </div>
+                            <div class="  c-btn-right">
+                                <a class="h-btn"  href="#"> <span class="h-btn-content"> <span class="h-icon c-icon-install"></span> 设置参数 </span> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="   c-box c-skin-h" >
+                    <div class=" h-col-r " style="">
+                        <p class="c-title ">自定义布局</p>
+                        <p class=" c-logintxt-h c-txt-muted" >进入系统无需登录页面，直接跳转到软件系统，指定连接地址跳转到需要设定的页面，这种模式适合无需用户登录的需求。</p>
+                        <p class="c-txt-muted" >当前连接</p>
+                        <div class="h-col-content h-mb-10 " style="margin-right:0px;" >
+                            <textarea class="h-form-control  h-form-control-disabled " rows="6">http</textarea>
+                        </div>
+                        <div class=" c-btn-p">
+                            <div class="c-left">
+                                <a class="h-btn"  href="#"> <span class="h-btn-content"> <span class="h-icon c-icon-selected"></span> 设为当前 </span> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--面板底部 按钮操作等-->
+            <div class="h-toolbar h-toolbar-footer h-box-item" style="height:36px;width:auto;left: 0px; right: 0px; top:auto; bottom:0px; ">
+                <div class="h-pull-right">
+                    <a class="h-btn h-btn-form h-btn-primary" href="#"> <span class="h-btn-content">保 存 </span> </a> <a class="h-btn h-btn-form" href="#"> <span class="h-btn-content">返 回</span> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

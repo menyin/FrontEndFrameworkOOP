@@ -1,0 +1,631 @@
+.c-body {
+	background-position: center 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	zoom: 1;
+	padding-top: 10px;
+}
+/*个性化配制首页头部工具条*/
+.c-portal-personal-header {
+	background: url(images/bg-gadget-header.png);
+	width: 520px;
+	border-radius: 18px;
+	z-index: 990;
+	position: absolute;
+	left: 50%;
+	top: 8px;
+	margin-left: -260px;
+	text-align: center;
+}
+.c-portal-personal-header .h-btn {
+	color: #fff;
+}
+.c-portal-personal-header .h-btn,
+.c-portal-personal-header .h-btn .h-btn-content,
+.c-portal-personal-header .h-btn:hover,
+.c-portal-personal-header .h-btn:focus,
+.c-portal-personal-header .h-btn:hover .h-btn-content,
+.c-portal-personal-header .h-btn:focus .h-btn-content {
+	padding: 5px 0;
+	margin: 0;
+	border-radius: 0;
+	background: none;
+}
+.c-portal-personal-header .h-btn .h-btn-content,
+.c-portal-personal-header .h-btn:hover .h-btn-content,
+.c-portal-personal-header .h-btn:focus .h-btn-content {
+	padding: 0 5px;
+	border-radius: 4px;
+}
+.c-portal-personal-header .h-btn.h-btn-primary .h-btn-content,
+.c-portal-personal-header .h-btn.h-btn-danger .h-btn-content {
+	padding: 0 15px;
+}
+.c-portal-personal-header .h-btn.h-btn-primary .h-btn-content {
+	background: #1e76eb;
+}
+.c-portal-personal-header .h-btn.h-btn-danger .h-btn-content {
+	background: #d9534f;
+}
+.c-portal-personal-header .h-btn.h-active .h-btn-content,
+.c-portal-personal-header .h-btn:hover .h-btn-content {
+	background: url(images/bg-gadget-header.png);
+}
+.c-portal-personal-header .h-btn-group .h-btn:not(:last-child) {
+	border: none;
+}
+.c-portal-personal-header .h-btn-group .h-dropdown-area {
+	left: auto;
+	right: 0;
+	min-width: 220px;
+	max-height: 320px;
+	overflow-y: auto;
+	text-align: left;
+	border: #4397dd 1px solid;
+}
+.c-portal-personal-header .h-icon{ margin-right:3px;}
+/*个性化配制首页主体内容*/
+.c-portal-personal-body {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 36px;
+	overflow: auto;
+	text-align: center;
+	z-index: 1;
+}
+.c-gadget-wrapper {
+	min-width: 1000px;
+	max-width: 1100px;
+	margin: 10px auto;
+	text-align: left;
+	position: relative;
+}
+.c-icon-add {
+	background-image: url(images/icon-add.png) !important;
+}
+.c-icon-add-v3{
+	background-image: url(images/icon-add-v3.png) !important;
+}
+.c-icon-worktable {
+	background-image: url(images/icon-worktable.png) !important;
+}
+.c-icon-skin {
+	background-image: url(images/icon-skin.png) !important;
+}
+.c-icon-move {
+	background-image: url(images/icon-move.png) !important;
+}
+.c-icon-move-xl {
+	background-image: url(images/icon-move-xl.png) !important;
+}
+.c-icon-setting {
+	background-image: url(images/icon-setting.png) !important;
+}
+.c-icon-delete {
+	background-image: url(images/icon-delete.png) !important;
+}
+.c-icon-history {
+	background-image: url(images/icon-history.png) !important;
+}
+.c-icon-fav {
+	background-image: url(images/icon-fav.png) !important;
+}
+.c-icon-favorites {
+	background-image: url(images/icon-favorites.png) !important;
+}
+.c-icon-refresh {
+	background-image: url(images/icon-refresh.png) !important;
+}
+/*小配件面板
+	分为工具栏、标题、内容三个部份
+*/
+
+.c-gadget {
+	position: relative;
+}
+/*小配件工具栏*/
+.c-gadget-toolbar {
+	display: inline;
+	z-index: 999;
+}
+.c-gadget-tools {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: url(images/bg-gadget-header.png);
+	z-index: 2;
+}
+.c-gadget-move {
+	display: none;
+	position: absolute;
+	cursor: move;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: url(images/bg-gadget-header.png);
+	z-index: 1;
+}
+.c-gadget-move p {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 120px;
+	text-align: center;
+	margin-left: -60px;
+	margin-top: -40px;
+}
+.c-gadget-move p strong {
+	display: block;
+	padding-top: 5px;
+	color: #fff;
+}
+.c-gadget-toolbar:hover .c-gadget-move {
+	display: block;
+}
+.c-gadget-toolbar .h-btn,
+.c-gadget-toolbar .h-btn .h-btn-content {
+	background: none;
+	padding: 0;
+	margin: 0;
+	border-radius: 0;
+}
+.c-gadget-toolbar .h-btn {
+	padding: 3px 10px;
+}
+.c-gadget-toolbar .h-btn:hover,
+.c-gadget-toolbar .h-btn:hover .h-btn-content {
+	background: #33acf1;
+}
+/*小配件面板标题*/
+.c-gadget-header {
+	background: rgba(0,0,0,0.2);
+	color: #fff;
+	padding: 5px 10px;
+	font-size: 16px;
+	font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+	background: url(images/bg-gadget-header.png);/*
+	background: none !important;
+background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .2)), to(rgba(0, 0, 0, .2))) !important;
+background-image: -moz-linear-gradient(rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, .2) 100%) !important;
+background-image: -ms-linear-gradient(rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, .2) 100%) !important;
+background-image: -o-linear-gradient(rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, .2) 100%) !important;
+background-image: linear-gradient(rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, .2) 100%) !important;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000, endColorstr=#33000000) !important;
+*/
+}
+/*小配件面板内容*/
+.c-gadget-body {
+	font-family: "Microsoft YaHei";
+}
+.c-app-menu {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	margin-top: -21px;
+	text-align: center;
+	color: #fff !important;
+	font-size: 14px;
+	padding: 0 10px;
+}
+.c-app-menu-onlyicon{margin-top: -12px;}
+.c-app-menu span {
+	display: block;
+	margin: 0 auto;
+}
+.c-icon-more {
+	background: url(images/icon-more.png);
+}
+.c-gadget-body .c-box-s {
+	position: absolute;
+	top: 32px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	background: url(images/bg-gadget-body.png);/*
+	
+	background: none !important;
+background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .9)), to(rgba(255, 255, 255, .9))) !important;
+background-image: -moz-linear-gradient(rgba(255, 255, 255, .9) 0, rgba(255, 255, 255, .9) 100%) !important;
+background-image: -ms-linear-gradient(rgba(255, 255, 255, .9) 0, rgba(255, 255, 255, .9) 100%) !important;
+background-image: -o-linear-gradient(rgba(255, 255, 255, .9) 0, rgba(255, 255, 255, .9) 100%) !important;
+background-image: linear-gradient(rgba(255, 255, 255, .9) 0, rgba(255, 255, 255, .9) 100%) !important;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e6ffffff, endColorstr=#e6ffffff) !important;
+	*/
+}
+.c-box-s .h-list-group-item {
+	background: none;
+}
+.c-ggtz-section {
+	overflow: hidden;
+}
+/*公告通知*/
+.c-list-group {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 36px;
+	overflow: hidden;
+}
+.c-ggtz-tiltle {
+	font-size: 16px;
+}
+.c-footer-toolbat {
+	height: 32px;
+	line-height: 32px;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background: url(images/bg-gadget-toolbar.png);
+}
+.c-ggtz-content {
+	font-size: 12px;
+	color: #666;
+}
+.c-tag-new {
+	background: url(images/tag-new.png) no-repeat;
+	width: 41px;
+	height: 41px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+/*待办任务*/
+.c-tag-hot {
+	background: url(images/tag-jinji.png) no-repeat;
+	width: 41px;
+	height: 41px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.c-mail-time {
+	float: right;
+	font-size: 12px;
+}
+.c-task-tiltle,
+.c-mail-tiltle,
+.c-mail-tiltle-active {
+	padding-left: 24px;
+	font-size: 16px;
+}
+.c-task-tiltle {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.c-task-tiltle {
+	background: url(images/icon-time.png) no-repeat left center;
+}
+.c-mail-tiltle-active {
+	background: url(images/icon-mail-open.png) no-repeat left center;
+}
+.c-mail-tiltle {
+	background: url(images/icon-mail-close.png) no-repeat left center;
+}
+.c-task-content,
+.c-mail-content {
+	max-width: 500px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-left: 24px;
+	color: #666;
+}
+/*个人便签*/
+.c-gadget-grbq {
+	position: absolute;
+	left: 20px;
+	top: 536px;
+}
+.c-list-grbq {
+	background: #f5ebd0 !important;
+}
+.c-list-group-item {
+	background: url(images/textarea-line.png) repeat;
+	line-height: 32px;
+	width: 100%;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	font-size: 14px;
+	color: #222222;
+	resize: none;
+}
+/*自定义背景图片列表*/
+.c-wallpaper-list {
+	padding: 10px;
+	width: 854px;
+	background: #FFF;
+	overflow: hidden;
+}
+.c-wallpaper-list a {
+	float: left;
+	height: 120px;
+	width: 120px;
+	display: block;
+	position: relative;
+	margin: 1px;
+}
+.c-wallpaper-list a i {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border: transparent 3px solid;
+}
+.c-wallpaper-list a:hover i,
+.c-wallpaper-list a:active i {
+	border-color: #0091ff;
+}
+.c-wallpaper-list .c-active i {
+	border-color: #0091ff;
+	background: url(images/check.png) no-repeat right top;
+}
+/*添加小组件列表*/
+.c-gadget-list {
+	padding: 20px 10px 10px 20px;
+	width: 560px;
+	position: relative;
+	background: #FFF;
+	overflow-x: hidden;
+}
+.c-gadget-panel {
+	width: 260px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	float: left;
+	position: relative;
+}
+.c-gadget-header-toolbar {
+	height: 26px;
+	background: #e8e8e8;
+}
+.c-gadget-add,
+.c-gadget-delete {
+	width: 26px;
+	height: 26px;
+	background: #a2aab1;
+	float: right;
+}
+.c-gadget-delete {
+	background: #33acf1;
+	display: none;
+}
+.c-icon-append {
+	background: url(images/icon-add-v2.png) no-repeat center center;
+	padding: 5px;
+}
+.c-icon-ready {
+	background: url(images/icon-ready.png) no-repeat center center;
+	padding: 5px;
+}
+.c-gadget-pic {
+	background: #eeeeee;
+	padding: 10px;
+}
+.c-gadget-list p {
+	padding-left: 10px;
+	font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+}
+.c-gadget-list .c-tiltle {
+	font-size: 14px;
+	color: #3c78bb;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-right: 10px;
+}
+.c-gadget-list .c-caption {
+	font-size: 12px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/*业务时序*/
+
+/*当前开展的工作面板内容*/
+
+
+
+
+.c-menu-btn {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	top: 100px;
+	padding: 10px;
+}
+.c-menu-btn .h-btn {
+	padding: 10px 4px;
+	background: #fff;
+	margin: 4px;
+	border: 1px solid #b2d0e9;
+	border-radius: 4px;
+	height: auto;
+	display: block;
+	float: left;
+	width: 100px;
+	position: relative;
+}
+.c-menu-btn .h-btn .c-btn-label {
+	position: absolute;
+	background: url(images/btn-label.png) no-repeat;
+	display: block;
+	width:12px;
+	height:12px;
+	right:0;
+	top:0;
+	
+}
+.c-menu-btn .h-btn:hover {
+	border-color: #92c0e0;
+	background-color: #cde6f7;
+}
+.c-plan-divbox {
+	float: left;
+	margin: 2px;
+}
+.c-plan-button {
+	text-align: center;
+	border: #b2d0e9 1px solid;
+	border-radius: 4px;
+	padding: 5px 5px;
+	background-color: #fff;
+}
+.c-plan-text {
+	vertical-align: middle;
+	overflow: hidden;
+	line-height: 1.4;
+	font-size: 14px;
+	max-height: 36px;
+}
+a.c-plan-button:hover {
+	background: #3581f1;
+	color: #fff;
+}
+.c-progress-area {
+	padding: 10px;
+	border-bottom: 1px solid #fff;
+}
+.c-progress {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	height: 4px;
+	background: #d0d0d0;
+	border-radius: 200px;
+}
+.c-progress-bar {
+	position: absolute;
+	width: 0%;
+	height: 4px;
+	background: #88bd00;
+	border-radius: 200px;
+}
+.c-progress-location {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	left: 0%;
+	top: -10px;
+	background: url(images/icon-probar-position.png) no-repeat center center;
+}
+.c-time {
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	color: #666;
+}
+.c-time-business-list {
+	margin-right: 150px;
+	padding: 0 20px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+}
+.c-time-business-wrapper {
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+.c-time-business {
+	position: absolute;
+}
+.c-time-business-btn-prev,
+.c-time-business-btn-next {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 20px;
+	display: block;
+	background: url(images/icon-arrow-left.png) no-repeat center center;
+	z-index: 999;
+}
+.c-time-business-btn-next {
+	right: 0px;
+	left: auto;
+	background-image: url(images/icon-arrow-right.png);
+}
+.c-time-business-progress {
+	float: right;
+	width: 140px;
+	padding-top: 10px;
+}
+.c-time-business a {
+	float: left;
+	width: 64px;
+	display: block;
+	margin: 0;
+	padding: 5px 4px;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid transparent;
+}
+.c-time-business a.h-active {
+	border-color: #92c0e0;
+	background: #f9f9f9;
+}
+.c-time-business a:hover {
+	border-color: #bbd6e8;
+	background: #fff;
+}
+.c-time-business em {
+	font-style: normal;
+	white-space: nowrap;
+}
+.c-time-business .h-icon {
+	display: block;
+	margin: 0 auto;
+}
+.c-dropdown-area {
+	border: 2px solid #e06a77;
+	font-size: 14px;
+	display: none;
+}
+.c-dropdown-area .h-list-group {
+	max-height: 380px;
+	overflow: auto;
+}
+
+.c-gadget-addlist{}
+.c-gadget-addlist .h-list-group{ overflow:hidden;}
+
+.c-gadget-addlist .h-list-group-item{ width:50%; padding:0; float:left; border:none;}
+.c-gadget-addlist .h-thumbnail-horizontal{ margin:5px; padding:10px; background-color:#f9f9f9;}
+
+
+.c-gadget-addlist .h-thumbnail-horizontal .h-image-area {
+    width: 72px;
+}
+.c-gadget-addlist  .h-thumbnail-horizontal .h-caption {
+    margin-left: 72px;
+	
+}
+.c-gadget-addlist .h-icon { width:72px; height:72px;}
+.c-gadget-addlist  .h-caption-title{ font-size:16px;}
+.c-gadget-addlist  .h-caption-content{color:#999;}

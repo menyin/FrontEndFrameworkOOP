@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>B/S结构通用框架HTML</title>
+<meta name="description" content="HSIT-UI">
+<meta name="keywords" content="HSIT-UI">
+<meta name="author" content="design4u,QQ:66383210,Email:caixfm@gmail.com;admin@design4u.cn">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.royalslider.min.js"></script>
+<link href="resources/css/login.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/royalslider.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/rs-minimal-white.css" rel="stylesheet">
+</head>
+<body>
+<div class="h-l-page">
+  <div class="h-l-wrapper">
+    <div class="h-l-wrapper-con">
+      <!--header-->
+      <div class="h-l-header">
+        <div class="h-l-wrapper-in">
+          <!--网站logo-->
+          <h1 class="h-l-logo">
+            <img src="resources/images/logo.png"  alt=""/>
+          </h1>
+          <!--头部右侧功导航-->
+          <div class="h-l-top-nav">
+            <a href="#">关于我们</a>
+            <a href="#">帮助</a>
+          </div>
+        </div>
+      </div>
+      <!--登录主体-->
+      <div class="h-l-content">
+        <!--登录表单-->
+        <div class="h-l-form-area">
+          <!--用户首次登录界面-->
+          <form id="loginform" method="post" action="../../../doc/web/framework/themes-default/login.html"  class="h-l-hide">
+            <p class="h-l-user-header ">
+              <img src="resources/images/img-user-header.jpg"  alt=""/>
+            </p>
+            <h2  class="h-l-login-title h-l-hide"><strong>请登录</strong></h2>
+            <p class="h-l-form-item">
+              <input name="userName" type="text" id="userName" class="h-l-input-text h-l-icon-user" value="" placeholder="请输入用户名" />
+            </p>
+            <p class="h-l-form-item">
+              <input name="password" type="password" id="pw" class="h-l-input-text h-l-icon-pw" value="" placeholder="请输入密码" />
+            </p>
+            <p class="h-l-form-item h-l-form-code">
+              <span><img src="resources/images/img-code.jpg" alt=""/></span>
+              <input name="userName" type="text" id="userName" class="h-l-input-text " value="" placeholder="请输入右侧验证码" />
+            </p>
+            <p class="h-l-form-item">
+              <a href="#" class="h-l-input-btn">登录</a>
+              <!--
+              <a href="#" class="h-l-input-btn h-l-disable" >
+              	<span class="h-l-icon-loading"></span>
+              正在登录...</a>
+               -->
+            </p>
+          </form>
+          <!--用户第二次登录界面-->
+          <form id="loginform" method="post" action="../../../doc/web/framework/themes-default/login.html" class="h-l-form-loged ">
+            <p class="h-l-user-header">
+              <img src="resources/images/img-user-header-d4u.jpg"  alt=""/>
+            </p>
+            <div class="h-l-user-info">
+              <h2><strong class="h-l-user-name">老蔡</strong>
+                <span class="h-l-user-id">(caixfm)</span>
+              </h2>
+              <span class="h-l-user-company">福建省烟草公司</span>
+            </div>
+            <p class="h-l-form-item">
+              <input name="password" type="password" id="pw" class="h-l-input-text h-l-icon-pw" value="" placeholder="请输入密码" />
+            </p>
+            <p class="h-l-form-item">
+              <input name="submit" type="submit" id="submit" class="h-l-input-btn" value="登录"/>
+            </p>
+            <p class="h-l-link">
+              <a href="#">用另一用户身份登录</a>
+            </p>
+          </form>
+          <!--错误提示-->
+          <div class="h-l-errorTxt h-l-hide">
+            <span>错误提示：</span>
+            您输入的帐号不存在，请重新输入</div>
+        </div>
+        <!-- 滚动代码开始-->
+        <div class="sliderContainer fullWidth clearfix">
+          <div id="full-width-slider" class="royalSlider heroSlider rsMinW">
+            <div class="rsContent" style="background:#2a95bb; height:500px;">
+              <div style="position:absolute; left:50%; width:2000px; height:500px; top:0; margin-left:-1000px;"><img src="resources/images/banner/1-0.jpg" alt=""/></div>
+              <div class="rsABlock" data-fade-effect="" data-move-offset="100" data-move-effect="left" data-speed="800"><img style="margin-left:-400px;" src="resources/images/banner/1-1.png" alt=""/></div>
+            </div>
+            <div class="rsContent" style="background:#E8E8E8; height:500px;">
+              <div style="position:absolute; left:50%; width:2000px; height:500px; top:0; margin-left:-1000px;"><img src="resources/images/banner/2-0.jpg" alt=""/></div>
+              <div class="rsABlock" data-fade-effect="" data-move-offset="100" data-move-effect="right" data-speed="800"><img style="margin-left:-400px;" src="resources/images/banner/2-1.png" alt=""/></div>
+            </div>
+            <div class="rsContent" style="background:#2a95bb; height:500px;">
+              <div style="position:absolute; left:50%; width:2000px; height:500px; top:0; margin-left:-1000px;"><img src="resources/images/banner/3-0.jpg" alt=""/></div>
+            </div>
+          </div>
+        </div>
+        <script>
+        jQuery(document).ready(function($) {
+			$('#full-width-slider').royalSlider({
+				arrowsNav: false,
+				loop: true,
+				loopRewind: true,
+				keyboardNavEnabled: true,
+				controlsInside: false,
+				imageScaleMode: 'none',
+				arrowsNavAutoHide: false,
+				controlNavigation: 'bullets',
+				thumbsFitInViewport: false,
+				navigateByClick: true,
+				startSlideId: 0,
+				autoplay: true,
+				transitionType:'move',
+				globalCaption: false,
+				deeplinking: {
+					enabled: true,
+					change: false
+				},
+				autoPlay: { 
+					enabled: true,
+					delay:3000
+				}
+			});
+        });
+        
+        </script>
+        <!-- 滚动代码结束-->
+      </div>
+      <!--footer-->
+      <div class="h-l-footer">
+        <div class="h-l-wrapper-in">
+          <div class="h-l-logo-bt">
+            <img src="resources/images/logo-hs.png" alt=""/>
+          </div>
+          <div class="h-l-copyRight">
+            <p>Copyright &copy; 2015
+              <a href="http://www.hsit.com.cn" title="点击进入中软海晟官网">HSIT.COM.CN</a>
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

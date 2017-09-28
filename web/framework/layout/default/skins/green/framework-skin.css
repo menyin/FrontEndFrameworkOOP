@@ -1,0 +1,114 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2014-08
+		-----------------------------------------------
+		
+		框架皮肤样式，仅包含框架页的色调搭配
+
+======================================*/
+
+/*
+	头部背景及文字
+*/
+.h-f-header {
+	background-color: #0a9475;
+	color: #99d5c7;
+}
+
+
+/*
+	间隔行
+*/
+.h-f-header .h-f-info .h-f-info-item-separate,
+.h-f-header-nav-item-separate,
+.h-f-header-separate { background: url(images/framework/frame_header_separate.png) no-repeat center center; }
+
+
+/*
+	头部下拉箭头
+*/
+.h-f-icon-pull-arrow { background: url(images/framework/icon-pull-arrow.gif) no-repeat center center; }
+/*
+	下拉框边边框
+*/
+.h-f-pulldown-content { border-color: #0a9475; }
+
+
+/*
+	导航打开/关闭按钮背景
+*/
+.btn-menu-open { background: url(images/framework/bg-open-menu.png) no-repeat; }
+.btn-menu-open:hover { background: url(images/framework/bg-open-menu-hover.png) no-repeat; }
+/*关闭菜单按钮*/
+.h-f-btn-menu-close {
+	background: url(images/framework/icon-aside-slide-close.png) no-repeat center center;
+}
+.h-f-btn-menu-close:hover { background-image: url(images/framework/icon-aside-slide-close-active.png); }
+
+/*
+	左侧导航背景色
+*/
+.h-f-menu-aside { background: #8eb259; }
+
+
+/*
+	菜单项间隔行
+*/
+.h-f-menu,
+.h-f-menu-aside-footer,
+.h-f-menu-item,
+.h-f-menu-item:visited { border-color: #7ba54a !important; }
+
+
+/*
+	菜单项鼠标移上去效果
+*/
+.h-f-menu-item:hover { background: #83a74d; }
+
+
+/*
+	菜单项点击及选中效果
+*/
+.h-f-menu-item-active,
+.h-f-menu-item-active:hover { background: #fff url(images/framework/bg-menu.png) repeat-y; }
+
+.h-f-menu-item .h-f-icon-arrow { background: url(images/framework/icon-aside-arrow.png) no-repeat center center; }
+
+
+/*
+	鼠标移上去效果
+*/
+.h-f-app-item-group .h-f-pulldown-content,
+.h-f-has-pulldown.h-f-active .h-f-app-item,
+.h-f-has-pulldown.h-f-active .h-f-app-item:hover,
+.h-f-app-item:hover,
+.h-f-app-fav-item:hover,
+.h-f-subsystem-item:hover,
+.h-f-pull-item:hover,
+.h-f-breadcrumbs-menu-area li a:hover,
+.h-f-header .h-f-info-item .h-f-panel a.h-f-notice-item:hover,
+.h-f-breadcrumbs-menu-area li a:hover {
+	background-color: #d3f0e0;
+	border-color: #9fd5b7;
+	color:#262626;
+}
+
+
+/*
+	鼠标点击效果
+*/
+.h-f-app-item:active,
+.h-f-app-item-active,
+.h-f-app-fav-item:active,
+.h-f-subsystem-item:active,
+.h-f-subsystem-item-active,
+.h-f-pull-item:active,
+.h-f-header .h-f-info-item .h-f-panel a.h-f-notice-item:active,
+.h-f-breadcrumbs-menu-area li a:active {
+	background-color: #9fd5b7 !important;
+	border-color: #57bb84 !important;
+	color:#262626;
+}

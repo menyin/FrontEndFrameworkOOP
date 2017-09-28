@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ICSSHS-MUI for webapp</title>
+  <meta name="description" content="ICSSHS-MUI for webapp">
+  <meta name="keywords" content="ICSSHS-MUI for webapp">
+  <meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+  <meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+  
+  <!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+  
+  <!--针对IOS 浏览器的设置-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon@72.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="icon@2x.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="icon@114.png" sizes="144x144">
+  <link rel="apple-touch-startup-image" href="undefined.png">
+  
+  <!--项目全局样式-->
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+  <!--说明文档样式,实际应用中请不要引用-->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+  <script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+  <div class="docs-page-masthead" >
+    <h1>封装的动画(animate.css)</h1>
+    <p>CSS3动画，已封装的动画演示效果。</p>
+  </div>
+  <div class="docs-page-animate">
+    <div id="docsAnimateShow" style="display: block;">
+      <h1>Animate</h1>
+    </div>
+    <form>
+      <select class="docs-animate-select" id="animations">
+        <optgroup label="Attention Seekers">
+        <option value="bounce">bounce</option>
+        <option value="flash">flash</option>
+        <option value="pulse">pulse</option>
+        <option value="rubberBand">rubberBand</option>
+        <option value="shake">shake</option>
+        <option value="swing">swing</option>
+        <option value="tada">tada</option>
+        <option value="wobble">wobble</option>
+        </optgroup>
+        <optgroup label="Bouncing Entrances">
+        <option value="bounceIn">bounceIn</option>
+        <option value="bounceInDown">bounceInDown</option>
+        <option value="bounceInLeft">bounceInLeft</option>
+        <option value="bounceInRight">bounceInRight</option>
+        <option value="bounceInUp">bounceInUp</option>
+        </optgroup>
+        <optgroup label="Bouncing Exits">
+        <option value="bounceOut">bounceOut</option>
+        <option value="bounceOutDown">bounceOutDown</option>
+        <option value="bounceOutLeft">bounceOutLeft</option>
+        <option value="bounceOutRight">bounceOutRight</option>
+        <option value="bounceOutUp">bounceOutUp</option>
+        </optgroup>
+        <optgroup label="Fading Entrances">
+        <option value="fadeIn">fadeIn</option>
+        <option value="fadeInDown">fadeInDown</option>
+        <option value="fadeInDownBig">fadeInDownBig</option>
+        <option value="fadeInLeft">fadeInLeft</option>
+        <option value="fadeInLeftBig">fadeInLeftBig</option>
+        <option value="fadeInRight">fadeInRight</option>
+        <option value="fadeInRightBig">fadeInRightBig</option>
+        <option value="fadeInUp">fadeInUp</option>
+        <option value="fadeInUpBig">fadeInUpBig</option>
+        </optgroup>
+        <optgroup label="Fading Exits">
+        <option value="fadeOut">fadeOut</option>
+        <option value="fadeOutDown">fadeOutDown</option>
+        <option value="fadeOutDownBig">fadeOutDownBig</option>
+        <option value="fadeOutLeft">fadeOutLeft</option>
+        <option value="fadeOutLeftBig">fadeOutLeftBig</option>
+        <option value="fadeOutRight">fadeOutRight</option>
+        <option value="fadeOutRightBig">fadeOutRightBig</option>
+        <option value="fadeOutUp">fadeOutUp</option>
+        <option value="fadeOutUpBig">fadeOutUpBig</option>
+        </optgroup>
+        <optgroup label="Flippers">
+        <option value="flip">flip</option>
+        <option value="flipInX">flipInX</option>
+        <option value="flipInY">flipInY</option>
+        <option value="flipOutX">flipOutX</option>
+        <option value="flipOutY">flipOutY</option>
+        </optgroup>
+        <optgroup label="Lightspeed">
+        <option value="lightSpeedIn">lightSpeedIn</option>
+        <option value="lightSpeedOut">lightSpeedOut</option>
+        </optgroup>
+        <optgroup label="Rotating Entrances">
+        <option value="rotateIn">rotateIn</option>
+        <option value="rotateInDownLeft">rotateInDownLeft</option>
+        <option value="rotateInDownRight">rotateInDownRight</option>
+        <option value="rotateInUpLeft">rotateInUpLeft</option>
+        <option value="rotateInUpRight">rotateInUpRight</option>
+        </optgroup>
+        <optgroup label="Rotating Exits">
+        <option value="rotateOut">rotateOut</option>
+        <option value="rotateOutDownLeft">rotateOutDownLeft</option>
+        <option value="rotateOutDownRight">rotateOutDownRight</option>
+        <option value="rotateOutUpLeft">rotateOutUpLeft</option>
+        <option value="rotateOutUpRight">rotateOutUpRight</option>
+        </optgroup>
+        <optgroup label="Specials">
+        <option value="hinge">hinge</option>
+        <option value="rollIn">rollIn</option>
+        <option value="rollOut">rollOut</option>
+        </optgroup>
+        <optgroup label="Zoom Entrances">
+        <option value="zoomIn">zoomIn</option>
+        <option value="zoomInDown">zoomInDown</option>
+        <option value="zoomInLeft">zoomInLeft</option>
+        <option value="zoomInRight">zoomInRight</option>
+        <option value="zoomInUp">zoomInUp</option>
+        </optgroup>
+        <optgroup label="Zoom Exits">
+        <option value="zoomOut">zoomOut</option>
+        <option value="zoomOutDown">zoomOutDown</option>
+        <option value="zoomOutLeft">zoomOutLeft</option>
+        <option value="zoomOutRight">zoomOutRight</option>
+        <option value="zoomOutUp">zoomOutUp</option>
+        </optgroup>
+      </select>
+      <button class="docs-animate-btn" id="triggerAnimation">Animate it</button>
+    </form>
+  </div>
+  <script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script> 
+  <script>
+  function testAnim(x) {
+    $('#docsAnimateShow').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $(this).removeClass();
+    });
+  };
+
+  $(document).ready(function(){
+    $('#triggerAnimation').click(function(e){
+      e.preventDefault();
+      var anim = $('#animations').val();
+      testAnim(anim);
+    });
+
+    $('#animations').change(function(){
+      var anim = $(this).val();
+      testAnim(anim);
+    });
+  });
+
+</script> 
+</div>
+</body>
+</html>

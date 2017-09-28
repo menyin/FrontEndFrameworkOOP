@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICSSHS-MUI for webapp</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<meta name="x5-fullscreen" content="true">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon.png">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="../project/resources/css/images/icons/undefined">
+
+<!--项目全局样式-->
+<link href="../project/resources/css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/global.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/animate.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/base.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/iconfont.css" rel="stylesheet" type="text/css" />
+<script src="../project/resources/js/jquery-1.9.1.js"></script>
+<!--图片轮播插件-->
+<script src="../project/resources/js/royalslider/jquery.royalslider.min.js"></script>
+<link href="../project/resources/css/royalslider/royalslider.css" rel="stylesheet" type="text/css" >
+<link href="..//project/resources/css/royalslider/rs-default.css" rel="stylesheet" type="text/css" >
+</head>
+<body class="hm-ov-x-hide" style="background:#aaa;">
+<div class="hm-page hm-page-nobg" style="max-width:640px; margin:0 auto; background:#fff;">
+    <!--header-->
+    <div class="hm-header">
+        <!--网站logo-->
+        <div class="hm-header-logo">
+            <img src="../project/resources/images/logo-hsit.png" alt="" />中软海晟网络认证系统
+        </div>
+    </div>
+    <div class=" hm-content">
+        <!-- 滚动代码开始-->
+        
+        <div id="full-width-slider" class="hm-slider royalSlider rsDefault">
+            <div class="rsContent">
+                <img class="rsImg" src="../project/resources/images/banner_1.jpg" alt=""/>
+            </div>
+            <div class="rsContent">
+                <img class="rsImg" src="../project/resources/images/banner_2.jpg" alt=""/>
+            </div>
+            <div class="rsContent">
+                <img class="rsImg" src="../project/resources/images/banner_3.jpg" alt=""/>
+            </div>
+            <div class="rsContent">
+                <img class="rsImg" src="../project/resources/images/banner_4.jpg" alt=""/>
+            </div>
+        </div>
+        <script>
+        jQuery(document).ready(function($) {
+
+  $('#full-width-slider').royalSlider({
+    arrowsNav: false,
+    loop: false,
+    keyboardNavEnabled: true,
+    controlsInside: false,
+    imageScaleMode: 'fill',
+    arrowsNavAutoHide: false,
+    autoScaleSlider: true, 
+    autoScaleSliderWidth: 320,     
+    autoScaleSliderHeight: 130,
+    controlNavigation: 'bullets',
+    thumbsFitInViewport: false,
+    navigateByClick: true,
+    startSlideId: 0,
+    autoPlay: false,
+    transitionType:'move',
+	 globalCaption: false,
+    globalCaptionInside: false,
+    deeplinking: {
+      enabled: true,
+      change: false
+    },
+	autoPlay: { 
+					enabled: true,
+					delay:3000
+				},
+    imgWidth: 320,
+    imgHeight: 130
+  });
+});
+
+
+        
+        </script> 
+        <!-- 滚动代码结束-->
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-content">
+                <div class="hm-form hm-form-vertical">
+                    <div class="hm-form-group">
+                        <div class="hm-form-control">
+                            <i class="hm-icon-me"></i>
+                            <input type="text" value="" placeholder="请输入公司邮箱用户名">
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <div class="hm-form-control">
+                            <i class="hm-icon-password"></i>
+                            <input type="password" value="" placeholder="请输入公司邮箱密码">
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <div class="hm-form-control-wrapper hm-linearLayout-horizontal">
+                            
+                            <div class=" hm-flex-1">
+                                请用公司邮箱帐号密码登录
+                            </div>
+                            <a class="hm-link">忘记密码？</a>
+                        </div>
+                    </div>
+                    <div class="hm-btn-area">
+                        <a href="#" class=" hm-btn hm-btn-primary hm-radius">登录</a>
+                    </div>
+                </div>
+                <ol class=" hm-padding-bottom-lg  hm-margin-0  hm-color-muted hm-text-sm">
+                	<li>绑定设备无需认证，请联系管理员绑定</li>
+                    <li>一个帐号仅限两台设备，缓存一天</li>
+                    <li>请优先选择使用5G帐号</li>
+                </ol>
+            </div>
+            <div class="hm-group-footer hm-text-center ">
+                &copy; 2016  中软海晟
+            </div>
+        </div>
+        <!--copyright-->
+        
+    </div>
+</div>
+</body>
+</html>

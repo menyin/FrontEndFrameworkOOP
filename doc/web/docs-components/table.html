@@ -1,0 +1,298 @@
+<!doctype html>
+<html class="docs-html">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>ICSSHS-UI</title>
+  <!--项目全局样式-->
+  <link href="../../../web/projects/themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+  <link href="../../../web/projects/themes-default/resources/css/css3-hsui.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="../../../web/dcresources/icons/action/themes-default/icon-action.css">
+  <!--说明文档样式,实际应用中请不要引用-->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+  <script src="../../../web/projects/themes-default/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+  <div class="docs-page-masthead">
+    <h1>表格</h1>
+  </div>
+  <h2>普通数据表格</h2>
+  <h3>基本样式</h3>
+  <p><code>.h-table-datail</code></p>
+  <div class="docs-example">
+  <table class="h-table">
+            <thead>
+              <tr>
+                
+                <th width="40" align="center">序号</th>
+                <th>编号</th>
+                <th>主体名称</th>
+                <th>处置面积(亩)</th>
+                <th>变化</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <td align="center">合计</td>
+                
+                <td></td>
+                <td align="left" class=" h-text-right"></td>
+                <td class=" h-text-right">500.00</td>
+                <td class=" h-text-right"><strong class=" h-text-danger">-3.18</strong></td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                
+                <td align="center">1</td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right">352.00</td>
+                <td class="h-text-right">0.00</td>
+                
+              </tr>
+
+            </tbody>
+          </table>
+  
+  </div>
+  <h3>情景表格行</h3>
+  <!--------------------------------------------------------------------
+  	表格
+  ---------------------------------------------------------------------->
+  <div class="docs-example">
+  <table class="h-table h-table-bordered">
+            <thead>
+              <tr>
+                <th width="40" align="center"><input type="checkbox"></th>
+                <th width="40" align="center">序号</th>
+                <th>编号</th>
+                <th>主体名称</th>
+                <th>处置面积(亩)</th>
+                <th>变化</th>
+                <th width="60">操作</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <td align="center">合计</td>
+                <td align="center"></td>
+                <td></td>
+                <td align="left" class=" h-text-right"></td>
+                <td class=" h-text-right">500.00</td>
+                <td class=" h-text-right"><strong class=" h-text-danger">-3.18</strong></td>
+                <td class=" h-text-right"></td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr class="h-bg-success-light">
+                <td align="center"><input type="checkbox"></td>
+                <td align="center">1</td>
+                <td>350322200808048888 </td>
+                <td align="left" >老蔡</td>
+                <td class="h-text-right">352.00</td>
+                <td class="h-text-right"><strong class=" h-text-success">8.98</strong></td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="#" title="编辑">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr class="h-bg-warning-light">
+                <td align="center"><input type="checkbox"></td>
+                <td align="center">2</td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right">352.00</td>
+                <td class="h-text-right"><strong class=" h-text-warning">12.56</strong></td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="#" title="编辑">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr class="h-bg-danger-light">
+                <td align="center"><input type="checkbox"></td>
+                <td align="center">3</td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right">352.00</td>
+                <td class="h-text-right"><strong class=" h-text-danger">-23.32</strong></td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="#" title="编辑">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr class="h-bg-info-light">
+                <td align="center"><input type="checkbox"></td>
+                <td align="center">4</td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right">352.00</td>
+                <td class="h-text-right">0.00</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="#" title="编辑">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr>
+                <td align="center"><input type="checkbox"></td>
+                <td align="center">6</td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right">352.00</td>
+                <td class="h-text-right">0.00</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="#" title="编辑">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr>
+                <td align="center"><input type="checkbox"></td>
+                <td align="center">7</td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right">352.00</td>
+                <td class="h-text-right">0.00</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="#" title="编辑">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr>
+                <td align="center"><input type="checkbox"></td>
+                <td align="center">8</td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right">352.00</td>
+                <td class="h-text-right">0.00</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="#" title="编辑">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr>
+                <td align="center"><input type="checkbox"></td>
+                <td align="center">9</td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right">352.00</td>
+                <td class="h-text-right">0.00</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="#" title="编辑">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr class="h-bg-info-light h-active">
+                <td align="center"><input type="checkbox"></td>
+                <td align="center">5</td>
+                <td>选中样式</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right">352.00</td>
+                <td class="h-text-right">0.00</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="#" title="编辑">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr>
+                <td align="center"><input type="checkbox"></td>
+                <td align="center">10</td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right">352.00</td>
+                <td class="h-text-right">0.00</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="#" title="编辑">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+            </tbody>
+          </table>
+  
+  </div>
+  <h2>详细数据表格</h2>
+  <p><code>.h-table-datail</code></p>
+  <div class="docs-example">
+          <table class="h-table-datail h-table-bordered">
+            <tbody>
+              <tr>
+                <td class="h-table-item-header">指标名称</td>
+                <td class="h-text-right">500.00</td>
+              </tr>
+              <tr>
+                <td class="h-table-item-header">指标名称</td>
+                <td class="h-text-right">500.00</td>
+              </tr>
+              <tr>
+                <td class="h-table-item-header">指标名称</td>
+                <td class="h-text-right">500.00</td>
+              </tr>
+              <tr>
+                <td class="h-table-item-header">指标名称</td>
+                <td class="h-text-right">500.00</td>
+              </tr>
+            </tbody>
+          </table>   
+  </div>
+</div>
+</body>
+</html>

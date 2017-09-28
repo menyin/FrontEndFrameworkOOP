@@ -1,0 +1,99 @@
+<!doctype html>
+<html class="docs-html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+    <title>ICSSHS-UI</title>
+    <!--项目全局样式-->
+    <link href="../../../web/projects/themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+    <link href="../../../web/projects/themes-default/resources/css/css3-hsui.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../../../web/dcresources/icons/action/themes-default/icon-action.css">
+    <!--说明文档样式,实际应用中请不要引用-->
+    <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+    <script src="../../../web/projects/themes-default/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+    <div class="docs-page-masthead">
+        <h1>面向对象工厂</h1>
+        <p class="docs-lead">提供优雅、高性能、可扩展、易维护的js面向对象开发体验</p>
+    </div>
+    <h2>定义</h2>
+    <p>J面向对象工厂做了几个规约定义：</p>
+    <ul>
+        <li>类型工厂：class.js，通过该工厂可以创建简单类型，如<code>var Shape= Class(function(config){ });</code>。</li>
+        <li>简单类型：该类型通过类型工厂创建，此类型包含基本的属性和函数定义、继承、子类调用父类函数功能。</li>
+        <li>复杂类型：是在上简单类型做的扩展，即是简单类型的子类，例如在简单类型上扩展了事件、AOP、属性操作三大功能的<code>Shape</code>类型。</li>
+        <li>业务类型：是在简单类型或者复杂类型做的扩展，即是简单类型或复杂类型的子类，例如在复杂类型上扩展了业务相关属性、函数的<code>editResume</code>类型。</li>
+    </ul>
+    <h2>架构</h2>
+    <p>整个前端框架结构如下：</p>
+    <div class="docs-example">
+        <div class="docs-area">
+            <img src="../../../web/projects/themes-default/resources/images/framework_img.png" alt="前端架构图"/>
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre><code>
+        </code></pre>
+    </div>
+
+    <h2>基本使用</h2>
+    <div class="docs-example">
+        <div class="docs-area">
+            <p>创建类型<code>Simple</code></p>
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre><code>
+            var Simple = Class(function(attrsConfig){   <span class="docs-color-muted">//实例化属性赋值</span>
+                Simple.parent().call(this,
+                util.merge({  <span class="docs-color-muted">//构造默认属性赋值</span>
+                   attr0:'attrVal0',
+                   attr1:'attrVal1',
+                   attr2:'attrVal2'
+                },attrsConfig)
+            ).extend(ParentClass);<span class="docs-color-muted">//继承父类型</span>
+
+            Simple.implement({ <span class="docs-color-muted">//类型函数构建</span>
+                func0:function(){ <span class="docs-color-muted">//类型函数定义</span>
+                   Simple.parent('func0').call(this);<span class="docs-color-muted">//调用父类型的func0函数</span>
+                },
+                func0:function(){
+                },
+                func0:function(){
+                },
+            });
+        </code></pre>
+    </div>
+
+    <div class="docs-example">
+        <div class="docs-area">
+            <p>创建类型实例<code>simple</code></p>
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre><code>
+            var simple = new Simple({
+                attr3:'attrVal3',
+                attr4:'attrVal4',
+                attr5:'attrVal5'
+              }
+            });
+        </code></pre>
+    </div>
+
+    <div class="docs-example">
+        <div class="docs-area">
+            <p>使用类型实例<code>simple</code></p>
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre><code>
+            simple.func0();
+            console.log(simple.attr0);
+        </code></pre>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ICSSHS-MUI for webapp</title>
+  <meta name="description" content="ICSSHS-MUI for webapp">
+  <meta name="keywords" content="ICSSHS-MUI for webapp">
+  <meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+  <meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+  
+  <!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+  
+  <!--针对IOS 浏览器的设置-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon@72.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="icon@2x.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="icon@114.png" sizes="144x144">
+  <link rel="apple-touch-startup-image" href="undefined.png">
+  
+  <!--项目全局样式-->
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+  <!--说明文档样式,实际应用中请不要引用-->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+  <script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+  <div class="docs-page-masthead">
+    <h1>表格(table)</h1>
+    <p>主要用于表格数据的展现。使用时注意 &lt;table&gt; HTML 结构的完整性。</p>
+  </div>
+  <h2>基本表格</h2>
+  <h3>基本样式</h3>
+  <p >添加 <code>.hm-table</code>。</p>
+  <div class="docs-example">
+    <table class="hm-table" summary="表格摘要">
+      <colgroup>
+      <col style="width:60px">
+      <col>
+      <col style="width:120px">
+      <col style="width:80px">
+      <col style="width:80px;">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>标题</th>
+          <th>日期</th>
+          <th>比例</th>
+          <th>数额</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  <h3>表格边框</h3>
+  <p >添加 <code>hm-table hm-table-bordered</code>。</p>
+  <div class="docs-example">
+    <table class="hm-table hm-table-bordered" summary="表格摘要">
+      <colgroup>
+      <col style="width:60px">
+      <col>
+      <col style="width:120px">
+      <col style="width:80px">
+      <col style="width:80px;">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>标题</th>
+          <th>日期</th>
+          <th>比例</th>
+          <th>数额</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  <h3>斑马纹表格</h3>
+  <p >通过<code> .hm-table-striped </code>类可以给 <code>&lt;tbody&gt;</code> 之内的每一行增加斑马条纹样式。</p>
+  <div class="docs-example">
+    <table class="hm-table hm-table-striped" summary="表格摘要">
+      <colgroup>
+      <col style="width:60px">
+      <col>
+      <col style="width:120px">
+      <col style="width:80px">
+      <col style="width:80px;">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>标题</th>
+          <th>日期</th>
+          <th>比例</th>
+          <th>数额</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  
+  
+  <h3>表格状态</h3>
+  <p >通过这些状态类可以为行或单元格设置颜色。</p>
+  <ul>
+    <li><code>.hm-active</code> 激活；</li>
+    <li><code>.hm-disabled</code> 禁用；</li>
+    <li><code>.hm-primary</code> 标识普通的提示信息或动作；</li>
+    <li><code>.hm-success</code> 标识成功或积极的动作；</li>
+    <li><code>.hm-warning</code> 标识警告或需要用户注意；</li>
+    <li><code>.hm-danger</code> 标识危险或潜在的带来负面影响的动作。</li>
+  </ul>
+  <div class="docs-example">
+    <table class="hm-table hm-table-striped" summary="表格摘要">
+      <colgroup>
+      <col style="width:60px">
+      <col>
+      <col style="width:120px">
+      <col style="width:80px">
+      <col style="width:80px;">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>标题</th>
+          <th>日期</th>
+          <th>比例</th>
+          <th>数额</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hm-active">
+          <td class="hm-text-center">1</td>
+          <td>鼠标悬停在行或单元格上时所设置的颜色</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr class="hm-disabled">
+          <td class="hm-text-center">1</td>
+          <td>禁用行</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr class="hm-primary">
+          <td class="hm-text-center">1</td>
+          <td>标识普通的提示信息或动作</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr class="hm-success">
+          <td class="hm-text-center">1</td>
+          <td>标识成功或积极的动作</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr class="hm-warning">
+          <td class="hm-text-center">1</td>
+          <td>标识警告或需要用户注意</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr class="hm-danger">
+          <td class="hm-text-center">1</td>
+          <td>标识危险或潜在的带来负面影响的动作</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td class="">正常行</td>
+          <td class="hm-text-center "></td>
+          <td class="hm-text-right"></td>
+          <td class="hm-text-right "></td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td class="">正常行</td>
+          <td class="hm-text-center "></td>
+          <td class="hm-text-right"></td>
+          <td class="hm-text-right "></td>
+        </tr>
+        <tr>
+          <td class="hm-text-center hm-active">1</td>
+          <td class="hm-primary">单元格状态</td>
+          <td class="hm-text-center hm-success">状态</td>
+          <td class="hm-text-right hm-warning">状态</td>
+          <td class="hm-text-right hm-danger">状态</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  <h3>紧凑型表格</h3>
+  <p >通过<code> .hm-table-compact </code>类可以调整单位元格的padding 显示更紧凑的单元格</p>
+  <div class="docs-example">
+    <table class="hm-table hm-table-compact" summary="表格摘要">
+      <colgroup>
+      <col style="width:60px">
+      <col>
+      <col style="width:120px">
+      <col style="width:80px">
+      <col style="width:80px;">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>标题</th>
+          <th>日期</th>
+          <th>比例</th>
+          <th>数额</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  
+  
+  <h3>表格内带复选框</h3>
+  <div class="docs-example">
+    <table class="hm-table" summary="表格摘要">
+      <colgroup>
+      <col style="width:60px">
+      <col>
+      <col style="width:120px">
+      <col style="width:80px">
+      <col style="width:140px;">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><input type="checkbox"  name="checkboxGroup2" value="多选" id="checkboxGroup1_1"></th>
+          <th>标题</th>
+          <th>日期</th>
+          <th>比例</th>
+          <th>数额</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="hm-text-center"><input type="checkbox"  name="checkboxGroup2" value="多选" id="checkboxGroup1_1"></td>
+          <td>收购金额</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center"><input type="checkbox"  name="checkboxGroup2" value="多选" id="checkboxGroup1_2"></td>
+          <td>收购金额50.22万元，占预计收购资金23.11%收购金额50.22万元，占预计收购资金23.11%收购金额50.22万元，占预计收购资金23.11%收购金额50.22万元，占预计收购资金23.11%收购金额50.22万元，占预计收购资金23.11%收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center"><input type="checkbox"  name="checkboxGroup2" value="多选" id="checkboxGroup1_3"></td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+        <tr>
+          <td class="hm-text-center"><input type="checkbox"  name="checkboxGroup2" value="多选" id="checkboxGroup1_4"></td>
+          <td>收购金额50.22万元，占预计收购资金23.11%</td>
+          <td class="hm-text-center">2015-01-22</td>
+          <td class="hm-text-right">98.00%</td>
+          <td class="hm-text-right">88.86</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  <h2>组合表格</h2>
+  <p>组合表格，通过对表格进行重新封装，可实现表体滚动、锁定列等复杂的表格功能。</p>
+  
+  <h3>表体滚动</h3>
+  <p>添加 <code>.hm-table-group</code>基础组合表格</p>
+  <div class="docs-example">
+    <div class="hm-table-group">
+      <div class="hm-table-header" style="padding-right:17px;">
+        <div class="hm-table-header-wrap">
+          <table class="hm-table " summary="表格摘要" >
+            <colgroup>
+              <col>
+              <col style="width:100px">
+              <col style="width:100px">
+              <col>
+              </colgroup>
+            <thead>
+              <tr>
+                <th>标题标题</th>
+                <th>比例</th>
+                <th>数值</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+      <div class="hm-table-content"  style="height:224px;">
+        <table class="hm-table " summary="表格摘要" >
+          <colgroup>
+          <col>
+          <col style="width:100px">
+          <col style="width:100px">
+          <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <td >收购金额50.22万元，占预计收购资金23.11%</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr class="hm-acitve">
+              <td >收购金额50.22万元，占预计收购资金23.11%</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td >收购金额50.22万元，占预计收购资金23.11%</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td >收购金额50.22万元，占预计收购资金23.11%</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td >收购金额50.22万元，占预计收购资金23.11%</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td >收购金额50.22万元，占预计收购资金23.11%</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td >收购金额50.22万元，占预计收购资金23.11%</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td >收购金额50.22万元，占预计收购资金23.11%</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td >收购金额50.22万元，占预计收购资金23.11%</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td >收购金额50.22万元，占预计收购资金23.11%</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td >收购金额50.22万元，占预计收购资金23.11%</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td >收购金额50.22万元，占预计收购资金23.11%</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td >收购金额50.22万元，占预计收购资金23.11%</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="hm-table-footer" style="padding-right:17px;">
+        <div class="hm-table-footer-wrap">
+          <table class="hm-table" summary="表格摘要" >
+            <colgroup>
+            <col style="width:100px">
+            <col style="width:100px">
+            <col style="">
+            </colgroup>
+            <tfoot>
+              <tr>
+                <td></th>
+                <td class="hm-text-right">79.88%</td>
+                <td class="hm-text-right">8950</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--实例：多表头-->
+  
+  <h3>实例：多表头</h3>
+  <p >多表头</p>
+  <div class="docs-example">
+    <div class="hm-table-group" id="table-">
+      <div class="hm-table-header" style="padding-right:17px">
+        <div class="hm-table-header-wrap">
+          <table class="hm-table" summary="表格摘要">
+            <colgroup>
+            <col style="width:60px">
+            <col>
+            <col style="width:120px">
+            <col style="width:80px">
+            <col style="width:80px;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th rowspan="2">编号</th>
+                <th rowspan="2">标题标题</th>
+                <th colspan="3">完成情况</th>
+              </tr>
+              <tr>
+                <th>日期</th>
+                <th><abbr title="Rotten Tomato Rating">完成比例</abbr></th>
+                <th>浏览</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+      <div class="hm-table-content"  style="height:224px;">
+        <table class="hm-table" summary="表格摘要">
+          <colgroup>
+          <col style="width:60px">
+          <col>
+          <col style="width:120px">
+          <col style="width:80px">
+          <col style="width:80px;">
+          </colgroup>
+          <tbody>
+            <tr>
+              <td class="hm-text-center">1</td>
+              <td><a href="#" class="hm-link">收购金额50.22万元，占预计收购资金23.11%</a></td>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2</td>
+              <td><a href="#" class="hm-link">收购金额50.22万元，占预计收购资金23.11%</a></td>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">3</td>
+              <td><a href="#" class="hm-link">收购金额50.22万元，占预计收购资金23.11%</a></td>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">4</td>
+              <td><a href="#" class="hm-link">收购金额50.22万元，占预计收购资金23.11%</a></td>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">5</td>
+              <td><a href="#" class="hm-link">收购金额50.22万元，占预计收购资金23.11%</a></td>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">6</td>
+              <td><a href="#" class="hm-link">收购金额50.22万元，占预计收购资金23.11%</a></td>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="hm-table-footer" style="padding-right:17px">
+        <div class="hm-table-footer-wrap">
+          <table class="hm-table" summary="表格摘要">
+            <colgroup>
+            <col style="width:60px">
+            <col>
+            <col style="width:120px">
+            <col style="width:80px">
+            <col style="width:80px;">
+            </colgroup>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="hm-text-right">79.88%</td>
+                <td class="hm-text-right">8950</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--实例：锁定列表格-->
+  
+  <h3>实例：锁定列表格</h3>
+  <p >锁定列表格</p>
+  <div class="docs-example">
+    <div class="hm-table-group" id="table-locked">
+      <div class="hm-table-header" >
+        <div class="hm-table-header-locked">
+          <table class="hm-table" summary="表格摘要" style="width:200px;">
+            <colgroup>
+            <col style="width:100px">
+            <col style="width:100px">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>编号</th>
+                <th>标题标题</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="hm-table-header-wrap">
+          <table class="hm-table" summary="表格摘要">
+            <colgroup>
+            <col style="width:100px">
+            <col style="width:100px">
+            <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th>编号</th>
+                <th>标题标题</th>
+                <th>标题标题</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+      <div class="hm-table-content-locked" style="height:224px;">
+        <table class="hm-table" summary="表格摘要" style="width:200px;">
+          <colgroup>
+          <col style="width:100px">
+          <col style="width:100px">
+          </colgroup>
+          <tbody>
+            <tr>
+              <td class="hm-text-center">1</td>
+              <td><a href="#" class="hm-link">收购金</a></td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2</td>
+              <td><a href="#" class="hm-link">收购金</a></td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">3</td>
+              <td><a href="#" class="hm-link">收购金</a></td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">4</td>
+              <td><a href="#" class="hm-link">收购金</a></td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">5</td>
+              <td><a href="#" class="hm-link">收购金</a></td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">6</td>
+              <td><a href="#" class="hm-link">收购金</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="hm-table-content"  style="height:224px;">
+        <table class="hm-table" summary="表格摘要">
+          <colgroup>
+          <col style="width:100px">
+          <col style="width:100px">
+          <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+            <tr>
+              <td class="hm-text-center">2015-01-22</td>
+              <td class="hm-text-right">98.00%</td>
+              <td class="hm-text-right">74</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="hm-table-footer" >
+        <div class="hm-table-footer-locked">
+          <table class="hm-table" summary="表格摘要" style="width:200px;">
+            <colgroup>
+            <col style="width:100px">
+            <col style="width:100px">
+            </colgroup>
+            <tfoot>
+              <tr>
+                <td class="hm-text-center">编号</td>
+                <td></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="hm-table-footer-wrap">
+          <table class="hm-table" summary="表格摘要" style="width:3000px;">
+            <colgroup>
+            <col style="width:100px">
+            <col style="width:100px">
+            <col >
+            </colgroup>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td class="hm-text-right">8950</td>
+                <td class="hm-text-right">8950</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script>
+			$(function(){
+				var w= $("#table-locked").width()-$("#table-locked .hm-table-header-locked").width()-1;
+				$("#table-locked .hm-table-header-wrap").css({ width:w});
+				$("#table-locked .hm-table-footer-wrap").css({ width:w});
+				$("#table-locked .hm-table-content").css({ width:w});
+			});
+		</script>
+  </div>
+</div>
+</body>
+</html>

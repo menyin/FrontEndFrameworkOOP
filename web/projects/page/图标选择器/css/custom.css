@@ -1,0 +1,90 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2014-08
+======================================*/
+/*标签页*/
+.c-tabbar {
+	border-bottom: 1px solid #dddfe3;
+	background-color:#fff;
+	height: 36px;
+	position:relative;
+}
+.c-tab-item {
+	float: left;
+	margin-bottom: -1px;
+}
+.c-tab-item a {
+	display: block;
+	padding: 10px 25px;
+	line-height: 16px;
+	border-color: transparent #dddddd transparent;
+	margin-left: -1px;
+}
+.c-tab-item.h-active a {
+	color: #555;
+	padding-top: 10px;
+	cursor: default;
+	background-color: #fff;
+	border-bottom: 3px solid #5090f6;
+	font-weight: bold;
+}
+.c-tabbar .h-pull-right { padding-right:5px;}
+.c-tabbar .h-pull-left{ padding-left:5px;}
+
+/*图标按钮*/
+.c-container{ background-color:#ebedf3;padding:5px; overflow-x:hidden; overflow-y:scroll;}
+.c-iconbtn-menu{background:#fff; color:#333 }
+.c-iconbtn-module{background:#2f91f2;color:#fff}
+.c-iconbtn-bg{width:120px; height:96px;  margin:5px; float:left; text-align:center; padding:5px; position:relative;}
+.c-iconbtn-bg:hover{ border:#fdbb49 solid 3px; padding:2px; cursor:pointer;}
+.c-iconbtn-title{height:40px;  padding-top:5px;text-overflow: -o-ellipsis-lastline;overflow: hidden;text-overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.c-iconbtn-selected:after{
+	content:"";
+    width: 43px;
+    height:41px;
+    background-image: url(images/iconbtn-selected.png) !important;
+	position:absolute;
+	right:0;
+	top:0;
+ 
+}
+
+/*图标属性*/
+
+
+a.c-upload-icon-control { display:inline-block; }
+a.c-upload-icon-control:hover .c-upload-icon {
+	background-color:#f2f2f2;
+	
+	
+}
+a.c-upload-icon-control:active { border-color: #78aad6; }
+
+.c-upload-icon {
+	display: inline-block;
+	background: #d9dce0 no-repeat center center;
+    height: 80px;
+    width: 80px;
+	text-align: center;
+	font-size:0;
+	margin: 0 auto;
+	position: relative;
+	border-radius: 5px;
+}
+.c-upload-icon:before{
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	}
+.h-upload-image .h-icon-delete-danger-l,.c-upload-icon .h-icon-delete-danger-l{
+	position:absolute;
+	top:10px;
+	right:10px;
+	}
+.c-upload-icon-add	{
+	 background-image: url(images/bg-addicon.png); 
+	}

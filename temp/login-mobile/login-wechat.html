@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>B/S结构通用框架HTML</title>
+<meta name="description" content="HSIT-UI">
+<meta name="keywords" content="HSIT-UI">
+<meta name="author" content="design4u,QQ:66383210,Email:caixfm@gmail.com;admin@design4u.cn">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../../mobile/project/resources/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="../../mobile/project/resources/css/global.css">
+<link rel="stylesheet" type="text/css" href="../../mobile/project/resources/css/base.css">
+<link rel="stylesheet" type="text/css" href="../../mobile/project/resources/css/iconfont.css">
+<link href="resources/css/login.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="resources/js/jquery-1.9.1.js"></script>
+<!--banner 轮显动画JS---------------开始-->
+<script type="text/javascript" src="resources/js/jquery.royalslider.min.js"></script>
+<link href="resources/css/royalslider.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/rs-minimal-white.css" rel="stylesheet">
+<!--banner 轮显动画JS---------------结束-->
+</head>
+<body>
+<div class="hm-page hm-page-nobg">
+  <div class="hm-header ">
+    <a class="hm-btn " href="#">
+      <i class=" hm-icon-back"></i>
+    </a>
+    <div class="hm-flex-1">
+    </div>
+    <div class="hm-title">
+      云南烟农合同网签
+    </div>
+  </div>
+  <div class="hm-bar">
+    <div class="hm-segmentedbutton hm-justify">
+      <a href="#" class="hm-btn hm-active">
+        烟技员
+      </a>
+      <a href="#" class="hm-btn">
+        烟农
+      </a>
+    </div>
+  </div>
+  <!--登录表单-->
+  <div class="h-l-form-area">
+    <!--用户首次登录界面-->
+    <form id="loginform" method="post" action="#"   >
+      <p class="h-l-form-item">
+        <input name="userName" type="text" id="userName" class="h-l-input-text h-l-icon-user" value="" placeholder="请输入用户名" />
+      </p>
+      <p class="h-l-form-item">
+        <input name="password" type="password" id="pw" class="h-l-input-text h-l-icon-pw" value="" placeholder="请输入密码" />
+      </p>
+      <div class="h-l-table">
+        <p class="h-l-row">
+          <span class="h-l-col">
+          <input type="checkbox" id="rememberPW">
+          <label for="rememberPW">
+            自动登录
+          </label>
+          </span>
+          <span class="h-l-col h-l-text-right">
+          <a class="hm-link" href="#">
+            忘记密码
+          </a>
+          </span>
+        </p>
+      </div>
+      <p class="h-l-form-item">
+        <a href="#" class="h-l-input-btn">
+          登录
+        </a>
+        <!--
+                            <a href="#" class="h-l-input-btn h-l-disable" >
+                            <span class="h-l-icon-loading"></span>
+                            正在登录...</a>
+                            -->
+      </p>
+    </form>
+    <!--用户第二次登录界面-->
+    <form id="loginform" method="post" action="#" class="h-l-form-loged h-l-hide ">
+      <div class="h-l-user-info">
+        <p class="h-l-user-header">
+          <img src="resources/images/img-user-header-d4u.jpg"  alt=""/>
+        </p>
+        <dl class="h-l-user-text">
+          <dt>
+            <strong class="h-l-user-name">老蔡</strong><span class="h-l-user-id">(caixfm)</span>
+          </dt>
+          <dd class="h-l-user-company">
+            福建省烟草公司
+          </dd>
+        </dl>
+      </div>
+      <p class="h-l-form-item">
+        <input name="password" type="password" id="pw" class="h-l-input-text h-l-icon-pw" value="" placeholder="请输入密码" />
+      </p>
+      <p class="h-l-form-item">
+        <a href="#" class="h-l-input-btn">
+          登录
+        </a>
+      </p>
+      <a href="#" class="h-l-link">
+        用另一用户身份登录
+      </a>
+      <a href="#" class="h-l-link">
+        登录设置
+      </a>
+    </form>
+  </div>
+  <!--copyright-->
+  <div class="h-l-footer">
+    <p class="h-l-copyRight">中软海晟信息技术有限公司提供技术支持</p>
+  </div>
+  <!--错误提示-->
+  <div class="h-l-errorTxt h-l-hide">
+    <span>错误提示：</span>您输入的帐号不存在，请重新输入
+  </div>
+</div>
+</body>
+</html>

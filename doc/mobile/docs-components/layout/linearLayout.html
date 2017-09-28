@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+<meta charset="utf-8">
+<title>WEBAPP通用框架HTML</title>
+<meta name="description" content="HSIT-UI for mobile">
+<meta name="keywords" content="HSIT-UI  for mobile">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/global.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/base.css">
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../../../resources/css/docs.css">
+</head>
+<body>
+<div class="docs-content">
+  <div class="docs-page-masthead">
+    <h1>线性布局(linearLayout)</h1>
+    <p>线性布局：是一个容器以线性方向显示它的子容器元素，分为垂直布局和水平布局。线性布局是让子容器针对父容器的宽、高度按一定规则进行划分，来实现布局的垂直等高、水平均分、按比例划分等。</p>
+  </div>
+  <!--水平布局-->
+  <h2>水平布局</h2>
+  <p class="docs-lead">通过给父容器添加<code>.hm-linearLayout</code>样式来实现，内部子容器的水平方向的平均分、按比例划分、固定宽及按比例划分混合布局。</p>
+  <!--水平布局之平均分-->
+  <h3>实例：水平均分</h3>
+  <p>通过设置子容器的<code>style="-webkit-box-flex: 1;"</code>来实现平均或者按比例显示宽度。注：如果子容器内容为长文本时，将无法实现自适应效果，解决的办法是设置宽度为<code>width:1%;</code></p>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout">
+        <div class=" hm-flex-1">宽度权重1</div>
+        <div class=" hm-flex-1">宽度权重1</div>
+        <div class=" hm-flex-1">宽度权重1</div>
+      </div>
+    </div>
+  </div>
+  
+  <!--水平布局之按比例划分-->
+  <h3>实例：按比例水平划分</h3>
+  <p>通过设置子容器的<code>-webkit-box-flex</code>为不同的值来分配宽度占比权重，从而实现按比例显示宽度</p>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout">
+        <div style="-moz-box-flex:2;-webkit-box-flex:2;box-flex:2; width:1%;">-webkit-box-flex:1</div>
+        <div style="-moz-box-flex:1;-webkit-box-flex:1;box-flex:1; width:1%;">-webkit-box-flex:1</div>
+        <div style="-moz-box-flex:2;-webkit-box-flex:2;box-flex:2; width:1%;">-webkit-box-flex:1</div>
+      </div>
+    </div>
+  </div>
+  
+  <!--水平布局之按比例划分-->
+  <h3>实例：固定宽度及按比例水平划分</h3>
+  <p>其中某（些）列固定宽，其余列按比例自适应布局,通过<code>style="-webkit-box-flex: 1;"</code>来实现</p>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout">
+        <div  style="width:300px">width:300px</div>
+        <div class=" hm-flex-1">-webkit-box-flex:1</div>
+        <div class=" hm-flex-1">-webkit-box-flex:1</div>
+      </div>
+    </div>
+  </div>
+  
+  <!--水平布局-水平对齐方式-->
+  <h3>实例：水平布局-水平对齐方式</h3>
+  <p>在未指定内部子容器的宽度及权重的情况下，内部子容器的宽度为子容器内部元素的宽度，默认左对齐<code>.hm-linearLayout-pack-start</code></p>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout">
+        <div >内部元素</div>
+        <div >内部元素，宽度为子容器内部元素的宽度值</div>
+        <div >内部元素</div>
+      </div>
+    </div>
+  </div>
+  <p>通过<code>.hm-linearLayout-pack-end</code>来实现内部元素水平右对齐</p>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-pack-end">
+        <div >内部元素</div>
+        <div >内部元素，宽度为子容器内部元素的宽度值</div>
+        <div >内部元素</div>
+      </div>
+    </div>
+  </div>
+  <p>通过<code>.hm-linearLayout-pack-center</code>来实现内部元素水平中对齐</p>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-pack-center">
+        <div >内部元素</div>
+        <div >内部元素，宽度为子容器内部元素的宽度值</div>
+        <div >内部元素</div>
+      </div>
+    </div>
+  </div>
+  <p>通过<code>.hm-linearLayout-pack-justify</code>来实现内部元素水平等分父容器宽度</p>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-pack-justify">
+        <div >内部元素</div>
+        <div >内部元素，宽度为子容器内部元素的宽度值</div>
+        <div >内部元素</div>
+      </div>
+    </div>
+  </div>
+  
+  <!--水平布局-垂直对齐方式-->
+  <h3>实例：水平布局-垂直对齐方式</h3>
+  <p>父容器里面子容器的垂直对齐方式，在不指定内部容器高度的情况下，默认为拉伸到与父容器等高</p>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-align-stretch" style="height:120px;">
+        <div style="">内部元素</div>
+        <div style="height:40px;" class="docs-bg3" >内部元素，已指定高度值</div>
+        <div style="">内部元素</div>
+      </div>
+    </div>
+  </div>
+  <p>通过<code>.hm-linearLayout-align-start</code>来实现内部元素垂直顶对齐</p>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-align-start" style="height:120px;">
+        <div style="">内部元素</div>
+        <div style="height:40px;" class="docs-bg3" >内部元素，已指定高度值</div>
+        <div style="">内部元素</div>
+      </div>
+    </div>
+  </div>
+  <p>通过<code>.hm-linearLayout-align-end</code>来实现内部元素垂直底对齐</p>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-align-end" style="height:120px;">
+        <div style="">内部元素</div>
+        <div style="height:40px;" class="docs-bg3" >内部元素，已指定高度值</div>
+        <div style="">内部元素</div>
+      </div>
+    </div>
+  </div>
+  <p>通过<code>.hm-linearLayout-align-center</code>来实现内部元素垂直中对齐</p>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-align-center" style="height:120px;">
+        <div style="">内部元素</div>
+        <div style="height:80px;" class="docs-bg3" >内部元素，已指定高度值</div>
+        <div style="">内部元素</div>
+      </div>
+    </div>
+  </div>
+  
+  <!--垂直布局-->
+  <h2>垂直布局</h2>
+  <p>通过给父容器添加<code>.hm-linearLayout .hm-linearLayout-vertical</code>样式来实现，内部子容器的垂直方向的平均分、按比例划分、固定宽及按比例划分混合布局。</p>
+  
+  <!--垂直均分-->
+  <h3>实例：垂直均分</h3>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-vertical" style="height:200px;">
+        <div class="hm-flex-1">-webkit-box-flex:1</div>
+        <div class="hm-flex-1">-webkit-box-flex:1</div>
+        <div class="hm-flex-1">-webkit-box-flex:1</div>
+      </div>
+    </div>
+  </div>
+  <p>通过设置子容器的<code>style="-webkit-box-flex: 1;"</code>来实现平均或者按比例显示宽度</p>
+  
+  <!--按比例垂直划分-->
+  <h3>实例：按比例垂直划分</h3>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-vertical"  style="height:240px;">
+        <div class="hm-flex-1">-webkit-box-flex:1</div>
+        <div class="hm-flex-1">-webkit-box-flex:1</div>
+        <div style="-moz-box-flex:3;-webkit-box-flex:3;box-flex:3;" class="docs-bg3">-webkit-box-flex:3</div>
+      </div>
+    </div>
+  </div>
+  <p>通过设置子容器的<code>-webkit-box-flex</code>为不同的值来分配宽度占比权重，从而实现按比例显示宽度</p>
+  
+  <!--固定高度及按比例垂直划分-->
+  <h3>实例：固定高度及按比例垂直划分</h3>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-vertical"  style="height:220px;">
+        <div style="height:100px;" class="docs-bg3">height:100px;</div>
+        <div class="hm-flex-1">-webkit-box-flex: 1</div>
+        <div class="hm-flex-1">-webkit-box-flex: 2</div>
+      </div>
+    </div>
+  </div>
+  <p>其中某（些）列固定高，其余列按比例自适应布局,通过<code>style="-webkit-box-flex: 1;"</code>来实现</p>
+  
+  <!--垂直布局-垂直对齐方式-->
+  <h3>实例：垂直布局-垂直对齐方式</h3>
+  
+  <!--默认顶对齐-->
+  
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-vertical" style="height:200px;">
+        <div >内部元素</div>
+        <div style="height:100px;">内部元素，宽度为子容器内部元素的宽度值</div>
+        <div >内部元素</div>
+      </div>
+    </div>
+  </div>
+  <p>内部子容器的宽度为子容器内部元素的高度，默认顶对齐<code>.hm-linearLayout-pack-start</code></p>
+  <!--垂直底对齐-->
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-vertical hm-linearLayout-pack-end" style="height:200px;">
+        <div >内部元素</div>
+        <div >内部元素，宽度为子容器内部元素的宽度值</div>
+        <div >内部元素</div>
+      </div>
+    </div>
+  </div>
+  <p>通过<code>.hm-linearLayout-pack-end</code>来实现内部元素垂直底对齐</p>
+  <!--垂直中对齐-->
+  
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-vertical hm-linearLayout-pack-center" style="height:200px;">
+        <div >内部元素</div>
+        <div >内部元素，宽度为子容器内部元素的宽度值</div>
+        <div >内部元素</div>
+      </div>
+    </div>
+  </div>
+  <p>通过<code>.hm-linearLayout-pack-center</code>来实现内部元素垂直中对齐</p>
+  <!--垂直等分父容器宽度-->
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-vertical hm-linearLayout-pack-justify" style="height:200px;">
+        <div >内部元素</div>
+        <div >内部元素，宽度为子容器内部元素的宽度值</div>
+        <div >内部元素</div>
+      </div>
+    </div>
+  </div>
+  <p>通过<code>.hm-linearLayout-pack-justify</code>来实现内部元素垂直等分父容器宽度</p>
+  
+  <!--垂直布局-水平对齐方式-->
+  <h3>实例：垂直布局-水平对齐方式</h3>
+  <h4>默认为拉伸到与父容器等宽</h4>
+  <p>父容器里面子容器的水平对齐方式，在不指定内部容器高度的情况下，默认为拉伸到与父容器等宽</p>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-vertical hm-linearLayout-align-stretch" style="height:220px;">
+        <div>内部元素</div>
+        <div>宽高为内部子元素的宽高</div>
+        <div>内部元素</div>
+      </div>
+    </div>
+  </div>
+  <h4>水平左对齐</h4>
+  <p>通过<code>.hm-linearLayout-align-start</code>来实现内部元素水平左对齐</p>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-vertical hm-linearLayout-align-start" >
+        <div >内部元素</div>
+        <div>宽高为内部子元素的宽高</div>
+        <div >内部元素</div>
+      </div>
+    </div>
+  </div>
+  <h4>水平右对齐</h4>
+  <p>通过<code>.hm-linearLayout-align-end</code>来实现内部元素水平右对齐</p>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-vertical hm-linearLayout-align-end" >
+        <div style="">内部元素</div>
+        <div>宽高为内部子元素的宽高</div>
+        <div style="">内部元素</div>
+      </div>
+    </div>
+  </div>
+  <h4>水平中对齐</h4>
+  <p>通过<code>.hm-linearLayout-align-center</code>来实现内部元素水平中对齐</p>
+  <div class="docs-example">
+    <div class="docs-area">
+      <div class="hm-linearLayout hm-linearLayout-vertical hm-linearLayout-align-center">
+        <div style="">内部元素</div>
+        <div>宽高为内部子元素的宽高</div>
+        <div style="">内部元素</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

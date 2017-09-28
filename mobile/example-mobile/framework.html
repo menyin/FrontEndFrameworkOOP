@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICSSHS-MUI for webapp</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<meta name="x5-fullscreen" content="true">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon.png">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="../project/resources/css/images/icons/undefined">
+
+<!--项目全局样式-->
+<link href="../project/resources/css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/global.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/animate.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/base.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/iconfont.css" rel="stylesheet" type="text/css" />
+<script src="../project/resources/js/jquery-1.9.1.js"></script>
+<!--图片轮播插件-->
+<script src="../project/resources/js/royalslider/jquery.royalslider.min.js"></script>
+<link href="../project/resources/css/royalslider/royalslider.css" rel="stylesheet" type="text/css" >
+<link href="..//project/resources/css/royalslider/rs-default.css" rel="stylesheet" type="text/css" >
+
+
+<script type="text/javascript">
+$(function(){
+	//同一页面存在多个弹窗控件时的调用方式
+	var curPopup;
+	var curAnimationIn;  //弹窗进入时的动画
+	var curAnimationOut;  //弹窗退出时的
+	$("[data-action^='popup-']").click(function(){
+		curPopup=$(this).attr("data-action");//获取所在显示的弹窗ID
+		curAnimationIn=$(this).attr("data-animation");//获取弹窗显示的动画方式
+		
+		$("#"+curPopup).fadeIn();//打开模态框
+		$(".hm-popup").removeClass(curAnimationOut);//清除上次退出时的动画
+		$("#"+curPopup).find(".hm-popup").addClass(curAnimationIn);//设定弹窗显示的动画方式
+		$("body").addClass("hm-ov-hide");//隐藏滚动条
+		
+		
+		
+  });
+	//关闭浮窗
+	$("[data-action=close-popup]").click(function() {
+		         curAnimationOut=$(this).attr("data-animation");//获取弹窗关闭的动画方式
+				$(".hm-popup").removeClass(curAnimationIn);//清除打开时的动画
+				$("#"+curPopup).find(".hm-popup").addClass(curAnimationOut);//设定关闭时的动画
+				$(this).parents(".hm-popup-wrapper").fadeOut("fast");//关闭弹层
+				$("body").removeClass("hm-ov-hide");//重新显示body的滚动条
+				
+	})
+	
+	
+	
+});
+</script>
+</head>
+<body class="hm-ov-x-hide">
+<!--page-->
+<div class="hm-page hm-page-active" >
+    <div class="hm-header hm-header-dark hm-fixed-top hm-bg-none">
+        <a class="hm-btn" href="#"> <i class="hm-icon-menu"></i> </a>
+        <div class="hm-flex-1" >
+        </div>
+        <a class="hm-btn" href="#"> <i class="hm-icon-search"></i> </a> <a class="hm-btn" href="#"> <i class="hm-icon-me"></i> </a>
+        <div class="hm-title">
+            移动端框架
+        </div>
+    </div>
+    <div class="hm-content">
+        <div id="full-width-slider" class="hm-slider royalSlider rsDefault">
+            <div class="rsContent">
+                <img class="rsImg" src="../project/resources/images/banner_1.jpg" alt=""/>
+            </div>
+            <div class="rsContent">
+                <img class="rsImg" src="../project/resources/images/banner_1.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-content">
+                <ul class="hm-average-4 hm-grid-menu ">
+            
+            <li>
+                <a class="hm-btn hm-btn-vertical" href="login.html"> 
+                    <i class="hm-icon-me hm-bg-success"><span class="hm-badge hm-badge-danger hm-round">8</span></i>
+                    <div class="hm-ellipsis">登录</div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical" href="login-slider.html"> 
+                <i class="hm-icon-me hm-bg-info"><span class="hm-badge hm-badge-danger hm-round"></span></i>
+                <div class="hm-ellipsis">轮播登录</div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical" href="framework-grid.html"> 
+                    <i class="hm-icon-viewgallery hm-bg-danger"></i>
+                    <div class="hm-ellipsis">
+                        宫格框架
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical" href="framework-slider.html"> 
+                    <i class="hm-icon-menu hm-bg-warning"></i>
+                    <div class="hm-ellipsis">
+                        侧滑框架
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical" href="buttons.html"> 
+                    <i class="hm-icon-download hm-bg-warning"></i>
+                    <div class="hm-ellipsis">按钮</div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical " href="form.html"> 
+                    <i class="hm-icon-edit hm-bg-danger"></i>
+                    <div class="hm-ellipsis">表单</div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical " href="listview.html"> 
+                    <i class="hm-icon-viewlist hm-bg-success"></i>
+                    <div class="hm-ellipsis">列表</div>
+                </a>
+            </li>
+            
+            <li>
+                <a class="hm-btn hm-btn-vertical " href="card.html"> 
+                    <i class="hm-icon-pic hm-bg-danger"></i>
+                    <div class="hm-ellipsis">卡片</div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical " href="article.html"> <i class="hm-icon-form hm-bg-danger"></i>
+                <div class="hm-ellipsis">
+                    文章
+                </div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical " href="filter.html"> 
+                    <i class="hm-icon-filter hm-bg-info"></i>
+                    <div class="hm-ellipsis">
+                        条件过滤
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical " href="detail.html"> <i class="hm-icon-detail hm-bg-warning"></i>
+                <div class="hm-ellipsis">
+                    详细内容
+                </div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical " href="charts.html"> <i class="hm-icon-training hm-bg-info"></i>
+                <div class="hm-ellipsis">
+                    图表
+                </div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical " href="ask.html"> <i class="hm-icon-help hm-bg-success"></i>
+                <div class="hm-ellipsis">
+                    调查问卷
+                </div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical " href="popup.html"> <i class="hm-icon-copy hm-bg-warning"></i>
+                <div class="hm-ellipsis">
+                    弹窗
+                </div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical " href="tree.html"> <i class="hm-icon-copy hm-bg-warning"></i>
+                <div class="hm-ellipsis">
+                    组织树
+                </div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical " href="synchronous.html"> <i class="hm-icon-refresh hm-bg-danger"></i>
+                <div class="hm-ellipsis">
+                    数据同步
+                </div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical " href="edit-table.html"> <i class="hm-icon-detail hm-bg-info"></i>
+                <div class="hm-ellipsis">
+                    主从可编辑表格
+                </div>
+                </a>
+            </li>
+             <li>
+                <a class="hm-btn hm-btn-vertical " href="flowstep.html"> <i class="hm-icon-detail hm-bg-info"></i>
+                <div class="hm-ellipsis">
+                    流程步骤
+                </div>
+                </a>
+            </li>
+             <li>
+                <a class="hm-btn hm-btn-vertical " href="notification.html"> <i class="hm-icon-detail hm-bg-info"></i>
+                <div class="hm-ellipsis">
+                    通知栏
+                </div>
+                </a>
+            </li>
+            
+            <li>
+                <a class="hm-btn hm-btn-vertical " href="javascript:void(0);" data-action="popup-dialog" data-animation="fadeIn">
+                <div class="hm-subicon">
+                    <ul class=" hm-average-2 hm-subicon-content">
+                        <li>
+                            <i class="hm-icon-scan hm-bg-success"></i>
+                        </li>
+                        <li>
+                            <i class="hm-icon-form hm-bg-warning"></i>
+                        </li>
+                        <li>
+                            <i class="hm-icon-calendar hm-bg-danger"></i>
+                        </li>
+                        <li>
+                            <i class="hm-icon-calendar hm-bg-info"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hm-ellipsis">
+                    二级菜单
+                </div>
+                </a>
+            </li>
+        </ul>
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-content">
+                <div class=" hm-listview">
+                    <a href="#" class="hm-li hm-li-link">
+                    <div class="hm-li-header">
+                        <i class="hm-icon-plus"></i>
+                    </div>
+                    <div class="hm-li-content hm-flex-1">
+                        添加新应用
+                    </div>
+                    <div class="hm-li-footer">
+                        共有26个
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                新消息
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-listview hm-listview-inset">
+                    <a href="#" class="hm-li hm-li-link">
+                    <div class="hm-li-header">
+                        <img src="../../doc/resources/images/user-header.jpg" class=" hm-round" width="42" height="42"  alt=""/>
+                    </div>
+                    <div class="hm-li-content hm-flex-1">
+                        <h2>design4u</h2>
+                        <p class="hm-li-desc hm-ellipsis">年度生产计划报表已发送到您的邮箱，请查收。</p>
+                    </div>
+                    <div class="hm-li-footer">
+                    </div>
+                    </a> <a href="#" class="hm-li hm-li-link">
+                    <div class="hm-li-header">
+                        <i class="hm-icon-form hm-circle hm-bg-warning"></i>
+                    </div>
+                    <div class="hm-li-content hm-flex-1">
+                        <h2>中软海晟UED</h2>
+                        <p class="hm-li-desc hm-ellipsis">[管理日历]：2016-02-10管理日报。</p>
+                    </div>
+                    <div class="hm-li-footer">
+                    </div>
+                    </a> <a href="#" class="hm-li hm-li-link">
+                    <div class="hm-li-header">
+                        <i class="hm-icon-me hm-circle hm-bg-info"></i>
+                    </div>
+                    <div class="hm-li-content hm-flex-1">
+                        <h2>小秘书</h2>
+                        <p class="hm-li-desc hm-ellipsis">新的好友推荐。</p>
+                    </div>
+                    <div class="hm-li-footer">
+                    </div>
+                    </a> <a href="#" class="hm-li hm-li-link">
+                    <div class="hm-li-header">
+                        <img src="../../doc/resources/images/user-header.jpg" class=" hm-round" width="42" height="42"  alt=""/>
+                    </div>
+                    <div class="hm-li-content hm-flex-1">
+                        <h2>晴天下的美</h2>
+                        <p class="hm-li-desc hm-ellipsis">这一周的工作总结还没有发给我。</p>
+                    </div>
+                    <div class="hm-li-footer">
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hm-footer">
+        <ul class="hm-nav hm-nav-tabs hm-nav-justify">
+            <li >
+                <a href="#" class="hm-btn hm-btn-vertical"> <i class="hm-icon-email"><span class="hm-badge hm-badge-danger hm-round">8</span></i> <span class="hm-tabs-label">消息</span> </a>
+            </li>
+            <li class="hm-active">
+                <a href="#" class="hm-btn hm-btn-vertical"> <i class="hm-icon-folder"></i> <span class="hm-tabs-label">工作</span> </a>
+            </li>
+            <li>
+                <a href="#" class="hm-btn hm-btn-vertical"> <i class="hm-icon-me"></i> <span class="hm-tabs-label">联系人</span> </a>
+            </li>
+            <li>
+                <a href="#" class="hm-btn hm-btn-vertical"> <i class="hm-icon-setting"></i> <span class="hm-tabs-label">设置</span> </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--page-->
+
+
+
+
+
+
+
+
+<!--普通对话框===============================开始-->
+<div class="hm-popup-wrapper" id="popup-dialog">
+  <div class="hm-mask" data-action="close-popup" data-animation="fadeOut">
+  </div>
+  <div class="hm-popup hm-popup-dialog">
+      <div class="hm-linearLayout">
+        <div class="hm-header ">
+        <div class="hm-title">二级菜单</div>
+    </div>
+        <div class="hm-content hm-padding-0">
+          <ul class="hm-average-3 hm-grid-menu ">
+            
+            <li>
+                <a class="hm-btn hm-btn-vertical" href="#"> 
+                    <i class="hm-icon-form hm-bg-danger"></i>
+                    <div class="hm-ellipsis">菜单项</div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical" href="#"> 
+                    <i class=" hm-icon-server hm-bg-info"></i>
+                    <div class="hm-ellipsis">菜单项</div>
+                </a>
+            </li>
+            <li>
+                <a class="hm-btn hm-btn-vertical" href="#"> 
+                    <i class="hm-icon-photo hm-bg-warning"></i>
+                    <div class="hm-ellipsis">菜单项</div>
+                </a>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            
+            
+            
+            
+        </ul>
+        </div>
+        
+      </div>
+    </div>
+</div>
+<!--普通对话框==== 结束-->
+
+
+
+ 
+<script>
+       $(function(){
+
+ //图片轮播
+  $('#full-width-slider').royalSlider({
+    arrowsNav: false,
+    loop: false,
+    keyboardNavEnabled: true,
+    controlsInside: false,
+    imageScaleMode: 'fill',
+    arrowsNavAutoHide: false,
+    autoScaleSlider: true, 
+    autoScaleSliderWidth: 320,     
+    autoScaleSliderHeight: 150,
+    controlNavigation: 'bullets',
+    thumbsFitInViewport: false,
+    navigateByClick: true,
+    startSlideId: 0,
+	slidesSpacing:0,
+    autoPlay: false,
+    transitionType:'move',
+	 globalCaption: false,
+    globalCaptionInside: false,
+    deeplinking: {
+      enabled: true,
+      change: false
+    },
+	autoPlay: { 
+					enabled: true,
+					delay:3000
+				},
+    imgWidth: 320,
+    imgHeight: 150
+  });
+
+	//滚动时头部变成不透明
+	var fh = $(".hm-slider").height()-48;
+	$(".hm-content").scroll(function() {
+		var scrollTop = $(".hm-content").scrollTop();
+			if (scrollTop > fh) {
+				$('.hm-header').removeClass("hm-bg-none")
+			} else {
+				$('.hm-header').addClass("hm-bg-none")
+			}
+		
+	})
+});
+</script>
+</body>
+</html>

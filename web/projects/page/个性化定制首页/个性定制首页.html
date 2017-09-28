@@ -1,0 +1,733 @@
+<!doctype html>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+ICSSHS-UI
+</title>
+<!--引用公共样式及JS-->
+<link href="../../themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/action/themes-default/icon-action.css">
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/other/icon-other.css">
+<script src="../../themes-default/resources/js/jquery-1.9.1.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/action/themes-default/icon-action.css">
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/menu/layout-default/icon-menu.css">
+<!--个性化页面样式及JS-->
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<!--页面高度需设置100%，并保证不出现滚动条；否则所包含的标签无法获取到100%的高度，会导致布局错乱 by 66383210@qq.com-->
+<style type="text/css">
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+/*实际开发时不引入以下样式*/
+.c-gadget {
+	float: left;
+	margin: 5px;
+}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//下拉菜单--------------------------代码开始-------------
+  	var intervalID; 
+	var curSel; 
+	$(".h-has-dropdown").mouseover(function(){ 
+		curSel=$(this); 
+		intervalID=setInterval(onMouseOver,100);//鼠标移入的时候有一定的延时才会滑出下拉菜单，防止用户不经意的操作 
+	}); 
+	function onMouseOver(){ 
+		$(curSel.children(".h-btn")).addClass("h-active"); //显示选中状态
+		curSel.find(".h-dropdown-area").slideDown("fast");//显示下拉菜单.fadeIn("fast")
+	} 
+	$(".h-has-dropdown").mouseout(function(){ 
+		clearInterval(intervalID); 
+	}); 
+	
+	$(".h-has-dropdown").mouseleave(function(){ 
+		if($(curSel.children(".h-btn")).hasClass("h-active")){
+				$(curSel.children(".h-btn")).removeClass("h-active")
+			}
+		$(this).find(".h-dropdown-area").slideUp("fast");
+	}); 
+	//下拉菜单--------------------------代码结束-------------
+  	
+	//点击设置按钮时显示设置操作----------------------------------------------------------
+	$("[data-action=setting]").click(function(){ 
+		$("#stateSetting").show();
+		$("#stateNormal").hide();
+		$(".c-gadget-toolbar").removeClass("h-hide");
+	});
+	$("[data-action=save-setting]").click(function(){ 
+		$("#stateSetting").hide();
+		$("#stateNormal").show();
+		$(".c-gadget-toolbar").addClass("h-hide");
+	});
+	
+	
+	//点击设置按钮时显示设置操作----------------------------------------------------------
+	$("[data-action=open-drop-favlist]").click(function(){ 
+		$(this).next(".h-dropdown-area").fadeIn();
+	});
+	
+	
+	//点击设置按钮时显示设置操作----------------------------------------------------------
+	$("[data-action=close-drop-fav]").click(function(){ 
+		$(".c-dropdown-area").fadeOut();
+	});
+	
+	
+	
+	
+	
+		
+});
+</script>
+</head>
+<body style=" background-image:url(images/wallpaper-42.jpg);" class="c-body">
+<div class="c-portal-personal-header">
+  <div id="stateSetting" style="display:none;">
+    <a class="h-btn h-btn-toolbar" href="#">
+      <span class="h-btn-content">
+      <span class="h-icon c-icon-add"></span>新增配件</span>
+    </a>
+    <a class="h-btn h-btn-toolbar " href="#">
+      <span class="h-btn-content">
+      <span class="h-icon c-icon-skin"></span>背景图片</span>
+    </a>
+    <a class="h-btn h-btn-primary" href="#" data-action="save-setting">
+      <span class="h-btn-content">保存</span>
+    </a>
+    <a class="h-btn h-btn-danger " href="#">
+      <span class="h-btn-content">取消</span>
+    </a>
+  </div>
+  <div id="stateNormal">
+    <a class="h-btn h-btn-toolbar disabled" href="#" data-action="setting">
+      <span class="h-btn-content">
+      <span class="h-icon c-icon-setting"></span>设置</span>
+    </a>
+    <a class="h-btn h-btn-toolbar " href="#">
+      <span class="h-btn-content">
+      <span class="h-icon c-icon-skin"></span>背景图片</span>
+    </a>
+    <a class="h-btn h-btn-toolbar disabled" href="#">
+      <span class="h-btn-content">
+      <span class="h-icon c-icon-refresh"></span>刷新</span>
+    </a>
+    <div class="h-btn-group h-has-dropdown">
+      <a href="#" class="h-btn">
+        <span class="h-btn-content"><span class="h-icon c-icon-history"></span>历史<span class="h-caret h-caret-white"></span>
+        </span>
+      </a>
+      <!--下拉菜单-->
+      <div class="h-dropdown-area" style="display:none;">
+        <div class="h-list-group">
+          <a href="#" class="h-list-group-item">
+            <h4 class="h-list-group-item-heading">模块名称</h4>
+            <p class="h-list-group-item-text">
+              一级模块 -> 二级模块
+            </p>
+          </a>
+          <a href="#" class="h-list-group-item">
+            <h4 class="h-list-group-item-heading">列表标题</h4>
+            <p class="h-list-group-item-text">
+              一级模块 -> 二级模块
+            </p>
+          </a>
+          <a href="#" class="h-list-group-item">
+            <h4 class="h-list-group-item-heading">列表标题</h4>
+            <p class="h-list-group-item-text">
+              一级模块 -> 二级模块
+            </p>
+          </a>
+          <a href="#" class="h-list-group-item">
+            <h4 class="h-list-group-item-heading">列表标题</h4>
+            <p class="h-list-group-item-text">
+              一级模块 -> 二级模块
+            </p>
+          </a>
+          <a href="#" class="h-list-group-item">
+            <h4 class="h-list-group-item-heading">列表标题</h4>
+            <p class="h-list-group-item-text">
+              一级模块 -> 二级模块
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="h-btn-group h-has-dropdown">
+      <a href="#" class="h-btn">
+        <span class="h-btn-content"><span class="h-icon c-icon-favorites"></span>收藏夹<span class="h-caret h-caret-white"></span></span>
+      </a>
+      <!--下拉菜单-->
+      <div class="h-dropdown-area" style="display:none;">
+        <div class="h-list-group">
+          <a href="#" class="h-list-group-item">
+            <h4 class="h-list-group-item-heading">模块名称</h4>
+            <p class="h-list-group-item-text">
+              一级模块 -> 二级模块
+            </p>
+          </a>
+          <a href="#" class="h-list-group-item">
+            <h4 class="h-list-group-item-heading">列表标题</h4>
+            <p class="h-list-group-item-text">
+              一级模块 -> 二级模块
+            </p>
+          </a>
+          <a href="#" class="h-list-group-item">
+            <h4 class="h-list-group-item-heading">列表标题</h4>
+            <p class="h-list-group-item-text">
+              一级模块 -> 二级模块
+            </p>
+          </a>
+          <a href="#" class="h-list-group-item">
+            <h4 class="h-list-group-item-heading">列表标题</h4>
+            <p class="h-list-group-item-text">
+              一级模块 -> 二级模块
+            </p>
+          </a>
+          <a href="#" class="h-list-group-item">
+            <h4 class="h-list-group-item-heading">列表标题</h4>
+            <p class="h-list-group-item-text">
+              一级模块 -> 二级模块
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!--切换工作台-->
+    <div class="h-btn-group h-has-dropdown">
+      <a href="#" class="h-btn">
+        <span class="h-btn-content"><span class="h-icon c-icon-worktable"></span>工作台<span class="h-caret h-caret-white"></span></span>
+      </a>
+      <!--下拉菜单-->
+      <div class="h-dropdown-area" style="display:none;">
+        <div class="h-list-group">
+          <a href="#" class="h-list-group-item h-active">工作台一</a>
+          <a href="#" class="h-list-group-item">工作台二</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="c-portal-personal-body">
+  <div class="c-gadget-wrapper">
+    <div class="c-gadget" style="width:308px;">
+      <div class="c-gadget-toolbar h-hide" >
+        <p class="c-gadget-tools">
+          <a class="h-btn" href="#" title="移动配件">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-move"></span></span>
+          </a>
+          <a class="h-btn" href="#" title="删除配件">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-delete"></span></span>
+          </a>
+          <a class="h-btn" href="#" title="配件设置">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-setting"></span></span>
+          </a>
+        </p>
+        <!--
+                <div class="c-gadget-move">
+                	<p><span class=" h-icon h-icon-xxxl c-icon-move-xl"></span>
+<strong>鼠标按住可拖动面板哦~</strong></p>
+                </div>-->
+      </div>
+      <div class="c-gadget-body">
+        <div class="clearfix">
+          <div style="background:#f26839; text-align:center; height:204px; width:280px;  color:#fff; margin:2px; float:left;position:relative;">
+            <a href="#" class=" c-app-menu h-ellipsis" >
+              <span class="h-icon h-icon-l"></span>收藏模块名称
+            </a>
+          </div>
+          <div style="background:#3581f1; text-align:center; height:100px; width:138px; color:#fff; margin:2px;float:left;position:relative;">
+            <a href="#" class=" c-app-menu h-ellipsis" >
+              <span class="h-icon h-icon-l"></span>模块名称
+            </a>
+          </div>
+          <div style="background:#31aae1; text-align:center; height:100px; width:138px; color:#fff; font-size:16px;margin:2px;float:left;position:relative;">
+            <a href="#" class=" c-app-menu h-ellipsis" >
+              <span class="h-icon h-icon-l"></span>模块名称
+            </a>
+          </div>
+          <div style="background:#a360a3; text-align:center; height:100px; width:138px;color:#fff; font-size:16px;margin:2px;float:left;position:relative;">
+            <a href="#" class=" c-app-menu h-ellipsis" >
+              <span class="h-icon h-icon-l"></span>模块名称
+            </a>
+          </div>
+          <div style="background:#6eb943; text-align:center; height:100px; width:138px; color:#fff; font-size:16px;margin:2px;float:left;position:relative;">
+            <a href="#" class=" c-app-menu h-ellipsis" >
+              <span class="h-icon h-icon-l"></span>模块名称模块名称模块名称模块名称模块名称模块名称
+            </a>
+          </div>
+          <div style="background:#e38a0c; text-align:center; height:100px; width:138px; color:#fff; font-size:16px;margin:2px;float:left;position:relative;">
+            <a href="#" class=" c-app-menu h-ellipsis c-app-menu-onlyicon" style="margin-top:-12px" >
+              <span class="h-icon h-icon-l c-icon-add-v3"></span>
+            </a>
+          </div>
+          <div style="background:#e06a77; text-align:center; height:100px; width:138px;color:#fff; font-size:16px;margin:2px;float:left;position:relative;">
+            <a href="#" class=" c-app-menu h-ellipsis" data-action="open-drop-favlist" >
+              <span class="h-icon h-icon-l c-icon-more"></span>更多
+            </a>
+            <div class="h-dropdown-area c-dropdown-area" style="bottom:0; top:auto; width:280px; left:100%; text-align:left;">
+              <!--收藏小挂件工具栏-->
+              <div class="h-toolbar">
+                <div class="h-pull-left h-inline-block-wrapper">
+                  <a class="h-btn h-btn-toolbar disabled" href="#">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-add"></span> 新增 </span>
+                  </a>
+                  <a class="h-btn h-btn-toolbar" href="#">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-setting"></span>设置</span>
+                  </a>
+                </div>
+                
+                <div class="h-pull-right h-inline-block-wrapper">
+                  <a class="h-btn h-btn-toolbar disabled" href="#" data-action="close-drop-fav">
+                    <span class="h-btn-content">
+                    <span class="h-icon h-icon-close"></span> 关闭 </span>
+                  </a>
+                  
+                </div>
+              </div>
+              <!--收藏栏目列表-->
+              <div class="h-list-group">
+                <a href="#" class="h-list-group-item">
+                  <h4 class="h-list-group-item-heading">收藏模块名称</h4>
+                  <p class="h-list-group-item-text">
+                    一级模块 -&gt; 二级模块
+                  </p>
+                </a>
+                <a href="#" class="h-list-group-item">
+                  <h4 class="h-list-group-item-heading">模块名称</h4>
+                  <p class="h-list-group-item-text">
+                    一级模块 -&gt; 二级模块
+                  </p>
+                </a>
+                <a href="#" class="h-list-group-item">
+                  <h4 class="h-list-group-item-heading">模块名称</h4>
+                  <p class="h-list-group-item-text">
+                    一级模块 -&gt; 二级模块
+                  </p>
+                </a>
+                <a href="#" class="h-list-group-item">
+                  <h4 class="h-list-group-item-heading">模块名称</h4>
+                  <p class="h-list-group-item-text">
+                    一级模块 -&gt; 二级模块
+                  </p>
+                </a>
+                <a href="#" class="h-list-group-item">
+                  <h4 class="h-list-group-item-heading">模块名称</h4>
+                  <p class="h-list-group-item-text">
+                    一级模块 -&gt; 二级模块
+                  </p>
+                </a>
+                <a href="#" class="h-list-group-item">
+                  <h4 class="h-list-group-item-heading">模块名称</h4>
+                  <p class="h-list-group-item-text">
+                    一级模块 -&gt; 二级模块
+                  </p>
+                </a>
+                <a href="#" class="h-list-group-item">
+                  <h4 class="h-list-group-item-heading">模块名称</h4>
+                  <p class="h-list-group-item-text">
+                    一级模块 -&gt; 二级模块
+                  </p>
+                </a>
+                <a href="#" class="h-list-group-item">
+                  <h4 class="h-list-group-item-heading">模块名称</h4>
+                  <p class="h-list-group-item-text">
+                    一级模块 -&gt; 二级模块
+                  </p>
+                </a>
+                <a href="#" class="h-list-group-item">
+                  <h4 class="h-list-group-item-heading">列表标题</h4>
+                  <p class="h-list-group-item-text">
+                    一级模块 -&gt; 二级模块
+                  </p>
+                </a>
+                <a href="#" class="h-list-group-item">
+                  <h4 class="h-list-group-item-heading">列表标题</h4>
+                  <p class="h-list-group-item-text">
+                    一级模块 -&gt; 二级模块
+                  </p>
+                </a>
+                <a href="#" class="h-list-group-item">
+                  <h4 class="h-list-group-item-heading">列表标题</h4>
+                  <p class="h-list-group-item-text">
+                    一级模块 -&gt; 二级模块
+                  </p>
+                </a>
+                <a href="#" class="h-list-group-item">
+                  <h4 class="h-list-group-item-heading">列表标题</h4>
+                  <p class="h-list-group-item-text">
+                    一级模块 -&gt; 二级模块
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-gadget" style=" position:absolute; left:290px; right:290px; height:260px;" >
+      <div class="c-gadget-toolbar h-hide" >
+        <p class="c-gadget-tools">
+          <a class="h-btn" href="#" title="移动配件">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-move"></span></span>
+          </a>
+          <a class="h-btn" href="#" title="删除配件">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-delete"></span></span>
+          </a>
+          <a class="h-btn" href="#" title="配件设置">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-setting"></span></span>
+          </a>
+        </p>
+      </div>
+      <div class="c-gadget-header">
+        <a href="#" class="h-icon h-icon-gadget-do">
+        </a>
+        当前开展的工作
+      </div>
+      <div class="c-gadget-body" >
+        <div class="c-box-s" >
+          <div  class="c-progress-area">
+            <div class="c-time-business-progress">
+              <span class="c-time">2014/09/01 - 2015/2/31</span>
+              <p class="c-progress">
+                <span class="c-progress-bar" style="width:40%;"></span>
+                <span class="c-progress-location" style="left:40%;"></span>
+              </p>
+            </div>
+            <div class="c-time-business-list clearfix">
+              <a href="#" class="c-time-business-btn-prev">
+                &nbsp;
+              </a>
+              <a href="#" class="c-time-business-btn-next">
+                &nbsp;
+              </a>
+              <div class="c-time-business-wrapper">
+              <div class="c-time-business" style="width:390px">
+                <a href="#" class="h-ellipsis">
+                  <span class="h-icon h-icon-xxl h-f-icon-system-zhlpxt"></span>
+                  <em>业务名称</em>
+                </a>
+                <a href="#" class=" h-ellipsis h-active">
+                  <span class="h-icon h-icon-xxl h-f-icon-system-zlzsyztfxbb"></span>
+                  <em>业务名称业务名称业务名称业务名称</em>
+                </a>
+                <a href="#" class="h-ellipsis">
+                  <span class="h-icon h-icon-xxl h-f-icon-system-yywl"></span>
+                  <em>业务名称</em>
+                </a>
+                <a href="#" class="h-ellipsis">
+                  <span class="h-icon h-icon-xxl h-f-icon-system-zhlpxt"></span>
+                  <em>业务名称</em>
+                </a>
+                <a href="#" class="h-ellipsis">
+                  <span class="h-icon h-icon-xxl h-f-icon-system-zhlpxt"></span>
+                  <em>业务名称</em>
+                </a>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-menu-btn">
+            <a href="../业务流程首页/物资管理业务流程.html" class="h-btn h-ellipsis"  title="物资管理业务流程">
+            	<span class="c-btn-label">&nbsp;</span>
+              物资管理业务
+            </a>
+            <a href="../业务流程首页/烟叶收购相关业务流程.html" class="h-btn h-ellipsis"  title="烟叶收购业务流程">
+            	<span class="c-btn-label">&nbsp;</span>
+              烟叶收购业务
+            </a>
+            <a href="../业务流程首页/优化烟叶业务流程.html" class="h-btn h-ellipsis"  title="优化烟叶业务流程">
+            <span class="c-btn-label">&nbsp;</span>
+              优化烟叶业务
+            </a>
+            <a href="#" class="h-btn h-ellipsis"  title="种植计划">
+              种植计划
+            </a>
+            <a href="#" class="h-btn h-ellipsis"  title="产前布局">
+              产前布局
+            </a>
+            <a href="#" class="h-btn h-ellipsis"  title="生产管理">
+              生产管理
+            </a>
+            <a href="#" class="h-btn h-ellipsis"  title="收购管理">
+              收购管理
+            </a>
+            <a href="#" class="h-btn h-ellipsis"  title="销售管理">
+              销售管理
+            </a>
+            <a href="#" class="h-btn h-ellipsis"  title="烟农档案">
+              烟农档案
+            </a>
+            <a href="#" class="h-btn h-ellipsis"  title="基础设施">
+              基础设施
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-gadget" style="position:absolute; right:0; width:280px;height:260px;">
+      <div class="c-gadget-toolbar h-hide" >
+        <p class="c-gadget-tools">
+          <a class="h-btn" href="#" title="移动配件">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-move"></span></span>
+          </a>
+          <a class="h-btn" href="#" title="删除配件">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-delete"></span></span>
+          </a>
+          <a class="h-btn" href="#" title="配件设置">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-setting"></span></span>
+          </a>
+        </p>
+      </div>
+      <div class="c-gadget-header">
+        <a href="#" class="h-icon h-icon-gadget-announcement">
+        </a>
+        通知公告
+      </div>
+      <div class="c-gadget-body" >
+        <div class="c-box-s "  >
+          <div class="h-list-group c-list-group" >
+            <a href="#" class="h-list-group-item">
+              <span class="c-tag-new"></span>
+              <p class="c-ggtz-tiltle">
+                烟叶集成平台正式上线了
+              </p>
+              <p class="c-ggtz-content">
+                云南省烟草公司 发表于 10-11 15:51
+              </p>
+            </a>
+            <a href="#" class="h-list-group-item">
+              <p class="c-ggtz-tiltle">
+                烟叶集成平台正式上线了
+              </p>
+              <p class="c-ggtz-content">
+                云南省烟草公司 发表于 10-11 15:51
+              </p>
+            </a>
+            <a href="#" class="h-list-group-item">
+              <p class="c-ggtz-tiltle">
+                烟叶集成平台正式上线了
+              </p>
+              <p class="c-ggtz-content">
+                云南省烟草公司 发表于 10-11 15:51
+              </p>
+            </a>
+            <a href="#" class="h-list-group-item">
+              <p class="c-ggtz-tiltle">
+                烟叶集成平台正式上线了
+              </p>
+              <p class="c-ggtz-content">
+                云南省烟草公司 发表于 10-11 15:51
+              </p>
+            </a>
+            <a href="#" class="h-list-group-item">
+              <p class="c-ggtz-tiltle">
+                烟叶集成平台正式上线了
+              </p>
+              <p class="c-ggtz-content">
+                云南省烟草公司 发表于 10-11 15:51
+              </p>
+            </a>
+          </div>
+          <div class="c-footer-toolbat">
+            <a href="#" class="c-checkAll" style="float:right;">
+              更多&gt;&gt;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-gadget" style="position:absolute; left:290px; right:290px; top:270px;  height:420px;">
+      <div class="c-gadget-toolbar h-hide" >
+        <p class="c-gadget-tools">
+          <a class="h-btn" href="#" title="移动配件">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-move"></span></span>
+          </a>
+          <a class="h-btn" href="#" title="删除配件">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-delete"></span></span>
+          </a>
+          <a class="h-btn" href="#" title="配件设置">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-setting"></span></span>
+          </a>
+        </p>
+      </div>
+      <div class="c-gadget-header">
+        <a href="#" class="h-icon h-icon-gadget-bell">
+        </a>
+        工作提醒
+      </div>
+      <div class="c-gadget-body" >
+        <div  class="c-box-s" >
+          <div class="h-list-group c-list-group">
+            <a href="#" class="h-list-group-item">
+              <span class=" h-float-right h-color-muted">今天 15:51</span>
+              <p class="h-list-group-item-text h-ellipsis">
+              	<span class="h-icon h-icon-todo"></span>
+                计划800万担，已签定300万担！计划800万担，已签定300万担！
+              </p>
+            </a>
+            <a href="#" class="h-list-group-item">
+              <span class=" h-float-right h-color-muted">今天 15:51</span>
+              <p class="h-list-group-item-text h-ellipsis">
+              	<span class="h-icon h-icon-message-new"></span>
+                烟叶公司2015年收购计划方案烟叶司2015年收购计划方案
+              </p>
+            </a>
+            
+            
+            
+            
+          </div>
+          <div class="c-footer-toolbat">
+            <a href="#" class="c-checkAll" style="float:right;">
+              更多&gt;&gt;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-gadget" style="position:absolute; right:0; top:270px;  width:280px;height:420px;">
+      <div class="c-gadget-toolbar h-hide" >
+        <p class="c-gadget-tools">
+          <a class="h-btn" href="#" title="移动配件">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-move"></span></span>
+          </a>
+          <a class="h-btn" href="#" title="删除配件">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-delete"></span></span>
+          </a>
+          <a class="h-btn" href="#" title="配件设置">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-setting"></span></span>
+          </a>
+        </p>
+      </div>
+      <div class="c-gadget-header">
+        <a href="#" class="h-icon h-icon-gadget-mail">
+        </a>
+        内部邮件
+      </div>
+      <div class="c-gadget-body" >
+        <div class="c-box-s" >
+          <div class="h-list-group c-list-group" >
+            <a href="#" class="h-list-group-item">
+              <span class="c-mail-time">今天 15:51</span>
+              <p class="c-mail-tiltle">
+                李加飞
+              </p>
+              <p class="c-mail-content">
+                烟叶公司2015年收购计划方案烟叶司2015年收购计划方案
+              </p>
+            </a>
+            <a href="#" class="h-list-group-item">
+              <span class="c-mail-time">今天 15:51</span>
+              <p class="c-mail-tiltle-active">
+                李加飞
+              </p>
+              <p class="c-mail-content">
+                烟叶公司2015年收购计划方案烟叶公司2015年收购计划方案烟叶公司2015年收购计划方案
+              </p>
+            </a>
+            <a href="#" class="h-list-group-item">
+              <span class="c-mail-time">今天 15:51</span>
+              <p class="c-mail-tiltle">
+                李加飞
+              </p>
+              <p class="c-mail-content">
+                烟叶公司2015年收购计划方案烟叶公司20司2015年收购计司2015年收购计司2015年收购计司2015年收购计15年收购计划方案烟叶公司2015年收购计划方案
+              </p>
+            </a>
+            <a href="#" class="h-list-group-item">
+              <span class="c-mail-time">今天 15:51</span>
+              <p class="c-mail-tiltle-active">
+                李加飞
+              </p>
+              <p class="c-mail-content">
+                烟叶公司2015年收购计划方案烟叶公司2015年收购计划方案烟叶公司2015年收购计划方案
+              </p>
+            </a>
+            <a href="#" class="h-list-group-item">
+              <span class="c-mail-time">今天 15:51</span>
+              <p class="c-mail-tiltle">
+                李加飞
+              </p>
+              <p class="c-mail-content">
+                烟叶公司2015年收购计划方案烟叶公司20司2015年收购计司2015年收购计司2015年收购计司2015年收购计15年收购计划方案烟叶公司2015年收购计划方案
+              </p>
+            </a>
+          </div>
+          <div class="c-footer-toolbat">
+            <a href="#" class="c-checkAll" style="float:right;">
+              更多&gt;&gt;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!--个人便签-->
+    <div class="c-gadget c-gadget-grbq" style="position:absolute; left:0; top:530px; height:160px;width:280px;">
+      <div class="c-gadget-toolbar h-hide" >
+        <p class="c-gadget-tools">
+          <a class="h-btn" href="#" title="移动配件">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-move"></span></span>
+          </a>
+          <a class="h-btn" href="#" title="删除配件">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-delete"></span></span>
+          </a>
+          <a class="h-btn" href="#" title="配件设置">
+            <span class="h-btn-content">
+            <span class="h-icon c-icon-setting"></span></span>
+          </a>
+        </p>
+      </div>
+      <div class="c-gadget-header">
+        <a href="#" class="h-icon h-icon-gadget-note">
+        </a>
+        个人便签
+      </div>
+      <div class="c-gadget-body" >
+        <div class="c-box-s c-list-grbq">
+          <textarea class="c-list-group-item" rows="4">1.计划800万担，已签定300万担！计划800万担，已签定300万担！计划800万担，已签定300万担！计划800万担，已签定300万担！计划800担！
+2.计划800万担，已签定300万担！计划800万担，已签定300万担！计划800万担，已签定300万担！计划800万担，已签定300万担！计划800担！
+3.计划800万担，已签定300万担！计划800万担，已签定300万担！计划800万担，已签定300万担！计划800万担，已签定300万担！计划800担！
+4.计划800万担，已签定300万担！计划800万担，已签定300万担！计划800万担，已签定300万担！计划800万担，已签定300万担！计划800担！
+                        </textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

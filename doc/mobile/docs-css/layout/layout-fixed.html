@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+<meta charset="utf-8">
+<title>WEBAPP通用框架HTML</title>
+<meta name="description" content="HSIT-UI for mobile">
+<meta name="keywords" content="HSIT-UI  for mobile">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/global.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/base.css">
+
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../../../resources/css/docs.css">
+</head>
+<body class="docs-body" style="padding:4rem 0;">
+<div class="docs-content">
+  <div class="docs-page-masthead">
+    <h1>固定元素(Fixed)</h1>
+    <p>固定元素: 当窗口滚动至元素上边距离时，将元素固定在窗口顶部。</p>
+  </div>
+  
+  <!--基本使用-->
+  <h2>基本使用</h2>
+  <p>通过添加 <code>.hm-fixed-*</code>,把元素固定在窗口固定位置，可结合<code>left</code>/<code>right</code>/<code>top</code>/<code>bottom</code>来指定离屏幕的边距。</p>
+  <div class="docs-example">
+    请查看当前窗口四个角落位置。
+      <div class="hm-header hm-header-dark hm-fixed-top"><a class="hm-btn"><i class="hm-icon-back"></i></a><div class="hm-flex-1"></div></div>
+      
+      <div class="hm-fixed-lt" style="top:3.5rem;"><div class="hm-btn hm-btn-circle hm-btn-warning"><i class="hm-icon-plus"></i></div></div>
+      <div class="hm-fixed-lb" style="bottom:3.5rem;"><div class="hm-btn hm-btn-circle hm-btn-info"><i class="hm-icon-plus"></i></div></div>
+      <div class="hm-fixed-rt" style="top:3.5rem;"><div class="hm-btn hm-btn-circle hm-btn-success"><i class="hm-icon-plus"></i></div></div>
+      <div class="hm-fixed-rb" style="bottom:3.5rem;"><div class="hm-btn hm-btn-circle hm-btn-primary"><i class="hm-icon-plus"></i></div></div>
+      
+      <div class="hm-footer hm-fixed-bottom"><span class="hm-flex-1">统计数字：200</span><a class="hm-btn hm-radius hm-btn-warning">确定</a></div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+
+</div>
+</body>
+</html>

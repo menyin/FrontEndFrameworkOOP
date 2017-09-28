@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HSUI-用户登录</title>
+<meta name="description" content="HSIT-UI">
+<meta name="keywords" content="HSIT-UI">
+<meta name="author" content="design4u,QQ:66383210,Email:caixfm@gmail.com;admin@design4u.cn">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有">
+<link href="resources/css/login.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/royalslider.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/rs-minimal-white.css" rel="stylesheet">
+
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery.royalslider.min.js"></script>
+<!--让IE支持placeholder属性-->
+<script type="text/javascript" src="js/placeholder.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("[data-action=loginform]").click(function(){
+		$("#loginform").show();
+		$("#logedform").hide();
+		
+  });
+  
+  
+  
+  
+  $("[data-action=codeLogin]").click(function(){
+		$("#loginform").hide();
+		$("#logedform").hide();
+		$("#codeLogin").show();
+		
+  });
+  
+  
+  $("[data-action=inputLogin]").click(function(){
+		$("#loginform").show();
+		$("#logedform").hide();
+		$("#codeLogin").hide();
+		
+  });
+  
+
+  
+	
+});
+</script>
+
+
+</head>
+<body>
+<div class="h-l-page">
+  <div class="h-l-wrapper">
+    <div class="h-l-wrapper-con">
+      <!--header-->
+      <div class="h-l-header">
+        <div class="h-l-wrapper-in">
+          <!--网站logo-->
+          <h1 class="h-l-logo">
+            <img src="resources/images/logo-wuyi.png"  alt=""/>
+          </h1>
+          <!--头部右侧功导航-->
+          <div class="h-l-top-nav">
+            <a href="#">关于我们</a>
+            <a href="#">帮助</a>
+          </div>
+        </div>
+      </div>
+      <!--登录主体-->
+      <div class="h-l-content">
+        <!--登录表单-->
+        <div class="h-l-form-area ">
+          <!--用户首次登录界面-->
+          <form id="loginform" class="h-l-hide" method="post" action="../../../doc/web/framework/themes-default/login.html"  >
+            <!--二维码登录入口---如不支持此功能直接隐藏就行-->
+            <a href="#" class="h-l-label-code "  data-action="codeLogin">&nbsp;</a>
+            <h2 class="h-l-form-title">请登录</h2>
+            <!--
+            <p class="h-l-user-header ">
+              <img src="resources/images/img-user-header.jpg"  alt=""/>
+            </p>
+            -->
+            <h2  class="h-l-login-title h-l-hide"><strong>请登录</strong></h2>
+            <p class="h-l-form-item">
+              <input name="userName" type="text" id="userName" class="h-l-input-text h-l-icon-user" value="" placeholder="请输入用户名" />
+            </p>
+            <p class="h-l-form-item">
+              <input name="password" type="password" id="pw" class="h-l-input-text h-l-icon-pw" value="" placeholder="请输入密码" />
+            </p>
+           
+            <p class="h-l-form-item h-l-form-code">
+              <span><img src="resources/images/img-code.jpg" alt=""/></span>
+              <input name="userName" type="text" id="" class="h-l-input-text " value="" placeholder="请输入右侧验证码" />
+            </p>
+            
+            <p class="h-l-form-item">
+              <a href="#" class="h-l-input-btn ">登录</a>
+              <!--
+              <a href="#" class="h-l-input-btn h-l-disable" >
+              	<span class="h-l-icon-loading"></span>
+              正在登录...</a>
+               -->
+            </p>
+          </form>
+          <!--用户第二次登录界面-->
+          <form id="logedform" method="post" action="../../../doc/web/framework/themes-default/login.html" class="h-l-form-loged ">
+            <a href="#" class="h-l-label-code " data-action="codeLogin">&nbsp;</a>
+            <!--
+            <p class="h-l-user-header">
+              <img src="resources/images/img-user-header-d4u.jpg"  alt=""/>
+            </p>
+            -->
+            <div class="h-l-user-info">
+              <p class="h-l-user-id">design4u</p>
+              <p class="h-l-user-name">大理州系统管理员</p>
+              <p class="h-l-user-company">云南省烟草公司大理州公司</p>
+            </div>
+            <p class="h-l-form-item">
+              <input name="password" type="password" id="" class="h-l-input-text h-l-icon-pw" value="" placeholder="请输入密码" />
+            </p>
+            <p class="h-l-form-item">
+              <input name="submit" type="submit" id="submit" class="h-l-input-btn" value="登录"/>
+            </p>
+            <p class="h-l-link" data-action="loginform">
+              <a href="#">用其它帐号登录</a>
+            </p>
+          </form>
+          <!--用户第二次登录界面-->
+          <div id="codeLogin" class="h-l-hide">
+            <a href="#" class="h-l-label-back " data-action="inputLogin">&nbsp;</a>
+            <h2 class="h-l-form-title">扫码登录</h2>
+            <div class="h-l-code-img">
+            	<img src="resources/images/code.png" width="180" height="182"  alt=""/>
+                <h2>更安全、更便捷</h2>
+                <p>微信扫描二维码即可登录</p>
+            </div>
+            
+            
+            
+          </div>
+          <!--错误提示-->
+          <div class="h-l-errorTxt h-l-hide">
+            <span>错误提示：</span>
+            您输入的帐号不存在，请重新输入</div>
+        </div>
+        <!-- 滚动代码开始-->
+        <div class="sliderContainer fullWidth clearfix">
+          <div id="full-width-slider" class="royalSlider heroSlider rsMinW">
+            
+            
+            
+            
+            
+            <div class="rsContent" style="background:#268cfa url(resources/images/banner/banner-jcpt-0.jpg) no-repeat center center; height:500px; position:relative; overflow:hidden;">
+              
+              
+              
+              <!--filter解决ie8 png黑边-->
+              <div class="rsABlock" style="left:50%; width:451px;  height:268px; top:50%; margin-left:-400px; margin-top:-70px;background:url(resources/images/banner/banner-jcpt-pc.png) no-repeat !important;background:url(resources/images/banner/blank.gif) no-repeat;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src='resources/images/banner/banner-jcpt-pc.png', enabled=true); " data-fade-effect="true" data-easing="easeOutSine" data-move-offset="100" data-move-effect="bottom" data-speed="1000"></div>
+              
+              
+              
+              <div class="rsABlock" style="left:50%; width:84px;  height:100px; top:50%; margin-left:-400px; margin-top:-60px;background:url(resources/images/banner/banner-jcpt-djc.png) no-repeat !important;background:url(resources/images/banner/blank.gif) no-repeat;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src='resources/images/banner/banner-jcpt-djc.png', enabled=true); " data-fade-effect="" data-move-offset="100" data-move-effect="top" data-speed="1000"></div>
+              
+              
+              
+              <div class="rsABlock" style="left:50%; width:100px;  height:120px; top:50%; margin-left:-40px; margin-top:-110px;background:url(resources/images/banner/banner-jcpt-dyy.png) no-repeat !important;background:url(resources/images/banner/blank.gif) no-repeat;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src='resources/images/banner/banner-jcpt-dyy.png', enabled=true); " data-fade-effect="" data-move-offset="100" data-move-effect="top" data-speed="1000"></div>
+              
+              
+              
+              <div class="rsABlock" style="left:50%; width:134px;  height:160px; top:50%; margin-left:-225px; margin-top:-180px;background:url(resources/images/banner/banner-jcpt-djh.png) no-repeat !important;background:url(resources/images/banner/blank.gif) no-repeat;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src='resources/images/banner/banner-jcpt-djh.png', enabled=true); " data-fade-effect="" data-move-offset="100" data-move-effect="top" data-speed="1000"></div>
+              
+              
+              
+              <div class="rsABlock" style="left:50%; width:525px;  height:180px; top:50%; margin-left:-460px; margin-top:-220px;background:url(resources/images/banner/banner-jcpt-app.png) no-repeat !important;background:url(resources/images/banner/blank.gif) no-repeat;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src='resources/images/banner/banner-jcpt-app.png', enabled=true); " data-fade-effect="true" data-easing="easeOutSine" data-move-offset="100" data-move-effect="top" data-speed="1000"></div>
+              
+             
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="rsContent" style="background:#2a95bb; height:500px;">
+              <div style="position:absolute; left:50%; width:2000px; height:500px; top:0; margin-left:-1000px;"><img src="resources/images/banner/1-0.jpg" alt=""/></div>
+              <div class="rsABlock" data-fade-effect="" data-move-offset="100" data-move-effect="left" data-speed="800">
+                <!--解决ie8 png黑边-->
+              	 <div style="margin:0 auto; width:980px;  height:480px;background:url(resources/images/banner/1-1.png) no-repeat !important;background:url(resources/images/banner/blank.gif) no-repeat;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src='resources/images/banner/1-1.png', enabled=true); "></div>
+             <!-- <img style="margin-left:-400px;" src="resources/images/banner/1-1.png" alt=""/>-->
+              </div>
+            </div>
+            <div class="rsContent" style="background:#E8E8E8; height:500px;">
+              <div style="position:absolute; left:50%; width:2000px; height:500px; top:0; margin-left:-1000px;"><img src="resources/images/banner/2-0.jpg" alt=""/></div>
+              <div class="rsABlock" data-fade-effect="" data-move-offset="100" data-move-effect="right" data-speed="800">
+               <!-- <img style="margin-left:-400px;" src="resources/images/banner/2-1.png" alt=""/>-->
+              	 <div style="margin:0 auto; width:980px;  height:480px;background:url(resources/images/banner/2-1.png) no-repeat !important;background:url(resources/images/banner/blank.gif) no-repeat;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src='resources/images/banner/2-1.png', enabled=true); "></div>
+              </div>
+            </div>
+            <div class="rsContent" style="background:#2a95bb; height:500px;">
+              <div style="position:absolute; left:50%; width:2000px; height:500px; top:0; margin-left:-1000px;"><img src="resources/images/banner/3-0.jpg" alt=""/></div>
+            </div>
+            <div class="rsContent" style="background:#E8E8E8; height:500px;">
+              <div style="position:absolute; left:50%; width:2000px; height:500px; top:0; margin-left:-1000px;"><img src="resources/images/banner/4-0.jpg" alt=""/></div>
+              <div class="rsABlock" data-fade-effect="" data-move-offset="100" data-move-effect="left" data-speed="800">
+               <!-- <img style="margin-left:-400px;" src="resources/images/banner/2-1.png" alt=""/>-->
+              	 <div style="margin:0 auto; width:980px;  height:480px;background:url(resources/images/banner/4-1.png) no-repeat !important;background:url(resources/images/banner/blank.gif) no-repeat;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src='resources/images/banner/4-1.png', enabled=true); "></div>
+              </div>
+            </div>
+            <div class="rsContent" style="background:#E8E8E8; height:500px;">
+              <div style="position:absolute; left:50%; width:2000px; height:500px; top:0; margin-left:-1000px;"><img src="resources/images/banner/5-0.jpg" alt=""/></div>
+              <div class="rsABlock" data-fade-effect="" data-move-offset="100" data-move-effect="left" data-speed="800">
+               <!-- <img style="margin-left:-400px;" src="resources/images/banner/2-1.png" alt=""/>-->
+              	 <div style="margin:0 auto; width:980px;  height:480px;background:url(resources/images/banner/5-1.png) no-repeat !important;background:url(resources/images/banner/blank.gif) no-repeat;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src='resources/images/banner/5-1.png', enabled=true); "></div>
+              </div>
+            </div>
+            
+            
+            
+            <div class="rsContent" style="background:#E8E8E8; height:500px;">
+              <div style="position:absolute; left:50%; width:2000px; height:500px; top:0; margin-left:-1000px;"><img src="resources/images/banner/6-0.jpg" alt=""/></div>
+              <div class="rsABlock" data-fade-effect="" data-move-offset="100" data-move-effect="left" data-speed="800">
+               <!-- <img style="margin-left:-400px;" src="resources/images/banner/2-1.png" alt=""/>-->
+              	 <div style="margin:0 auto; width:980px;  height:480px;background:url(resources/images/banner/6-1.png) no-repeat !important;background:url(resources/images/banner/blank.gif) no-repeat;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src='resources/images/banner/6-1.png', enabled=true); "></div>
+              </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+        <script>
+        jQuery(document).ready(function($) {
+			$('#full-width-slider').royalSlider({
+				arrowsNav: true,
+				loop: true,
+				loopRewind: true,
+				keyboardNavEnabled: true,
+				controlsInside: false,
+				imageScaleMode: 'none',
+				arrowsNavAutoHide: false,
+				controlNavigation: 'bullets',
+				thumbsFitInViewport: false,
+				navigateByClick: true,
+				startSlideId: 0,
+				autoplay: true,
+				transitionType:'move',
+				globalCaption: false,
+				deeplinking: {
+					enabled: true,
+					change: false
+				},
+				autoPlay: { 
+					enabled: true,
+					delay:4000
+				}
+			});
+        });
+        
+        </script>
+        <!-- 滚动代码结束-->
+      </div>
+      <!--footer-->
+      <div class="h-l-footer">
+        <div class="h-l-wrapper-in">
+          <div class="h-l-logo-bt">
+            <img src="resources/images/logo-hs.png" alt=""/>
+          </div>
+          <div class="h-l-copyRight">
+            <p>技术支持：<a href="http://www.hsit.com.cn" title="点击进入中软海晟官网">中软海晟信息技术有限公司</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

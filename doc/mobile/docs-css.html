@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>HSUI-MOBILE</title>
+
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="../resources/icons/icon.png">
+<link rel="apple-touch-icon" href="../resources/icons/icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="../resources/icons/icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="../resources/icons/icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="../undefined">
+
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../mobile/project/resources/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="../../mobile/project/resources/css/global.css">
+<link rel="stylesheet" type="text/css" href="../../mobile/project/resources/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="../../mobile/project/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../mobile/project/resources/css/base.css">
+
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../resources/css/docs.css">
+
+<script src="../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  //框架头部下拉菜单
+  	var intervalID; 
+	var curSel; 
+	$(".docs-has-pulldown").mouseover(function(){ 
+		curSel=$(this); 
+		intervalID=setInterval(onMouseOver,250);//鼠标移入的时候有一定的延时才会滑出下拉菜单，防止用户不经意的操作 
+	}); 
+	function onMouseOver(){ 
+		curSel.addClass("docs-current"); 
+		if(curSel.hasClass("docs-subsystem")){
+				curSel.addClass("docs-subsystem-active")
+			}
+		curSel.find(".docs-pulldown").slideDown("fast");	
+	} 
+	
+	$(".docs-has-pulldown").mouseout(function(){ 
+		clearInterval(intervalID); 
+	}); 
+	
+	$(".docs-has-pulldown").mouseleave(function(){ 
+		if($(this).hasClass("docs-subsystem-active")){
+				$(this).removeClass("docs-subsystem-active")
+			}
+		$(this).find(".docs-pulldown").hide();
+	}); 
+	
+	
+	//可收缩展开列表
+     $("[data-action=accordion] > li > a").click(function() {
+          $(this).next().slideToggle();
+          $(this).find("i").toggleClass("docs-icon-minus-square-o");
+          $(this).find("i").toggleClass("docs-icon-plus-square-o");
+		  
+		  $(this).parent().addClass("docs-active");
+		  $("[data-action=accordion] > li > a").not(this).parent().removeClass("docs-active");;
+		  
+          $("[data-action=accordion] > li > a").not(this).next().slideUp();
+          $("[data-action=accordion] > li > a").not(this).find("i").removeClass("docs-icon-minus-square-o").addClass("docs-icon-plus-square-o");
+     })
+	 
+	 //侧边栏二级菜单
+     $("[data-action=accordion]  ul li").click(function() {
+          $(this).addClass("docs-active");
+		  $("[data-action=accordion]  ul li").not(this).removeClass("docs-active");;
+         
+     })
+
+
+  
+});
+</script>
+</head>
+<body class="docs-fluid">
+<!--header-->
+<div class="docs-header">
+  <div class="docs-container"> 
+    <!--系统logo-->
+    <div class="docs-logo docs-has-pulldown">
+      <div><a href="../../index.html"><img src="../resources/images/logo-hsui-mobile.png" alt=""/></a></div>
+      <div class="docs-pulldown"> 
+      	<span class="docs-arrow"></span>
+        <div class="docs-pulldown-content"><a href="../web/docs-example.html" class="docs-pull-item">HSUI for web</a> </div>
+      </div>
+    </div>
+    <ul class="docs-header-nav">
+      <li><a href="docs-getting-started.html">开始使用</a></li>
+      <li class="docs-active"><a href="docs-css.html">CSS</a></li>
+      <li ><a href="docs-components.html">组件</a></li>
+      <li><a href="docs-tools.html" >实用工具</a></li>
+      <li><a href="docs-example.html">实际案例</a></li>
+    </ul>
+  </div>
+</div>
+<!--main-->
+<div class="docs-main">
+  <div class="docs-container">
+    <div class="docs-aside">
+      <ul class="docs-nav" data-action="accordion">
+        <li class="docs-active">
+        	<a href="#">基本样式<span class="docs-nav-en">Style</span><i class="docs-icon-minus-square-o"></i></a>
+            <ul>
+                <li class="docs-active"><a href="docs-css/normalize.html" target="content-ifram">样式统一<span class="docs-nav-en">Normalize</span></a></li>
+                <li><a href="docs-css/base.html" target="content-ifram">基础设置<span class="docs-nav-en">Base</span></a></li>
+                <li><a href="docs-css/typography.html" target="content-ifram">文字排版<span class="docs-nav-en">Typography</span></a></li>
+                <li>
+              <a href="docs-components/colors.html" target="content-ifram">颜色<span class="docs-nav-en">Color</span></a>
+            </li>
+                <li>
+              <a href="docs-css/helper.html" target="content-ifram">辅助类<span class="docs-nav-en">Helper</span></a>
+            </li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#">布局相关<span class="docs-nav-en">Layout</span><i class="docs-icon-plus-square-o"></i></a>
+            <ul>
+                <li><a href="docs-css/layout/linearLayout.html" target="content-ifram">线性布局<span class="docs-nav-en">linearLayout</span></a></li>
+                <li><a href="docs-css/layout/avg-grid.html" target="content-ifram">等分网格<span class="docs-nav-en">AvgGrid</span></a></li>
+                <li><a href="docs-css/layout/absoluteLayout.html" target="content-ifram">绝对布局<span class="docs-nav-en">absoluteLayout</span></a></li>
+                
+                
+                
+                
+                <li><a href="docs-css/layout/layout-fixed.html" target="content-ifram">固定布局<span class="docs-nav-en">Fixed</span></a></li>
+                
+                <li><a href="docs-css/layout/tableLayout.html" target="content-ifram">表格布局<span class="docs-nav-en">tableLayout</span></a></li>
+                <li><a href="docs-css/layout/textColumn.html" target="content-ifram">文本多列布局<span class="docs-nav-en">textColumn</span></a></li>
+            </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="docs-iframe ">
+    <iframe src="docs-css/normalize.html" name="content-ifram" id="content-ifram" frameborder="0" scrolling="auto"></iframe>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ICSSHS-MUI for webapp</title>
+  <meta name="description" content="ICSSHS-MUI for webapp">
+  <meta name="keywords" content="ICSSHS-MUI for webapp">
+  <meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+  <meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+  
+  <!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+  
+  <!--针对IOS 浏览器的设置-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="apple-touch-icon" href="../docs-components/icon.png">
+  <link rel="apple-touch-icon" href="../docs-components/icon@72.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="../docs-components/icon@2x.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="../docs-components/icon@114.png" sizes="144x144">
+  <link rel="apple-touch-startup-image" href="../docs-components/undefined.png">
+  
+  <!--项目全局样式-->
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+  <!--说明文档样式,实际应用中请不要引用-->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+  <script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+  <div class="docs-page-masthead">
+    <h1>辅助类(helper)</h1>
+  </div>
+  
+  <h2 >三角符号</h2>
+  <p>通过使用三角符号可以指示某个元素具有下拉菜单的功能。</p>
+  <div class="docs-example">
+    <span class="hm-caret"></span><span class="hm-caret-up"></span>
+  </div>
+  <div class="docs-highlight">
+    <pre><code>&lt;span class="<span class="hm-color-danger">hm-caret</span>"&gt;&lt;/span&gt;
+&lt;span class="<span class="hm-color-danger">hm-caret-up</span>"&gt;&lt;/span&gt;</code></pre>
+  </div>
+  
+  
+  
+  <h2 >浮动</h2>
+  <h3>快速浮动</h3>
+  <p>通过添加一个类<code>hm-float-left</code><code>hm-float-right</code>，可以将任意元素向左或向右浮动。</p>
+  <div class="docs-example ">
+    <div class="docs-area clearfix">
+      <a class="hm-btn hm-btn-success hm-float-left">左浮动</a>
+      <a class="hm-btn hm-btn-success hm-float-right">右浮动</a>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code>&lt;div class="<span class="hm-color-danger">hm-float-left</span>"&gt;向左浮动&lt;/div&gt;
+&lt;div class="<span class="hm-color-danger">hm-float-right</code>"&gt;向右浮动&lt;/div&gt;</code></pre>
+  </div>
+  <h3>清除浮动</h3>
+  <p>通过为父元素添加<code> .clearfix </code>类可以很容易地清除浮动（float）。</p>
+  <div class="docs-highlight">
+    <pre><code>&lt;div class="<span class="hm-color-danger">clearfix</span>"&gt;
+    	&lt;span class="<span class="hm-color-danger">hm-float-left</span>"&gt;浮动内容&lt;/span&gt;
+    &lt;/div&gt;</code></pre>
+  </div>
+  <h2>显示或隐藏内容</h2>
+  <p><code>.hm-show</code> 和 <code>.hm-hide</code> 类可以强制任意元素显示或隐藏(<strong>对于屏幕阅读器也能起效</strong>)。这些类通过 <code>!important</code> 来避免 CSS 样式优先级问题，就像
+    <a href="#helper-classes-floats">quick floats</a>
+    一样的做法。注意，这些类只对块级元素起作用。</p>
+  <div class="docs-highlight">
+    <pre><code>&lt;div class="<span class="hm-color-danger">hm-show</span>"&gt;显示内容&lt;/div&gt;
+&lt;div class="<span class="hm-color-danger">hm-hide</code>"&gt;隐藏内容&lt;/div&gt;</code></pre>
+  </div>
+  <h2>对齐方式</h2>
+  <h3>水平对齐</h3>
+  <p>内容元素 <code>display</code> 属性需为 <code>inline</code> 或 <code>inline-block</code>。</p>
+  <div class="docs-example">
+    <p class=" docs-area hm-text-left">
+      <a class="hm-btn hm-btn-success hm-btn-inline">左对齐</a>
+    </p>
+    <p class=" docs-area hm-text-center">
+      <a class="hm-btn hm-btn-success hm-btn-inline">中对齐</a>
+    </p>
+    <p class=" docs-area hm-text-right">
+      <a class="hm-btn hm-btn-success hm-btn-inline">左对齐</a>
+    </p>
+  </div>
+  <div class="docs-highlight">
+    <pre><code>&lt;p class="<span class="hm-color-danger">hm-text-left</span>"&gt;左对齐&lt;/p&gt;
+    &lt;p class="<span class="hm-color-danger">hm-text-center</span>"&gt;中对齐&lt;/p&gt;
+    &lt;p class="<span class="hm-color-danger">hm-text-right</span>"&gt;右对齐&lt;/p&gt;</code></pre>
+  </div>
+  <h3>垂直对齐</h3>
+  <p>垂直对齐的原理为把父容器内的 “幽灵”元素（使用伪元素）高度设置为 100%，再通过设置需要对齐的元素 vertical-align 属性实现。默认内部元素，垂直居中。</p>
+  <h4>垂直居中</h4>
+  <div class="docs-example">
+    <div class="hm-vertical-align" style="height: 150px;">
+      <div class="hm-vertical-align-middle">
+        <a class="hm-btn hm-btn-success">垂直居中</a>
+      </div>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code>&lt;div class="<span class="hm-color-danger">hm-vertical-align</span>" style="height: 150px;"&gt;
+        垂直居中
+    &lt;/div&gt;</code></pre>
+  </div>
+  <h4>底部对齐</h4>
+  <div class="docs-example">
+    <div class="hm-vertical-align" style="height: 150px;">
+      <div class="hm-vertical-align-bottom">
+        <a class="hm-btn hm-btn-success ">底部对齐</a>
+      </div>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code>&lt;div class="<span class="hm-color-danger">hm-vertical-align</span>" style="height: 150px;"&gt;
+      &lt;div class="<span class="hm-color-danger">hm-vertical-align-bottom</span>"&gt;
+        底部对齐
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+  </div>
+  <h3>水平垂直居中</h3>
+  <div class="docs-example">
+    <div class="hm-vertical-align hm-text-center" style="height: 150px;">
+        <a class="hm-btn hm-btn-success ">水平垂直居中</a>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code>&lt;div class="<span class="hm-color-danger">hm-vertical-align hm-text-center</span>" style="height: 150px;"&gt;
+        水平垂直居中
+    &lt;/div&gt;</code></pre>
+  </div>
+  <h2>内外边距</h2>
+  <h3>尺寸</h3>
+  <ul>
+    <li><code>xs</code> - 4px</li>
+    <li><code>sm</code> - 8px</li>
+    <li>default - 16px</li>
+    <li><code>lg</code> - 24px</li>
+    <li><code>xl</code> - 32px</li>
+  </ul>
+  <h3>class 列表</h3>
+  <p>不加尺寸为默认大小（16px），<code>{size}</code> 可以为 <code>0, xs, sm, lg, xl</code> 中之一。</p>
+  <table class="hm-table">
+    <thead>
+      <tr>
+        <th>Margin</th>
+        <th>Padding</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.hm-margin</code><br>
+          <code>.hm-margin-{size}</code></td>
+        <td><code>.hm-padding</code><br>
+          <code>.hm-padding-{size}</code></td>
+      </tr>
+      <tr>
+        <td>水平方向外边距<br>
+          <code>.hm-margin-horizontal</code><br>
+          <code>.hm-margin-horizontal-{size}</code></td>
+        <td>水平方向内边距<br>
+          <code>.hm-padding-horizontal</code><br>
+          <code>.hm-padding-horizontal-{size}</code></td>
+      </tr>
+      <tr>
+        <td>垂直方向外边距<br>
+          <code>.hm-margin-vertical</code><br>
+          <code>.hm-margin-vertical-{size}</code></td>
+        <td>垂直方向内边距<br>
+          <code>.hm-padding-vertical</code><br>
+          <code>.hm-padding-vertical-{size}</code></td>
+      </tr>
+      <tr>
+        <td>左外边距<br>
+          <code>.hm-margin-left</code><br>
+          <code>.hm-margin-left-{size}</code></td>
+        <td>左内边距<br>
+          <code>.hm-padding-left</code><br>
+          <code>.hm-padding-left-{size}</code></td>
+      </tr>
+      <tr>
+        <td>右外边距<br>
+          <code>.hm-margin-right</code><br>
+          <code>.hm-margin-right-{size}</code></td>
+        <td>右内边距<br>
+          <code>.hm-padding-right</code><br>
+          <code>.hm-padding-right-{size}</code></td>
+      </tr>
+      <tr>
+        <td>上外边距<br>
+          <code>.hm-margin-top</code><br>
+          <code>.hm-margin-top-{size}</code></td>
+        <td>上内边距<br>
+          <code>.hm-padding-top</code><br>
+          <code>.hm-padding-top-{size}</code></td>
+      </tr>
+      <tr>
+        <td>下外边距<br>
+          <code>.hm-margin-bottom</code><br>
+          <code>.hm-margin-bottom-{size}</code></td>
+        <td>下内边距<br>
+          <code>.hm-padding-bottom</code><br>
+          <code>.hm-padding-bottom-{size}</code></td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>文本相关</h2>
+  <h3>文字大小</h3>
+  <ul>
+    <li><code>.hm-text-xs</code> - 10px</li>
+    <li><code>.hm-text-sm</code> - 12px</li>
+    <li><code>.hm-text-default</code> - 14px</li>
+    <li><code>.hm-text-lg</code> - 16px</li>
+    <li><code>.hm-text-xl</code> - 18px</li>
+    <li><code>.hm-text-xxl</code> - 24px</li>
+    <li><code>.hm-text-xxxl</code> - 32px</li>
+  </ul>
+  <div class="docs-example">
+    <p class="hm-text-xs">设计过程注重以用户为中心</p>
+    <p class="hm-text-sm">设计过程注重以用户为中心</p>
+    <p class="hm-text-default">设计过程注重以用户为中心</p>
+    <p class="hm-text-lg">设计过程注重以用户为中心</p>
+    <p class="hm-text-xl">设计过程注重以用户为中心</p>
+    <p class="hm-text-xxl">设计过程注重以用户为中心</p>
+    <p class="hm-text-xxxl">设计过程注重以用户为中心</p>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  
+  
+  <h3>文本垂直对齐</h3>
+  <div class="docs-example">
+    <ul class="hm-average-3">
+    	<li><img src="../../resources/images/img-listview-thumb.jpg" width="48" height="48" alt=""/><span class="hm-text-top">顶部对齐</span></li>
+    	<li><img src="../../resources/images/img-listview-thumb.jpg" width="48" height="48" alt=""/><span class="hm-text-middle">居中对齐</span></li>
+    	<li><img src="../../resources/images/img-listview-thumb.jpg" width="48" height="48" alt=""/><span class="hm-text-bottom">底部对齐</span></li>
+        
+    </ul>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3>截断文本</h3>
+  <h4>单行文字截断</h4>
+  <p><code>.hm-ellipsis</code>，元素 <code>display</code> 属性需为 <code>block</code> 或 <code>inline-block</code>。</p>
+  <div class="docs-example">
+    <p class="hm-ellipsis">UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+  </div>
+  <div class="docs-highlight">
+    <pre><code>&lt;p class="<span class="hm-color-danger">hm-ellipsis</span>"&gt;长文本内容&lt;/p&gt;</code></pre>
+  </div>
+  <h4>多行文字截断</h4>
+  <p>Webkit 内核的浏览器可以通<code>过 -webkit-line-clamp</code> 私有属性实现多行文字截取。此处默认显示为两行。其他浏览器没有这个属性，通常的做法是把容器的高度限定为 行高 * 显示的行数，超出的部分隐藏，勉强达到目的。</p>
+  <div class="docs-example">
+    <p class="hm-line-clamp">用户体验（User Experience，简称UX 或 UE）是一种纯主观的在用户使用一个产品（服务）的过程中建立起来的心理感受。因为它是纯主观的，就带有一定的不确定因素。个体差异也决定了每个用户的真实体验是无法通过其他途径来完全模拟或再现的。但是对于一个界定明确的用户群体来讲，能够通过设计良好的实验来收集其用户体验的共性。计算机技术和互联网的发展，使技术创新形态正在发生转变，以用户为中心、以人为本越来越得到重视，用户体验也因此被称做创新2.0模式的精髓。</p>
+  </div>
+  <div class="docs-highlight">
+    <pre><code>&lt;p class="<span class="hm-color-danger">hm-line-clamp</span>"&gt;多行长文本内容&lt;/p&gt;</code></pre>
+  </div>
+</div>
+</body>
+</html>

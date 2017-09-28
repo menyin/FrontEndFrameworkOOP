@@ -1,0 +1,399 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ICSSHS-UI</title>
+<link href="../../themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/action/themes-default/icon-action.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<link rel="stylesheet" type="text/css" href="css/help.css">
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/menu/layout-default/icon-menu.css">
+<script src="../../../framework/layout/default/js/jquery-1.9.1.js"></script>
+<!--页面布局样式,框架页面发现包含以下样式，否则布局会错乱-->
+<style type="text/css">
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.h-panel {
+	height: 100%;
+}
+
+</style>
+
+</head>
+<body>
+<!-- 布局 +++++++++++++++++++++++++开始+++++++++++++++++++++++++++++++++++++++--> 
+<!-- 面板 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<div class="h-row" style="position:absolute; top:60px; bottom:10px; left:10px; right:10px;">
+<div class="h-col-g12-3">
+        <div class="h-col-content">
+          <div class="h-panel">
+            <div class="h-panel-header">
+              <div class=" h-pull-left">
+                <div class="h-panel-title">
+                 项目列表
+                </div>
+              </div>
+              <div class="h-pull-right">
+                <a class="h-btn h-btn-table" href="#">
+                  <span class="h-btn-content">
+                  <span id="addBtn" class="h-icon h-icon-add"></span>
+                  </span>
+                </a>
+                 <a class="h-btn h-btn-table" href="#">
+                  <span class="h-btn-content">
+                  <span class="h-icon h-icon-edit"></span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="h-panel-body">
+              <div class="h-pad10">
+              
+                <p class="c-list-group-title ">我的项目</p>
+                <ul class="h-list-group h-noborder "  style="max-height:220px; overflow-y:auto;">
+               <!-- <li class="h-text-center h-pad20"><p class="c-icon-smill"></p><p class="h-font-18 h-pad5">还没有自己的项目!</p><a href="#" class=" h-color-primary">请通过<span class="h-icon h-icon-add"></span>按钮添加项目</a></li>-->
+                <li><a class="h-list-group-item h-pad5 h-ellipsis" href="#">2015年广东信息化应用扩展项目2015年广东信息化应用扩展项目</a></li>
+                <li ><a class="h-list-group-item h-pad5 h-ellipsis h-active" href="#">2015年广东信息化应用扩展项目</a></li>
+                <li ><a class="h-list-group-item h-pad5 h-ellipsis" href="#">2015年广东信息化应用扩展项目</a></li>
+                <li><a  class="h-list-group-item h-pad5 h-ellipsis  c-date-nopass" href="#">2015年广东信息化应用扩展项目s</a></li>
+                <li ><a class="h-list-group-item h-pad5 h-ellipsis" href="#">2015年广东信息化应用扩展项目</a></li>
+                 <li><a  class="h-list-group-item h-pad5 h-ellipsis" href="#">2015年广东信息化应用扩展项目</a></li>
+                <li ><a class="h-list-group-item h-pad5 h-ellipsis" href="#">2015年广东信息化应用扩展项目</a></li>
+                 <li><a  class="h-list-group-item h-pad5 h-ellipsis" href="#">2015年广东信息化应用扩展项目</a></li>
+                <li ><a class="h-list-group-item h-pad5 h-ellipsis" href="#">2015年广东信息化应用扩展项目</a></li>
+               </ul>
+               
+               <p class="c-list-group-title ">综合类</p>
+                <ul class="h-list-group h-noborder c-3column">
+                <li ><a class="h-list-group-item " href="#">管理</a></li>
+                <li ><a class="h-list-group-item" href="#">会议</a></li>
+                <li ><a class="h-list-group-item " href="#">培训</a></li>
+                <li><a  class="h-list-group-item " href="#">请假</a></li>
+                <li ><a class="h-list-group-item " href="#">调休</a></li>
+                <li ><a class="h-list-group-item " href="#">公共</a></li>
+                <div class="clear" ></div>
+               </ul>
+               <p class="c-hline"></p>
+                <ul class="h-list-group h-noborder c-3column">
+                <li ><a class="h-list-group-item " href="#">湖广区</a></li>
+                <li ><a class="h-list-group-item " href="#">川渝区</a></li>
+                <li ><a class="h-list-group-item " href="#">华中区</a></li>
+                <li><a  class="h-list-group-item " href="#">贵州区</a></li>
+                <li ><a class="h-list-group-item " href="#">东北区</a></li>
+                <li ><a class="h-list-group-item " href="#">华南区</a></li>
+                <div class="clear"></div>
+               </ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+<div class="h-col-g12-9">
+ <div class="h-col-content">
+    <div class="h-panel" > 
+      <!--面板头部-->
+      <div class="h-panel-header">
+        <div class=" h-pull-left">
+         
+           <div class="h-btn-group h-inline-block">
+         
+              <a class="h-btn h-active" href="#">
+                <span class="h-btn-content">单项目填写</span>
+              </a>
+     
+              <a id="allprojects" class="h-btn"  href="#">
+                <span class="h-btn-content">全部项目查看</span>
+                
+          </a>
+        </div>
+        </div>
+        <div class="h-text-center h-pt-5">
+            <div class="c-calendar-year" >
+           		 <a href="#" class="h-pad10">2016<span class="h-caret"></span></a>
+           	   <!--  <div class="h-dropdown-area">
+          <ul class="h-dropdown-list">
+             	 <li class="h-dropdown-item">
+                  <a href="#" class="h-block">2015</a>
+                </li>
+                <li class="h-dropdown-item">
+                  <a href="#" class="h-block">2016</a>
+                </li>
+                <li class="h-dropdown-item">
+                  <a href="#" class="h-block">2017</a>
+                </li>
+                <li class="h-dropdown-item">
+                  <a href="#" class="h-block">2018</a>
+                </li>
+                <li class="h-dropdown-item">
+                  <a href="#" class="h-block">2019</a>
+                </li>
+              </ul>
+            </div>-->
+            </div>
+            <div class="h-btn-group">
+              <a class="h-btn" href="#">
+                <span class="h-btn-content"><</span>
+              </a>
+              <div  class="h-float-left">
+              <a class="h-btn h-active" href="#">
+                <span class="h-btn-content">三月 </span><span class="c-caret" ></span>
+              </a>
+              <!-- <div class="h-dropdown-area">
+             <ul class="h-dropdown-list">
+                <li class="h-dropdown-item">
+                  <a href="#" class="h-block">一月</a>
+                </li>
+                <li class="h-dropdown-item">
+                  <a href="#" class="h-block">二月</a>
+                </li>
+                <li class="h-dropdown-item">
+                  <a href="#" class="h-block">三月</a>
+                </li>
+                <li class="h-separate"></li>
+                <li class="h-dropdown-item">
+                  <a href="#" class="h-block">四月</a>
+                </li>
+                <li class="h-dropdown-item">
+                  <a href="#" class="h-block">五月</a>
+                </li>
+                <li class="h-dropdown-item">
+                  <a href="#" class="h-block">六月</a>
+                </li>
+              </ul>
+            </div>-->
+              </div>
+              <a class="h-btn" href="#">
+                <span class="h-btn-content">></span>
+              </a>
+            </div>
+        </div>
+        <div class="h-pull-right">
+        <a href="#"  class="h-btn" id="projectBtn"><span class="h-btn-content">工时分布</span></a> </div>
+      </div>
+      
+      <!--面板内容，一般放表单，数字，图表等-->
+      <div class="h-panel-body" style="height:500px;position:relative;" >
+          <div class="h-pad10" style="padding-right:150px!important;"  id="notic">您该月工时为<strong>25h</strong>，未填工时<span class="h-color-warning">200h</span> ,涉及项目<strong> 3个</strong>；加班<span class="h-color-warning">25h</span>，调休<strong>25h</strong>，请假<strong>25h</strong>。
+            <div  class="h-relative h-inline-block">
+              <a href="#" class="h-icon c-icon-havechat"></a>
+                    <div class="c-dropdown-area">
+                      <span class=" h-panel-title">项目经理A</span> <p>全部项目的时候才出现</p>  
+                      
+                   </div>
+           </div>        
+          </div>   
+          <div  class="h-pull-right" style="padding-right:10px;">
+                
+              <a id="help-addwork-model"><span class="h-icon c-icon-info"></span></a>
+              <span style="line-height:32px">加班模式：</span> 
+              <label class="label-switch">
+                        <input type="checkbox" id="addwork-model">
+                        <div class="checkbox"></div>
+                  </label>
+          </div>
+          <div class="c-calendar-container">
+          <table cellpadding="0" cellspacing="0"  class="c-calendar h-table-bordered"  id="calendar" >
+                <thead>
+                    <tr>
+                        <th>周一</th><th>周二</th><th>周三</th>
+                        <th>周四</th><th>周五</th><th>周六</th>
+                        <th>周日</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="c-date-disable" ><span class="c-datenumber"></span></td>
+                        <td class="c-date-disable" ><span class="c-datenumber"></span></td>
+                        <td class="c-date-disable" ><span class="c-datenumber"></span></td>
+                        <td><span class="c-datenumber">  1</span> </td>
+                        <td class="c-date-select"><span  class="c-datenumber">  2</span></td>
+                        <td class="c-date-noenough c-date-pass "> <span  class="c-datenumber">3</span><div class="c-worktime">工<sup>5</sup></div></td>
+                        <!--c-date-pass属性要在最后-->
+                        <td > <span  class="c-datenumber"> 4</span></td>
+                    </tr>
+                    <tr>
+                        <td class="c-date-select"><div class="c-worktime"><span class="c-date-overtime">加<sup>2</sup></span></div><span  class="c-datenumber">  5</span></td>
+                        <td class="c-date-select c-tempselect c-date-noenough" ><a href="#" class="c-data-info"></a> 
+                            <div class="c-info-contant">
+                                        <p >提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息</p>
+                            </div><span  class="c-datenumber" > 6</span></td>
+                        <td class="c-date-select" > <span  class="c-datenumber"> 7</span> <div class="c-worktime"><span class="c-date-holiday" >假</span><span class="c-date-rest" >休</span><span class=" c-date-overtime">加<sup>2</sup></span></div></td>
+                        <!--说明：项目时候不用显示是调休或请假，全部的时候显示-->
+                        <td class="c-date-select" ><span  class="c-datenumber"> 8</span><div class="c-worktime"><span class="c-date-holiday" >假</span></div></td>
+                        <td class="c-date-select" > <a href="#" class="c-data-info"></a> 
+                            <div class="c-info-contant h-hide">
+                                        <p >提示信息提示信息提示信息提示信息提示信息提示信息提示信息</p>
+                            </div><span class="c-toholiday">假</span><span  class="c-datenumber">9</span></td>
+                        <td  class="c-date-select   c-date-nopass" ><span class="c-towork">班</span><span  class="c-datenumber">10</span><div class="c-worktime">工<sup>5</sup><span class=" c-date-overtime">加<sup>2</sup></span></div></td>
+                        <td><span  class="c-datenumber">11</span></td>
+                    </tr>
+                    <tr>
+                        <td class="c-date-noenough c-date-select  c-tempselect">
+                        <!--说明：单独项目时候不用显示是调休或请假，全部项目的时候显示-->
+                        <span  class="c-datenumber">12</span>
+                        <div class="c-worktime">
+                         <span class="c-date-holiday" >假</span>
+                        </div>
+                        </td>
+                        <td class="c-date-select c-tempselect c-date-noenough">
+                        <!--说明：单独项目时候不用显示是调休或请假，全部项目的时候显示-->
+                            
+                            <span  class="c-datenumber"> 13</span>
+                            <div class="c-worktime">工<sup>2</sup><span class="c-date-rest" >休</span></div>
+                        </td>
+                        <td class="c-date-select  c-date-nopass c-date-doing c-tempselect">
+                        <a href="#" class="c-date-chat h-icon c-icon-havechat"></a>
+                        <label class='c-overtime' style="left:25px;"><input type='checkbox'>加班 </label>
+                       <span  class="c-datenumber"> 14</span>
+                           <div class="c-chat-contant" >
+                                        <span class=" h-panel-title" >项目经理A</span>
+                                        <p >用时太多多用时太多</p>
+    
+                            </div>
+                        </td>
+                        <td> <span  class="c-datenumber">15</span></td>
+                        <td class=" c-date-pass "> <span  class="c-datenumber">16</span><div class="c-worktime">工<span class="c-date-overtime">加<sup>2</sup></span></div></td>
+                        <td  class=" c-date-pass "> <span  class="c-datenumber">17</span><div class="c-worktime">工</div></td>
+                        <td> <span  class="c-datenumber">18</span></td>
+                    </tr>
+                    <tr>
+                        <td  > <span class="c-toholiday">假</span><span class="c-datenumber c-date-today">19</span></td>
+                        <td class="c-tempselect"><span  class="c-datenumber ">20</span></td>
+                        <td > <span  class="c-datenumber"> 21</span></td>
+                        <td class="c-date-select  c-date-noenough" >
+                             <span  class="c-datenumber">22</span><div class="c-worktime">工<sup>5</sup></div>
+             
+                        </td>
+                        <td class=" c-date-pass "> <span  class="c-datenumber">23</span><div class="c-worktime">工</div></td>
+                        <td class=" c-date-pass "> <span  class="c-datenumber">24</span><div class="c-worktime">工</div></td>
+                        <td> <span  class="c-datenumber">25</span></td>
+                    </tr>	
+                    <tr>
+                        <td> <span  class="c-datenumber">26</span> </td>
+                        <td> <span  class="c-datenumber">27</span></td>
+                        <td> <span  class="c-datenumber">28</span></td>
+                        <td class="c-date-disable" ><span  class="c-datenumber" >29</span> </td>
+                        <td class="c-date-disable" > <span  class="c-datenumber">30</span></td>
+                        <td class="c-date-disable" > <span  class="c-datenumber">31</span></td>
+                        <td class="c-date-disable" ></td>
+                    </tr>
+                </tbody>
+                 
+            </table>
+        </div>
+        
+      </div>
+
+  
+  <!--面板底部工具-->
+  <div class="h-toolbar h-toolbar-footer" >
+      <div class="h-pull-left"> 
+                        <a id="openhelp"><span  class="h-icon c-icon-info"></span></a> <span class="c-helpinfo"> 点击日历框变 <em  class="c-helpinfo-yes"></em> 为填写，再次点击变 <em  class="c-helpinfo-no"></em> 为未填；支持框选；双击做细分小时操作。 </span> <a id="morehelp" class="h-link">更多帮助...</a></div>
+      <div class="h-pull-right"><a class="h-btn  h-btn-form" href="#"> <span class="h-btn-content">重置</span> </a><a id="saveBtn" class="h-btn h-btn-primary h-btn-form" href="#" > <span class="h-btn-content" style="width:50px;" >保存 </span> </a> </div>
+    </div>
+</div>
+    </div>
+  </div>
+  
+
+ 
+</div>  
+<!-- 布局 +++++++++++++++++++++++++结束+++++++++++++++++++++++++++++++++++++++-->
+  <div class="h-mask-wrapper" id="helpdemo"  style="display:none">
+      <div class="h-mask"></div>
+      <!--该iframe用于解决DIV层被OBJECT控件遮盖问题-->
+     <iframe src="about:blank" frameborder="0" class="h-mask-iframe"></iframe>
+      <div class="help-head" >
+         <div class="help-logo">
+          工时填报简易说明
+         </div>
+         <ul class="help-menu">
+           <li class="help-menu-btn help-btn-active">   <i class="h-icon h-icon-xl help-icon-explain"></i>功能说明 </li>
+          <li class="help-menu-btn">  <i class="h-icon h-icon-xl help-icon-date"></i>日历说明 </li>
+           <li class="help-menu-btn" >  <i class="h-icon h-icon-xl help-icon-see"></i>整体查看  </li>
+          
+           
+         </ul>
+         <a href="#" id="close-help" class="help-close-btn h-pull-right"></a>
+      </div>
+      <div class="help-contant " >
+      	<span class="help-info help-info-add"></span>
+       	<span class="help-info help-info-save"></span>
+      	<span class="help-info help-info-project"></span>
+      	<span class="help-info help-info-calendar"></span>
+      </div> 
+      <div class="help-contant" style="display:none" >
+        <span class="help-info help-info-date"></span>
+      </div>
+      <div class="help-contant" style="display:none">
+      	<span class="help-info help-info-allprojects"></span>
+       	<span class="help-info help-info-notic"></span>
+      	<span class="help-info help-info-projectgd"></span>
+      </div> 
+   </div> 
+ <div id="help-addwork" class="help-addwork">
+    <p>正常工作加班默认为下班后3个小时，</p>
+    <p>节假日默认加班为7个小时</p>
+ </div> 
+<script type="text/javascript">
+  $(document).ready(function(){
+	<!--帮助信息-->  
+	$("#openhelp,#morehelp").click(function(){
+	  $("#helpdemo").show(500);
+	  $(".help-info-add").css({"left":$("#addBtn").offset().left,"top":$("#addBtn").offset().top})
+      $(".help-info-save").css({"left":$("#saveBtn").offset().left,"top":$("#saveBtn").offset().top})
+      $(".help-info-project").css({"left":$("#projectBtn").offset().left,"top":$("#projectBtn").offset().top})
+      $(".help-info-calendar").css({"left":$("#calendar").offset().left,"top":$("#calendar").offset().top})
+	  $(".help-info-allprojects").css({"left":$("#allprojects").offset().left,"top":$("#allprojects").offset().top})
+	   $(".help-info-notic").css({"left":$("#notic").offset().left,"top":$("#notic").offset().top})
+	   $(".help-info-projectgd").css({"left":$("#projectBtn").offset().left,"top":$("#projectBtn").offset().top})
+		});
+
+	  $("#close-help").click(function(){ $("#helpdemo").hide(500) });
+	  
+	  $(".help-menu li").click(function(){
+        $(".help-menu li").eq($(this).index()).addClass("help-btn-active").siblings().removeClass('help-btn-active');
+        $(".help-contant").hide(1000).eq($(this).index()).show();
+	  });
+	  
+	  
+	<!--  加班模式-->
+	  $("#addwork-model").click(function(){ 
+	    if($("#addwork-model").is(':checked')){
+			$("td").not(".c-date-disable").append("<label class='c-overtime'><input type='checkbox'>加班 </label>");
+			}
+	     else{
+			$(".c-overtime").remove();
+			 }
+	  });
+	    
+	  
+	   $("#help-addwork-model").hover(function(){ 
+	      $("#help-addwork").show(0);
+	      $("#help-addwork").css({"left":$("#help-addwork-model").offset().left-300,"top":$("#help-addwork-model").offset().top})
+	  });
+	   $("#help-addwork-model").mouseout(function(e) {
+         $("#help-addwork").hide(100);
+         }) 
+	  })
+	  
+	  
+	    
+	 
+
+</script> 
+</body>
+</html>

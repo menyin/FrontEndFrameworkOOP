@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ICSSHS-UI</title>
+<link href="../../themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+ 
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/action/themes-default/icon-action.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<!--页面布局样式,框架页面发现包含以下样式，否则布局会错乱-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.h-panel { height: 100%; }
+</style>
+</head>
+<body>
+<!-- 布局 +++++++++++++++++++++++++开始+++++++++++++++++++++++++++++++++++++++-->
+
+  <!-- 面板 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+  <div class="h-box-item"  style="width: auto; height:auto; left: 5px; right: 5px; top: 5px; bottom:5px; ">
+    <div class="h-panel">
+      <!--面板头部-->
+      <div class="h-panel-header">
+        <div class=" h-pull-left">
+          <div class="h-panel-title">工单处理</div>
+        </div>
+        <div class="h-pull-right">面板标题右侧内容
+          <a href="#" class="h-close"></a>
+        </div>
+      </div>
+      
+<!--+++++++++++++++++++面板内容++++++++++++++++++++++++++++++-->
+     
+<!--+++++++++++++进度条++++++++++++++-->
+	<div class="c-progress-panel">
+    	<div class="c-progress-bar">
+        	<span class="c-bar-l"></span>
+            <span class="c-bar-m"></span>
+            <span class="c-bar-r"></span>
+            <div class="c-progress-bar-a">
+            	<span class="c-bar-l-a"></span>
+            	<span class="c-bar-m-a"></span>
+            	<span class="c-bar-r-a"></span>
+            </div>
+        </div>
+        <div class="c-progress-info">
+        	<div class="c-progress-point c-register">
+            	<p class="c-time">2014-10-31 12:00</p>
+            	<p class="c-circle c-circle-active"></p>
+                <p class="c-status">已登记</p>
+                
+            </div>
+            <div class="c-progress-point c-acceptance">
+            	<p class="c-time">2014-10-31 12:00</p>
+            	<p class="c-circle c-circle-active">8</p>
+                <p class="c-status">已受理</p>
+                
+            </div>
+            <div class="c-progress-point c-manage">
+            	<p class="c-time"></p>
+            	<p class="c-circle c-circle-active"></p>
+                <p class="c-status">待处理</p>
+                
+            </div>
+            <div class="c-progress-point c-finish">
+            	<p class="c-time"></p>
+            	<p class="c-circle c-circle-active"></p>
+                <p class="c-status">待结单</p>
+                
+            </div>
+        </div>
+    </div> 
+<div class="c-content-area" >
+<!--+++++++++++++操作日志++++++++++++++-->
+     <div class="c-right-area" >
+     	<div class="c-daily-list" >
+         <form>
+        	<fieldset class="c-caption">
+            <legend>
+            	<a class="h-icon c-icon-arrow" href="#"></a>
+                操作日志
+             </legend>
+             <div class="c-line-y">&nbsp;</div>
+             <div class="c-daily-clearly">
+                <p class="c-event">Ruanjt创建工单[0004]</p>
+                <p class="c-time">2014-10-30  11:28:29</p>
+             </div>
+             <div class="c-daily-clearly">
+                <p class="c-event">Ruanjt创建工单[0004]</p>
+                <p class="c-time">2014-10-30  11:28:29</p>
+             </div>
+              <div class="c-daily-clearly">
+                <p class="c-event">Ruanjt创建工单[0004]</p>
+                <p class="c-time">2014-10-30  11:28:29</p>
+             </div>
+              <div class="c-daily-clearly">
+                <p class="c-event">Ruanjt创建工单[0004]</p>
+                <p class="c-time">2014-10-30  11:28:29</p>
+             </div>
+            </fieldset>
+        </form>
+        </div>
+     </div>
+<!--+++++++++++++++++主要内容+++++++++++++++++++-->
+     <div class="c-left-area">
+     	<div class="c-main-title">
+        	<h1>进入论坛页面提示“抱歉，指定的版块不存在”</h1>
+            <span>系统版本：3.2   &nbsp;| 2014-10-30 创建</span>
+        </div>
+        <div class="c-question-content">
+        <form>
+        	<fieldset class="c-caption">
+            <legend>
+            	<a class="h-icon c-icon-arrow" href="#"></a>
+                问题详情
+             </legend>
+             <p class="c-content-clearly">
+             用户用手机发图发不了，好几个用户碰到来，同样是苹果手机，为啥我自己手机可以用手机传图，有些用户不行？还有一个建议：什么时候把网站的门户系统也开发出手机版！
+             </p>
+            </fieldset>
+        </form>
+        </div>
+        <div class="c-question-list">
+         <form>
+        	<fieldset class="c-caption">
+            <legend>
+            	<a class="h-icon c-icon-arrow" href="#"></a>
+                问题描述
+             </legend>
+             <div class="c-question-clearly">
+             	<p><span class="c-list-left">创建时间：2014-10-30</span><span class="c-list-right">影响范围：低</span></p>
+                <p><span class="c-list-left">更新时间：2015-01-10</span><span class="c-list-right">影响程度：严重</span></p>
+                <p><span class="c-list-left">提交人：</span><span class="c-list-right">优先级：高</span></p>
+                <p><span class="c-list-left">接单人：</span><span class="c-list-right">完成期限：2014-12-13</span></p>
+                <p><span class="c-list-left">jira单：<a href="#">JIRAC00315</a></span><span class="c-list-right">影响程度：严重</span></p>
+                <p><span class="c-list-left"></span><span class="c-list-right">状态：已发布</span></p>
+             </div>
+            </fieldset>
+        </form>
+        </div>
+        <div class="c-attachment-list" style="overflow:auto;">
+         <form>
+        	<fieldset class="c-caption">
+            <legend>
+            	<a class="h-icon c-icon-arrow" href="#"></a>
+                附件
+             </legend>
+             <div class="c-attachment-clearly" >
+             	<p>
+                <a href="#"><span class="h-icon c-icon-att"></span>优化烟叶系统使用出现问题</a>
+                <a href="#" class="c-download">下载</a>
+                <a href="#" class="c-scan">预览</a>
+                <span class="c-f-size">544kB</span><span class="c-f-time">2013-07-01 12:00</span>
+                </p>
+                <p>
+                <a href="#"><span class="h-icon c-icon-att"></span>优化烟叶系统使用出现问题</a>
+                <a href="#" class="c-download">下载</a>
+                <a href="#" class="c-scan">预览</a>
+                <span class="c-f-size">544kB</span><span class="c-f-time">2013-07-01 12:00</span>
+                </p>
+             </div>
+            </fieldset>
+        </form>
+        </div>
+        <div class="c-feedback-list">
+         <form>
+        	<fieldset class="c-caption">
+            <legend>
+            	<a class="h-icon c-icon-arrow" href="#"></a>
+                反馈
+             </legend>
+             <div class="c-feedback-clearly">
+             	<div class="c-feedback-content">
+                	<p class="c-fb-head">
+                    <a class="c-userName" href="#">李思</a>
+                    <span class="c-time">2014-12-02 12:21:32</span>
+                    </p>
+                    <p class="c-fb-content">进一步深入落实贯彻落实《烟草企业采购管理规定》文件精神，扎实推进整顿规范工作，12月17日，云南省烟草专卖局</p>
+                    <div class="c-att-list">
+                    <p>
+                	<a href="#"><span class="h-icon c-icon-att"></span>附件一</a><span class="c-f-size">（544kB）</span>
+                	<a href="#" class="c-download">(下载</a>
+                	<a href="#" class="c-scan">预览)</a>
+                	</p>
+                    <p>
+                	<a href="#"><span class="h-icon c-icon-att"></span>附件二</a><span class="c-f-size">（544kB）</span>
+                	<a href="#" class="c-download">(下载</a>
+                	<a href="#" class="c-scan">预览)</a>
+                	</p>
+                    </div>
+                </div>
+               
+                <!--快速回复-->
+                <div class="c-reply">
+             	<div class="c-toolbar-h">
+                <a href="#"><span class="h-icon c-icon-att"></span>上传附件</a>
+                </div>
+                <textarea class="c-input-area"></textarea>
+                <div class=" h-toolbar-footer h-toolbar">
+                	<div class="h-pull-right">
+      				<a class="h-btn h-btn-primary h-btn-form" href="#">
+        			<span class="h-btn-content">回复 </span>
+     				</a> 
+    				</div>
+                </div>
+             	</div>
+             </div>
+            
+            </fieldset>
+        </form>
+        </div>
+     </div>
+    
+     </div>
+<!--+++++++++++++++++++底部工具栏++++++++++++++++++++++++++++++-->
+    <div class="h-toolbar h-toolbar-footer c-toolbar" >
+    <div class="h-pull-right">
+      <a class="h-btn h-btn-primary h-btn-form" href="#">
+        <span class="h-btn-content">
+          结单 </span>
+      </a> 
+    </div>
+    
+  </div>
+    </div>
+  </div>
+</div>
+<!-- 布局 +++++++++++++++++++++++++结束+++++++++++++++++++++++++++++++++++++++-->
+
+</body>
+</html>

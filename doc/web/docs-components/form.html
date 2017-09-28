@@ -1,0 +1,713 @@
+<!doctype html>
+<html class="docs-html">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>ICSSHS-UI</title>
+  <!--项目全局样式-->
+  <link href="../../../web/projects/themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+  <link href="../../../web/projects/themes-default/resources/css/css3-hsui.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="../../../web/dcresources/icons/action/themes-default/icon-action.css">
+  <!--说明文档样式,实际应用中请不要引用-->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+  <script src="../../../web/projects/themes-default/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+    <div class="docs-page-masthead">
+    <h1>表单</h1>
+    <p class="docs-lead">表单运用实例</p>
+  </div>
+
+
+  <h2>基本表单</h2>
+  
+  <!--------------------------------------------------------------------
+  	表单
+  ---------------------------------------------------------------------->
+  <h3>垂直布局-默认</h3>
+  <p class="h-docs-lead">单独的表单控件会被自动赋予一些全局样式。所有设置了<code>.h-form-control</code>的 <code>input</code>、<code>textarea</code>和<code>select</code>元素都将被默认设置为width: 100%;。将label和前面提到的这些控件包裹在<code>.h-form-group</code>中可以获得最好的排列。</p>
+  <div class="h-form" >
+    <div class="h-container">
+      <div class="h-row">
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">单据号
+                <span class="h-text-required">*</span>
+              </label>
+              <a href="#" class="h-form-group-alert">
+                <span class="h-icon h-icon-info "></span>
+                <div class="h-alert h-alert-info">
+                  <small>请输入与此相关的内容，随便测试一下文字长的情况</small>
+                </div>
+              </a>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="请输入内容" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">单据日期</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="单据日期" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">委托单位</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="委托单位" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">国别</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="国别" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">烟叶品种</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="烟叶品种" value="烟叶品种" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">烟叶产地</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="烟叶产地" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <h3>水平布局-无控件、带边框</h3>
+  <div class="h-form-horizontal h-form-border" >
+    <div class="h-container">
+      <div class="h-row">
+        <div class="h-col-g12-8">
+          <div class="h-form-group ">
+            <div class="h-form-label-wrapper h-text-right">
+              <label class="h-form-label" for="">单据号</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              基本原则苛城
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group ">
+            <div class="h-form-label-wrapper h-text-right">
+              <label class="h-form-label" for="">单据号</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              基本原则苛城
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-8">
+          <div class="h-form-group ">
+            <div class="h-form-label-wrapper h-text-right">
+              <label class="h-form-label" for="">调拨駏基地苦</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              基本原则苛城
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group ">
+            <div class="h-form-label-wrapper h-text-right">
+              <label class="h-form-label" for="">调拨駏基</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              基本原则苛城
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <h3>水平排列的表单</h3>
+  <div class="h-form-horizontal" >
+    <div class="h-container">
+      <div class="h-row">
+        <div class="h-col-g12-8">
+          <div class="h-form-group ">
+            <div class="h-form-label-wrapper h-text-right">
+              <label class="h-form-label" for="">单据号
+                <span class="h-text-required">*</span>
+              </label>
+              <a href="#" class="h-form-group-alert">
+                <span class="h-icon h-icon-info "></span>
+                <div class="h-alert h-alert-info">
+                  <small>请输入与此相关的内容，随便测试一下文字长的情况</small>
+                </div>
+              </a>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="请输入内容" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group ">
+            <div class="h-form-label-wrapper h-text-right">
+              <label class="h-form-label" for="">单据号</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="请输入内容" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-8">
+          <div class="h-form-group ">
+            <div class="h-form-label-wrapper h-text-right">
+              <label class="h-form-label" for="">调拨駏基地苦</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="请输入内容" value="调拨駏基地苦" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group ">
+            <div class="h-form-label-wrapper h-text-right">
+              <label class="h-form-label" for="">调拨駏基</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="请输入内容" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <h3>内联表单-带标签</h3>
+  <div class="h-form-inline" >
+    <div class="h-form-group">
+      <div class="h-form-label-wrapper">
+        <label class="h-form-label h-text-right" for="">单据号</label>
+      </div>
+      <div class="h-form-control-wrapper">
+        <input type="text" class="h-form-control" id="" placeholder="请输入内容" />
+      </div>
+    </div>
+    <div class="h-form-group">
+      <div class="h-form-label-wrapper">
+        <label class="h-form-label h-text-right" for="">委托单位</label>
+      </div>
+      <div class="h-form-control-wrapper">
+        <input type="text" class="h-form-control" id="" placeholder="委托单位" />
+      </div>
+    </div>
+    <div class="h-form-group">
+      <div class="h-form-label-wrapper">
+        <label class="h-form-label h-text-right" for="">烟叶品种</label>
+      </div>
+      <div class="h-form-control-wrapper">
+        <input type="text" class="h-form-control" id="" placeholder="烟叶品种" value="烟叶品种" />
+      </div>
+    </div>
+    <a class="h-btn" href="#">
+      <span class="h-btn-content">查询</span>
+    </a>
+    <a class="h-btn" href="#">
+      <span class="h-btn-content">高级
+        <span class="h-caret"></span>
+      </span>
+    </a>
+  </div>
+  
+  <h3>内联表单</h3>
+  <div class="h-form-inline" >
+    <div class="h-form-group">
+      <div class="h-form-control-wrapper">
+        <input type="text" class="h-form-control" id="" placeholder="请输入内容" />
+      </div>
+    </div>
+    <div class="h-form-group">
+      <div class="h-form-control-wrapper">
+        <input type="text" class="h-form-control" id="" placeholder="委托单位" />
+      </div>
+    </div>
+    <div class="h-form-group">
+      <div class="h-form-control-wrapper">
+        <input type="text" class="h-form-control" id="" placeholder="烟叶品种" value="烟叶品种" />
+      </div>
+    </div>
+    <a class="h-btn" href="#">
+      <span class="h-btn-content">查询</span>
+    </a>
+    <a class="h-btn" href="#">
+      <span class="h-btn-content">高级
+        <span class="h-caret"></span>
+      </span>
+    </a>
+  </div>
+  <h3>表单</h3>
+  <div class="h-container">
+    <div class="h-row clearfix">
+      <div class="h-col-g12-3 ">
+        <div class="h-form-group">
+          <div class="h-form-label-wrapper">
+            <label class="h-form-label" for="">checkboxs-上下分布</label>
+          </div>
+          <div class="h-form-control-wrapper">
+            <div class="h-checkbox">
+              <label>
+                <input type="checkbox">
+                复选框 </label>
+            </div>
+            <div class="h-checkbox">
+              <label>
+                <input type="checkbox">
+                复选框 </label>
+            </div>
+            <div class="h-checkbox">
+              <label>
+                <input type="checkbox">
+                复选框 </label>
+            </div>
+            <div class="h-checkbox">
+              <label>
+                <input type="checkbox">
+                复选框 </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h-col-g12-3 ">
+        <div class="h-form-group">
+          <div class="h-form-label-wrapper">
+            <label class="h-form-label" for="">radio-上下分布</label>
+          </div>
+          <div class="h-form-control-wrapper">
+            <div class="h-radio">
+              <label>
+                <input type="radio">
+                单选框 </label>
+            </div>
+            <div class="h-radio">
+              <label>
+                <input type="radio">
+                单选框 </label>
+            </div>
+            <div class="h-radio">
+              <label>
+                <input type="radio">
+                单选框 </label>
+            </div>
+            <div class="h-radio">
+              <label>
+                <input type="radio">
+                单选框 </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h-col-g12-6 h-float-right ">
+        <div class="h-form-group">
+          <div class="h-form-label-wrapper">
+            <label class="h-form-label" for="">checkboxs-平均分布</label>
+          </div>
+          <div class="h-form-control-wrapper">
+            <div class="h-row">
+              <div class="h-col-g12-3">
+                <div class="h-checkbox">
+                  <label>
+                    <input type="checkbox">
+                    复选框 </label>
+                </div>
+              </div>
+              <div class="h-col-g12-3">
+                <div class="h-checkbox">
+                  <label>
+                    <input type="checkbox">
+                    复选框 </label>
+                </div>
+              </div>
+              <div class="h-col-g12-3">
+                <div class="h-checkbox">
+                  <label>
+                    <input type="checkbox">
+                    复选框 </label>
+                </div>
+              </div>
+              <div class="h-col-g12-3">
+                <div class="h-checkbox">
+                  <label>
+                    <input type="checkbox">
+                    复选框 </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="h-form-group">
+          <div class="h-form-label-wrapper">
+            <label class="h-form-label" for="">checkboxs-自由分布</label>
+          </div>
+          <div class="h-form-control-wrapper">
+            <div class="h-checkbox h-checkbox-inline">
+              <label>
+                <input type="checkbox">
+                复选框 </label>
+            </div>
+            <div class="h-checkbox h-checkbox-inline">
+              <label>
+                <input type="checkbox">
+                复选框 </label>
+            </div>
+            <div class="h-checkbox h-checkbox-inline">
+              <label>
+                <input type="checkbox">
+                复选框 </label>
+            </div>
+            <div class="h-checkbox h-checkbox-inline">
+              <label>
+                <input type="checkbox">
+                复选框 </label>
+            </div>
+          </div>
+        </div>
+        <div  class="h-form-group">
+          <div class="h-form-label-wrapper">
+            <label for="">radios-平均分布</label>
+          </div>
+          <div class="h-form-control-wrapper">
+            <div class="h-row">
+              <div class="h-col-g12-3">
+                <div class="h-radio">
+                  <label>
+                    <input type="radio">
+                    单选框 </label>
+                </div>
+              </div>
+              <div class="h-col-g12-3">
+                <div class="h-radio">
+                  <label>
+                    <input type="radio">
+                    单选框 </label>
+                </div>
+              </div>
+              <div class="h-col-g12-3">
+                <div class="h-radio">
+                  <label>
+                    <input type="radio">
+                    单选框 </label>
+                </div>
+              </div>
+              <div class="h-col-g12-3">
+                <div class="h-radio">
+                  <label>
+                    <input type="radio">
+                    单选框 </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div  class="h-form-group">
+          <div class="h-form-label-wrapper">
+            <label for="">radios-自由分布</label>
+          </div>
+          <div class="h-form-control-wrapper">
+            <div class="h-radio h-radio-inline">
+              <label>
+                <input type="radio">
+                单选框 </label>
+            </div>
+            <div class="h-radio h-radio-inline">
+              <label>
+                <input type="radio">
+                单选框单选框 </label>
+            </div>
+            <div class="h-radio h-radio-inline">
+              <label>
+                <input type="radio">
+                单选框 </label>
+            </div>
+            <div class="h-radio h-radio-inline">
+              <label>
+                <input type="radio">
+                单选框 </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <h2>表单综合</h2>
+  <div class="h-panel">
+            <div class="h-panel-header">
+              <div class=" h-pull-left"><div class="h-panel-title">面板标题</div></div>
+              <div class="h-pull-right">面板标题右侧内容
+                <a href="#" class="h-close"></a>
+              </div>
+            </div>
+            <div class="h-panel-body">
+            	<form class="h-form">
+                <div class="h-container">
+      <div class="h-row">
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">单据号
+                <span class="h-text-required">*</span>
+              </label>
+              <a href="#" class="h-form-group-alert">
+                <span class="h-icon h-icon-info "></span>
+                <div class="h-alert h-alert-info">
+                  <small>请输入与此相关的内容，随便测试一下文字长的情况</small>
+                </div>
+              </a>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="请输入内容" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">单据日期</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="单据日期" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">委托单位</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="委托单位" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">国别</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="国别" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">烟叶品种</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="烟叶品种" value="烟叶品种" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">烟叶产地</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="烟叶产地" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <fieldset>
+      <legend><div class="h-checkbox h-checkbox-inline">
+              <label><input type="checkbox">是否显示该区域</label>
+            </div></legend>
+    <div class="h-container">
+      <div class="h-row">
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">单据号
+                <span class="h-text-required">*</span>
+              </label>
+              <a href="#" class="h-form-group-alert">
+                <span class="h-icon h-icon-info "></span>
+                <div class="h-alert h-alert-info">
+                  <small>请输入与此相关的内容，随便测试一下文字长的情况</small>
+                </div>
+              </a>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="请输入内容" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">单据日期</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="单据日期" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">委托单位</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="委托单位" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">国别</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="国别" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">烟叶品种</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="烟叶品种" value="烟叶品种" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">烟叶产地</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="烟叶产地" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </fieldset>
+    <fieldset>
+      <legend><a class="h-icon h-icon-up" ></a>表单分组可展开收缩</legend>
+      <div class="h-container">
+      <div class="h-row">
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">单据号
+                <span class="h-text-required">*</span>
+              </label>
+              <a href="#" class="h-form-group-alert">
+                <span class="h-icon h-icon-info "></span>
+                <div class="h-alert h-alert-info">
+                  <small>请输入与此相关的内容，随便测试一下文字长的情况</small>
+                </div>
+              </a>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="请输入内容" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">单据日期</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="单据日期" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">委托单位</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="委托单位" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">国别</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="国别" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">烟叶品种</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="烟叶品种" value="烟叶品种" />
+            </div>
+          </div>
+        </div>
+        <div class="h-col-g12-4">
+          <div class="h-form-group">
+            <div class="h-form-label-wrapper">
+              <label class="h-form-label" for="">烟叶产地</label>
+            </div>
+            <div class="h-form-control-wrapper">
+              <input type="text" class="h-form-control" id="" placeholder="烟叶产地" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </fieldset>
+    <fieldset class="h-fieldset-collapsed">
+      <legend><a class="h-icon h-icon-down" ></a>表单分组可展开收缩</legend>
+    </fieldset>
+  </form>
+            </div>
+            <div class="h-toolbar h-toolbar-footer">
+              <div class="h-pull-left">左侧内容</div>
+              <div class="h-pull-right">右侧内容</div>
+            </div>
+          </div>
+</div>
+</div>
+</body>
+</html>

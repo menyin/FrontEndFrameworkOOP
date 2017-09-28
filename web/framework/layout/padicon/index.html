@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ICSSHS-UI</title>
+<link href="css/framework.css" rel="stylesheet" type="text/css" />
+<!--菜单图标-->
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/menu/layout-padicon/icon-menu.css">
+<script src="js/jquery-1.9.1.js"></script>
+<!--页面高度需设置100%，并保证不出现滚动条；否则所包含的标签无法获取到100%的高度，会导致布局错乱 by 66383210@qq.com-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+  //框架头部下拉菜单
+  	var intervalID; 
+	var curSel; 
+	$(".h-f-has-pulldown").mouseover(function(){ 
+		curSel=$(this); 
+		intervalID=setInterval(onMouseOver,250);//鼠标移入的时候有一定的延时才会滑出下拉菜单，防止用户不经意的操作 
+	}); 
+	
+	
+	function onMouseOver(){ 
+		if(curSel.hasClass("h-f-subsystem")){
+				curSel.addClass("h-f-subsystem-active")
+			}
+		curSel.css("z-index","10003");
+		curSel.parent().find(".h-f-app-toolbar").css("z-index","10004");
+		curSel.addClass("h-f-active"); //显示选中状态
+		curSel.find(".h-f-pulldown").slideDown("fast");	
+		
+		
+		//超出三级菜单时的下拉框，分为右下（默认）、右上、左下、左上几种，需要计算页面空间来决定采用哪种位置
+		if(curSel.hasClass("h-f-app-item")){
+				
+				var w=curSel.outerWidth();	
+				var h=curSel.outerHeight()-1;				
+				var h2=curSel.find(".h-f-pulldown").outerHeight();
+				
+				//默认下拉菜单在右下侧
+				curSel.addClass("h-f-app-item-rb"); 
+				curSel.find(".h-f-pulldown").css("top",h);
+				
+				//下拉菜单在右上侧
+				//curSel.addClass("h-f-app-item-rt"); 
+				//curSel.find(".h-f-pulldown").css("bottom",h);
+				
+				//下拉菜单在左下侧
+				//curSel.addClass("h-f-app-item-lb"); 
+				//curSel.find(".h-f-pulldown").css("top",h);
+
+				
+				//下拉菜单在左上侧
+				//curSel.addClass("h-f-app-item-lt"); 
+				//curSel.find(".h-f-pulldown").css("bottom",h);
+
+			}
+	} 
+	
+	
+	$(".h-f-has-pulldown").mouseout(function(){ 
+		clearInterval(intervalID); 
+	}); 
+
+
+	
+	$(".h-f-has-pulldown").mouseleave(function(){ 
+		curSel.css("z-index","1");
+		if($(this).hasClass("h-f-active")){
+				$(this).removeClass("h-f-active")
+			}
+		$(this).find(".h-f-pulldown").slideUp("fast");
+	}); 
+	
+	
+  //收缩左侧栏
+  
+  $("[data-hsui=aside-contral]").click(function(){
+  	$(".h-f-aside").toggleClass("h-f-aside-small");
+	$(".h-f-content").toggleClass("h-f-content-big");
+	$(".h-f-icon-aside-status").toggleClass("h-f-icon-aside-status-small");
+  });
+  
+  //点击后向右滑出二级菜单
+  
+  var sideMenuID;
+  $("[data-hsui=slide-menu]").click(function(){
+  	sideMenuID = $(this).attr("href");
+
+	$(".h-f-aside-slide-area").not($(sideMenuID)).animate({right:'0px'},500);
+	$(sideMenuID).animate({right:'-660px'},500);
+	
+	$(".h-f-aside-slide-mask").fadeTo(500,0.5);
+	$("[data-hsui=slide-menu]").removeClass("h-f-menu-item-active");
+	$(this).addClass("h-f-menu-item-active");
+  });
+  
+  //关闭二级菜
+  $("[data-hsui=slide-close]").click(function(){
+  	closeMenu()
+  });
+  
+  
+  //关闭菜单
+	function closeMenu(){
+			$(".h-f-aside-slide-area").animate({right:'0'},500);
+			$(".h-f-aside-slide-mask").fadeOut(500);
+			$("[data-hsui=slide-menu]").removeClass("h-f-menu-item-active");
+		
+	   }; 
+
+  
+  //关闭菜单并打开相应的链接页面
+
+	var curLink; 
+	$("[data-hsui=open-link]").click(function(){ 
+		curLink=$(this).attr("href"); //获取链接地址 
+		//点击链接后关闭菜单
+		closeMenu();
+		//显示导航
+		//$(".h-f-localbar").toggleClass("h-f-hide");
+		//$(".h-f-content").toggleClass("h-f-content-top76");
+		
+		//先用空白页替换页面，再
+		$("#content-fram").attr("src","blank.html");
+		setTimeout(function () {$("#content-fram").attr("src",curLink)},300);//
+		return false;//去掉链接的默认行为 
+	}); 
+  
+  
+  //加入收藏		
+	$(".h-f-icon-favorite").click(function(){
+		$(this).toggleClass("h-f-icon-favorite-active");
+	})	
+	
+	
+	//编辑我的应用  
+	$("[data-hsui=btn-fav-adit]").click(function(){
+		$(this).parents(".h-f-aside-slide-area").find("[data-hsui=app-fav]").toggle();
+		$(this).toggleClass("h-f-icon-setting-active");
+	})
+
+	//收藏应用		
+$("[data-hsui=app-fav]").click(function(){
+		$(this).find(".h-f-icon-app-fav").toggleClass("h-f-icon-app-fav-active");
+	})	
+  
+});
+</script>
+</head>
+<body>
+<div class="h-f-wrapper">
+  <!--header-->
+  <div class="h-f-header">
+    <!--顶部logo及导航栏-->
+    <div class="h-top-bar h-f-text-center">
+      <!--系统logo-->
+      <p class="h-f-logo">
+      	<!--
+          系统logo,分为以下两部份，
+          1，系统logo图片：默认为单独的烟草logo,可根据实际需要，把系统名称整合在logo图片里，那么需要隐藏下面的h-f-app-name
+          2，系统名称文字：以文字的形式单独显示系统名称。
+          此处显示的内容可通过后台进行配置
+          -->
+        <span class="h-f-logo-img"><img src="images/app-logo.png" alt=""/></span>
+        <span class="h-f-application-name">烟叶系统集成平台</span>
+      </p>
+      <!--间隔线-->
+      <span class="h-f-header-separate"></span>
+      <!--子系统下拉-->
+      <div class="h-f-subsystem h-f-has-pulldown">
+        <span class="h-f-icon-pull-arrow"></span>
+        <span class="h-f-pull-text">调拨系统</span>
+        <div class="h-f-pulldown">
+          <!--该iframe用于解决DIV层被OBJECT控件遮盖问题-->
+          <iframe class="h-f-pulldown-canvas" frameborder="0" scrolling="no"></iframe>
+          <div class="h-f-pulldown-content">
+            <div class="h-f-subsystem-group">烟叶系统</div>
+            <div class="h-f-subsystem-list">
+              <a href="#" class="h-f-subsystem-item ">
+                <span class="h-f-icon-menu h-f-icon-system-1"></span>
+                <em>烟叶生产管理系统</em></a>
+              <a href="#" class="h-f-subsystem-item  ">
+                <span class="h-f-icon-menu h-f-icon-system-2"></span>
+                <em>烟叶运营管理系统</em>
+              </a>
+              <a href="#" class="h-f-subsystem-item h-f-subsystem-item-active">
+                <span class="h-f-icon-menu h-f-icon-system-3"></span>
+                <em>调拨系统</em></a>
+              <a href="#" class="h-f-subsystem-item">
+                <span class="h-f-icon-menu h-f-icon-system-4"></span>
+                <em>烟叶销售系统</em></a>
+              <a href="#" class="h-f-subsystem-item ">
+                <span class="h-f-icon-menu h-f-icon-system-5"></span>
+                <em>烟叶财务系统</em></a>
+            </div>
+            <div class="h-f-subsystem-group">卷烟系统</div>
+            <div class="h-f-subsystem-list">
+              <a href="#" class="h-f-subsystem-item">
+                <span class="h-f-icon-menu h-f-icon-system-4"></span>
+                <em>卷烟销售系统</em></a>
+              <a href="#" class="h-f-subsystem-item  ">
+                <span class="h-f-icon-menu h-f-icon-system-5"></span>
+                <em>卷烟加工系统</em>
+              </a>
+              <a href="#" class="h-f-subsystem-item ">
+                <span class="h-f-icon-menu h-f-icon-system-4"></span>
+                <em>财务系统</em></a>
+              <a href="#" class="h-f-subsystem-item">
+                <span class="h-f-icon-menu h-f-icon-system-2"></span>
+                <em>零售管理系统</em></a>
+              <a href="#" class="h-f-subsystem-item">
+                <span class="h-f-icon-menu h-f-icon-system-1"></span>
+                <em>零售管理系统</em></a>
+            </div>
+          </div>
+        </div>
+      </div>
+     <div style=" display: inline-block; ">
+      <!--公告-->
+       <div class="h-f-public" >
+           <div class="h-f-public-contant" >
+              <span class="h-f-info-icon h-f-icon-public"></span>
+              <ul class="h-f-publicfont">
+              <li class="h-f-publicfont">2015年欢迎领导莅临指导工作年欢迎领导莅临指导工作<li>
+               <li  class="h-f-publicfont"><li>
+              </ul>
+            </div>
+       </div>
+        <!--公告end-->
+       </div>
+      <div class="h-f-info">
+        <ul>
+          <!--用户登录信息-->
+          <li class="h-f-info-item">
+            <a href="#">ICSSHS-UED</a>
+            <a href="../../../../doc/web/framework/themes-app/login.html">[退出]</a>
+          </li>
+          <!--问隔线-->
+          <li class="h-f-info-item-separate">&nbsp;</li>
+          <!--消息提醒-->
+          <li class="h-f-info-item h-f-notice h-f-has-pulldown">
+            <a href="#">
+              <span class="h-f-info-icon h-f-icon-notice"></span>
+            </a>
+            <em class="h-f-notice-num"> 2 </em>
+            <div class="h-f-pulldown">
+              <span class="h-f-arrow"></span>
+              <div class="h-f-pulldown-content">
+                <div class="h-f-panel">
+                  <div class="h-f-panel-header">
+                 <!--   <div class="h-f-float-right">
+                      <p class="h-f-nav-tab"> 待办
+                        <a href="#">消息</a>
+                      </p>
+                    </div>-->
+                    <div class="h-f-panel-title">消息提醒</div>
+                  </div>
+                   <div class="h-f-panel-body h-f-notice-list">
+                    <div class="">
+                      <a href="#" class="h-f-notice-item">
+                        <span class="h-f-notice-item-time" >12分钟前</span>
+                        <dl href="#" class="h-f-icon-bg-todo">
+                          <!-- <img src="css/images/framework/img-userhead.png" class="h-f-img-listhead" > -->
+                          <dt>请把昨天的业务单据发给我一下</dt>
+                          <dd>站长A</dd>
+                        </dl>
+                      </a>
+                      <a href="#" class="h-f-notice-item">
+                        <span class="h-f-notice-item-time" >12分钟前</span>
+                        <dl href="#" class="h-f-icon-bg-todo">
+                       
+                          <dt>截止2014年8月20日，已经收购50天全市收购量34.22万担，完成计划45.22%,进度...截止2014年8月20日，已经收购50天全市收购量34.22万担，完成计划45.22%,进度...截止2014年8月20日，已经收购50天全市收购量34.22万担，完成计划45.22%,进度..</dt>
+                          <dd>站长B</dd>
+                        </dl>
+                      </a>
+                      <a href="#" class="h-f-notice-item">
+                        <span class="h-f-notice-item-time" >12分钟前</span>
+                        <dl href="#" class="h-f-icon-bg-todo">
+                       
+                          <dt>截止2014年8月20日，已经收购50天全市收购量34.22万担，完成计划45.22%,进度...截止2014年8月20日，已经收购50天全市收购量34.22万担，完成计划45.22%,进度...截止2014年8月20日，已经收购50天全市收购量34.22万担，完成计划45.22%,进度..</dt>
+                          <dd>站长B</dd>
+                        </dl>
+                      </a>
+                       <a href="#" class="h-f-notice-item">
+                        <span class="h-f-notice-item-time" >12分钟前</span>
+                        <dl href="#" class="h-f-icon-bg-todo">
+                       
+                          <dt>截止2014年8月20日，已经收购50天全市收购量34.22万担，完成计划45.22%,进度...截止2014年8月20日，已经收购50天全市收购量34.22万担，完成计划45.22%,进度...截止2014年8月20日，已经收购50天全市收购量34.22万担，完成计划45.22%,进度..</dt>
+                          <dd>站长B</dd>
+                        </dl>
+                      </a>
+                       <a href="#" class="h-f-notice-item">
+                        <span class="h-f-notice-item-time" >12分钟前</span>
+                        <dl href="#" class="h-f-icon-bg-todo">
+                       
+                          <dt>截止2014年8月20日，已经收购50天全市收购量34.22万担，完成计划45.22%,进度...截止2014年8月20日，已经收购50天全市收购量34.22万担，完成计划45.22%,进度...截止2014年8月20日，已经收购50天全市收购量34.22万担，完成计划45.22%,进度..</dt>
+                          <dd>站长B</dd>
+                        </dl>
+                      </a>
+                     
+                    </div>
+                  </div>
+                  <div class="h-f-panel-footer clearfix">
+                    <div class="h-f-float-left">
+                      <a href="#">查看所有提醒</a>
+                    </div>
+                   <!-- <div class="h-f-float-right">
+                      <a href="#">提醒设置</a>
+                    </div>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li> 
+          
+          <!--待办--> 
+          <li class="h-f-info-item  h-f-has-pulldown">
+            <a href="#" >
+              <span class="h-f-info-icon h-f-icon-do"></span>
+            </a>
+             <em class="h-f-notice-num">6</em>
+             <div class="h-f-pulldown">
+             <span class="h-f-arrow"></span>
+               <div class="h-f-pulldown-content h-f-alarm-contant" >
+                    <div class="h-f-panel"  >
+                          <div class="h-f-panel-header h-f-header-alarm"  >
+                            <div class="h-f-float-right">
+                                   <a href="#" class="h-f-info-icon h-f-icon-close-big "></a>
+                            </div>
+                            <div class="h-f-panel-title h-f-panel-title-alarm"  >待办工作</div>                
+                          </div>
+                          
+                          <div class="h-f-panel-alarmbodys">
+                         	 
+                              <div class="h-f-panel-body h-f-panel-body-alarm " >
+                               <p  class="h-f-title-alarm" >组件标题</p>
+                               <a href="#" >
+                                 <dl >
+                                  <dt>模块标题</dt>
+                                  <dd>  您有<span > 2</span> 张单据需要做<span > 审核</span>处理</dd>
+                    		    </dl>
+                                
+                                </a>
+                                   <a href="#" >
+                                <dl >
+                                  <dt>模块标题</dt>
+                                  <dd>  您有<span > 2</span> 张单据需要做处</dd>
+                    		    </dl>
+                                
+                                </a>                      
+                               </div>
+                                <div class="h-f-panel-body h-f-panel-body-alarm " >
+                               <p  class="h-f-title-alarm" >组件标题</p>
+                               <a href="#" >
+                                <dl>
+                                  <dt >模块标题</dt>
+                                  <dd>  您有<span > 2</span> 张单据需要做处</dd>
+                    		    </dl>
+                                
+                                </a>
+                                   <a href="#" >
+                                <dl >
+                                  <dt>模块标题</dt>
+                                  <dd>  您有<span > 2</span> 张单据需要做处</dd>
+                    		    </dl>
+                                
+                                </a>                      
+                               </div>
+                                   <div class="h-f-panel-body h-f-panel-body-alarm " >
+                               <p  class="h-f-title-alarm" >组件标题</p>
+                               <a href="#" >
+                                <dl>
+                                  <dt >模块标题</dt>
+                                  <dd>  您有<span > 2</span> 张单据需要做处</dd>
+                    		    </dl>
+                                
+                                </a>
+                                   <a href="#" >
+                                <dl >
+                                  <dt>模块标题</dt>
+                                  <dd>  您有<span > 2</span> 张单据需要做处</dd>
+                    		    </dl>
+                                
+                                </a>                      
+                               </div>
+                                
+                           </div>
+                           <div class="h-f-panel-footer clearfix h-f-panel-footer-alarm"  >
+                                   <!--<a class="h-f-btn-alarm-go" >查看所有消息</a>-->
+                                  <a  class="h-f-btn-alarm-cancel">稍后处理</a>
+                         </div>
+                   </div>
+ 			</div>    
+            </div>
+          </li>
+          <!--设置-->
+          <li class="h-f-info-item">
+            <a href="#">
+              <span class="h-f-info-icon h-f-icon-setting"></span>
+            </a>
+          </li>
+          <!--最大化/退出最大化界面-->
+          <li class="h-f-info-item">
+            <a href="#" title="屏幕最大化">
+              <span class="h-f-info-icon h-f-icon-fullscreen"></span>
+            </a>
+            <!-- 
+              <a href="#" title="退出最大化">
+              <span class="h-f-info-icon h-f-icon-exit-fullscreen"></span>
+               </a>
+              -->
+          </li>
+          <!--问隔线-->
+          <li class="h-f-info-item-separate">&nbsp;</li>
+          
+          <!--更多下拉框-->
+          <li class="h-f-info-item h-f-has-pulldown">
+            <span class="h-f-icon-pull-arrow"></span>
+            <span class="h-f-pull-text">更多</span>
+            <div class="h-f-pulldown">
+              <span class="h-f-arrow"></span>
+              <div class="h-f-pulldown-content">
+                <a href="#" class="h-f-pull-item">关于中软海晟</a>
+                <span class="h-f-pull-item-separate"></span>
+                <a href="#" class="h-f-pull-item">版本更新</a>
+                <a href="#" class="h-f-pull-item">帮助中心</a>
+                <a href="#" class="h-f-pull-item">版权声明</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="h-f-main">
+    <div class="h-f-aside">
+      <!--主菜单-->
+      <div class="h-f-aside-main">
+        <!--侧边栏收缩及展开控件按钮-->
+        <a href="#" class="h-f-aside-contral-btn" data-hsui="aside-contral">
+          <span class="h-f-icon h-f-icon-aside-status"></span>
+        </a>
+        <!--主菜单列表区域-->
+        <div class="h-f-menu">
+          <a href="#slide-menu-1" class="h-f-menu-item" data-hsui="slide-menu" title="数据查询" >
+            <span class="h-f-icon-arrow"></span>
+            <span class="h-f-icon h-f-icon-l  "></span>
+            <span class="text">数据查询</span>
+          </a>
+          <a href="#slide-menu-2" class="h-f-menu-item" data-hsui="slide-menu" title="资源分析">
+            <span class="h-f-icon-arrow"></span>
+            <span class="h-f-icon h-f-icon-l h-f-icon-modul-2"></span>
+            <span class="text">资源分析</span>
+          </a>
+          <a href="#slide-menu-3" class="h-f-menu-item " data-hsui="slide-menu" title="数据管理" >
+            <span class="h-f-icon-arrow"></span>
+            <span class="h-f-icon h-f-icon-l h-f-icon-modul-3"></span>
+            <span class="text">数据管理</span>
+          </a>
+          <a href="#slide-menu-4" class="h-f-menu-item " data-hsui="slide-menu" title="系统维护" >
+            <span class="h-f-icon-arrow"></span>
+            <span class="h-f-icon h-f-icon-l h-f-icon-modul-4"></span>
+            <span class="text">系统维护</span>
+          </a>
+        </div>
+      </div>
+      <!--常用应用-->
+      <div class="h-f-aside-footer">
+        <a href="#" class="h-f-menu-item" title="常用应用">
+          <span class="h-f-icon h-f-icon-l h-f-icon-favorites" >&nbsp;</span>
+          <span class="text">常用应用</span>
+        </a>
+      </div>
+      
+      <!--滑出菜单-->
+      <div class="h-f-aside-slide-area" id="slide-menu-1">
+        <div class="h-f-page-header">
+          <!--工具栏-->
+          <div class="h-f-page-toolbar h-f-float-right">
+            <!--编辑收藏-->
+            <a href="#" class="h-f-icon h-f-icon-setting" title="编辑收藏" data-hsui="btn-fav-adit">&nbsp;</a>
+            <!--关闭按钮-->
+            <a href="#" class="h-f-icon h-f-icon-close" title="关闭菜单" data-hsui="slide-close">&nbsp;</a>
+          </div>
+          <!--应用搜索-->
+          <div class="h-f-form-app-search">
+            <form>
+              <input type="text" class="h-f-form-control" placeholder="请输入应用名称...">
+            </form>
+          </div>
+          <div class="h-f-page-title">
+            <a href="#">数据查询</a>
+          </div>
+        </div>
+        <div class="h-f-submenu-area">
+          <h3 class="h-f-app-list-title">烟叶购销</h3>
+          <div class="h-f-app-list">
+      
+      <ul class="clearfix">
+            <li class="h-f-app-item h-f-has-pulldown">
+              
+                <div class="h-f-arrow"></div>
+                
+                <div class="h-f-app-toolbar" data-hsui="app-fav">
+                	<a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+                </div>
+              
+                <a href="javascript:void(0);" class="h-f-app-link " data-hsui="open-drop">
+                	<span class="h-f-icon h-f-icon-xxl h-f-icon-menu-1"></span>
+                	<span class="h-f-app-name">弹出下拉菜单</span> 
+                </a>
+             
+              
+                <div class="h-f-pulldown" style="display: none;">
+                    <!--该iframe用于解决DIV层被OBJECT控件遮盖问题-->
+                    <iframe class="h-f-pulldown-canvas" frameborder="0" scrolling="no"></iframe>
+                    <div class="h-f-pulldown-content">
+                      <div class="h-f-pulldown-content-in">下拉菜单采用树控件。说明：下拉菜单的弹出位置分为右下(默认)、右上、左下、左上几种，需要根据该菜单四周空间来计算并判断采用哪个位置，如果四周宽高都无法满足时，下拉菜单的宽高也应同时进行计算采用四周空间的最大值，具体调用方式请查看页头的JS代码 </div>
+                    </div>
+                </div>
+                
+            </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-2"></span>
+              <span class="h-f-app-name">菜单项一</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-3"></span>
+              <span class="h-f-app-name">菜单二</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-4"></span>
+              <span class="h-f-app-name">菜单项三</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-5"></span>
+              <span class="h-f-app-name">菜单项四</span> </a>
+        </li>
+         <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-6"></span>
+              <span class="h-f-app-name">菜单项五</span> </a>
+        </li>
+      </ul>
+    </div>
+          <h3 class="h-f-app-list-title">
+          	
+            <a href="#">烟叶加工1</a>
+            <span class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </span>
+          </h3>
+          <div class="h-f-app-list">
+      <ul class="clearfix">
+      	<li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-1"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-2"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-3"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-4"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-5"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-6"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-7"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-8"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-1"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-2"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-3"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-4"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+
+      </ul>
+    </div>
+          <h3 class="h-f-app-list-title">烟叶库存</h3>
+          <div class="h-f-app-list">
+      <ul class="clearfix">
+      	<li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-1"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-2"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-3"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-4"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-5"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-6"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-7"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-8"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item h-f-has-pulldown">
+              
+                <div class="h-f-arrow"></div>
+                
+                <div class="h-f-app-toolbar" data-hsui="app-fav">
+                	<a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+                </div>
+              
+                <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-drop">
+                	<span class="h-f-icon h-f-icon-xxl h-f-icon-menu-1"></span>
+                	<span class="h-f-app-name">弹出下拉菜单</span> 
+                </a>
+             
+              
+                <div class="h-f-pulldown" style="display: none;">
+                    <!--该iframe用于解决DIV层被OBJECT控件遮盖问题-->
+                    <iframe class="h-f-pulldown-canvas" frameborder="0" scrolling="no"></iframe>
+                    <div class="h-f-pulldown-content">
+                      <div class="h-f-pulldown-content-in">下拉菜单采用树控件，下拉菜单的弹出位置分为右下(默认)、右上、左下、左上几种，请查看页头的JS代码 </div>
+                    </div>
+                </div>
+                
+            </li>
+
+      </ul>
+    </div>
+        </div>
+      </div>
+      <div class="h-f-aside-slide-area" id="slide-menu-2">
+        <div class="h-f-page-header">
+          <!--工具栏-->
+          <div class="h-f-page-toolbar h-f-float-right">
+            <!--编辑收藏-->
+            <a href="#" class="h-f-icon h-f-icon-setting" title="编辑收藏" data-hsui="btn-fav-adit">&nbsp;</a>
+            <!--关闭按钮-->
+            <a href="#" class="h-f-icon h-f-icon-close" title="关闭菜单" data-hsui="slide-close">&nbsp;</a>
+          </div>
+          <!--应用搜索-->
+          <div class="h-f-form-app-search">
+            <form>
+              <input type="text" class="h-f-form-control" placeholder="请输入应用名称...">
+            </form>
+          </div>
+          <div class="h-f-page-title">
+            资源分析
+          </div>
+        </div>
+        <div class="h-f-submenu-area">
+          <h3 class="h-f-app-list-title">
+            <a href="#">烟叶加工</a>
+          </h3>
+          <div class="h-f-app-list">
+      <ul class="clearfix">
+      	<li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-1"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-2"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-3"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-4"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-5"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-6"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-7"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-8"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+
+      </ul>
+    </div>
+          <h3 class="h-f-app-list-title">烟叶库存</h3>
+          <div class="h-f-app-list">
+      <ul class="clearfix">
+      	<li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-1"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-2"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-3"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-4"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-5"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-6"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-7"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-fav">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-fav" title="收藏该应用">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-link " data-hsui="open-link" target="content-fram">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-8"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+
+      </ul>
+    </div>
+        </div>
+      </div>
+    </div>
+    <!--滑出菜单遮罩层-->
+    <div class="h-f-aside-slide-mask h-f-hide">
+      <div class="h-f-aside-slide-mask-content"></div>
+      <!--该iframe用于解决DIV层被OBJECT控件遮盖问题-->
+      <iframe src="about:blank"  frameBorder=0 style="position:absolute; visibility:inherit; top:0px;right:0px;height:100%;width:100%; z-Index:-1; background:#f00; filter='progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0)';">
+      </iframe>
+    </div>
+    
+    <!--主内容区域-->
+    <div class="h-f-content">
+      <div class="h-f-localbar">
+        <!--右侧功能按钮区域，包括帮助、收藏页面等-->
+        <div class="h-f-float-right">
+          <a href="#" class="h-f-icon h-f-icon-help" title="查看帮助">&nbsp;</a>
+          <a href="#" class="h-f-icon h-f-icon-favorite" title="加入收藏">&nbsp;</a>
+        </div>
+        <!--面包屑导航-->
+        
+        <ul class="h-f-breadcrumbs">
+          <li class="h-f-breadcrumbs-item">
+            <a href="portal.html" target="content-fram" class="h-f-icon h-f-icon-l h-f-icon-home-l" title="返回首页"></a>
+          </li>
+          <li class="h-f-breadcrumbs-item">
+            <a href="#" class="h-f-link">一级菜单</a>
+          </li>
+          <li class="h-f-has-pulldown h-f-breadcrumbs-item">
+            <span class="h-f-icon-pull-arrow"></span>
+            <span class="h-f-pull-text">二级菜单</span>
+            <div class="h-f-pulldown" style="width:600px;">
+              <div class="h-f-pulldown-content">
+                <div class="h-f-has-pulldow-title">
+                  <a href="#" class="h-f-icon  h-f-icon-back" title="返回"></a>
+                  <a href="#" class="h-f-link">二级菜单</a>
+                  /
+                  <a href="#" class="h-f-link">三级菜单</a>
+                  / 四级菜单 </div>
+                <div class="h-f-breadcrumbs-menu clearfix">
+                  <div class="h-f-breadcrumbs-menu-area" style="width:33.33%;">
+                    <p >调拨计划管理</p>
+                    <ul >
+                      <li>
+                        <a href="#" >集中交易管理
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" >日常交易管理
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" >计划预衔接</a>
+                      </li>
+                      <li>
+                        <a href="#" >基地衔接</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="h-f-breadcrumbs-menu-area" style="width:33.33%;">
+                    <p >集中交易</p>
+                    <ul >
+                      <li>
+                        <a href="#" >核定量上限查询
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" >计划流水查询
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" >供方数据上报查询
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" >需方数据上报查询
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" >正式数据交易查询
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="h-f-breadcrumbs-menu-area" style="width:33.33%;">
+                    <p >调拨计划管理</p>
+                    <ul >
+                      <li>
+                        <a href="#" >集中交易管理
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" >日常交易管理
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" >计划预衔接</a>
+                      </li>
+                      <li>
+                        <a href="#" >基地衔接</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="h-f-clb"></div>
+                  <div class="h-f-breadcrumbs-menu-area" style="width:33.33%;">
+                    <p >集中交易</p>
+                    <ul >
+                      <li>
+                        <a href="#" >核定量上限查询
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" >计划流水查询
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" >供方数据上报查询
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" >需方数据上报查询
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" >正式数据交易查询
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="h-f-breadcrumbs-menu-area" style="width:33.33%;">
+                    <p >调拨计划管理</p>
+                    <ul >
+                      <li>
+                        <a href="#" >集中交易管理
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" >日常交易管理
+                          <span class="h-f-icon h-f-icon-arrow"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" >计划预衔接</a>
+                      </li>
+                      <li>
+                        <a href="#" >基地衔接</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="h-f-breadcrumbs-item h-f-breadcrumbs-current">计划流水单状态查询</li>
+        </ul>
+      </div>
+      <!--显示业务页面的iframe-->
+      <div class="h-f-content-iframe">
+        <iframe src="portal.html" name="content-fram" id="content-fram"  frameborder="0" scrolling="auto"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

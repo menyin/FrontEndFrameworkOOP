@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+/***************
+*
+*  4. Tabs
+*
+****************/
+
+.rsMinW .rsTabs {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	text-align:center;
+	overflow: hidden; padding-top:16px; position:absolute;  top:-8px;
+}
+.rsMinW .rsTab {
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	height: auto;
+	width: auto;
+	font-size:17px;
+	min-width: 72px;
+	border-radius:80px;
+	text-decoration: none;
+	margin:8px;
+	margin-bottom:32px;
+	background-color:rgba(22,172,235,0.9);
+	*display:inline; 
+	*zoom:1;
+}
+.rsMinW .rsTab a{	color: #fff;}
+/*.rsMinW .rsTab:first-child {
+	-webkit-border-top-left-radius: 4px;
+	border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.rsMinW .rsTab:last-child { 
+	-webkit-border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+
+	border-right:  1px solid #cfcfcf;
+}*/
+.rsMinW .rsTab:active {  
+	background-color: #fff;
+	box-shadow:  0 1px 4px rgba(0, 0, 0, 0.2) inset;
+}
+.rsMinW .rsTab.rsNavSelected { 
+	background: #fff;
+}
+
+
+.rsMinW .rsTab.rsNavSelected::before {
+    content: "";
+    position: absolute;
+    top:120px;
+    height: 0px;
+    width: 0px;
+    border-width: 10px;
+    border-style: solid; 
+	margin-left:-8px;
+    border-color:transparent transparent #fff transparent;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+}	
+.rsMinW .rsTab.rsNavSelected a{color: #6093ce;}
+
+.h-p-btn-clircle{
+	display:block; height:100px;background-repeat:no-repeat; background-position:center;
+	}
+/*数据共享*/
+.rsTab.rsNavSelected >.h-p-btn-shareout{
+	background-image:url(images/portal/btn-shareout-select.png); 
+	}
+.rsTab.rsNavSelected >.h-p-btn-sharein{
+	background-image:url(images/portal/btn-shareIn-select.png); 
+	}
+.rsTab >.h-p-btn-shareout{
+	background-image:url(images/portal/btn-shareout.png); 
+	}
+.rsTab >.h-p-btn-sharein{
+	background-image:url(images/portal/btn-shareIn.png); 
+	}	
+/*技术支持*/	.rsTab.rsNavSelected >.h-p-btn-basic{
+	background-image:url(images/portal/btn-basic-select.png); 
+	}
+.rsTab.rsNavSelected >.h-p-btn-time{
+	background-image:url(images/portal/btn-time-select.png); 
+	}
+.rsTab.rsNavSelected >.h-p-btn-post{
+	background-image:url(images/portal/btn-Post-select.png); 
+	}
+.rsTab >.h-p-btn-basic{
+	background-image:url(images/portal/btn-basic.png); 
+	}
+.rsTab >.h-p-btn-time{
+	background-image:url(images/portal/btn-time.png); 
+	}	
+.rsTab >.h-p-btn-post{
+	background-image:url(images/portal/btn-Post.png); 
+	}	

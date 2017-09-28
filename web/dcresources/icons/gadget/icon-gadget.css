@@ -1,0 +1,48 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2016-03
+======================================*/
+
+/*-------------------------------------------------------------
+	 个性首页小挂件图标
+-------------------------------------------------------------*/
+
+/*@tag 通知公告*/
+.h-icon-gadget-notice{background-image: url(images/icon-gadget-notice.png) !important;}
+.h-icon-gadget-notice_ext{background-image: url(images/icon-gadget-notice_ext.png) !important;}
+
+/*@tag 待办事项*/
+.h-icon-gadget-todo{background-image: url(images/icon-gadget-todo.png) !important;}
+.h-icon-gadget-todo_ext{background-image: url(images/icon-gadget-todo_ext.png) !important;}
+
+/*@tag 消息列表*/
+.h-icon-gadget-message{background-image: url(images/icon-gadget-message.png) !important;}
+.h-icon-gadget-message_ext{background-image: url(images/icon-gadget-message_ext.png) !important;}
+
+/*@tag 最近工作*/
+.h-icon-gadget-works{background-image: url(images/icon-gadget-works.png) !important;}
+.h-icon-gadget-works_ext{background-image: url(images/icon-gadget-works_ext.png) !important;}
+
+/*@tag 系统模块*/
+.h-icon-gadget-system{background-image: url(images/icon-gadget-system.png) !important;}
+.h-icon-gadget-system_ext{background-image: url(images/icon-gadget-system_ext.png) !important;}
+
+/*@tag 个人便签*/
+.h-icon-gadget-note{background-image: url(images/icon-gadget-note.png) !important;}
+.h-icon-gadget-note_ext{background-image: url(images/icon-gadget-note_ext.png) !important;}
+
+
+
+/*@tag 收藏*/
+.h-icon-gadget-favorites{background-image: url(images/icon-gadget-favorites.png) !important;}
+.h-icon-gadget-favorites_ext{background-image: url(images/icon-gadget-favorites_ext.png) !important;}
+
+
+/*@tag 看板*/
+.h-icon-gadget-board{background-image: url(images/icon-gadget-board.png) !important;}
+.h-icon-gadget-board_ext{background-image: url(images/icon-gadget-board_ext.png) !important;}
+
+

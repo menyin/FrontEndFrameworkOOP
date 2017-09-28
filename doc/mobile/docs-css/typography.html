@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICSSHS-MUI for webapp</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="../docs-components/icon.png">
+<link rel="apple-touch-icon" href="../docs-components/icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="../docs-components/icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="../docs-components/icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="../docs-components/undefined.png">
+
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+<script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//可收缩展开列表
+     $("[data-action=accordion] .hm-card-header").click(function() {
+          $(this).next().slideToggle();
+          $(this).find("i").toggleClass("hm-icon-arrow-up");
+          $(this).find("i").toggleClass("hm-icon-arrow-down");
+		  
+		  $(this).parent().addClass("hm-active");
+		  
+		  $("[data-action=accordion] .hm-card-header").not(this).parent().removeClass("hm-active");;
+          $("[data-action=accordion] .hm-card-header").not(this).next().slideUp();
+          $("[data-action=accordion] .hm-card-header").not(this).find("i").removeClass("hm-icon-arrow-up").addClass("hm-icon-arrow-down");
+     })
+});
+</script>
+</head>
+<body>
+<div class="docs-content">
+  <div class="docs-page-masthead">
+    <h1>排版(typography)</h1>
+  </div>
+  <h2>基本案例</h2>
+  <h3>标题</h3>
+  <p>HTML 中的所有标题标签，<code>h1</code> 到 <code>h6</code> 均可使用。</p>
+  <div class="docs-example docs-example-dark">
+    <h1>h1. HSUI标题文字 </h1>
+    <h2>h2. HSUI标题文字 </h2>
+    <h3>h3. HSUI标题文字 </h3>
+    <h4>h4. HSUI标题文字 </h4>
+    <h5>h5. HSUI标题文字 </h5>
+    <h6>h6. HSUI标题文字 </h6>
+  </div>
+  
+  
+  
+  <p>在标题内还可以包含 <code>&lt;small&gt;</code> 标签或赋予 <code>.small</code> 类的元素，可以用来标记副标题。</p>
+  <div class="docs-example docs-example-dark">
+    <h1>h1. HSUI标题文字 <small>副标题</small></h1>
+    <h2>h2. HSUI标题文字 <small>副标题</small></h2>
+    <h3>h3. HSUI标题文字 <small>副标题</small> </h3>
+    <h4>h4. HSUI标题文字 <small>副标题</small> </h4>
+    <h5>h5. HSUI标题文字 <small>副标题</small></h5>
+    <h6>h6. HSUI标题文字 <small>副标题</small> </h6>
+  </div>
+  
+  
+  
+  
+  
+  <h3>段落文本</h3>
+  <p>HSUI 将全局 <code>font-size</code> 设置为 <strong>16px</strong>，<code>line-height</code> 设置为 <strong>1.5</strong>。这些属性直接赋予 <code>&lt;body&gt;</code> 元素和所有段落元素。另外，<code>&lt;p&gt;</code> （段落）元素还被设置1rem的底部外边距（margin）。</p>
+  <div class="docs-example docs-example-dark">
+    <p>UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+    <p>UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+  </div>
+  
+  
+  
+  <h3>引用</h3>
+  <p>通过添加 <code>.hm-lead</code> 类可以让段落突出显示。</p>
+  
+  <div class="docs-example docs-example-dark">
+    <blockquote>
+    	<p>无论走到哪里，都应该记住，过去都是假的，回忆是一条没有尽头的路，一切以往的春天都不复存在，就连那最坚韧而又狂乱的爱情归根结底也不过是一种转瞬即逝的现实。</p>
+        <small>马尔克斯 ——《百年孤独》</small>
+    </blockquote>
+  </div>
+  
+  
+  <h2>列表</h2>
+  <h3>无序列表</h3>
+  
+  <div class="docs-example docs-example-dark">
+    <ul>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit
+        <ul>
+          <li>Phasellus iaculis neque</li>
+          <li>Purus sodales ultricies</li>
+          <li>Vestibulum laoreet porttitor sem</li>
+          <li>Ac tristique libero volutpat at</li>
+        </ul>
+      </li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+    </ul>
+  </div>
+  
+  
+  <h3>有序列表</h3>
+  
+  <div class="docs-example docs-example-dark">
+    <ol>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit</li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+    </ol>
+  </div>
+  
+  
+  
+  <h3>描述</h3>
+  <p>带有描述的短语列表.</p>
+  <div class="docs-example docs-example-dark">
+  	<dl>
+        <dt>什么是UED</dt>
+        <dd>UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</dd>
+        <dt>什么是UED</dt>
+        <dd>UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</dd>
+    </dl>
+  </div>
+  
+  <p>水平排列的描述</p>
+  <div class="docs-example docs-example-dark">
+  	<dl class="hm-dl-horizontal">
+        <dt>地址</dt>
+        <dd>厦门市思明区观日路2号</dd>
+        <dt>电话</dt>
+        <dd>15710657497</dd>
+        <dt>网址</dt>
+        <dd>www.hsit.com.cn</dd>
+        <dt>公司简介</dt>
+        <dd>务实造就成功，创新成就未来。作为在烟草行业内具有一定影响力的IT供应商，中软海晟将以务实、创新的态度，一如既往地以服务烟草行业信息化建设、振兴烟草信息化软件产业为己任，奋力拼搏，与时俱进，力争成为烟草行业应用最广泛、实施服务经验最丰富的一流供应商。</dd>
+    </dl>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+</body>
+</html>

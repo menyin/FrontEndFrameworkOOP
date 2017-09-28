@@ -1,0 +1,208 @@
+/*======================================
+		HSIT-UI for moblie CSS
+		author:   design4u
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2016-02
+		version:  3.0
+======================================*/
+@font-face {
+	font-family: "hm-iconfont";
+	src: url('font/iconfont.eot'); /* IE9*/
+	src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('font/iconfont.woff') format('woff'), /* chrome, firefox */ url('font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('font/iconfont.svg#hm-iconfont') format('svg'); /* iOS 4.1- */
+}
+[class*="hm-icon"] {
+	font-family: "hm-iconfont" !important;
+	display: inline-block;
+	font-size: 24px;
+	line-height: 1;
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	vertical-align: middle;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+}
+/*图标内的微章*/
+[class*="hm-icon"] .hm-badge {
+	position: absolute;
+	left: 100%;
+	top: 0;
+	margin-left: -10px;
+	padding: 2px 5px;
+	font-size: .625rem;
+	min-width: 0;
+}
+/*图标形状*/
+[class*="hm-icon"].hm-radius,
+[class*="hm-icon"].hm-circle {
+	background: #777;
+	color: #fff;
+	padding: 0.375rem;
+}
+[class*="hm-icon"].hm-radius:before,
+[class*="hm-icon"].hm-circle:before { }
+.hm-btn >*+[class*="hm-icon"],
+.hm-btn >*+[class^="hm-icon"] { margin: 0 0.25rem; }
+.hm-icon-xs { font-size: 12px; }
+.hm-icon-sm { font-size: 16px; }
+.hm-icon-lg { font-size: 32px; }
+.hm-icon-xl { font-size: 48px; }
+.hm-icon-alert-success { color: #04be02; }
+.hm-icon-alert-info { color: #10aeff; }
+.hm-icon-alert-warning { color: #ffbe00; }
+.hm-icon-alert-danger { color: #f76260; }
+.hm-icon-safe:before { content: "\e609"; }
+.hm-icon-server:before { content: "\e60a"; }
+.hm-icon-input:before { content: "\e60e"; }
+.hm-icon-print:before { content: "\e606"; }
+.hm-icon-edit:before { content: "\e608"; }
+.hm-icon-love-active:before { content: "\e60f"; }
+.hm-icon-love:before { content: "\e610"; }
+.hm-icon-delete-character:before { content: "\e600"; }
+.hm-icon-close:before { content: "\e601"; }
+.hm-icon-add:before { content: "\e615"; }
+.hm-icon-plus:before { content: "\d001"; }
+.hm-icon-reduce:before { content: "\e613"; }
+.hm-icon-alert-warning:before { content: "\e604"; }
+.hm-icon-search:before { content: "\e611"; }
+.hm-icon-comment:before { content: "\e614"; }
+.hm-icon-copy:before { content: "\e616"; }
+.hm-icon-message:before { content: "\e617"; }
+.hm-icon-photo:before { content: "\e618"; }
+.hm-icon-more-vertical:before { content: "\e619"; }
+.hm-icon-me:before { content: "\e61a"; }
+.hm-icon-pengyouquan:before { content: "\e61b"; }
+.hm-icon-weibo:before { content: "\e61c"; }
+.hm-icon-weixin:before { content: "\e61d"; }
+.hm-icon-code:before { content: "\e61e"; }
+.hm-icon-more:before { content: "\e61f"; }
+.hm-icon-alert-danger:before { content: "\e607"; }
+.hm-icon-download:before { content: "\e603"; }
+.hm-icon-delete:before { content: "\e60d"; }
+.hm-icon-edit1:before { content: "\e638"; }
+.hm-icon-email:before { content: "\e639"; }
+.hm-icon-favorite:before { content: "\e63a"; }
+.hm-icon-folder:before { content: "\e63b"; }
+.hm-icon-form:before { content: "\e63c"; }
+.hm-icon-pic:before { content: "\e641"; }
+.hm-icon-refresh:before { content: "\e642"; }
+.hm-icon-training:before { content: "\e643"; }
+.hm-icon-viewgallery:before { content: "\e644"; }
+.hm-icon-viewlist:before { content: "\e645"; }
+.hm-icon-alert-info:before { content: "\e60c"; }
+.hm-icon-clock:before { content: "\e646"; }
+.hm-icon-remind:before { content: "\e647"; }
+.hm-icon-calendar:before { content: "\e648"; }
+.hm-icon-quit:before { content: "\e605"; }
+.hm-icon-view:before { content: "\e623"; }
+.hm-icon-scan:before { content: "\e624"; }
+.hm-icon-attachment:before { content: "\e649"; }
+.hm-icon-voice-active:before { content: "\e625"; }
+.hm-icon-voice:before { content: "\e626"; }
+.hm-icon-checked:before { content: "\e628"; }
+.hm-icon-follow:before { content: "\e629"; }
+.hm-icon-good:before { content: "\e62a"; }
+.hm-icon-share:before { content: "\e62b"; }
+.hm-icon-forward:before { content: "\e62c"; }
+.hm-icon-image:before { content: "\e62d"; }
+.hm-icon-help:before { content: "\e630"; }
+.hm-icon-detail:before { content: "\e631"; }
+.hm-icon-location:before { content: "\e632"; }
+.hm-icon-setting:before { content: "\e633"; }
+.hm-icon-time:before { content: "\e634"; }
+.hm-icon-arrow-up:before { content: "\e635"; }
+.hm-icon-arrow-down:before { content: "\e636"; }
+.hm-icon-arrow-left:before,
+.hm-icon-back:before { content: "\e64b"; }
+.hm-icon-arrow-right:before { content: "\e64a"; }
+.hm-icon-info:before { content: "\e637"; }
+.hm-icon-alert-success:before { content: "\e602"; }
+.hm-icon-alert-waiting:before { content: "\e612"; }
+.hm-icon-filter:before { content: "\e620"; }
+.hm-icon-home:before { content: "\e621"; }
+.hm-icon-menu:before { content: "\e62f"; }
+.hm-icon-sort:before { content: "\e622"; }
+.hm-icon-sort-up:before { content: "\e62e"; }
+.hm-icon-sort-down:before { content: "\e627"; }
+.hm-icon-upload:before { content: "\e63e"; }
+.hm-icon-password:before { content: "\e63d"; }
+
+
+.hm-icon-node-expand:before { content: "\e640"; }
+.hm-icon-node-collapse:before { content: "\e63f"; }
+.hm-icon-dote:before { content: "\e60b"; }
+
+
+
+.hm-icon-office:before { content: "\e671"; }
+.hm-icon-news:before { content: "\e654"; }
+.hm-icon-music:before { content: "\e64c"; }
+.hm-icon-headphone:before { content: "\e68b"; }
+.hm-icon-video:before { content: "\e679"; }
+.hm-icon-connection:before { content: "\e67f"; }
+.hm-icon-podcast:before { content: "\e663"; }
+.hm-icon-book:before { content: "\e66e"; }
+.hm-icon-books:before { content: "\e66e"; }
+.hm-icon-folder:before { content: "\e63b"; }
+.hm-icon-folder-open:before { content: "\e68d"; }
+.hm-icon-tag:before { content: "\e667"; }
+.hm-icon-tags:before { content: "\e656"; }
+.hm-icon-barcode:before { content: "\e661"; }
+.hm-icon-qrcode:before { content: "\e674"; }
+.hm-icon-cart:before { content: "\e659"; }
+.hm-icon-credit:before { content: "\e67e"; }
+.hm-icon-phone:before { content: "\e67d"; }
+.hm-icon-pushpin:before { content: "\e675"; }
+.hm-icon-compass:before { content: "\e652"; }
+.hm-icon-map:before { content: "\e665"; }
+.hm-icon-bell:before { content: "\e680"; }
+.hm-icon-screen:before { content: "\e66b"; }
+.hm-icon-mobile:before { content: "\e653"; }
+.hm-icon-tablet:before { content: "\e66a"; }
+.hm-icon-cabinet:before { content: "\e67c"; }
+.hm-icon-drawer:before { content: "\e66c"; }
+.hm-icon-undo:before { content: "\e660"; }
+.hm-icon-redo:before { content: "\e651"; }
+.hm-icon-bubble:before { content: "\e65d"; }
+.hm-icon-bubbles:before { content: "\e670"; }
+.hm-icon-user:before { content: "\e650"; }
+.hm-icon-users:before { content: "\e68f"; }
+
+
+
+.hm-icon-expand:before { content: "\e64d"; }
+.hm-icon-contract:before { content: "\e686"; }
+.hm-icon-key:before { content: "\e685"; }
+.hm-icon-lock:before { content: "\e666"; }
+.hm-icon-unlocked:before { content: "\e669"; }
+.hm-icon-wrench:before { content: "\e658"; }
+.hm-icon-cogs:before { content: "\e662"; }
+.hm-icon-cog:before { content: "\e68c"; }
+.hm-icon-hammer:before { content: "\e65c"; }
+.hm-icon-pie:before { content: "\e684"; }
+.hm-icon-stats:before { content: "\e688"; }
+.hm-icon-bars:before { content: "\e64f"; }
+.hm-icon-gift:before { content: "\e64e"; }
+.hm-icon-rocket:before { content: "\e68a"; }
+.hm-icon-airplane:before { content: "\e681"; }
+.hm-icon-truck:before { content: "\e67a"; }
+.hm-icon-road:before { content: "\e683"; }
+.hm-icon-target:before { content: "\e66d"; }
+.hm-icon-switch:before { content: "\e68e"; }
+.hm-icon-powercord:before { content: "\e664"; }
+.hm-icon-tree:before { content: "\e689"; }
+.hm-icon-earth:before { content: "\e673"; }
+.hm-icon-attachment:before { content: "\e65e"; }
+.hm-icon-star:before { content: "\e655"; }
+.hm-icon-star-active:before { content: "\e657"; }
+.hm-icon-enter:before { content: "\e676"; }
+.hm-icon-exit:before { content: "\e66f"; }
+.hm-icon-loop:before { content: "\e65a"; }
+
+
+
+

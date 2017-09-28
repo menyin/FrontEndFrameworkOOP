@@ -1,0 +1,3122 @@
+﻿/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2015-10
+======================================*/
+
+/*-------------------------------------------------------------
+	菜单CSS命令规约：
+	
+	子系统图标：h-f-icon-system-xxx；
+	模块图标：  h-f-icon-module-xxx，其对应的衍生图标为：
+h-f-icon-module-xxx_ext 如果模块图标其下无分支时，模块图标还需要衍生一个类菜单的图标出来。
+	菜单图标：  h-f-icon-menu-xxx；
+    首页自定义快捷模块图标：  h-f-icon-leaf-xxx；
+
+-------------------------------------------------------------*/
+
+/**
+=====================================================
+@group 子系统图标
+=====================================================
+*/
+/**
+@tag 调拨计划合同管理
+*/
+.h-f-icon-system-dbjhhtgl { background-image: url(images/system/icon-system-dbjhhtgl.png) !important; }
+/**
+@tag 调拨计划合同管理
+*/
+.h-f-icon-system-dbjhhtgl-ext { background-image: url(images/system/icon-system-dbjhhtgl-ext.png) !important; }
+
+/**
+@tag 调拨数采
+*/
+.h-f-icon-system-dbsc { background-image: url(images/system/icon-system-dbsc.png) !important; }
+/**
+@tag 调拨数采
+*/
+.h-f-icon-system-dbsc-ext { background-image: url(images/system/icon-system-dbsc-ext.png) !important; }
+/**
+@tag 统计管理
+*/
+.h-f-icon-system-tjgl { background-image: url(images/system/icon-system-tjgl.png) !important; }
+/**
+@tag 统计管理
+*/
+.h-f-icon-system-tjgl-ext { background-image: url(images/system/icon-system-tjgl-ext.png) !important; }
+/**
+@tag 数据发布
+*/
+.h-f-icon-system-sjfb { background-image: url(images/system/icon-system-sjfb.png) !important; }
+/**
+@tag 数据发布
+*/
+.h-f-icon-system-sjfb-ext { background-image: url(images/system/icon-system-sjfb-ext.png) !important; }
+/**
+@tag 基础信息管理
+*/
+.h-f-icon-system-jcxxgl { background-image: url(images/system/icon-system-jcxxgl.png) !important; }
+/**
+@tag 基础信息管理
+*/
+.h-f-icon-system-jcxxgl-ext { background-image: url(images/system/icon-system-jcxxgl-ext.png) !important; }
+/**
+@tag 系统管理
+*/
+.h-f-icon-system-xtgl { background-image: url(images/system/icon-system-xtgl.png) !important; }
+/**
+@tag 系统管理
+*/
+.h-f-icon-system-xtgl-ext { background-image: url(images/system/icon-system-xtgl-ext.png) !important; }
+/**
+@tag 消息中心
+*/
+.h-f-icon-system-xxzx { background-image: url(images/system/icon-system-xxzx.png) !important; }
+/**
+@tag 消息中心
+*/
+.h-f-icon-system-xxzx-ext  { background-image: url(images/system/icon-system-xxzx-ext.png) !important; }
+/**
+@tag 结算网关
+*/
+.h-f-icon-system-jswg { background-image: url(images/system/icon-system-jswg.png) !important; }
+/**
+@tag 结算网关
+*/
+.h-f-icon-system-jswg-ext { background-image: url(images/system/icon-system-jswg-ext.png) !important; }
+/**
+@tag 电子结算
+*/
+.h-f-icon-system-dzjs { background-image: url(images/system/icon-system-dzjs.png) !important; }
+/**
+@tag 电子结算
+*/
+.h-f-icon-system-dzjs-ext { background-image: url(images/system/icon-system-dzjs-ext.png) !important; }
+/**
+@tag 优化烟叶
+*/
+.h-f-icon-system-yhyy { background-image: url(images/system/icon-system-yhyy.png) !important; }
+/**
+@tag 优化烟叶
+*/
+.h-f-icon-system-yhyy-ext { background-image: url(images/system/icon-system-yhyy-ext.png) !important; }
+/**
+@tag 质量追溯与主题分析报表
+*/
+.h-f-icon-system-zlzsyztfxbb{ background-image: url(images/system/icon-system-zlzsyztfxbb.png) !important; }
+/**
+@tag 质量追溯与主题分析报表
+*/
+.h-f-icon-system-zlzsyztfxbb-ext{ background-image: url(images/system/icon-system-zlzsyztfxbb-ext.png) !important; }
+/**
+@tag 公共编码
+*/
+.h-f-icon-system-ggbm { background-image: url(images/system/icon-system-ggbm.png) !important; }
+/**
+@tag 公共编码
+*/
+.h-f-icon-system-ggbm-ext { background-image: url(images/system/icon-system-ggbm-ext.png) !important; }
+/**
+@tag TSO公共资源
+*/
+.h-f-icon-system-tsoggzy{ background-image: url(images/system/icon-system-tsoggzy.png) !important; }
+/**
+@tag TSO公共资源
+*/
+.h-f-icon-system-tsoggzy-ext{ background-image: url(images/system/icon-system-tsoggzy-ext.png) !important; }
+/**
+@tag CS升级服务端
+*/
+.h-f-icon-system-cssjfwd { background-image: url(images/system/icon-system-cssjfwd.png) !important; }
+/**
+@tag CS升级服务端
+*/
+.h-f-icon-system-cssjfwd-ext { background-image: url(images/system/icon-system-cssjfwd-ext.png) !important; }
+/**
+@tag 灾害理赔系统
+*/
+.h-f-icon-system-zhlpxt{ background-image: url(images/system/icon-system-zhlpxt.png) !important; }
+/**
+@tag 灾害理赔系统
+*/
+.h-f-icon-system-zhlpxt-ext{ background-image: url(images/system/icon-system-zhlpxt-ext.png) !important; }
+/**
+@tag 大理烟叶质量追溯
+*/
+.h-f-icon-system-dlyyzlzs{ background-image: url(images/system/icon-system-dlyyzlzs.png) !important; }
+/**
+@tag 大理烟叶质量追溯
+*/
+.h-f-icon-system-dlyyzlzs-ext{ background-image: url(images/system/icon-system-dlyyzlzs-ext.png) !important; }
+/**
+@tag 合同管理
+*/
+.h-f-icon-system-htgl{ background-image: url(images/system/icon-system-htgl.png) !important; }
+/**
+@tag 合同管理
+*/
+.h-f-icon-system-htgl-ext{ background-image: url(images/system/icon-system-htgl-ext.png) !important; }
+/**
+@tag 烟叶收购
+*/
+.h-f-icon-system-yysg{ background-image: url(images/system/icon-system-yysg.png) !important; }
+/**
+@tag 烟叶收购
+*/
+.h-f-icon-system-yysg-ext{ background-image: url(images/system/icon-system-yysg-ext.png) !important; }
+/**
+@tag 站点收购报表
+*/
+.h-f-icon-system-zdsgbb { background-image: url(images/system/icon-system-zdsgbb.png) !important; }
+/**
+@tag 站点收购报表
+*/
+.h-f-icon-system-zdsgbb-ext { background-image: url(images/system/icon-system-zdsgbb-ext.png) !important; }
+/**
+@tag TSO合同管理
+*/
+.h-f-icon-system-tsohtgl{ background-image: url(images/system/icon-system-tsohtgl.png) !important; }
+/**
+@tag TSO合同管理
+*/
+.h-f-icon-system-tsohtgl-ext{ background-image: url(images/system/icon-system-tsohtgl-ext.png) !important; }
+/**
+@tag 烟叶物流
+*/
+.h-f-icon-system-yywl{ background-image: url(images/system/icon-system-yywl.png) !important; }
+/**
+@tag 烟叶物流
+*/
+.h-f-icon-system-yywl-ext{ background-image: url(images/system/icon-system-yywl-ext.png) !important; }
+/**
+@tag 烟叶物资
+*/
+.h-f-icon-system-yywz{ background-image: url(images/system/icon-system-yywz.png) !important; }
+/**
+@tag 烟叶物资
+*/
+.h-f-icon-system-yywz-ext{ background-image: url(images/system/icon-system-yywz-ext.png) !important; }
+/**
+@tag 开发管理
+*/
+.h-f-icon-system-kfgl{ background-image: url(images/system/icon-system-kfgl.png) !important; }
+/**
+@tag 开发管理
+*/
+.h-f-icon-system-kfgl-ext{ background-image: url(images/system/icon-system-kfgl-ext.png) !important; }
+
+
+  /** 2016-6-24 */
+
+  /**
+@tag 烟叶生产
+*/
+.h-f-icon-system-yysc{ background-image: url(images/system/icon-system-yysc.png) !important; }
+/**
+@tag 烟叶生产
+*/
+.h-f-icon-system-yysc-ext{ background-image: url(images/system/icon-system-yysc-ext.png) !important; }
+  /**
+@tag 基础档案
+*/
+.h-f-icon-system-jcda{ background-image: url(images/system/icon-system-jcda.png) !important; }
+/**
+@tag 基础档案
+*/
+.h-f-icon-system-jcda-ext{ background-image: url(images/system/icon-system-jcda-ext.png) !important; }
+
+
+  /**
+@tag 生产看板
+*/
+.h-f-icon-system-sckb{ background-image: url(images/system/icon-system-sckb.png) !important; }
+/**
+@tag 生产看板
+*/
+.h-f-icon-system-sckb-ext{ background-image: url(images/system/icon-system-sckb-ext.png) !important; }
+
+  /**
+@tag 硬件参数
+*/
+.h-f-icon-system-yjcs{ background-image: url(images/system/icon-system-yjcs.png) !important; }
+/**
+@tag 硬件参数
+*/
+.h-f-icon-system-yjcs-ext{ background-image: url(images/system/icon-system-yjcs-ext.png) !important; }
+  /**
+@tag 基础设施档案与项目管理
+*/
+.h-f-icon-system-jcssdayxmgl{ background-image: url(images/system/icon-system-jcssdayxmgl.png) !important; }
+/**
+@tag 基础设施档案与项目管理
+*/
+.h-f-icon-system-jcssdayxmgl-ext{ background-image: url(images/system/icon-system-jcssdayxmgl-ext.png) !important; }
+  /**
+@tag 种植主体档案与管理
+*/
+.h-f-icon-system-zzztdaygl{ background-image: url(images/system/icon-system-zzztdaygl.png) !important; }
+/**
+@tag 种植主体档案与管理
+*/
+.h-f-icon-system-zzztdaygl-ext{ background-image: url(images/system/icon-system-zzztdaygl-ext.png) !important; }
+  /**
+@tag CELL烟叶物流
+*/
+.h-f-icon-system-cellyywl{ background-image: url(images/system/icon-system-cellyywl.png) !important; }
+/**
+@tag CELL烟叶物流
+*/
+.h-f-icon-system-cellyywl-ext{ background-image: url(images/system/icon-system-cellyywl-ext.png) !important; }
+  /**
+@tag 种植布局与计划合同
+*/
+.h-f-icon-system-zzbjyjhht{ background-image: url(images/system/icon-system-jcda.png) !important; }
+/**
+@tag 种植布局与计划合同
+*/
+.h-f-icon-system-jcda-ext{ background-image: url(images/system/icon-system-jcda-ext.png) !important; }
+
+  /**
+@tag 基础设施档案管理
+*/
+.h-f-icon-system-jcssdagl{ background-image: url(images/system/icon-system-jcssdagl.png) !important; }
+/**
+@tag 基础设施档案管理
+*/
+.h-f-icon-system-jcssdagl-ext{ background-image: url(images/system/icon-system-jcssdagl-ext.png) !important; }
+  /**
+@tag 烟用物资
+*/
+.h-f-icon-system-yywz{ background-image: url(images/system/icon-system-yywz.png) !important; }
+/**
+@tag 烟用物资
+*/
+.h-f-icon-system-yywz-ext{ background-image: url(images/system/icon-system-yywz-ext.png) !important; }
+  /**
+@tag 生产技术与绩效考核
+*/
+.h-f-icon-system-scjsyjxkh{ background-image: url(images/system/icon-system-scjsyjxkh.png) !important; }
+/**
+@tag 生产技术与绩效考核
+*/
+.h-f-icon-system-scjsyjxkh-ext{ background-image: url(images/system/icon-system-scjsyjxkh-ext.png) !important; }
+
+  /**
+@tag 合作社
+*/
+.h-f-icon-system-hzs{ background-image: url(images/system/icon-system-hzs.png) !important; }
+/**
+@tag 合作社
+*/
+.h-f-icon-system-hzs-ext{ background-image: url(images/system/icon-system-hzs-ext.png) !important; }
+  /**
+@tag CELL收购参数
+*/
+.h-f-icon-system-cellsgcs{ background-image: url(images/system/icon-system-cellsgcs.png) !important; }
+/**
+@tag CELL收购参数
+*/
+.h-f-icon-system-cellsgcs-ext{ background-image: url(images/system/icon-system-cellsgcs-ext.png) !important; }
+  /**
+@tag CELL收购业务
+*/
+.h-f-icon-system-cell{ background-image: url(images/system/icon-system-jcda.png) !important; }
+/**
+@tag CELL收购业务
+*/
+.h-f-icon-system-jcda-ext{ background-image: url(images/system/icon-system-jcda-ext.png) !important; }
+  /**
+@tag 基础设施
+*/
+.h-f-icon-system-jcss{ background-image: url(images/system/icon-system-jcss.png) !important; }
+/**
+@tag 基础设施
+*/
+.h-f-icon-system-jcss-ext{ background-image: url(images/system/icon-system-jcss-ext.png) !important; } 
+/**
+@tag 短信平台
+*/
+.h-f-icon-system-dxpt{ background-image: url(images/system/icon-system-dxpt.png) !important; }
+/**
+@tag 短信平台
+*/
+.h-f-icon-system-dxpt-ext{ background-image: url(images/system/icon-system-dxpt-ext.png) !important; }  
+/**
+@tag DM收购报表
+*/
+.h-f-icon-system-dmsgbb{ background-image: url(images/system/icon-system-dmsgbb.png) !important; }
+/**
+@tag DM收购报表
+*/
+.h-f-icon-system-dmsgbb-ext{ background-image: url(images/system/icon-system-dmsgbb-ext.png) !important; }
+  /**
+@tag 数据服务
+*/
+.h-f-icon-system-sjfw{ background-image: url(images/system/icon-system-sjfw.png) !important; }
+/**
+@tag 数据服务
+*/
+.h-f-icon-system-sjfw-ext{ background-image: url(images/system/icon-system-sjfw-ext.png) !important; }
+  /**
+@tag TSO烟叶物流仓储
+*/
+.h-f-icon-system-tsoyywlcc{ background-image: url(images/system/icon-system-tsoyywlcc.png) !important; }
+/**
+@tag TSO烟叶物流仓储
+*/
+.h-f-icon-system-tsoyywlcc-ext{ background-image: url(images/system/icon-system-tsoyywlcc-ext.png) !important; }
+  /**
+@tag TSO烟叶站点物流
+*/
+.h-f-icon-system-tsoyyzdwl{ background-image: url(images/system/icon-system-tsoyyzdwl.png) !important; }
+/**
+@tag TSO烟叶站点物流
+*/
+.h-f-icon-system-tsoyyzdwl-ext{ background-image: url(images/system/icon-system-tsoyyzdwl-ext.png) !important; }
+
+
+/**
+=====================================================
+@group 模块图标
+=====================================================
+*/
+
+
+/**
+@tag 流程首页
+*/
+.h-f-icon-module-home { background-image: url(images/module/icon-module-home.png) !important; }
+
+.h-f-icon-menu-home { background-image: url(images/menu/icon-menu-home.png) !important; }
+
+/**
+@tag 需要完成的工作
+*/
+.h-f-icon-module-xywcdgz { background-image: url(images/module/icon-module-xywcdgz.png) !important; }
+/**
+@tag 需要完成的工作
+*/
+.h-f-icon-menu-xywcdgz { background-image: url(images/menu/icon-menu-xywcdgz.png) !important; }
+/**
+@tag 调拨计划管理
+*/
+.h-f-icon-module-dbjhgl { background-image: url(images/module/icon-module-dbjhgl.png) !important; }
+/**
+@tag 调拨计划管理
+*/
+.h-f-icon-menu-dbjhgl { background-image: url(images/menu/icon-menu-dbjhgl.png) !important; }
+/**
+@tag 调拨合同管理
+*/
+.h-f-icon-module-dbhtgl { background-image: url(images/module/icon-module-dbhtgl.png) !important; }
+/**
+@tag 调拨合同管理
+*/
+.h-f-icon-menu-dbhtgl { background-image: url(images/menu/icon-menu-dbhtgl.png) !important; }
+/**
+@tag 入库
+*/
+.h-f-icon-module-rk { background-image: url(images/module/icon-module-rk.png) !important; }
+/**
+@tag 入库
+*/
+.h-f-icon-menu-rk { background-image: url(images/menu/icon-menu-rk.png) !important; }
+/**
+@tag 出库
+*/
+.h-f-icon-module-ck { background-image: url(images/module/icon-module-ck.png) !important; }
+/**
+@tag 出库
+*/
+.h-f-icon-menu-ck { background-image: url(images/menu/icon-menu-ck.png) !important; }
+/**
+@tag 库存盘点
+*/
+.h-f-icon-module-kcpd { background-image: url(images/module/icon-module-kcpd.png) !important; }
+/**
+@tag 库存盘点
+*/
+.h-f-icon-menu-kcpd { background-image: url(images/menu/icon-menu-kcpd.png) !important; }
+/**
+@tag 计划合同
+*/
+.h-f-icon-module-jhht { background-image: url(images/module/icon-module-jhht.png) !important; }
+/**
+@tag 计划合同
+*/
+.h-f-icon-menu-jhht { background-image: url(images/menu/icon-menu-jhht.png) !important; }
+/**
+@tag 调拨
+*/
+.h-f-icon-module-db { background-image: url(images/module/icon-module-db.png) !important; }
+/**
+@tag 调拨
+*/
+.h-f-icon-menu-db { background-image: url(images/menu/icon-menu-db.png) !important; }
+
+/**
+@tag 数据发布
+*/
+.h-f-icon-module-sjfb { background-image: url(images/module/icon-module-sjfb.png) !important; }
+/**
+@tag 数据发布
+*/
+.h-f-icon-module-sjfb { background-image: url(images/module/icon-module-sjfb.png) !important; }
+/**
+@tag 数据发布查询
+*/
+.h-f-icon-module-sjfbcq { background-image: url(images/module/icon-module-sjfbcq.png) !important; }
+/**
+@tag 数据发布查询
+*/
+.h-f-icon-menu-sjfbcq { background-image: url(images/menu/icon-menu-sjfbcq.png) !important; }
+/**
+@tag 任务中心
+*/
+.h-f-icon-module-rwzx { background-image: url(images/module/icon-module-rwzx.png) !important; }
+/**
+@tag 任务中心
+*/
+.h-f-icon-menu-rwzx { background-image: url(images/menu/icon-menu-rwzx.png) !important; }
+/**
+@tag 仓库管理
+*/
+.h-f-icon-module-ckgl { background-image: url(images/module/icon-module-ckgl.png) !important; }
+/**
+@tag 仓库管理
+*/
+.h-f-icon-menu-ckgl { background-image: url(images/menu/icon-menu-ckgl.png) !important; }
+
+/**
+@tag 时间,历史
+*/
+.h-f-icon-module-time { background-image: url(images/module/icon-module-time.png) !important; }
+
+/**
+@tag 时间,历史
+*/
+.h-f-icon-menu-time { background-image: url(images/menu/icon-menu-time.png) !important; }
+
+/**
+@tag 系统参数设置
+*/
+.h-f-icon-module-xtcssz { background-image: url(images/module/icon-module-xtcssz.png) !important; }
+/**
+@tag 系统参数设置
+*/
+.h-f-icon-menu-xtcssz { background-image: url(images/menu/icon-menu-xtcssz.png) !important; }
+/**
+@tag 数据管理
+*/
+.h-f-icon-module-sjgl { background-image: url(images/module/icon-module-sjgl.png) !important; }
+/**
+@tag 数据管理
+*/
+.h-f-icon-menu-sjgl { background-image: url(images/menu/icon-menu-sjgl.png) !important; }
+/**
+@tag 数据导入
+*/
+.h-f-icon-module-sjdr { background-image: url(images/module/icon-module-sjdr.png) !important; }
+/**
+@tag 数据导入
+*/
+.h-f-icon-menu-sjdr { background-image: url(images/menu/icon-menu-sjdr.png) !important; }
+/**
+@tag 数据备份
+*/
+.h-f-icon-module-sjbf { background-image: url(images/module/icon-module-sjbf.png) !important; }
+/**
+@tag 数据备份
+*/
+.h-f-icon-menu-sjbf { background-image: url(images/menu/icon-menu-sjbf.png) !important; }
+/**
+@tag 帮助
+*/
+.h-f-icon-module-bz { background-image: url(images/module/icon-module-bz.png) !important; }
+/**
+@tag 帮助
+*/
+.h-f-icon-menu-bz { background-image: url(images/menu/icon-menu-bz.png) !important; }
+/**
+@tag 模块首页
+*/
+.h-f-icon-module-mksy { background-image: url(images/module/icon-module-mksy.png) !important; }
+/**
+@tag 模块首页
+*/
+.h-f-icon-menu-mksy { background-image: url(images/menu/icon-menu-mksy.png) !important; }
+
+/**
+@tag 系统维护
+*/
+.h-f-icon-module-xtwh { background-image: url(images/module/icon-module-xtwh.png) !important; }
+/**
+@tag 系统维护
+*/
+.h-f-icon-menu-xtwh { background-image: url(images/menu/icon-menu-xtwh.png) !important; }
+/**
+@tag 开发者工具
+*/
+.h-f-icon-module-kfzgj { background-image: url(images/module/icon-module-kfzgj.png) !important; }
+/**
+@tag 开发者工具
+*/
+.h-f-icon-menu-kfzgj{ background-image: url(images/menu/icon-menu-kfzgj.png) !important; }
+
+
+/**
+@tag 业务字典
+*/
+.h-f-icon-module-ywzd{ background-image: url(images/module/icon-module-ywzd.png) !important; }
+
+/**
+@tag 业务字典
+*/
+.h-f-icon-menu-ywzd{ background-image: url(images/menu/icon-menu-ywzd.png) !important; }
+/**
+@tag 系统管理
+*/
+.h-f-icon-menu-xtgl{ background-image: url(images/menu/icon-menu-xtgl.png) !important;}
+
+/**
+@tag 系统管理
+*/
+.h-f-icon-module-xtgl{ background-image: url(images/module/icon-module-xtgl.png) !important; }
+/**
+@tag 公告
+*/
+.h-f-icon-module-gg{ background-image: url(images/module/icon-module-gg.png) !important; }
+/**
+@tag 公告
+*/
+.h-f-icon-menu-gg{ background-image: url(images/menu/icon-menu-gg.png) !important; }
+/**
+@tag 系统消息数据源
+*/
+.h-f-icon-module-xtxxsjy{ background-image: url(images/module/icon-module-xtxxsjy.png) !important; }
+/**
+@tag 系统消息数据源
+*/
+.h-f-icon-menu-xtxxsjy{ background-image: url(images/menu/icon-menu-xtxxsjy.png) !important; }
+/**
+@tag 通知管理
+*/
+.h-f-icon-module-tzgl{ background-image: url(images/module/icon-module-tzgl.png) !important; }
+/**
+@tag 通知管理
+*/
+.h-f-icon-menu-tzgl{ background-image: url(images/menu/icon-menu-tzgl.png) !important; }
+/**
+@tag 消息助手
+*/
+.h-f-icon-module-xxzs{ background-image: url(images/module/icon-module-xxzs.png) !important; }
+/**
+@tag 消息助手
+*/
+.h-f-icon-menu-xxzs{ background-image: url(images/menu/icon-menu-xxzs.png) !important; }
+/**
+@tag  CELL不适应烟叶
+*/
+.h-f-icon-module-cellbsyyy{ background-image: url(images/module/icon-module-cellbsyyy.png) !important; }
+/**
+@tag  CELL不适应烟叶
+*/
+.h-f-icon-menu-cellbsyyy{ background-image: url(images/menu/icon-menu-cellbsyyy.png) !important; }
+/**
+@tag CELL公共资源
+*/
+.h-f-icon-module-cellggzy{ background-image: url(images/module/icon-module-cellggzy.png) !important; }
+/**
+@tag CELL公共资源
+*/
+.h-f-icon-menu-cellggzy{ background-image: url(images/menu/icon-menu-cellggzy.png) !important; }
+
+/**
+@tag CELL结算中心
+*/
+.h-f-icon-module-celljszx{ background-image: url(images/module/icon-module-celljszx.png) !important; }
+/**
+@tag CELL结算中心
+*/
+.h-f-icon-menu-celljszx{ background-image: url(images/menu/icon-menu-celljszx.png) !important; }
+/**
+@tag TSO公共资源
+*/
+.h-f-icon-module-tsoggzy{ background-image: url(images/module/icon-module-tsoggzy.png) !important; }
+/**
+@tag TSO公共资源
+*/
+.h-f-icon-menu-tsoggzy{ background-image: url(images/menu/icon-menu-tsoggzy.png) !important; }
+/**
+@tag  TSO烟叶收购
+*/
+.h-f-icon-module-tsoyysg{ background-image: url(images/module/icon-module-tsoyysg.png) !important; }
+/**
+@tag  TSO烟叶收购
+*/
+.h-f-icon-menu-tsoyysg{ background-image: url(images/menu/icon-menu-tsoyysg.png) !important; }
+/**
+@tag TSO烟用物资
+*/
+.h-f-icon-module-tsoyywz{ background-image: url(images/module/icon-module-tsoyywz.png) !important; }
+/**
+@tag TSO烟用物资
+*/
+.h-f-icon-menu-tsoyywz{ background-image: url(images/menu/icon-menu-tsoyywz.png) !important; }
+
+/**
+@tag 消息中心
+*/
+.h-f-icon-menu-xxzx { background-image: url(images/menu/icon-menu-xxzx.png) !important; }
+/**
+@tag 消息中心
+*/
+.h-f-icon-module-xxzx { background-image: url(images/module/icon-module-xxzx.png) !important; }
+/**
+@tag 灾害理赔
+*/
+.h-f-icon-module-zhlp{ background-image: url(images/module/icon-module-zhlp.png) !important; }
+/**
+@tag 灾害理赔
+*/
+.h-f-icon-menu-zhlp{ background-image: url(images/menu/icon-menu-zhlp.png) !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+=====================================================
+@group 菜单图标
+=====================================================
+*/
+/**
+@tag 集中交易管理
+*/
+.h-f-icon-menu-jzjygl { background-image: url(images/menu/icon-menu-jzjygl.png) !important; }
+/**
+@tag 日常交易管理
+*/
+.h-f-icon-menu-rcjygl{ background-image: url(images/menu/icon-menu-rcjygl.png) !important; }
+/**
+@tag 基地衔接
+*/
+.h-f-icon-menu-jdxj{ background-image: url(images/menu/icon-menu-jdxj.png) !important; }
+/**
+@tag 计划预衔接
+*/
+.h-f-icon-menu-jhyxj{ background-image: url(images/menu/icon-menu-jhyxj.png) !important; }
+/**
+@tag 鉴章管理
+*/
+.h-f-icon-menu-jzgl { background-image: url(images/menu/icon-menu-jzgl.png) !important; }
+
+
+/**
+@tag 调拨计划
+*/
+.h-f-icon-menu-dbjh { background-image: url(images/menu/icon-menu-dbjh.png) !important; }
+/**
+@tag 调拨合同
+*/
+.h-f-icon-menu-dbht { background-image: url(images/menu/icon-menu-dbht.png) !important; }
+/**
+@tag 单据查询
+*/
+.h-f-icon-menu-djcx{ background-image: url(images/menu/icon-menu-djcx.png) !important; }
+/**
+@tag 汇总查询
+*/
+.h-f-icon-menu-hzcx { background-image: url(images/menu/icon-menu-hzcx.png) !important; }
+/**
+@tag  报表查询
+*/
+.h-f-icon-menu-bbcx{ background-image: url(images/menu/icon-menu-bbcx.png) !important; }
+
+
+
+
+
+/**
+@tag 其它
+*/
+.h-f-icon-menu-qt{ background-image: url(images/menu/icon-menu-qt.png) !important; }
+/**
+@tag 用户组织
+*/
+.h-f-icon-menu-yhzz { background-image: url(images/menu/icon-menu-yhzz.png) !important; }
+/**
+@tag 权限管理
+*/
+.h-f-icon-menu-qxgl{ background-image: url(images/menu/icon-menu-qxgl.png) !important; }
+/**
+@tag 资源管理
+*/
+.h-f-icon-menu-zygl{ background-image: url(images/menu/icon-menu-zygl.png) !important; }
+
+
+/**
+@tag 应用资源
+*/
+.h-f-icon-menu-yyzy{ background-image: url(images/menu/icon-menu-yyzy.png) !important; }
+/**
+@tag 系统设置
+*/
+.h-f-icon-menu-xtsz{ background-image: url(images/menu/icon-menu-xtsz.png) !important; }
+/**
+@tag 系统日志
+*/
+.h-f-icon-menu-xtrz{ background-image: url(images/menu/icon-menu-xtrz.png) !important; }
+
+
+
+/**
+@tag 公告管理
+*/
+.h-f-icon-menu-gggl { background-image: url(images/menu/icon-menu-gggl.png) !important; }
+/**
+@tag 待办管理
+*/
+.h-f-icon-menu-dbgl { background-image: url(images/menu/icon-menu-dbgl.png) !important; }
+/**
+@tag 消息管理
+*/
+.h-f-icon-menu-xxgl { background-image: url(images/menu/icon-menu-xxgl.png) !important; }
+/**
+@tag 运行管理
+*/
+.h-f-icon-menu-yxgl{ background-image: url(images/menu/icon-menu-yxgl.png) !important; }
+/**
+@tag 运行管理
+*/
+.h-f-icon-module-yxgl{ background-image: url(images/module/icon-module-yxgl.png) !important; }
+
+/**
+@tag 实施管理
+*/
+.h-f-icon-menu-ssgl{ background-image: url(images/menu/icon-menu-ssgl.png) !important; }
+
+
+
+/**
+@group 云南平台菜单图标
+*/
+
+
+/**
+@tag 基础数据设置
+*/
+.h-f-icon-menu-jcsjsz{ background-image: url(images/menu/icon-menu-jcsjsz.png) !important; }
+
+/**
+@tag 数据交互管理
+*/
+.h-f-icon-menu-sjjhgl{ background-image: url(images/menu/icon-menu-sjjhgl.png) !important; }
+/**
+@tag 投保信息管理
+*/
+.h-f-icon-menu-tbjhgl{ background-image: url(images/menu/icon-menu-tbjhgl.png) !important; }
+/**
+@tag 灾害快报管理
+*/
+.h-f-icon-menu-zhkbgl{ background-image: url(images/menu/icon-menu-zhkbgl.png) !important; }
+/**
+@tag 理赔信息管理
+*/
+.h-f-icon-menu-lpxxgl{ background-image: url(images/menu/icon-menu-lpxxgl.png) !important; }
+
+
+/**
+@tag 组织单位维护
+*/
+.h-f-icon-menu-zzdwwh{ background-image: url(images/menu/icon-menu-zzdwwh.png) !important; }
+/**
+@tag 烟叶基础代码查询
+*/
+.h-f-icon-menu-yyjcdmcx{ background-image: url(images/menu/icon-menu-yyjcdmcx.png) !important; }
+/**
+@tag 仓库编码维护
+*/
+.h-f-icon-menu-ccbmwh{ background-image: url(images/menu/icon-menu-ccbmwh.png) !important; }
+/**
+@tag 物资基础代码维护
+*/
+.h-f-icon-menu-wzjcbmwh{ background-image: url(images/menu/icon-menu-wzjcbmwh.png) !important; }
+
+
+
+/**
+@tag 烟叶相关编码
+*/
+.h-f-icon-menu-yyxgbm{ background-image: url(images/menu/icon-menu-yyxgbm.png) !important; }
+/**
+@tag 烟草系统组织单位管理
+*/
+.h-f-icon-menu-ycxtzzdwgl{ background-image: url(images/menu/icon-menu-ycxtzzdwgl.png) !important; }
+/**
+@tag 种植主体管理
+*/
+.h-f-icon-menu-zzztgl{ background-image: url(images/menu/icon-menu-zzztgl.png) !important; }
+/**
+@tag
+专业化服务组织管理
+*/
+.h-f-icon-menu-zyhfwzzgl{ background-image: url(images/menu/icon-menu-zyhfwzzgl.png) !important; }
+/**
+@tag 其他公共资源
+*/
+.h-f-icon-menu-qtggzy{ background-image: url(images/menu/icon-menu-qtggzy.png) !important; }
+
+
+/**
+@tag 站点储运管理参数设置
+*/
+.h-f-icon-menu-zdcyglcssz{ background-image: url(images/menu/icon-menu-zdcyglcssz.png) !important; }
+/**
+@tag 烟叶收购
+*/
+.h-f-icon-menu-yysg{ background-image: url(images/menu/icon-menu-yysg.png) !important; }
+/**
+@tag 税务发票管理
+*/
+.h-f-icon-menu-swfpgl{ background-image: url(images/menu/icon-menu-swfpgl.png) !important; }
+/**
+@tag 烟叶收购限制控制设置
+*/
+.h-f-icon-menu-yysgxzkzsz{ background-image: url(images/menu/icon-menu-yysgxzkzsz.png) !important; }
+/**
+@tag 收购预算
+*/
+.h-f-icon-menu-sgys{ background-image: url(images/menu/icon-menu-sgys.png) !important; }
+/**
+@tag 烟叶收购结构控制设置
+*/
+.h-f-icon-menu-yysgjgkzsz{ background-image: url(images/menu/icon-menu-yysgjgkzsz.png) !important; }
+/**
+@tag 烟叶收购业务权限设置
+*/
+.h-f-icon-menu-yysgywqxsz{ background-image: url(images/menu/icon-menu-yysgywqxsz.png) !important; }
+/**
+@tag 收购基层参数设置
+*/
+.h-f-icon-menu-sgjccssz{ background-image: url(images/menu/icon-menu-sgjccssz.png) !important; }
+/**
+@tag 收购皮重设置
+*/
+.h-f-icon-menu-sgpzsz{ background-image: url(images/menu/icon-menu-sgpzsz.png) !important; }
+/**
+@tag 收购预测
+*/
+.h-f-icon-menu-sgyc{ background-image: url(images/menu/icon-menu-sgyc.png) !important; }
+/**
+@tag 收购巡检初始化管理
+*/
+.h-f-icon-menu-sgxjcshgl{ background-image: url(images/menu/icon-menu-sgxjcshgl.png) !important; }
+/**
+@tag 烟叶回流管理
+*/
+.h-f-icon-menu-yyhlgl{ background-image: url(images/menu/icon-menu-yyhlgl.png) !important; }
+/**
+@tag 收购其他参数设置
+*/
+.h-f-icon-menu-sgqtcssz{ background-image: url(images/menu/icon-menu-sgqtcssz.png) !important; }
+
+
+
+/**
+@tag 物资参数管理
+*/
+.h-f-icon-menu-wzcsgl{ background-image: url(images/menu/icon-menu-wzcsgl.png) !important; }
+/**
+@tag 基础信息管理
+*/
+.h-f-icon-menu-jcxxgl{ background-image: url(images/menu/icon-menu-jcxxgl.png) !important; }
+/**
+@tag 物资工作检查
+*/
+.h-f-icon-menu-wcgzjc{ background-image: url(images/menu/icon-menu-wcgzjc.png) !important; }
+/**
+@tag 需求管理
+*/
+.h-f-icon-menu-xqgl{ background-image: url(images/menu/icon-menu-xqgl.png) !important; }
+/**
+@tag 采购管理
+*/
+.h-f-icon-menu-cggl{ background-image: url(images/menu/icon-menu-cggl.png) !important; }
+/**
+@tag 盘点管理
+*/
+.h-f-icon-menu-pdgl{ background-image: url(images/menu/icon-menu-pdgl.png) !important; }
+/**
+@tag 育苗管理
+*/
+.h-f-icon-menu-ymgl{ background-image: url(images/menu/icon-menu-ymgl.png) !important; }
+/**
+@tag 供应管理
+*/
+.h-f-icon-menu-gygl{ background-image: url(images/menu/icon-menu-gygl.png) !important; }
+/**
+@tag 领借管理
+*/
+.h-f-icon-menu-ljgl{ background-image: url(images/menu/icon-menu-ljgl.png) !important; }
+/**
+@tag 代领管理
+*/
+.h-f-icon-menu-dlgl{ background-image: url(images/menu/icon-menu-dlgl.png) !important; }
+/**
+@tag 救灾物资管理
+*/
+.h-f-icon-menu-jzwzgl{ background-image: url(images/menu/icon-menu-jzwzgl.png) !important; }
+/**
+@tag 物资仓储
+*/
+.h-f-icon-menu-wzcc{ background-image: url(images/menu/icon-menu-wzcc.png) !important; }
+/**
+@tag 报表管理
+*/
+.h-f-icon-menu-bbgl{ background-image: url(images/menu/icon-menu-bbgl.png) !important; }
+/**
+@tag 财务核算
+*/
+.h-f-icon-menu-cwhs{ background-image: url(images/menu/icon-menu-cwhs.png) !important; }
+
+
+
+
+/**
+@tag 基础信息管理
+*/
+.h-f-icon-menu-jcxxgl{ background-image: url(images/menu/icon-menu-jcxxgl-1.png) !important; }
+/**
+@tag 不适用烟叶处理管理
+*/
+.h-f-icon-menu-bsyyyclgl{ background-image: url(images/menu/icon-menu-bsyyyclgl.png) !important; }
+/**
+@tag 补贴兑现管理
+*/
+.h-f-icon-menu-btdxgl{ background-image: url(images/menu/icon-menu-btdxgl.png) !important; }
+/**
+@tag 不适用烟叶报表
+*/
+.h-f-icon-menu-bsyyebb{ background-image: url(images/menu/icon-menu-bsyyebb.png) !important; }
+
+
+
+/**
+@tag 收购付款
+*/
+.h-f-icon-menu-sgfk{ background-image: url(images/menu/icon-menu-sgfk.png) !important; }
+
+/*===================结算网关==========================*/
+/**
+@tag 辅助参数设置
+*/
+.h-f-icon-menu-fzcssz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 辅助参数设置
+*/
+.h-f-icon-module-fzcssz{ background-image: url(images/module/icon-module-setting.png) !important; }
+/**
+@tag 个人账户管理
+*/
+.h-f-icon-menu-grzhgl{ background-image: url(images/menu/icon-menu-grzhgl.png) !important; }
+/**
+@tag 个人账户管理
+*/
+.h-f-icon-module-grzhgl{ background-image: url(images/module/icon-module-grzhgl.png) !important; }
+/**
+@tag 对公账户管理
+*/
+.h-f-icon-menu-dgzhgl{ background-image: url(images/menu/icon-menu-dgzhgl.png) !important; }
+/**
+@tag 对公账户管理
+*/
+.h-f-icon-module-dgzhgl{ background-image: url(images/module/icon-module-dgzhgl.png) !important; }
+/**
+@tag 银行管理
+*/
+.h-f-icon-menu-yhgl{ background-image: url(images/menu/icon-menu-yhgl.png) !important; }
+/**
+@tag 银行管理
+*/
+.h-f-icon-module-yhgl{ background-image: url(images/module/icon-module-yhgl.png) !important; }
+/**
+@tag 签到管理
+*/
+.h-f-icon-menu-qdgl{ background-image: url(images/menu/icon-menu-qdgl.png) !important; }
+/**
+@tag 签到管理
+*/
+.h-f-icon-module-qdgl{ background-image: url(images/module/icon-module-qdgl.png) !important; }
+
+/*===================电子结算==========================*/
+/**
+@tag 票据管理
+*/
+.h-f-icon-menu-pjgl{ background-image: url(images/menu/icon-menu-pjgl.png) !important; }
+/**
+@tag 票据管理
+*/
+.h-f-icon-module-pjgl{ background-image: url(images/module/icon-module-pjgl.png) !important; }
+/**
+@tag 交易管理
+*/
+.h-f-icon-menu-jygl{ background-image: url(images/menu/icon-menu-jygl.png) !important; }
+/**
+@tag 交易管理
+*/
+.h-f-icon-module-jygl{ background-image: url(images/module/icon-module-jygl.png) !important; }
+/**
+@tag 对账管理
+*/
+.h-f-icon-menu-dzgl{ background-image: url(images/menu/icon-menu-dzgl.png) !important; }
+/**
+@tag 对账管理
+*/
+.h-f-icon-module-dzgl{ background-image: url(images/module/icon-module-dzgl.png) !important; }
+
+/**
+@tag 结算日志管理
+*/
+.h-f-icon-menu-jsrzgl{ background-image: url(images/menu/icon-menu-jsrzgl.png) !important; }
+/**
+@tag 结算日志管理
+*/
+.h-f-icon-module-jsrzgl{ background-image: url(images/module/icon-module-jsrzgl.png) !important; }
+
+/**
+@tag 辅助设置
+*/
+.h-f-icon-menu-fzsz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 辅助设置
+*/
+.h-f-icon-module-fzsz{ background-image: url(images/module/icon-module-setting.png) !important; }
+
+/**
+@tag 报表查看
+*/
+.h-f-icon-menu-bbck{ background-image: url(images/menu/icon-menu-bbck.png) !important; }
+/**
+@tag 报表查看
+*/
+.h-f-icon-module-bbck{ background-image: url(images/module/icon-module-bbck.png) !important; }
+
+/**
+@tag 余额查询
+*/
+.h-f-icon-menu-yecx{ background-image: url(images/menu/icon-menu-yecx.png) !important; }
+/**
+@tag 余额查询
+*/
+.h-f-icon-module-yecx{ background-image: url(images/module/icon-module-yecx.png) !important; }
+
+/**
+@tag 烟款回收管理
+*/
+.h-f-icon-menu-ykhsgl{ background-image: url(images/menu/icon-menu-ykhsgl.png) !important; }
+/**
+@tag 烟款回收管理
+*/
+.h-f-icon-module-ykhsgl{ background-image: url(images/module/icon-module-ykhsgl.png) !important; }
+
+/*===================优化烟叶==========================*/
+/**
+@tag 基本信息
+*/
+.h-f-icon-menu-jbxx{ background-image: url(images/menu/icon-menu-jbxx.png) !important; }
+/**
+@tag 基本信息
+*/
+.h-f-icon-module-jbxx{ background-image: url(images/module/icon-module-jbxx.png) !important; }
+/**
+@tag 参数设置
+*/
+.h-f-icon-menu-cssz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 参数设置
+*/
+.h-f-icon-module-cssz{ background-image: url(images/module/icon-module-setting.png) !important; }
+/**
+@tag 人员设置
+*/
+.h-f-icon-menu-rysz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 人员设置
+*/
+.h-f-icon-module-rysz{ background-image: url(images/module/icon-module-setting.png) !important; }
+/**
+@tag 烟叶处理
+*/
+.h-f-icon-menu-yycl{ background-image: url(images/menu/icon-menu-yycl.png) !important; }
+/**
+@tag 烟叶处理
+*/
+.h-f-icon-module-yycl{ background-image: url(images/module/icon-module-yycl.png) !important; }
+
+/**
+@tag 补贴兑现
+*/
+.h-f-icon-menu-btdx{ background-image: url(images/menu/icon-menu-btdx.png) !important; }
+/**
+@tag 补贴兑现
+*/
+.h-f-icon-module-btdx{ background-image: url(images/module/icon-module-btdx.png) !important; }
+
+/**
+@tag 烟农现金补贴
+*/
+.h-f-icon-menu-ynxjbt{ background-image: url(images/menu/icon-menu-ynxjbt.png) !important; }
+/**
+@tag 烟农现金补贴
+*/
+.h-f-icon-module-ynxjbt{ background-image: url(images/module/icon-module-ynxjbt.png) !important; }
+
+/**
+@tag 电子支付补贴
+*/
+.h-f-icon-menu-dzzfbt{ background-image: url(images/menu/icon-menu-dzzfbt.png) !important; }
+/**
+@tag 电子支付补贴
+*/
+.h-f-icon-module-dzzfbt{ background-image: url(images/module/icon-module-dzzfbt.png) !important; }
+/**
+@tag 村委会工作经费
+*/
+.h-f-icon-menu-cwhgzjf{ background-image: url(images/menu/icon-menu-cwhgzjf.png) !important; }
+/**
+@tag 村委会工作经费
+*/
+.h-f-icon-module-cwhgzjf{ background-image: url(images/module/icon-module-cwhgzjf.png) !important; }
+/**
+@tag 信息管理
+*/
+.h-f-icon-menu-xxgl{ background-image: url(images/menu/icon-menu-xxgl.png) !important; }
+/**
+@tag 信息管理
+*/
+.h-f-icon-module-xxgl{ background-image: url(images/module/icon-module-xxgl.png) !important; }
+/**
+@tag 业务预警
+*/
+.h-f-icon-menu-ywyj{ background-image: url(images/menu/icon-menu-ywyj.png) !important; }
+/**
+@tag 业务预警
+*/
+.h-f-icon-module-ywyj{ background-image: url(images/module/icon-module-ywyj.png) !important; }
+
+/**
+@tag 异常监控
+*/
+.h-f-icon-menu-ycjk{ background-image: url(images/menu/icon-menu-ycjk.png) !important; }
+/**
+@tag 异常监控
+*/
+.h-f-icon-module-ycjk{ background-image: url(images/module/icon-module-ycjk.png) !important; }
+
+/**
+@tag 业务分析
+*/
+.h-f-icon-menu-ywfx{ background-image: url(images/menu/icon-menu-ywfx.png) !important; }
+/**
+@tag 业务分析
+*/
+.h-f-icon-module-ywfx{ background-image: url(images/module/icon-module-ywfx.png) !important; }
+/**
+@tag 财务报表
+*/
+.h-f-icon-menu-cwbb{ background-image: url(images/menu/icon-menu-cwbb.png) !important; }
+/**
+@tag 财务报表
+*/
+.h-f-icon-module-cwbb{ background-image: url(images/module/icon-module-cwbb.png) !important; }
+/**
+@tag 数据加工
+*/
+.h-f-icon-menu-sjjg{ background-image: url(images/menu/icon-menu-sjjg.png) !important; }
+/**
+@tag 数据加工
+*/
+.h-f-icon-module-sjjg{ background-image: url(images/module/icon-module-sjjg.png) !important; }
+/**
+@tag 统计分析
+*/
+.h-f-icon-menu-tjfx{ background-image: url(images/menu/icon-menu-tjfx.png) !important; }
+/**
+@tag 统计分析
+*/
+.h-f-icon-module-tjfx{ background-image: url(images/module/icon-module-tjfx.png) !important; }
+/**
+@tag 考核管理
+*/
+.h-f-icon-menu-khgl{ background-image: url(images/menu/icon-menu-khgl.png) !important; }
+/**
+@tag 考核管理
+*/
+.h-f-icon-module-khgl{ background-image: url(images/module/icon-module-khgl.png) !important; }
+
+/*===================质量追溯与主题分析报表==========================*/
+/**
+@tag 计划合同分析
+*/
+.h-f-icon-menu-jhhtfx{ background-image: url(images/menu/icon-menu-jhhtfx.png) !important; }
+/**
+@tag 计划合同分析
+*/
+.h-f-icon-module-jhhtfx{ background-image: url(images/module/icon-module-jhhtfx.png) !important; }
+/**
+@tag 国家局报表
+*/
+.h-f-icon-menu-gjjbb{ background-image: url(images/menu/icon-menu-gjjbb.png) !important; }
+/**
+@tag 国家局报表
+*/
+.h-f-icon-module-gjjbb{ background-image: url(images/module/icon-module-gjjbb.png) !important; }
+/**
+@tag 收购储运分析
+*/
+.h-f-icon-menu-sgcyfx{ background-image: url(images/menu/icon-menu-sgcyfx.png) !important; }
+/**
+@tag 收购储运分析
+*/
+.h-f-icon-module-sgcyfx{ background-image: url(images/module/icon-module-sgcyfx.png) !important; }
+/**
+@tag 生产产情分析
+*/
+.h-f-icon-menu-sccqfx{ background-image: url(images/menu/icon-menu-sccqfx.png) !important; }
+/**
+@tag 生产产情分析
+*/
+.h-f-icon-module-sccqfx{ background-image: url(images/module/icon-module-sccqfx.png) !important; }
+/**
+@tag 综合分析
+*/
+.h-f-icon-menu-zhfx{ background-image: url(images/menu/icon-menu-zhfx.png) !important; }
+/**
+@tag 综合分析
+*/
+.h-f-icon-module-zhfx{ background-image: url(images/module/icon-module-zhfx.png) !important; }
+/**
+@tag GIS应用
+*/
+.h-f-icon-menu-gisyy{ background-image: url(images/menu/icon-menu-gisyy.png) !important; }
+/**
+@tag GIS应用
+*/
+.h-f-icon-module-gisyy{ background-image: url(images/module/icon-module-gisyy.png) !important; }
+/**
+@tag 物资管理分析
+*/
+.h-f-icon-menu-wzglfx{ background-image: url(images/menu/icon-menu-wzglfx.png) !important; }
+/**
+@tag 物资管理分析
+*/
+.h-f-icon-module-wzglfx{ background-image: url(images/module/icon-module-wzglfx.png) !important; }
+/**
+@tag 不适用烟叶分析
+*/
+.h-f-icon-menu-bsyyyfx{ background-image: url(images/menu/icon-menu-bsyyyfx.png) !important; }
+/**
+@tag 不适用烟叶分析
+*/
+.h-f-icon-module-bsyyyfx{ background-image: url(images/module/icon-module-bsyyyfx.png) !important; }
+/**
+@tag 湖南报表
+*/
+.h-f-icon-menu-hnbb{ background-image: url(images/menu/icon-menu-hnbb.png) !important; }
+/**
+@tag 湖南报表
+*/
+.h-f-icon-module-hnbb{ background-image: url(images/module/icon-module-hnbb.png) !important; }
+/**
+@tag 贵州报表_新
+*/
+.h-f-icon-menu-gzbbx{ background-image: url(images/menu/icon-menu-hnbb.png) !important; }
+/**
+@tag 贵州报表_新
+*/
+.h-f-icon-module-gzbbx{ background-image: url(images/module/icon-module-hnbb.png) !important; }
+/**
+@tag 收购提升
+*/
+.h-f-icon-menu-sgts{ background-image: url(images/menu/icon-menu-sgts.png) !important; }
+/**
+@tag 收购提升
+*/
+.h-f-icon-module-sgts{ background-image: url(images/module/icon-module-sgts.png) !important; }
+/**
+@tag 工商研协同
+*/
+.h-f-icon-menu-gsyxt{ background-image: url(images/menu/icon-menu-gsyxt.png) !important; }
+/**
+@tag 工商研协同
+*/
+.h-f-icon-module-gsyxt{ background-image: url(images/module/icon-module-gsyxt.png) !important; }
+
+/*===================公共编码==========================*/
+/**
+@tag 烟叶基础代码
+*/
+.h-f-icon-menu-yyjcdm{ background-image: url(images/menu/icon-menu-yyjcdm.png) !important; }
+/**
+@tag 烟叶基础代码
+*/
+.h-f-icon-module-yyjcdm{ background-image: url(images/module/icon-module-yyjcdm.png) !important; }
+/**
+@tag 组织单位
+*/
+.h-f-icon-menu-zzdw{ background-image: url(images/menu/icon-menu-zzdw.png) !important; }
+/**
+@tag 组织单位
+*/
+.h-f-icon-module-zzdw{ background-image: url(images/module/icon-module-zzdw.png) !important; }
+/**
+@tag 仓库管理
+*/
+.h-f-icon-menu-ckgl{ background-image: url(images/menu/icon-menu-ckgl.png) !important; }
+/**
+@tag 仓库管理
+*/
+.h-f-icon-module-ckgl{ background-image: url(images/module/icon-module-ckgl.png) !important; }
+/**
+@tag 物资基础代码
+*/
+.h-f-icon-menu-wzjcdm{ background-image: url(images/menu/icon-menu-wzjcdm.png) !important; }
+/**
+@tag 物资基础代码
+*/
+.h-f-icon-module-wzjcdm{ background-image: url(images/module/icon-module-wzjcdm.png) !important; }
+/**
+@tag 参数设置
+*/
+.h-f-icon-menu-cssz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 参数设置
+*/
+.h-f-icon-module-cssz{ background-image: url(images/module/icon-module-setting.png) !important; }
+/**
+@tag 数据导出
+*/
+.h-f-icon-menu-sjdc{ background-image: url(images/menu/icon-menu-sjdc.png) !important; }
+/**
+@tag 数据导出
+*/
+.h-f-icon-module-sjdc{ background-image: url(images/module/icon-module-sjdc.png) !important; }
+
+/*===================TSO公共资源==========================*/
+/**
+@tag 烟叶相关编码
+*/
+.h-f-icon-menu-yyxgbm{ background-image: url(images/menu/icon-menu-yyxgbm.png) !important; }
+/**
+@tag 烟叶相关编码
+*/
+.h-f-icon-module-yyxgbm{ background-image: url(images/module/icon-module-yyxgbm.png) !important; }
+/**
+@tag 组织单位管理
+*/
+.h-f-icon-menu-zzdwgl{ background-image: url(images/menu/icon-menu-zzdwgl.png) !important; }
+/**
+@tag 组织单位管理
+*/
+.h-f-icon-module-zzdwgl{ background-image: url(images/module/icon-module-zzdwgl.png) !important; }
+/**
+@tag 种植主体管理
+*/
+.h-f-icon-menu-zzztgl{ background-image: url(images/menu/icon-menu-zzztgl.png) !important; }
+/**
+@tag 种植主体管理
+*/
+.h-f-icon-module-zzztgl{ background-image: url(images/module/icon-module-zzztgl.png) !important; }
+/**
+@tag 专业化服务组织
+*/
+.h-f-icon-menu-zyhfwzz{ background-image: url(images/menu/icon-menu-zyhfwzz.png) !important; }
+/**
+@tag 专业化服务组织
+*/
+.h-f-icon-module-zyhfwzz{ background-image: url(images/module/icon-module-zyhfwzz.png) !important; }
+/**
+@tag 其他公共资源
+*/
+.h-f-icon-menu-qtggzy{ background-image: url(images/menu/icon-menu-qtggzy.png) !important; }
+/**
+@tag 其他公共资源
+*/
+.h-f-icon-module-qtggzy{ background-image: url(images/module/icon-module-qtggzy.png) !important; }
+/**
+@tag 参数初始化
+*/
+.h-f-icon-menu-cscsh{ background-image: url(images/menu/icon-menu-cscsh.png) !important; }
+/**
+@tag 参数初始化
+*/
+.h-f-icon-module-cscsh{ background-image: url(images/module/icon-module-cscsh.png) !important; }
+/**
+@tag 硬件接口参数
+*/
+.h-f-icon-menu-yjjkcs{ background-image: url(images/menu/icon-menu-yjjkcs.png) !important; }
+/**
+@tag 硬件接口参数
+*/
+.h-f-icon-module-yjjkcs{ background-image: url(images/module/icon-module-yjjkcs.png) !important; }
+/**
+@tag 01服务片区
+*/
+.h-f-icon-menu-01fwpq{ background-image: url(images/menu/icon-menu-01fwpq.png) !important; }
+/**
+@tag 01服务片区
+*/
+.h-f-icon-module-01fwpq{ background-image: url(images/module/icon-module-01fwpq.png) !important; }
+
+/*===================CS升级服务端==========================*/
+/**
+@tag 版本管理
+*/
+.h-f-icon-menu-bbgl-1{ background-image: url(images/menu/icon-menu-bbgl-1.png) !important; }
+/**
+@tag 版本管理
+*/
+.h-f-icon-module-bbgl-1{ background-image: url(images/module/icon-module-bbgl-1.png) !important; }
+
+/*===================灾害理赔系统==========================*/
+/**
+@tag 基础数据设置
+*/
+.h-f-icon-menu-jcsjsz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 基础数据设置
+*/
+.h-f-icon-module-jcsjsz{ background-image: url(images/module/icon-module-setting.png) !important; }
+/**
+@tag 投保信息管理
+*/
+.h-f-icon-menu-tbxxgl{ background-image: url(images/menu/icon-menu-tbxxgl.png) !important; }
+/**
+@tag 投保信息管理
+*/
+.h-f-icon-module-tbxxgl{ background-image: url(images/module/icon-module-tbxxgl.png) !important; }
+/**
+@tag 数据交互管理
+*/
+.h-f-icon-menu-sjjhgl{ background-image: url(images/menu/icon-menu-sjjhgl.png) !important; }
+/**
+@tag 数据交互管理
+*/
+.h-f-icon-module-sjjhgl{ background-image: url(images/module/icon-module-sjjhgl.png) !important; }
+/**
+@tag 灾害快报管理
+*/
+.h-f-icon-menu-zhkbgl{ background-image: url(images/menu/icon-menu-zhkbgl.png) !important; }
+/**
+@tag 灾害快报管理
+*/
+.h-f-icon-module-zhkbgl{ background-image: url(images/module/icon-module-zhkbgl.png) !important; }
+/**
+@tag 理赔信息管理
+*/
+.h-f-icon-menu-lpxxgl{ background-image: url(images/menu/icon-menu-lpxxgl.png) !important; }
+/**
+@tag 理赔信息管理
+*/
+.h-f-icon-module-lpxxgl{ background-image: url(images/module/icon-module-lpxxgl.png) !important; }
+
+/*===================大理烟叶质量追溯==========================*/
+/**
+@tag 网格参数设置
+*/
+.h-f-icon-menu-wgcssz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 网格参数设置
+*/
+.h-f-icon-module-wgcssz{ background-image: url(images/module/icon-module-setting.png) !important; }
+/**
+@tag 外观质量管理
+*/
+.h-f-icon-menu-wgzlgl{ background-image: url(images/menu/icon-menu-wgzlgl.png) !important; }
+/**
+@tag 外观质量管理
+*/
+.h-f-icon-module-wgzlgl{ background-image: url(images/module/icon-module-wgzlgl.png) !important; }
+/**
+@tag 农残、重金属化检管理
+*/
+.h-f-icon-menu-nczjshjgl{ background-image: url(images/menu/icon-menu-nczjshjgl.png) !important; }
+/**
+@tag 农残、重金属化检管理
+*/
+.h-f-icon-module-nczjshjgl{ background-image: url(images/module/icon-module-nczjshjgl.png) !important; }
+/**
+@tag 内在质量化检管理
+*/
+.h-f-icon-menu-nzzlhjgl{ background-image: url(images/menu/icon-menu-nzzlhjgl.png) !important; }
+/**
+@tag 内在质量化检管理
+*/
+.h-f-icon-module-nzzlhjgl{ background-image: url(images/module/icon-module-nzzlhjgl.png) !important; }
+/**
+@tag 网格质量分析
+*/
+.h-f-icon-menu-wgzlfx{ background-image: url(images/menu/icon-menu-wgzlfx.png) !important; }
+/**
+@tag 网格质量分析
+*/
+.h-f-icon-module-wgzlfx{ background-image: url(images/module/icon-module-wgzlfx.png) !important; }
+
+/*===================合同管理==========================*/
+/**
+@tag 种植品种管理
+*/
+.h-f-icon-menu-zzpzgl{ background-image: url(images/menu/icon-menu-zzpzgl.png) !important; }
+/**
+@tag 种植品种管理
+*/
+.h-f-icon-module-zzpzgl{ background-image: url(images/module/icon-module-zzpzgl.png) !important; }
+/**
+@tag 种植申请单打印
+*/
+.h-f-icon-menu-zzsqddy{ background-image: url(images/menu/icon-menu-zzsqddy.png) !important; }
+/**
+@tag 种植申请单打印
+*/
+.h-f-icon-module-zzsqddy{ background-image: url(images/module/icon-module-zzsqddy.png) !important; }
+/**
+@tag 种植收购计划预安排
+*/
+.h-f-icon-menu-zzsgjhyap{ background-image: url(images/menu/icon-menu-zzsgjhyap.png) !important; }
+/**
+@tag 种植收购计划预安排
+*/
+.h-f-icon-module-zzsgjhyap{ background-image: url(images/module/icon-module-zzsgjhyap.png) !important; }
+/**
+@tag 合同签订流程时效设置
+*/
+.h-f-icon-menu-htqdlcsxsz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 合同签订流程时效设置
+*/
+.h-f-icon-module-htqdlcsxsz{ background-image: url(images/module/icon-module-setting.png) !important; }
+/**
+@tag 种植计划类型
+*/
+.h-f-icon-menu-zzjhlx{ background-image: url(images/menu/icon-menu-zzjhlx.png) !important; }
+/**
+@tag 种植计划类型
+*/
+.h-f-icon-module-zzjhlx{ background-image: url(images/module/icon-module-zzjhlx.png) !important; }
+/**
+@tag 合同签订规则
+*/
+.h-f-icon-menu-htqdgh{ background-image: url(images/menu/icon-menu-htqdgh.png) !important; }
+/**
+@tag 合同签订规则
+*/
+.h-f-icon-module-htqdgh{ background-image: url(images/module/icon-module-htqdgh.png) !important; }
+/**
+@tag 烟农档案管理
+*/
+.h-f-icon-menu-yndagl{ background-image: url(images/menu/icon-menu-yndagl.png) !important; }
+/**
+@tag 烟农档案管理
+*/
+.h-f-icon-module-yndagl{ background-image: url(images/module/icon-module-yndagl.png) !important; }
+/**
+@tag 合同签订
+*/
+.h-f-icon-menu-htqd{ background-image: url(images/menu/icon-menu-htqd.png) !important; }
+/**
+@tag 合同签订
+*/
+.h-f-icon-module-htqd{ background-image: url(images/module/icon-module-htqd.png) !important; }
+/**
+@tag 合同审核
+*/
+.h-f-icon-menu-htsh{ background-image: url(images/menu/icon-menu-htsh.png) !important; }
+/**
+@tag 合同审核
+*/
+.h-f-icon-module-htsh{ background-image: url(images/module/icon-module-htsh.png) !important; }
+/**
+@tag 合同调整
+*/
+.h-f-icon-menu-httz{ background-image: url(images/menu/icon-menu-httz.png) !important; }
+/**
+@tag 合同调整
+*/
+.h-f-icon-module-httz{ background-image: url(images/module/icon-module-httz.png) !important; }
+/**
+@tag 烟农投保确认
+*/
+.h-f-icon-menu-yntbqr{ background-image: url(images/menu/icon-menu-yntbqr.png) !important; }
+/**
+@tag 烟农投保确认
+*/
+.h-f-icon-module-yntbqr{ background-image: url(images/module/icon-module-yntbqr.png) !important; }
+/**
+@tag 合同下发
+*/
+.h-f-icon-menu-htxf{ background-image: url(images/menu/icon-menu-htxf.png) !important; }
+/**
+@tag 合同下发
+*/
+.h-f-icon-module-htxf{ background-image: url(images/module/icon-module-htxf.png) !important; }
+/**
+@tag 合同报表
+*/
+.h-f-icon-menu-htbb{ background-image: url(images/menu/icon-menu-htbb.png) !important; }
+/**
+@tag 合同报表
+*/
+.h-f-icon-module-htbb{ background-image: url(images/module/icon-module-htbb.png) !important; }
+
+/*===================烟叶收购==========================*/
+/**
+@tag 烟叶收购结构控制设置
+*/
+.h-f-icon-menu-yysgjgkzsz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 烟叶收购结构控制设置
+*/
+.h-f-icon-module-yysgjgkzsz{ background-image: url(images/module/icon-module-setting.png) !important; }
+/**
+@tag 烟叶收购限制控制设置
+
+*/
+.h-f-icon-menu-yysgxzkzsz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 烟叶收购限制控制设置
+
+*/
+.h-f-icon-module-yysgxzkzsz{ background-image: url(images/module/icon-module-setting.png) !important; }
+/**
+@tag 烟叶收购业务权限设置
+
+*/
+.h-f-icon-menu-yysgywqxsz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 烟叶收购业务权限设置
+
+*/
+.h-f-icon-module-yysgywqxsz{ background-image: url(images/module/icon-module-setting.png) !important; }
+/**
+@tag 收购皮重设置
+
+*/
+.h-f-icon-menu-sgpzsz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 收购皮重设置
+
+*/
+.h-f-icon-module-sgpzsz{ background-image: url(images/module/icon-module-setting.png) !important; }
+/**
+@tag 收购巡检初始化管理
+
+*/
+.h-f-icon-menu-sgxjcshgl{ background-image: url(images/menu/icon-menu-sgxjcshgl.png) !important; }
+/**
+@tag 收购巡检初始化管理
+
+*/
+.h-f-icon-module-sgxjcshgl{ background-image: url(images/module/icon-module-sgxjcshgl.png) !important; }
+/**
+@tag 收购基层参数设置
+
+*/
+.h-f-icon-menu-sgjxcssz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 收购基层参数设置
+
+*/
+.h-f-icon-module-sgjxcssz{ background-image: url(images/module/icon-module-setting.png) !important; }
+/**
+@tag 收购其他参数设置
+
+*/
+.h-f-icon-menu-sgqtcssz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 收购其他参数设置
+
+*/
+.h-f-icon-module-sgqtcssz{ background-image: url(images/module/icon-module-setting.png) !important; }
+/**
+@tag 烟叶收购
+
+*/
+.h-f-icon-menu-yysg{ background-image: url(images/menu/icon-menu-yysg.png) !important; }
+/**
+@tag 烟叶收购
+
+*/
+.h-f-icon-module-yysg{ background-image: url(images/module/icon-module-yysg.png) !important; }
+/**
+@tag 收购基层参数
+
+*/
+.h-f-icon-menu-sgjccs{ background-image: url(images/menu/icon-menu-sgjccs.png) !important; }
+/**
+@tag 收购基层参数
+
+*/
+.h-f-icon-module-sgjccs{ background-image: url(images/module/icon-module-sgjccs.png) !important; }
+/**
+@tag 司磅
+
+*/
+.h-f-icon-menu-sb{ background-image: url(images/menu/icon-menu-sb.png) !important; }
+/**
+@tag 司磅
+
+*/
+.h-f-icon-module-sb{ background-image: url(images/module/icon-module-sb.png) !important; }
+/**
+@tag 收购票据维护
+
+*/
+.h-f-icon-menu-sgpjwh{ background-image: url(images/menu/icon-menu-sgpjwh.png) !important; }
+/**
+@tag 收购票据维护
+
+*/
+.h-f-icon-module-sgpjwh{ background-image: url(images/module/icon-module-sgpjwh.png) !important; }
+/**
+@tag 丰产烟发票维护
+
+*/
+.h-f-icon-menu-fcyfpwh{ background-image: url(images/menu/icon-menu-fcyfpwh.png) !important; }
+/**
+@tag 丰产烟发票维护
+
+*/
+.h-f-icon-module-fcyfpwh{ background-image: url(images/module/icon-module-fcyfpwh.png) !important; }
+/**
+@tag 已支付发票冲红管理
+
+*/
+.h-f-icon-menu-yzffpchgl{ background-image: url(images/menu/icon-menu-yzffpchgl.png) !important; }
+/**
+@tag 已支付发票冲红管理
+
+*/
+.h-f-icon-module-yzffpchgl{ background-image: url(images/module/icon-module-yzffpchgl.png) !important; }
+/**
+@tag 收购工作计划
+
+*/
+.h-f-icon-menu-sggzjh{ background-image: url(images/menu/icon-menu-sggzjh.png) !important; }
+/**
+@tag 收购工作计划
+
+*/
+.h-f-icon-module-sggzjh{ background-image: url(images/module/icon-module-sggzjh.png) !important; }
+/**
+@tag 预检
+
+*/
+.h-f-icon-menu-yj{ background-image: url(images/menu/icon-menu-yj.png) !important; }
+/**
+@tag 预检
+
+*/
+.h-f-icon-module-yj{ background-image: url(images/module/icon-module-yj.png) !important; }
+/**
+@tag 专业化分级
+
+*/
+.h-f-icon-menu-zyhfj{ background-image: url(images/menu/icon-menu-zyhfj.png) !important; }
+/**
+@tag 专业化分级
+
+*/
+.h-f-icon-module-zyhfj{ background-image: url(images/module/icon-module-zyhfj.png) !important; }
+/**
+@tag 初检
+
+*/
+.h-f-icon-menu-cj{ background-image: url(images/menu/icon-menu-cj.png) !important; }
+/**
+@tag 初检
+
+*/
+.h-f-icon-module-cj{ background-image: url(images/module/icon-module-cj.png) !important; }
+/**
+@tag 定级
+
+*/
+.h-f-icon-menu-dj{ background-image: url(images/menu/icon-menu-dj.png) !important; }
+/**
+@tag 定级
+
+*/
+.h-f-icon-module-dj{ background-image: url(images/module/icon-module-dj.png) !important; }
+/**
+@tag 鲜烟补贴管理
+
+*/
+.h-f-icon-menu-xybtgl{ background-image: url(images/menu/icon-menu-xybtgl.png) !important; }
+/**
+@tag 鲜烟补贴管理
+
+*/
+.h-f-icon-module-xybtgl{ background-image: url(images/module/icon-module-xybtgl.png) !important; }
+/**
+@tag 烟叶等级结构优化补贴
+
+*/
+.h-f-icon-menu-yydjjgyhbt{ background-image: url(images/menu/icon-menu-yydjjgyhbt.png) !important; }
+/**
+@tag 烟叶等级结构优化补贴
+
+*/
+.h-f-icon-module-yydjjgyhbt{ background-image: url(images/module/icon-module-yydjjgyhbt.png) !important; }
+/**
+@tag 收购储运统管参数
+
+*/
+.h-f-icon-menu-sgcytgcs{ background-image: url(images/menu/icon-menu-sgcytgcs.png) !important; }
+/**
+@tag 收购储运统管参数
+
+*/
+.h-f-icon-module-sgcytgcs{ background-image: url(images/module/icon-module-sgcytgcs.png) !important; }
+/**
+@tag 烟叶回流管理
+
+*/
+.h-f-icon-menu-yyhlgl{ background-image: url(images/menu/icon-menu-yyhlgl.png) !important; }
+/**
+@tag 烟叶回流管理
+
+*/
+.h-f-icon-module-yyhlgl{ background-image: url(images/module/icon-module-yyhlgl.png) !important; }
+/**
+@tag 税务发票管理
+
+*/
+.h-f-icon-menu-swfpgl{ background-image: url(images/menu/icon-menu-swfpgl.png) !important; }
+/**
+@tag 税务发票管理
+
+*/
+.h-f-icon-module-swfpgl{ background-image: url(images/module/icon-module-swfpgl.png) !important; }
+/**
+@tag 税务发票分配管理
+
+*/
+.h-f-icon-menu-swfpfpgl{ background-image: url(images/menu/icon-menu-swfpfpgl.png) !important; }
+/**
+@tag 税务发票分配管理
+
+*/
+.h-f-icon-module-swfpfpgl{ background-image: url(images/module/icon-module-swfpfpgl.png) !important; }
+/**
+@tag 税务发票回收管理
+
+*/
+.h-f-icon-menu-swfphsgl{ background-image: url(images/menu/icon-menu-swfphsgl.png) !important; }
+/**
+@tag 税务发票回收管理
+
+*/
+.h-f-icon-module-swfphsgl{ background-image: url(images/module/icon-module-swfphsgl.png) !important; }
+/**
+@tag 税务发票作废管理
+
+*/
+.h-f-icon-menu-swfpzfgl{ background-image: url(images/menu/icon-menu-swfpzfgl.png) !important; }
+/**
+@tag 税务发票作废管理
+
+*/
+.h-f-icon-module-swfpzfgl{ background-image: url(images/module/icon-module-swfpzfgl.png) !important; }
+/**
+@tag 税务发票导出管理
+
+*/
+.h-f-icon-menu-swfpdcgl{ background-image: url(images/menu/icon-menu-swfpdcgl.png) !important; }
+/**
+@tag 税务发票导出管理
+
+*/
+.h-f-icon-module-swfpdcgl{ background-image: url(images/module/icon-module-swfpdcgl.png) !important; }
+/**
+@tag 自印单据管理
+
+*/
+.h-f-icon-menu-zydjgl{ background-image: url(images/menu/icon-menu-zydjgl.png) !important; }
+/**
+@tag 自印单据管理
+
+*/
+.h-f-icon-module-zydjgl{ background-image: url(images/module/icon-module-zydjgl.png) !important; }
+/**
+@tag 自印票据分配管理
+
+*/
+.h-f-icon-menu-zypjfpgl{ background-image: url(images/menu/icon-menu-zypjfpgl.png) !important; }
+/**
+@tag 自印票据分配管理
+
+*/
+.h-f-icon-module-zypjfpgl{ background-image: url(images/module/icon-module-zypjfpgl.png) !important; }
+/**
+@tag 自印票据回收管理
+
+*/
+.h-f-icon-menu-zypjhsgl{ background-image: url(images/menu/icon-menu-zypjhsgl.png) !important; }
+/**
+@tag 自印票据回收管理
+
+*/
+.h-f-icon-module-zypjhsgl{ background-image: url(images/module/icon-module-zypjhsgl.png) !important; }
+/**
+@tag 自印票据作废管理
+
+*/
+.h-f-icon-menu-zypjzfgl{ background-image: url(images/menu/icon-menu-zypjzfgl.png) !important; }
+/**
+@tag 自印票据作废管理
+
+*/
+.h-f-icon-module-zypjzfgl{ background-image: url(images/module/icon-module-zypjzfgl.png) !important; }
+/**
+@tag 站点许可管理
+
+*/
+.h-f-icon-menu-zdxkgl{ background-image: url(images/menu/icon-menu-zdxkgl.png) !important; }
+/**
+@tag 站点许可管理
+
+*/
+.h-f-icon-module-zdxkgl{ background-image: url(images/module/icon-module-zdxkgl.png) !important; }
+/**
+@tag 综合数据管理
+
+*/
+.h-f-icon-menu-zhsjgl{ background-image: url(images/menu/icon-menu-zhsjgl.png) !important; }
+/**
+@tag 综合数据管理
+
+*/
+.h-f-icon-module-zhsjgl{ background-image: url(images/module/icon-module-zhsjgl.png) !important; }
+/**
+@tag 收购价格管理
+
+*/
+.h-f-icon-menu-sgjggl{ background-image: url(images/menu/icon-menu-sgjggl.png) !important; }
+/**
+@tag 收购价格管理
+
+*/
+.h-f-icon-module-sgjggl{ background-image: url(images/module/icon-module-sgjggl.png) !important; }
+/**
+@tag 行业价格管理
+
+*/
+.h-f-icon-menu-hyjggl{ background-image: url(images/menu/icon-menu-hyjggl.png) !important; }
+/**
+@tag 行业价格管理
+
+*/
+.h-f-icon-module-hyjggl{ background-image: url(images/module/icon-module-hyjggl.png) !important; }
+/**
+@tag 地方价格管理
+
+*/
+.h-f-icon-menu-dfjggl{ background-image: url(images/menu/icon-menu-dfjggl.png) !important; }
+/**
+@tag 地方价格管理
+
+*/
+.h-f-icon-module-dfjggl{ background-image: url(images/module/icon-module-dfjggl.png) !important; }
+/**
+@tag 补贴价格管理
+
+*/
+.h-f-icon-menu-btjggl{ background-image: url(images/menu/icon-menu-btjggl.png) !important; }
+/**
+@tag 补贴价格管理
+
+*/
+.h-f-icon-module-btjggl{ background-image: url(images/module/icon-module-btjggl.png) !important; }
+/**
+@tag 烟叶储运
+
+*/
+.h-f-icon-menu-yycy{ background-image: url(images/menu/icon-menu-yycy.png) !important; }
+/**
+@tag 烟叶储运
+
+*/
+.h-f-icon-module-yycy{ background-image: url(images/module/icon-module-yycy.png) !important; }
+/**
+@tag 出站
+
+*/
+.h-f-icon-menu-cz{ background-image: url(images/menu/icon-menu-cz.png) !important; }
+/**
+@tag 出站
+
+*/
+.h-f-icon-module-cz{ background-image: url(images/module/icon-module-cz.png) !important; }
+/**
+@tag 成包
+
+*/
+.h-f-icon-menu-cb{ background-image: url(images/menu/icon-menu-cb.png) !important; }
+/**
+@tag 成包
+
+*/
+.h-f-icon-module-cb{ background-image: url(images/module/icon-module-cb.png) !important; }
+/**
+@tag 仓储管理
+
+*/
+.h-f-icon-menu-ccgl{ background-image: url(images/menu/icon-menu-ccgl.png) !important; }
+/**
+@tag 仓储管理
+
+*/
+.h-f-icon-module-ccgl{ background-image: url(images/module/icon-module-ccgl.png) !important; }
+/**
+@tag 样品烟管理
+
+*/
+.h-f-icon-menu-ypygl{ background-image: url(images/menu/icon-menu-ypygl.png) !important; }
+/**
+@tag 样品烟管理
+
+*/
+.h-f-icon-module-ypygl{ background-image: url(images/module/icon-module-ypygl.png) !important; }
+/**
+@tag 应急收购离线管理
+
+*/
+.h-f-icon-menu-yjsglxgl{ background-image: url(images/menu/icon-menu-yjsglxgl.png) !important; }
+/**
+@tag 应急收购离线管理
+
+*/
+.h-f-icon-module-yjsglxgl{ background-image: url(images/module/icon-module-yjsglxgl.png) !important; }
+/**
+@tag 授权码管理
+
+*/
+.h-f-icon-menu-sqmgl{ background-image: url(images/menu/icon-menu-sqmgl.png) !important; }
+/**
+@tag 授权码管理
+
+*/
+.h-f-icon-module-sqmgl{ background-image: url(images/module/icon-module-sqmgl.png) !important; }
+/**
+@tag 收购预算
+
+*/
+.h-f-icon-menu-sgys{ background-image: url(images/menu/icon-menu-sgys.png) !important; }
+/**
+@tag 收购预算
+
+*/
+.h-f-icon-module-sgys{ background-image: url(images/module/icon-module-sgys.png) !important; }
+/**
+@tag 收购预测
+
+*/
+.h-f-icon-menu-sgyc{ background-image: url(images/menu/icon-menu-sgyc.png) !important; }
+/**
+@tag 收购预测
+
+*/
+.h-f-icon-module-sgyc{ background-image: url(images/module/icon-module-sgyc.png) !important; }
+/**
+@tag 站点储运管理参数设置
+
+*/
+.h-f-icon-menu-zdcyglcssz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 站点储运管理参数设置
+
+*/
+.h-f-icon-module-zdcyglcssz{ background-image: url(images/module/icon-module-setting.png) !important; }
+/**
+@tag 罚没烟登记
+
+*/
+.h-f-icon-menu-fmydj{ background-image: url(images/menu/icon-menu-fmydj.png) !important; }
+/**
+@tag 罚没烟登记
+
+*/
+.h-f-icon-module-fmydj{ background-image: url(images/module/icon-module-fmydj.png) !important; }
+/**
+@tag 离线管理
+
+*/
+.h-f-icon-menu-lxgl{ background-image: url(images/menu/icon-menu-lxgl.png) !important; }
+/**
+@tag 离线管理
+
+*/
+.h-f-icon-module-lxgl{ background-image: url(images/module/icon-module-lxgl.png) !important; }
+/**
+@tag 授权码管理
+
+*/
+.h-f-icon-menu-sqmgl{ background-image: url(images/menu/icon-menu-sqmgl.png) !important; }
+/**
+@tag 授权码管理
+
+*/
+.h-f-icon-module-sqmgl{ background-image: url(images/module/icon-module-sqmgl.png) !important; }
+/**
+@tag 外围设备离线管理
+
+*/
+.h-f-icon-menu-wwsblxgl{ background-image: url(images/menu/icon-menu-wwsblxgl.png) !important; }
+/**
+@tag 外围设备离线管理
+
+*/
+.h-f-icon-module-wwsblxgl{ background-image: url(images/module/icon-module-wwsblxgl.png) !important; }
+/**
+@tag 种植主体欠还款管理
+
+*/
+.h-f-icon-menu-zzztqhkgl{ background-image: url(images/menu/icon-menu-zzztqhkgl.png) !important; }
+/**
+@tag 种植主体欠还款管理
+
+*/
+.h-f-icon-module-zzztqhkgl{ background-image: url(images/module/icon-module-zzztqhkgl.png) !important; }
+
+/*===================站点收购报表==========================*/
+/**
+@tag 税务发票查询报表
+
+*/
+.h-f-icon-menu-swfpcxbb{ background-image: url(images/menu/icon-menu-swfpcxbb.png) !important; }
+/**
+@tag 税务发票查询报表
+
+*/
+.h-f-icon-module-swfpcxbb{ background-image: url(images/module/icon-module-swfpcxbb.png) !important; }
+/**
+@tag 自印票据查询报表
+
+*/
+.h-f-icon-menu-zypjcxbb{ background-image: url(images/menu/icon-menu-zypjcxbb.png) !important; }
+/**
+@tag 自印票据查询报表
+
+*/
+.h-f-icon-module-zypjcxbb{ background-image: url(images/module/icon-module-zypjcxbb.png) !important; }
+/**
+@tag 收购报表
+
+*/
+.h-f-icon-menu-sgbb{ background-image: url(images/menu/icon-menu-sgbb.png) !important; }
+/**
+@tag 收购报表
+
+*/
+.h-f-icon-module-sgbb{ background-image: url(images/module/icon-module-sgbb.png) !important; }
+/**
+@tag 计划合同报表
+
+*/
+.h-f-icon-menu-jhhtbb{ background-image: url(images/menu/icon-menu-jhhtbb.png) !important; }
+/**
+@tag 计划合同报表
+
+*/
+.h-f-icon-module-jhhtbb{ background-image: url(images/module/icon-module-jhhtbb.png) !important; }
+/**
+@tag 调运物流报表
+
+*/
+.h-f-icon-menu-dywlbb{ background-image: url(images/menu/icon-menu-dywlbb.png) !important; }
+/**
+@tag 调运物流报表
+
+*/
+.h-f-icon-module-dywlbb{ background-image: url(images/module/icon-module-dywlbb.png) !important; }
+
+/*===================TSO合同管理==========================*/
+/**
+@tag 计划管理
+
+*/
+.h-f-icon-menu-jhgl{ background-image: url(images/menu/icon-menu-jhgl.png) !important; }
+/**
+@tag 计划管理
+
+*/
+.h-f-icon-module-jhgl{ background-image: url(images/module/icon-module-jhgl.png) !important; }
+/**
+@tag 收购预计划
+
+*/
+.h-f-icon-menu-sgyjh{ background-image: url(images/menu/icon-menu-sgyjh.png) !important; }
+/**
+@tag 收购预计划
+
+*/
+.h-f-icon-module-sgyjh{ background-image: url(images/module/icon-module-sgyjh.png) !important; }
+/**
+@tag 种植收购计划管理
+
+*/
+.h-f-icon-menu-zzsgjhgl{ background-image: url(images/menu/icon-menu-zzsgjhgl.png) !important; }
+/**
+@tag 种植收购计划管理
+
+*/
+.h-f-icon-module-zzsgjhgl{ background-image: url(images/module/icon-module-zzsgjhgl.png) !important; }
+/**
+@tag 丰产烟计划
+
+*/
+.h-f-icon-menu-fcyjh{ background-image: url(images/menu/icon-menu-fcyjh.png) !important; }
+/**
+@tag 丰产烟计划
+
+*/
+.h-f-icon-module-fcyjh{ background-image: url(images/module/icon-module-fcyjh.png) !important; }
+/**
+@tag 种植合同管理
+
+*/
+.h-f-icon-menu-zzhtgl{ background-image: url(images/menu/icon-menu-zzhtgl.png) !important; }
+/**
+@tag 种植合同管理
+
+*/
+.h-f-icon-module-zzhtgl{ background-image: url(images/module/icon-module-zzhtgl.png) !important; }
+/**
+@tag 种植申请
+
+*/
+.h-f-icon-menu-zzsq{ background-image: url(images/menu/icon-menu-zzsq.png) !important; }
+/**
+@tag 种植申请
+
+*/
+.h-f-icon-module-zzsq{ background-image: url(images/module/icon-module-zzsq.png) !important; }/**
+@tag 种植意向
+
+*/
+.h-f-icon-menu-zzyx{ background-image: url(images/menu/icon-menu-zzyx.png) !important; }
+/**
+@tag 种植意向
+
+*/
+.h-f-icon-module-zzyx{ background-image: url(images/module/icon-module-zzyx.png) !important; }/**
+@tag 场点可签合同分配管理
+
+*/
+.h-f-icon-menu-cdkqhtfpgl{ background-image: url(images/menu/icon-menu-cdkqhtfpgl.png) !important; }
+/**
+@tag 场点可签合同分配管理
+
+*/
+.h-f-icon-module-cdkqhtfpgl{ background-image: url(images/module/icon-module-cdkqhtfpgl.png) !important; }/**
+@tag 场点可执行合同分配管理
+
+*/
+.h-f-icon-menu-cdkzxhtfpgl{ background-image: url(images/menu/icon-menu-cdkzxhtfpgl.png) !important; }
+/**
+@tag 场点可执行合同分配管理
+
+*/
+.h-f-icon-module-cdkzxhtfpgl{ background-image: url(images/module/icon-module-cdkzxhtfpgl.png) !important; }/**
+@tag 成员约定量管理
+
+*/
+.h-f-icon-menu-cyydlgl{ background-image: url(images/menu/icon-menu-cyydlgl.png) !important; }
+/**
+@tag 成员约定量管理
+
+*/
+.h-f-icon-module-cyydlgl{ background-image: url(images/module/icon-module-cyydlgl.png) !important; }/**
+@tag 计划合同上传与下载
+
+*/
+.h-f-icon-menu-jhhtscyxz{ background-image: url(images/menu/icon-menu-jhhtfx.png) !important; }
+/**
+@tag 计划合同上传与下载
+
+*/
+.h-f-icon-module-jhhtfx{ background-image: url(images/module/icon-module-jhhtfx.png) !important; }
+
+/*===================烟叶物流==========================*/
+/**
+@tag 业务规划
+
+*/
+.h-f-icon-menu-ywgh{ background-image: url(images/menu/icon-menu-ywgh.png) !important; }
+/**
+@tag 业务规划
+
+*/
+.h-f-icon-module-ywgh{ background-image: url(images/module/icon-module-ywgh.png) !important; }
+/**
+@tag 仓库规划
+
+*/
+.h-f-icon-menu-ckgh{ background-image: url(images/menu/icon-menu-ckgh.png) !important; }
+/**
+@tag 仓库规划
+
+*/
+.h-f-icon-module-ckgh{ background-image: url(images/module/icon-module-ckgh.png) !important; }
+/**
+@tag 包装规划
+
+*/
+.h-f-icon-menu-bzgh{ background-image: url(images/menu/icon-menu-bzgh.png) !important; }
+/**
+@tag 包装规划
+
+*/
+.h-f-icon-module-bzgh{ background-image: url(images/module/icon-module-bzgh.png) !important; }
+/**
+@tag 调运规划
+
+*/
+.h-f-icon-menu-dygh{ background-image: url(images/menu/icon-menu-dygh.png) !important; }
+/**
+@tag 调运规划
+
+*/
+.h-f-icon-module-dygh{ background-image: url(images/module/icon-module-dygh.png) !important; }
+
+/**
+@tag 质检规划
+
+*/
+.h-f-icon-menu-zjgh{ background-image: url(images/menu/icon-menu-zjgh.png) !important; }
+/**
+@tag 质检规划
+
+*/
+.h-f-icon-module-zjgh{ background-image: url(images/module/icon-module-zjgh.png) !important; }
+
+/**
+@tag 营销规划
+
+*/
+.h-f-icon-menu-yxgh{ background-image: url(images/menu/icon-menu-yxgh.png) !important; }
+/**
+@tag 营销规划
+
+*/
+.h-f-icon-module-yxgh{ background-image: url(images/module/icon-module-yxgh.png) !important; }
+
+/**
+@tag 业务控制
+
+*/
+.h-f-icon-menu-ywkz{ background-image: url(images/menu/icon-menu-ywkz.png) !important; }
+/**
+@tag 业务控制
+
+*/
+.h-f-icon-module-ywkz{ background-image: url(images/module/icon-module-ywkz.png) !important; }
+/**
+@tag 作业控制
+
+*/
+.h-f-icon-menu-zykz{ background-image: url(images/menu/icon-menu-zykz.png) !important; }
+/**
+@tag 作业控制
+
+*/
+.h-f-icon-module-zykz{ background-image: url(images/module/icon-module-zykz.png) !important; }
+/**
+@tag 养护控制
+
+*/
+.h-f-icon-menu-yhkz{ background-image: url(images/menu/icon-menu-yhkz.png) !important; }
+/**
+@tag 养护控制
+
+*/
+.h-f-icon-module-yhkz{ background-image: url(images/module/icon-module-yhkz.png) !important; }
+/**
+@tag 协同调度
+
+*/
+.h-f-icon-menu-xtdd{ background-image: url(images/menu/icon-menu-xtdd.png) !important; }
+/**
+@tag 协同调度
+
+*/
+.h-f-icon-module-xtdd{ background-image: url(images/module/icon-module-xtdd.png) !important; }
+
+/**
+@tag 工商需求协同
+
+*/
+.h-f-icon-menu-gsxqxt{ background-image: url(images/menu/icon-menu-gsxqxt.png) !important; }
+/**
+@tag 工商需求协同
+
+*/
+.h-f-icon-module-gsxqxt{ background-image: url(images/module/icon-module-gsxqxt.png) !important; }
+
+/**
+@tag 初烟调度协同
+
+*/
+.h-f-icon-menu-cyddxt{ background-image: url(images/menu/icon-menu-cyddxt.png) !important; }
+/**
+@tag 初烟调度协同
+
+*/
+.h-f-icon-module-cyddxt{ background-image: url(images/module/icon-module-cyddxt.png) !important; }
+/**
+@tag 初烟流向规划
+
+*/
+.h-f-icon-menu-cylxgh{ background-image: url(images/menu/icon-menu-cylxgh.png) !important; }
+/**
+@tag 初烟流向规划
+
+*/
+.h-f-icon-module-cylxgh{ background-image: url(images/module/icon-module-cylxgh.png) !important; }
+/**
+@tag 初烟调运调度
+
+*/
+.h-f-icon-menu-cydydd{ background-image: url(images/menu/icon-menu-cydydd.png) !important; }
+/**
+@tag 初烟调运调度
+
+*/
+.h-f-icon-module-cydydd{ background-image: url(images/module/icon-module-cydydd.png) !important; }
+/**
+@tag 初烟交接
+
+*/
+.h-f-icon-menu-cyjj{ background-image: url(images/menu/icon-menu-cyjj.png) !important; }
+/**
+@tag 初烟交接
+
+*/
+.h-f-icon-module-cyjj{ background-image: url(images/module/icon-module-cyjj.png) !important; }
+/**
+@tag 报到作业
+
+*/
+.h-f-icon-menu-bdzy{ background-image: url(images/menu/icon-menu-bdzy.png) !important; }
+/**
+@tag 报到作业
+
+*/
+.h-f-icon-module-bdzy{ background-image: url(images/module/icon-module-bdzy.png) !important; }
+/**
+@tag 过磅作业
+
+*/
+.h-f-icon-menu-gbzy{ background-image: url(images/menu/icon-menu-gbzy.png) !important; }
+/**
+@tag 过磅作业
+
+*/
+.h-f-icon-module-gbzy{ background-image: url(images/module/icon-module-gbzy.png) !important; }
+
+/**
+@tag 审核验收
+
+*/
+.h-f-icon-menu-shys{ background-image: url(images/menu/icon-menu-shys.png) !important; }
+/**
+@tag 审核验收
+
+*/
+.h-f-icon-module-shys{ background-image: url(images/module/icon-module-shys.png) !important; }
+
+/**
+@tag 质检作业
+
+*/
+.h-f-icon-menu-zjzy{ background-image: url(images/menu/icon-menu-zjzy.png) !important; }
+/**
+@tag 质检作业
+
+*/
+.h-f-icon-module-zjzy{ background-image: url(images/module/icon-module-zjzy.png) !important; }
+
+/**
+@tag 仓储管理
+
+*/
+.h-f-icon-menu-ccgl{ background-image: url(images/menu/icon-menu-ccgl.png) !important; }
+/**
+@tag 仓储管理
+
+*/
+.h-f-icon-module-ccgl{ background-image: url(images/module/icon-module-ccgl.png) !important; }
+
+/**
+@tag 入库作业
+
+*/
+.h-f-icon-menu-rkzy{ background-image: url(images/menu/icon-menu-rkzy.png) !important; }
+/**
+@tag 入库作业
+
+*/
+.h-f-icon-module-rkzy{ background-image: url(images/module/icon-module-rkzy.png) !important; }
+
+/**
+@tag 出库作业
+
+*/
+.h-f-icon-menu-ckzy{ background-image: url(images/menu/icon-menu-ckzy.png) !important; }
+/**
+@tag 出库作业
+
+*/
+.h-f-icon-module-ckzy{ background-image: url(images/module/icon-module-ckzy.png) !important; }
+
+/**
+@tag 在库作业
+
+*/
+.h-f-icon-menu-zkzy{ background-image: url(images/menu/icon-menu-zkzy.png) !important; }
+/**
+@tag 在库作业
+
+*/
+.h-f-icon-module-zkzy{ background-image: url(images/module/icon-module-zkzy.png) !important; }
+
+/**
+@tag 烟叶营销
+
+*/
+.h-f-icon-menu-yyyx{ background-image: url(images/menu/icon-menu-yyyx.png) !important; }
+/**
+@tag 烟叶营销
+
+*/
+.h-f-icon-module-yyyx{ background-image: url(images/module/icon-module-yyyx.png) !important; }
+
+/**
+@tag 营销作业调度
+
+*/
+.h-f-icon-menu-yxzydd{ background-image: url(images/menu/icon-menu-yxzydd.png) !important; }
+/**
+@tag 营销作业调度
+
+*/
+.h-f-icon-module-yxzydd{ background-image: url(images/module/icon-module-yxzydd.png) !important; }
+
+/**
+@tag 调拨销售
+
+*/
+.h-f-icon-menu-dbxs{ background-image: url(images/menu/icon-menu-dbxs.png) !important; }
+/**
+@tag 调拨销售
+
+*/
+.h-f-icon-module-dbxs{ background-image: url(images/module/icon-module-dbxs.png) !important; }
+
+/**
+@tag 台账查询
+
+*/
+.h-f-icon-menu-tzcx{ background-image: url(images/menu/icon-menu-tzcx.png) !important; }
+/**
+@tag 台账查询
+
+*/
+.h-f-icon-module-tzcx{ background-image: url(images/module/icon-module-tzcx.png) !important; }
+
+/**
+@tag 作业台账
+
+*/
+.h-f-icon-menu-zytz{ background-image: url(images/menu/icon-menu-zytz.png) !important; }
+/**
+@tag 作业台账
+
+*/
+.h-f-icon-module-zytz{ background-image: url(images/module/icon-module-zytz.png) !important; }
+
+/**
+@tag 单据查询
+
+*/
+.h-f-icon-menu-djcx{ background-image: url(images/menu/icon-menu-djcx.png) !important; }
+/**
+@tag 单据查询
+
+*/
+.h-f-icon-module-djcx{ background-image: url(images/module/icon-module-djcx.png) !important; }
+
+/**
+@tag 管理分析
+
+*/
+.h-f-icon-menu-glfx{ background-image: url(images/menu/icon-menu-glfx.png) !important; }
+/**
+@tag 管理分析
+
+*/
+.h-f-icon-module-glfx{ background-image: url(images/module/icon-module-glfx.png) !important; }
+
+/**
+@tag 数字仓储
+
+*/
+.h-f-icon-menu-szcc{ background-image: url(images/menu/icon-menu-szcc.png) !important; }
+/**
+@tag 数字仓储
+
+*/
+.h-f-icon-module-szcc{ background-image: url(images/module/icon-module-szcc.png) !important; }
+
+/**
+@tag 管控中心
+
+*/
+.h-f-icon-menu-gkzx{ background-image: url(images/menu/icon-menu-gkzx.png) !important; }
+/**
+@tag 管控中心
+
+*/
+.h-f-icon-module-gkzx{ background-image: url(images/module/icon-module-gkzx.png) !important; }
+
+/**
+@tag 调运报表
+
+*/
+.h-f-icon-menu-dybb{ background-image: url(images/menu/icon-menu-dybb.png) !important; }
+/**
+@tag 调运报表
+
+*/
+.h-f-icon-module-dybb{ background-image: url(images/module/icon-module-dybb.png) !important; }
+/**
+@tag 仓储报表
+
+*/
+.h-f-icon-menu-ccbb{ background-image: url(images/menu/icon-menu-ccbb.png) !important; }
+/**
+@tag 仓储报表
+
+*/
+.h-f-icon-module-ccbb{ background-image: url(images/module/icon-module-ccbb.png) !important; }
+
+/*===================TSO公共资源==========================*/
+/**
+@tag 烟叶相关编码
+*/
+.h-f-icon-menu-yyxgbm{ background-image: url(images/menu/icon-menu-yyxgbm.png) !important; }
+/**
+@tag 烟叶相关编码
+*/
+.h-f-icon-module-yyxgbm{ background-image: url(images/module/icon-module-yyxgbm.png) !important; }
+/**
+@tag 组织单位管理
+*/
+.h-f-icon-menu-zzdwgl{ background-image: url(images/menu/icon-menu-zzdwgl.png) !important; }
+/**
+@tag 组织单位管理
+*/
+.h-f-icon-module-zzdwgl{ background-image: url(images/module/icon-module-zzdwgl.png) !important; }
+/**
+@tag 种植主体管理
+*/
+.h-f-icon-menu-zzztgl{ background-image: url(images/menu/icon-menu-zzztgl.png) !important; }
+/**
+@tag 种植主体管理
+*/
+.h-f-icon-module-zzztgl{ background-image: url(images/module/icon-module-zzztgl.png) !important; }
+/**
+@tag 专业化服务组织
+*/
+.h-f-icon-menu-zyhfwzz{ background-image: url(images/menu/icon-menu-zyhfwzz.png) !important; }
+/**
+@tag 专业化服务组织
+*/
+.h-f-icon-module-zyhfwzz{ background-image: url(images/module/icon-module-zyhfwzz.png) !important; }
+/**
+@tag 其他公共资源
+*/
+.h-f-icon-menu-qtggzy{ background-image: url(images/menu/icon-menu-qtggzy.png) !important; }
+/**
+@tag 其他公共资源
+*/
+.h-f-icon-module-qtggzy{ background-image: url(images/module/icon-module-qtggzy.png) !important; }
+/**
+@tag 参数初始化
+*/
+.h-f-icon-menu-cscsh{ background-image: url(images/menu/icon-menu-cscsh.png) !important; }
+/**
+@tag 参数初始化
+*/
+.h-f-icon-module-cscsh{ background-image: url(images/module/icon-module-cscsh.png) !important; }
+/**
+@tag 硬件接口参数
+*/
+.h-f-icon-menu-yjjkcs{ background-image: url(images/menu/icon-menu-yjjkcs.png) !important; }
+/**
+@tag 硬件接口参数
+*/
+.h-f-icon-module-yjjkcs{ background-image: url(images/module/icon-module-yjjkcs.png) !important; }
+/**
+@tag 01服务片区
+*/
+.h-f-icon-menu-01fwpq{ background-image: url(images/menu/icon-menu-01fwpq.png) !important; }
+/**
+@tag 01服务片区
+*/
+.h-f-icon-module-01fwpq{ background-image: url(images/module/icon-module-01fwpq.png) !important; }
+
+/*===================CS升级服务端==========================*/
+/**
+@tag 版本管理
+*/
+.h-f-icon-menu-bbgl-1{ background-image: url(images/menu/icon-menu-bbgl-1.png) !important; }
+/**
+@tag 版本管理
+*/
+.h-f-icon-module-bbgl-1{ background-image: url(images/module/icon-module-bbgl-1.png) !important; }
+
+/*===================灾害理赔系统==========================*/
+/**
+@tag 基础数据设置
+*/
+.h-f-icon-menu-jcsjsz{ background-image: url(images/menu/icon-menu-setting.png) !important; }
+/**
+@tag 基础数据设置
+*/
+.h-f-icon-module-jcsjsz{ background-image: url(images/module/icon-module-setting.png) !important; }
+/**
+@tag 投保信息管理
+*/
+.h-f-icon-menu-tbxxgl{ background-image: url(images/menu/icon-menu-tbxxgl.png) !important; }
+/**
+@tag 投保信息管理
+*/
+.h-f-icon-module-tbxxgl{ background-image: url(images/module/icon-module-tbxxgl.png) !important; }
+/**
+@tag 数据交互管理
+*/
+.h-f-icon-menu-sjjhgl{ background-image: url(images/menu/icon-menu-sjjhgl.png) !important; }
+/**
+@tag 数据交互管理
+*/
+.h-f-icon-module-sjjhgl{ background-image: url(images/module/icon-module-sjjhgl.png) !important; }
+/**
+@tag 灾害快报管理
+*/
+.h-f-icon-menu-zhkbgl{ background-image: url(images/menu/icon-menu-zhkbgl.png) !important; }
+/**
+@tag 灾害快报管理
+*/
+.h-f-icon-module-zhkbgl{ background-image: url(images/module/icon-module-zhkbgl.png) !important; }
+/**
+@tag 理赔信息管理
+*/
+.h-f-icon-menu-lpxxgl{ background-image: url(images/menu/icon-menu-lpxxgl.png) !important; }
+/**
+@tag 理赔信息管理
+*/
+.h-f-icon-module-lpxxgl{ background-image: url(images/module/icon-module-lpxxgl.png) !important; }
+
+/*===================烟叶物资==========================*/
+/**
+@tag 物资参数管理
+
+*/
+.h-f-icon-menu-wzcsgl{ background-image: url(images/menu/icon-menu-wzcsgl.png) !important; }
+/**
+@tag 物资参数管理
+
+*/
+.h-f-icon-module-wzcsgl{ background-image: url(images/module/icon-module-wzcsgl.png) !important; }
+/**
+@tag 基础信息管理
+
+*/
+.h-f-icon-menu-jcxxgl{ background-image: url(images/menu/icon-menu-jcxxgl.png) !important; }
+/**
+@tag 基础信息管理
+
+*/
+.h-f-icon-module-jcxxgl{ background-image: url(images/module/icon-module-jcxxgl.png) !important; }
+/**
+@tag 物资工作检查
+
+*/
+.h-f-icon-menu-wzgzjc{ background-image: url(images/menu/icon-menu-wzgzjc.png) !important; }
+/**
+@tag 物资工作检查
+
+*/
+.h-f-icon-module-wzgzjc{ background-image: url(images/module/icon-module-wzgzjc.png) !important; }
+/**
+@tag 需求管理
+
+*/
+.h-f-icon-menu-xqgl{ background-image: url(images/menu/icon-menu-xqgl.png) !important; }
+/**
+@tag 需求管理
+
+*/
+.h-f-icon-module-xqgl{ background-image: url(images/module/icon-module-xqgl.png) !important; }
+/**
+@tag 采购管理
+
+*/
+.h-f-icon-menu-cggl{ background-image: url(images/menu/icon-menu-cggl.png) !important; }
+/**
+@tag 采购管理
+
+*/
+.h-f-icon-module-cggl{ background-image: url(images/module/icon-module-cggl.png) !important; }
+/**
+@tag 盘点管理
+
+*/
+.h-f-icon-menu-pdgl{ background-image: url(images/menu/icon-menu-pdgl.png) !important; }
+/**
+@tag 盘点管理
+
+*/
+.h-f-icon-module-pdgl{ background-image: url(images/module/icon-module-pdgl.png) !important; }
+/**
+@tag 育苗管理
+
+*/
+.h-f-icon-menu-ymgl{ background-image: url(images/menu/icon-menu-ymgl.png) !important; }
+/**
+@tag 育苗管理
+
+*/
+.h-f-icon-module-ymgl{ background-image: url(images/module/icon-module-ymgl.png) !important; }
+/**
+@tag 供应管理
+
+*/
+.h-f-icon-menu-gygl{ background-image: url(images/menu/icon-menu-gygl.png) !important; }
+/**
+@tag 供应管理
+
+*/
+.h-f-icon-module-gygl{ background-image: url(images/module/icon-module-gygl.png) !important; }
+/**
+@tag 领借管理
+
+*/
+.h-f-icon-menu-ljgl{ background-image: url(images/menu/icon-menu-ljgl.png) !important; }
+/**
+@tag 领借管理
+
+*/
+.h-f-icon-module-ljgl{ background-image: url(images/module/icon-module-ljgl.png) !important; }
+/**
+@tag 代领管理
+
+*/
+.h-f-icon-menu-dlgl{ background-image: url(images/menu/icon-menu-dlgl.png) !important; }
+/**
+@tag 代领管理
+
+*/
+.h-f-icon-module-dlgl{ background-image: url(images/module/icon-module-dlgl.png) !important; }
+/**
+@tag 救灾物资管理
+
+*/
+.h-f-icon-menu-jzwzgl{ background-image: url(images/menu/icon-menu-jzwzgl.png) !important; }
+/**
+@tag 救灾物资管理
+
+*/
+.h-f-icon-module-jzwzgl{ background-image: url(images/module/icon-module-jzwzgl.png) !important; }
+/**
+@tag 物资仓储
+
+*/
+.h-f-icon-menu-wzcc{ background-image: url(images/menu/icon-menu-wzcc.png) !important; }
+/**
+@tag 物资仓储
+
+*/
+.h-f-icon-module-wzcc{ background-image: url(images/module/icon-module-wzcc.png) !important; }
+/**
+@tag 报表管理
+
+*/
+.h-f-icon-menu-bbgl{ background-image: url(images/menu/icon-menu-bbgl.png) !important; }
+/**
+@tag 报表管理
+
+*/
+.h-f-icon-module-bbgl{ background-image: url(images/module/icon-module-bbgl.png) !important; }
+/**
+@tag 财务核算
+
+*/
+.h-f-icon-menu-cwhs{ background-image: url(images/menu/icon-menu-cwhs.png) !important; }
+/**
+@tag 财务核算
+
+*/
+.h-f-icon-module-cwhs{ background-image: url(images/module/icon-module-cwhs.png) !important; }
+
+/*===============================================================*/
+/**
+@tag 标准数据
+*/
+.h-f-icon-menu-bzsj{ background-image: url(images/menu/icon-menu-bzsj.png) !important; }
+/**
+@tag 标准数据
+*/
+.h-f-icon-module-bzsj{ background-image: url(images/module/icon-module-bzsj.png) !important; }
+/**
+@tag 应用资源
+*/
+.h-f-icon-menu-yyzy-1{ background-image: url(images/menu/icon-menu-yyzy-1.png) !important; }
+/**
+@tag 应用资源
+*/
+.h-f-icon-module-yyzy-1{ background-image: url(images/module/icon-module-yyzy-1.png) !important; }
+/**
+@tag 业务事务
+*/
+.h-f-icon-menu-ywsw{ background-image: url(images/menu/icon-menu-ywsw.png) !important; }
+/**
+@tag 业务事务
+*/
+.h-f-icon-module-ywsw{ background-image: url(images/module/icon-module-ywsw.png) !important; }
+/**
+@tag 应用管理
+*/
+.h-f-icon-menu-yygl{ background-image: url(images/menu/icon-menu-yygl.png) !important; }
+/**
+@tag 应用管理
+*/
+.h-f-icon-module-yygl{ background-image: url(images/module/icon-module-yygl.png) !important; }
+/**
+@tag 基础管理
+*/
+.h-f-icon-menu-jcgl-1{ background-image: url(images/menu/icon-menu-jcgl-1.png) !important; }
+/**
+@tag 基础管理
+*/
+.h-f-icon-module-jcgl-1{ background-image: url(images/module/icon-module-jcgl-1.png) !important; }
+
+
+
+/**
+=====================================================
+@group 首页自定义快捷模块图标
+=====================================================
+*/
+/**
+@tag 烟叶
+*/
+.h-f-icon-leaf-leaf{ background-image: url(images/leaf/icon-leaf-leaf.png) !important; }
+/**
+@tag 设置，管理,工具，参数
+*/
+.h-f-icon-leaf-set{ background-image: url(images/leaf/icon-leaf-set.png) !important; }
+/**
+@tag 设置，管理，参数
+*/
+.h-f-icon-leaf-sets{ background-image: url(images/leaf/icon-leaf-sets.png) !important; }
+/**
+@tag 工具，设置
+*/
+.h-f-icon-leaf-tool{ background-image: url(images/leaf/icon-leaf-tool.png) !important; }
+/**
+@tag 设置，电脑，系统，后台
+*/
+.h-f-icon-leaf-pc{ background-image: url(images/leaf/icon-leaf-pc.png) !important; }
+/**
+@tag 设置，笔记本电脑，系统，后台，
+*/
+.h-f-icon-leaf-pcbook{ background-image: url(images/leaf/icon-leaf-pcbook.png) !important; }
+
+/**
+@tag 文件，模块
+*/
+.h-f-icon-leaf-file{ background-image: url(images/leaf/icon-leaf-file.png) !important; }
+/**
+@tag 文件s，模块s
+*/
+.h-f-icon-leaf-folder{ background-image: url(images/leaf/icon-leaf-folder.png) !important; }
+
+/**
+@tag 文件s，模块s
+*/
+.h-f-icon-leaf-files{ background-image: url(images/leaf/icon-leaf-files.png) !important; }
+/**
+@tag 文档
+*/
+.h-f-icon-leaf-book{ background-image: url(images/leaf/icon-leaf-book.png) !important; }
+/**
+@tag 模块，功能
+*/
+.h-f-icon-leaf-module{ background-image: url(images/leaf/icon-leaf-module.png) !important; }
+/**
+@tag 编辑，处理
+*/
+.h-f-icon-leaf-edit{ background-image: url(images/leaf/icon-leaf-edit.png) !important; }
+/**
+@tag 编辑，处理，完成
+*/
+.h-f-icon-leaf-do{ background-image: url(images/leaf/icon-leaf-do.png) !important; }
+
+/**
+@tag 查找
+*/
+.h-f-icon-leaf-find{ background-image: url(images/leaf/icon-leaf-find.png) !important; }
+
+/**
+@tag 分析
+*/
+.h-f-icon-leaf-analysis{ background-image: url(images/leaf/icon-leaf-analysis.png) !important; }
+/**
+@tag 图表，面板
+*/
+.h-f-icon-leaf-panel{ background-image: url(images/leaf/icon-leaf-panel.png) !important; }
+
+
+/**
+@tag 数据，数据库
+*/
+.h-f-icon-leaf-data{ background-image: url(images/leaf/icon-leaf-data.png) !important; }
+/**
+@tag 数据库管理，数据库设置
+*/
+.h-f-icon-leaf-dataset{ background-image: url(images/leaf/icon-leaf-dataset.png) !important; }

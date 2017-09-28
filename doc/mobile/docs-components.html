@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HSUI-MOBILE</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="../resources/icons/icon.png">
+<link rel="apple-touch-icon" href="../resources/icons/icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="../resources/icons/icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="../resources/icons/icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="../undefined">
+
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../mobile/project/resources/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="../../mobile/project/resources/css/global.css">
+<link rel="stylesheet" type="text/css" href="../../mobile/project/resources/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="../../mobile/project/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../mobile/project/resources/css/base.css">
+
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../resources/css/docs.css">
+<script src="../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  //框架头部下拉菜单
+  	var intervalID; 
+	var curSel; 
+	$(".docs-has-pulldown").mouseover(function(){ 
+		curSel=$(this); 
+		intervalID=setInterval(onMouseOver,250);//鼠标移入的时候有一定的延时才会滑出下拉菜单，防止用户不经意的操作 
+	}); 
+	function onMouseOver(){ 
+		curSel.addClass("docs-current"); 
+		if(curSel.hasClass("docs-subsystem")){
+				curSel.addClass("docs-subsystem-active")
+			}
+		curSel.find(".docs-pulldown").slideDown("fast");	
+	} 
+	
+	$(".docs-has-pulldown").mouseout(function(){ 
+		clearInterval(intervalID); 
+	}); 
+	
+	$(".docs-has-pulldown").mouseleave(function(){ 
+		if($(this).hasClass("docs-subsystem-active")){
+				$(this).removeClass("docs-subsystem-active")
+			}
+		$(this).find(".docs-pulldown").hide();
+	}); 
+	
+	
+	//可收缩展开列表
+     $("[data-action=accordion] > li > a").click(function() {
+          $(this).next().slideToggle();
+          $(this).find("i").toggleClass("docs-icon-minus-square-o");
+          $(this).find("i").toggleClass("docs-icon-plus-square-o");
+		  
+		  $(this).parent().addClass("docs-active");
+		  $("[data-action=accordion] > li > a").not(this).parent().removeClass("docs-active");;
+		  
+          $("[data-action=accordion] > li > a").not(this).next().slideUp();
+          $("[data-action=accordion] > li > a").not(this).find("i").removeClass("docs-icon-minus-square-o").addClass("docs-icon-plus-square-o");
+         
+     })
+	 
+	 //侧边栏二级菜单
+     $("[data-action=accordion]  ul li").click(function() {
+          $(this).addClass("docs-active");
+		  $("[data-action=accordion]  ul li").not(this).removeClass("docs-active");;
+         
+     })
+
+
+  
+});
+</script>
+</head>
+<body class="docs-fluid">
+<!--header-->
+<div class="docs-header">
+  <div class="docs-container">
+    <!--系统logo-->
+    <div class="docs-logo docs-has-pulldown">
+      <div>
+        <a href="../../index.html">
+          <img src="../resources/images/logo-hsui-mobile.png" alt=""/>
+        </a>
+      </div>
+      <div class="docs-pulldown">
+        <span class="docs-arrow"></span>
+        <div class="docs-pulldown-content">
+          <a href="../web/docs-example.html" class="docs-pull-item">
+            HSUI for web
+          </a>
+        </div>
+      </div>
+    </div>
+    <ul class="docs-header-nav">
+      <li>
+        <a href="docs-getting-started.html">
+          开始使用
+        </a>
+      </li>
+      <li>
+        <a href="docs-css.html">
+          CSS
+        </a>
+      </li>
+      <li class="docs-active">
+        <a href="docs-components.html">
+          组件
+        </a>
+      </li>
+      <li >
+        <a href="docs-tools.html" >
+          实用工具
+        </a>
+      </li>
+      <li>
+        <a href="docs-example.html">
+          实际案例
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--main-->
+<div class="docs-main">
+  <div class="docs-container">
+    <div class="docs-aside">
+      <ul class="docs-nav" data-action="accordion">
+        <li class="docs-active">
+          <a href="#">
+            常用组件<span class="docs-nav-en">Elements</span><i class="docs-icon-plus-square-o"></i>
+          </a>
+          <ul>
+            <li class="docs-active">
+              <a href="docs-components/buttons.html"  target="content-ifram">
+                按钮系列<span class="docs-nav-en">Buttons</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/icons.html" target="content-ifram">
+                图标<span class="docs-nav-en">Icon</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/images.html"  target="content-ifram">
+                图片<span class="docs-nav-en">Image</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/thumbnail.html"  target="content-ifram">
+                缩略图<span class="docs-nav-en">Thumbnail</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="docs-components/divider.html" target="content-ifram">
+                分割线<span class="docs-nav-en">Divider</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/badge.html" target="content-ifram">
+                小徽章<span class="docs-nav-en">Badge</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/form.html" target="content-ifram">
+                表单<span class="docs-nav-en">Form</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/table.html" target="content-ifram">
+                表格<span class="docs-nav-en">Table</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="docs-components/listview.html" target="content-ifram">
+                列表<span class="docs-nav-en">List</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/comment.html" target="content-ifram">
+                评论列表<span class="docs-nav-en">Comment</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/timeline.html" target="content-ifram">
+                时间轴<span class="docs-nav-en">timeline</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/card.html"  target="content-ifram">
+                卡片<span class="docs-nav-en">Card</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/group.html"  target="content-ifram">
+                群组<span class="docs-nav-en">group</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/bar.html"  target="content-ifram">
+                工具栏<span class="docs-nav-en">Bar</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/article.html"  target="content-ifram">
+                文章页<span class="docs-nav-en">Article</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/footer.html" target="content-ifram">
+                页脚<span class="docs-nav-en">Footer</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            导航<span class="docs-nav-en">Navs</span><i class="docs-icon-plus-square-o"></i>
+          </a>
+          <ul>
+            <li>
+              <a href="docs-components/header.html" target="content-ifram">
+                页头<span class="docs-nav-en">Header</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/navs.html" target="content-ifram">
+                导航及标签<span class="docs-nav-en">Nav</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/breadcrumb.html" target="content-ifram">
+                面包屑导航<span class="docs-nav-en">Breadcrumb</span>
+              </a>
+            </li>
+             <li>
+              <a href="docs-components/flowstep.html" target="content-ifram">
+                流程步骤<span class="docs-nav-en">flowstep</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/pagination.html" target="content-ifram">
+                分页<span class="docs-nav-en">Pagination</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/sudoku-menu.html" target="content-ifram">
+                九宫格菜单<span class="docs-nav-en">Sudoku Menu</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="#" target="content-ifram">
+                侧滑菜单<span class="docs-nav-en">OffCanvas</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/tree.html" target="content-ifram">组织树<span class="docs-nav-en">tree</span></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            交互组件<span class="docs-nav-en">Interactive</span><i class="docs-icon-plus-square-o"></i>
+          </a>
+          <ul>
+            <li>
+              <a href="docs-components/alert.html" target="content-ifram">
+                警告框<span class="docs-nav-en">Alert</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/feedback.html" target="content-ifram">
+                操作反馈<span class="docs-nav-en">Feedback</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/loading.html" target="content-ifram">
+                加载<span class="docs-nav-en">Loading</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/popup.html" target="content-ifram">
+                弹窗<span class="docs-nav-en">Popup</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="docs-components/datepicker.html" target="content-ifram">
+                日期时间选择<span class="docs-nav-en">DatePicker</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/numeric-keyboard.html" target="content-ifram">
+                数字键盘<span class="docs-nav-en">Numeric Keyboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/dropdown.html" target="content-ifram">
+                下拉组件<span class="docs-nav-en">Dropdown</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/slider.html" target="content-ifram">
+                图片轮播<span class="docs-nav-en">Slider</span>
+              </a>
+            </li>
+            <li>
+              <a href="/javascript/sticky" target="content-ifram">
+                固定元素<span class="docs-nav-en">Sticky</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/progress.html" target="content-ifram">
+                进度条<span class="docs-nav-en">Progress</span>
+              </a>
+            </li>
+            <li>
+              <a href="docs-components/charts.html" target="content-ifram">
+                图表插件<span class="docs-nav-en">charts</span>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="docs-iframe ">
+      <iframe src="docs-components/buttons.html" name="content-ifram" id="content-ifram" frameborder="0" scrolling="auto"></iframe>
+    </div>
+  </div>
+</div>
+</body>
+</html>

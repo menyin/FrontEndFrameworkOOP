@@ -1,0 +1,124 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2014-08
+		-----------------------------------------------
+		说明：
+		1：登录页所有的样式名称前面必须加 h-l-
+			h:代表hsui,海晟UI
+			l:代表login,登录页
+
+======================================*/
+@import url('reset.css');
+html,
+.h-l-login-body,
+.h-l-wrapper { height: 100%; }
+.h-l-login-body,
+.h-l-login-body * {
+	font: 14px/1.5 "\5FAE\8F6F\96C5\9ED1";
+	font-weight: 400;
+}
+.h-l-login-body { background: #f9f9f9 url(images/login/bg-body.jpg) repeat-x; }
+.h-l-login-body > .h-l-wrapper {
+	height: auto;
+	min-height: 100%;
+}
+.h-l-hide { display: none; }
+.h-l-main { padding-bottom: 50px; }
+.h-l-content { padding-top: 100px; }
+.h-l-content-inner {
+	width: 900px;
+	height: 440px;
+	margin: 0 auto;
+	background: url(images/login/body-content.jpg) no-repeat;
+}
+/*
+logo
+*/
+.h-l-logo-area {
+	float: left;
+	width: 450px;
+}
+.h-l-logo-img { padding: 90px 0 0 160px; }
+/*
+系统名称等信息
+*/
+.h-l-system-info { padding-left: 170px; }
+.h-l-system-name {
+	padding: 20px 0 10px;
+	font-size: 26px;
+	color: #666;
+}
+.h-l-system-info-list li {
+	background: url(images/login/icon-dot.gif) no-repeat left center;
+	padding-left: 12px;
+	color: #999;
+}
+/*
+登录表单
+*/
+.h-l-form-area {
+	float: left;
+	width: 300px;
+	margin-left: 50px;
+	padding-top: 40px;
+}
+.h-l-form-title {
+	font-size: 18px;
+	color: #999;
+	border-bottom: 1px solid #ececec;
+	padding: 10px 0;
+	margin-bottom: 20px;
+}
+.h-l-form-item { margin-bottom: 20px; }
+.h-l-input-text {
+	border: 1px solid #d9d9d9;
+	background: url(images/login/bg-input.jpg) repeat-x;
+	width: 240px;
+	height: 48px;
+	line-height: 48px;
+	padding-left: 60px;
+	font-size: 18px;
+}
+.h-l-input-text:focus { border: 1px solid #333; }
+.h-l-input-text:focus:hover { border: 1px solid #ff7200; }
+.h-l-icon-user { background-image: url(images/login/icon-user.jpg); }
+.h-l-icon-pw { background-image: url(images/login/icon-pw.jpg); }
+.h-l-input-btn {
+	height: 36px;
+	width: 90px;
+	background: url(images/login/bg-btn.jpg);
+	border: 1px solid #c7c7c7;
+	font-weight: 400;
+	font-size: 18px;
+	cursor: pointer;
+}
+.h-l-form-area label { float: left; }
+.h-l-btn-bar { float: right; }
+/*
+错误提示
+*/
+.h-l-errorTxt {
+	background: #ffffe3;
+	border: 1px dashed #ff6600;
+	padding: 6px;
+	color: #666;
+}
+.h-l-errorTxt span { color: #f00; }
+/*
+footer
+*/
+.h-l-footer {
+	position: relative;
+	margin-top: -50px;
+	height: 50px;
+	clear: both;
+	text-align: center;
+}
+.h-l-footer .h-l-copyRight p {
+	color: #999;
+	padding-top: 20px;
+}
+.h-l-footer .h-l-copyRight a { color: #999 !important; }

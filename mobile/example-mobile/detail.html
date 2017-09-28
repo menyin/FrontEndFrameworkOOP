@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICSSHS-MUI for webapp</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<meta name="x5-fullscreen" content="true">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon.png">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="../project/resources/css/images/icons/undefined">
+
+<!--项目全局样式-->
+<link href="../project/resources/css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/global.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/animate.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/base.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/iconfont.css" rel="stylesheet" type="text/css" />
+<script src="../project/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body class="hm-ov-x-hide">
+<!--page-->
+<div class="hm-page hm-page-active" >
+    <div class="hm-header hm-header-dark">
+        <a class="hm-btn" href="#" onclick="history.go(-1)">
+        <i class="hm-icon-back"></i>
+        </a>
+        <div class="hm-flex-1" >
+        </div>
+        <div class="hm-title">
+            详细页
+        </div>
+    </div>
+    <div class="hm-content">
+        <div class="hm-bar hm-padding-0">
+            <ul class="hm-nav hm-nav-tabs hm-nav-justify">
+              <li class="hm-active"><a href="#" class="hm-btn">基本信息</a></li>
+              <li><a href="#" class="hm-btn">单据详情</a></li>
+              <li><a href="#" class="hm-btn">评价1987</a></li>
+            </ul>
+        </div>
+        <div class="hm-group">
+            <div class="hm-group-header">
+                单列布局
+            </div>
+            <div class="hm-group-content">
+                <ul class="hm-list-detail hm-average-1">
+                	<li><label>姓名</label><span>老蔡</span></li>
+                    <li><label>身份证</label><span>350888201408768768</span></li>
+                    <li><label>公司地址</label><span>厦门市思明区软件园二期观日路</span></li>
+                    <li><label>转入帐号</label><span>6222009876789876789</span></li>
+                    <li><label>转出帐号</label><span>6222009876789876789</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hm-group">
+            <div class="hm-group-header">
+                多列+混合布局
+            </div>
+            <div class="hm-group-content">
+                <ul class="hm-list-detail hm-average-2">
+                    <li><label>姓名</label><span>老蔡</span></li>
+                    <li><label>职位</label><span>UED</span></li>
+                    <li><label>部门</label><span>UI部</span></li>
+                    <li><label>邮箱</label><span>保密</span></li>
+                    <li><label>QQ</label><span>66383210</span></li>
+                    <li><label>电话</label><span>保密</span></li>
+                     <li class="hm-column-all"><label>地址</label><span>厦门市思明区软件园二期观日路</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hm-group">
+            <div class="hm-group-header">
+                单据流转情况
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-timeline">
+                    <a href="#" class="hm-timeline-item">
+                        <div class="hm-timeline-item-node">
+                            <i class="hm-icon-sm hm-circle hm-icon-time"></i>
+                        </div>
+                        <div class="hm-timeline-item-content">
+                            <div class="hm-timeline-title">
+                                21:30 karmo
+                            </div>
+                            <div class="hm-timeline-desc">
+                                已接收退回申请，需要重新申请。
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="hm-timeline-item">
+                        <div class="hm-timeline-item-node">
+                            <i class="hm-icon-sm hm-circle hm-icon-checked"></i>
+                        </div>
+                        <div class="hm-timeline-item-content">
+                            <div class="hm-timeline-title">
+                                14:31 人事部李总
+                            </div>
+                            <div class="hm-timeline-desc">
+                                请假条件未写，审核不通过，已被退回
+                            </div>
+                        </div>
+                    </a>
+                    <div class="hm-timeline-item">
+                        <div class="hm-timeline-item-node">
+                            <i class="hm-icon-sm hm-circle hm-icon-checked"></i>
+                        </div>
+                        <div class="hm-timeline-item-content">
+                            <div class="hm-timeline-title">
+                                11:21 design4u
+                            </div>
+                            <div class="hm-timeline-desc">
+                                已批准
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hm-timeline-item">
+                        <div class="hm-timeline-item-node">
+                            <i class="hm-icon-sm hm-circle hm-icon-checked"></i>
+                        </div>
+                        <div class="hm-timeline-item-content">
+                            <div class="hm-timeline-title">
+                                09:30 karmo
+                            </div>
+                            <div class="hm-timeline-desc">
+                                发起请假申请
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

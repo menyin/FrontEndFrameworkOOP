@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ICSSHS-UI</title>
+<link href="../../themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css" />
+<!--页面布局样式,框架页面发现包含以下样式，否则布局会错乱-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+	background: #f9f9f9;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.h-panel { }
+</style>
+</head>
+<body>
+<!-- 布局 +++++++++++++++++++++++++开始+++++++++++++++++++++++++++++++++++++++-->
+<div class="h-box" style="height:100%;">
+<div class="h-box-item"  style=" width:auto;  left: 5px; right: 5px; top: 5px; bottom:5px; ">
+    <!--辅助信息-->
+    
+    <div class="h-panel h-box-item" style="height:auto;width:5;left: 0px; right: 0px; top:5px; bottom:5px; ">
+        <!--面板头部-->
+        <div class="h-panel-header">
+            <div class=" h-pull-left">
+                <div class="h-panel-title">
+                    框架设置
+                </div>
+            </div>
+        </div>
+        <!--面板主体内容-->
+        <div class="h-panel-body ">
+            <!--面板内容说明--> 
+            <!-- <div class=" h-border-b ">
+			<p class=" c-container "><span class=" h-color-muted">配置登录页的LOGO，轮显图，版权信息等</span></p>
+		 </div>--> 
+            <!--面板内容-->
+            <div  class=" h-pad10" style="position: absolute; overflow: auto;width: auto; height:auto;left:0px; right:0px; top:38px; bottom:32px;">
+                <!--面板左边主体内容-->
+                <div  class="h-box-item" style="position: absolute;width:400px;bottom:5px;left: 0; top: 0px; right: auto; ">
+                    <div class=" h-pad10 c-loginect-h" >
+                        <p class=" h-mb-10" ><img src="images/pic-system.jpg" width="400" height="244" alt=""/></P>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+                <!--面板右边主体内容-->
+                <div class="h-box-item  h-pad10 " style=" x-overflow: auto;width: auto; height:auto; left:420px; right:0px; top:0px; bottom:5px;min-width:410px">
+                
+                
+                	<div class="c-title"> 1.系统名称</div>
+                        <input id="" class="h-form-control" type="text" placeholder="请输入内容">
+                        <p class="c-txt-muted ">如示意图（1）部分显示在浏览器页签上的系统模块名称</p>
+                        
+                        
+                        
+                        
+                        <div class="h-form-group ">
+                        <div class="c-title">
+                            2.LOGO设置
+                        </div>
+                        <div class="c-system "  >
+                            <div class="h-col-g12-3" style="">
+                                <label >
+                                    <input type="radio"  >
+                                    仅用图片</label>
+                            </div>
+                            <div class="h-col-g12-8" >
+                                <label>
+                                    <input type="radio" checked="checked" >
+                                    LOGO图片+文字</label>
+                            </div>
+                            <div style="display:none">
+                                <a class="c-logobox" href="#">
+                                <div class="c-systemlogo h-mb-5">
+                                    <img width="" height="40" alt="" src="images/logo-2.jpg">
+                                </div>
+                                </a>
+                                <p class="c-txt-muted "> 点击图片上传LOGO，图片尺寸建议 <span class="h-color-danger">高：40px</span></p>
+                            </div>
+                            <div  >
+                                <a class="c-logobody" href="#">
+                                <div class="c-logo-s ">
+                                    <img width="30" height="30" style="margin-top:5px;" alt="" src="images/logo-s.png">
+                                </div>
+                                </a>
+                                <div class="c-systemlogo-box">
+                                    <a href="#">
+                                    <div class="c-logo-pic">
+                                        LOGO
+                                    </div>
+                                    <input id="" class="c-form-sysname" type="text" placeholder="福建调拨系统">
+                                    </a>
+                                    <p class="c-txt-muted  c-txt-h" > 点击方框上传LOGO，尺寸 <span class="h-color-danger">宽：35px 高：35px</span>，点击输入框直接编辑名称</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                        
+                        <div class="h-form-group " >
+                            <div class="c-title ">
+                                3.布局皮肤
+                            </div>
+                            <div class=" c-theme "  >
+                                <img width="150"  src="images/preview-3.jpg">
+                                <div class=" c-themetxt h-pad10 " >
+                                    <p class="c-title-selected"><span class=" c-txt-muted">当前主题：</span>OUTLOOK布局-蓝色皮肤</p>
+                                    <p class="c-txt-muted c-txtskin-h" >系统默认主题，点击菜单从左侧全屏滑出导航菜单，支持多系统切换、支持无限级菜单（其中一级菜单及二级菜单需要提供特定格式的图标）、支持多种皮肤颜色的选择系统默认主题，点击菜单从左侧全屏滑出导航菜单，支持多系统切换、支持无限级菜单（其中一级菜单及二级菜单需要提供特定格式的图标）、支持多种皮肤颜色的选择</p>
+                                    <div class=" c-btn-right ">
+                                        <a class="h-btn" href="#"> <span class="h-btn-content"> <span class="h-icon c-icon-install"></span> 修改主题 </span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" h-form-group h-mb-10 " >
+                            <div class=" h-float-left" style=" width:120px;">
+                                <span class=" c-title ">是否开启全屏</span>
+                            </div>
+                            <div class="h-radio h-mb-5 ">
+                                <label><input type="radio">开启</label>                                
+                                <label><input type="radio" checked>不开启</label>
+                            </div>
+                        </div>
+                    
+                    <!--
+                    <div class="c-title h-form-group ">
+                        5.主页设定
+                    </div>
+                    <div class=" h-row-col2-rf   c-homebox " style=" padding-left:185px;">
+                        <div class="h-col-l" style=" margin-left: -185px;width: 185px;padding-left:10px;">
+                            <img width="150"  height="100" alt="" src="images/preview-1.jpg">
+                        </div>
+                        <div class=" h-col-r " style="margin-top:-120px;">
+                            <p class="c-title">默认首页</p>
+                            <p class=" c-txt-muted c-txtcustom-h " >系统默认主题，点击菜单从左侧全屏滑出导航菜单，支持多系统切换、支持无限级菜单（其中一级菜单及二级菜单需要提供特定格式的图标）、支持多种皮肤颜色的选择系统默认主题，点击菜单从左侧全屏滑出导航菜单，支持多系统切换、支持无限级菜单（其中一级菜单及二级菜单需要提供特定格式的图标）、支持多种皮肤颜色的选择系统默认主题，点击菜单从左侧全屏滑出导航菜单，支持多系统切换、支持无限级菜单（其中一级菜单及二级菜单需要提供特定格式的图标）、支持多种皮肤颜色的选择系统默认主题，点击菜单从左侧全屏滑出导航菜单，支持多系统切换、支持无限级菜单（其中一级菜单及二级菜单需要提供特定格式的图标）、支持多种皮肤颜色的选择</p>
+                            <div class=" c-btn-p">
+                                <div class="c-right">
+                                    <a class="h-btn"  href="#"> <span class="h-btn-content"> <span class="h-icon c-icon-selected"></span> 设为当前 </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" h-row-col2-rf  c-selected  c-homebox " style=" padding-left: 185px;">
+                        <div class="h-col-l" style=" margin-left: -185px;width: 185px;padding-left:10px;">
+                            <img width="160"  height="130" alt="" src="images/preview-2.jpg">
+                        </div>
+                        <div class=" h-col-r  " style="margin-top:-130px;">
+                            <p class="c-title">部分定义</p>
+                            <p class="c-txt-muted ">自定义宽度</span>
+                                <input id="" class="h-form-control c-label-w" type="text" value="300"  placeholder="请输入内容">
+                                <span class="h-color-muted ">px</span> </p>
+                            <span class="c-txt-muted  " style="margin-bottom:2px;">当前连接地址</span>
+                            <textarea class="c-form-link h-form-control "  rows="1">/trade/itemlist/listBoughtItems.htm?spm=a1z09.2.9.437.S7pRdF&action=itemlist/QueryAction&event_submit_do_query=1&prePageNo=3&clickMore=0&pageNum=4</textarea>
+                            <div class=" c-btn-p">
+                                <div class="c-right">
+                                    <span class="h-icon h-icon-success"></span> <span class="h-alert-text h-color-success h-font-b "> <strong>当前使用 </strong> </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="  c-homebox " style="">
+                        <div class=" " style="">
+                            <p class="c-title">自定义布局</p>
+                            <p class=" c-txt-muted c-custom-h" >进入系统不进入目前默认的系统首页，而是跳转到跳转到需要设定的页面里面，可以直接定义进入的页面，只需输入跳转的链接地址即可点击菜单从左侧全屏滑出导航菜单，</p>
+                            <span class=" c-txt-muted "  >当前连接地址：
+                            <textarea class="h-form-control h-mb-5 h-form-control-disabled " rows="1">/trade/itemlist/listBoughtItems.htm?spm=a1z09.2.9.437.S7pRdF&action=itemlist/QueryAction&event_submit_do_query=1&prePageNo=3&clickMore=0&pageNum=4</textarea>
+                            </span>
+                            <div class=" c-btn-p">
+                                <div class="c-right">
+                                    <a class="h-btn"  href="#"> <span class="h-btn-content"> <span class="h-icon c-icon-selected"></span> 设为当前 </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+        
+        <!--面板底部 按钮操作等-->
+        <div class="h-toolbar h-toolbar-footer h-box-item" style="height:36px;width:auto;left: 0px; right: 0px; top:auto; bottom:0px; ">
+            <div class="h-pull-right">
+                <a class="h-btn h-btn-form h-btn-primary" href="#"> <span class="h-btn-content">保 存 </span> </a> <a class="h-btn h-btn-form" href="#"> <span class="h-btn-content">返 回</span> </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

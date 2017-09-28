@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ICSSHS-UI</title>
+
+
+<!--公共-->
+<script src="../../themes-default/resources/js/jquery-1.9.1.js"></script>
+<link href="../../themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+ 
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/action/themes-default/icon-action.css">
+
+<!--个性化样式-->
+<script type="text/javascript" src="js/jquery.royalslider.min.js"></script>
+
+<link  href="css/custom.css" rel="stylesheet" type="text/css"/>
+<link href="css/royalslider.css" rel="stylesheet" type="text/css" />
+<link href="css/rs-minimal-white.css" rel="stylesheet">
+<link href="css/rs-minimal-leftTab.css" rel="stylesheet">
+<script>
+//业务支撑--交互信息tab切换代码
+		 function switchTab(TabBtn, TabCon) {
+			 $("#tab1").toggleClass("h-p-tab-current");
+			 $("#tab2").toggleClass("h-p-tab-current");
+			  $("#con1").toggleClass("h-hide");
+			 $("#con2").toggleClass("h-hide");
+        }
+
+$(document).ready(function(){
+	//  控制slider高度
+        $(".h-p-panel").css('height',document.body.clientHeight);
+		$(".royalSlider").css('height',document.body.clientHeight)
+		
+
+ 		
+});
+</script>
+<!--页面高度需设置100%，并保证不出现滚动条；否则所包含的标签无法获取到100%的高度，会导致布局错乱 by 66383210@qq.com-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+</style>
+
+</head>
+<body>
+<div class="h-p-bgmanager" >
+        <!-- 滚动代码开始-->
+          <div id="full-height-slider" class="royalSlider heroSlider rsMinW h-p-slider-bluebg" >
+          
+            <!--01基础属性-->
+            <div class="rsContent h-p-panel"  >
+
+                  <p  class="h-p-title h-p-panel-title" style="padding:10px;" >基础属性<span  class="h-p-title-aid" >请点击数字查看详细</span><p>
+               
+                        <div  class="h-p-fieldset h-p-fieldset-green">
+                         <p   class="h-p-fieldset-title "><span class="h-p-icon h-p-icon-xxl h-p-icon-yyzz h-p-pad10 h-p-fieldsetrow"></span>运营组织</p>  
+                           
+                             <div  class="h-p-fieldset-contant-outline">
+                              <div   class="h-p-fieldset-contant" >
+                               <div class="h-p-fieldset-digi"  >
+                                   <p >5</p>
+                                   <span>组织机构</span>
+                               </div>
+                               <div class="h-p-fieldset-digi"  >
+                                   <p >500</p>
+                                   <span>行政机构</span>
+                               </div>
+                                <div class="h-p-fieldset-digi"  >
+                                   <p >25</p>
+                                   <span>仓库机构</span>
+                               </div>
+                             </div>     
+                           </div> 
+                        </div>
+                         <div  class="h-p-fieldset h-p-fieldset-green">
+                            <p   class="h-p-fieldset-title "><span class="h-p-icon h-p-icon-xxl h-p-icon-yn h-p-pad10 h-p-fieldsetrow"></span>烟农</p> 
+                            
+                             <div  class="h-p-fieldset-contant-outline">
+                             <div   class="h-p-fieldset-contant" >
+                               <div class="h-p-fieldset-digi" >
+                                   <p >500</p>
+                                   <span>烟农档案</span>
+                               </div>
+                               </div>
+                             </div>     
+                            </div>
+                    
+                          <div  class="h-p-fieldset h-p-fieldset-green">
+                            <p   class="h-p-fieldset-title "><span class="h-p-icon h-p-icon-xxl h-p-icon-fwzz h-p-pad10 h-p-fieldsetrow"></span>服务组织</p> 
+                            
+                             <div  class="h-p-fieldset-contant-outline">
+                             <div   class="h-p-fieldset-contant" >
+                               <div class="h-p-fieldset-digi" >
+                                   <p >500</p>
+                                   <span>烟技员</span>
+                               </div>
+                               <div class="h-p-fieldset-digi" >
+                                   <p >200</p>
+                                   <span>合作社</span>
+                               </div>
+                               </div>
+                             </div>     
+                            </div> 
+    
+                    
+                    <div  style="clear:both"></div>
+                    
+                     <div  class="h-p-fieldset h-p-fieldset-orange">
+                     	<p   class="h-p-fieldset-title " ><span class="h-p-icon h-p-icon-xxl h-p-icon-gys h-p-pad10 h-p-fieldsetrow"></span>供应商</p> 
+                        
+                         <div  class="h-p-fieldset-contant-outline">
+                         <div   class="h-p-fieldset-contant" >
+                           <div class="h-p-fieldset-digi" >
+                           <a>
+                               <p >500</p>
+                               <span>供应商</span>
+                             </a>
+                           </div>
+                           </div>
+                         </div>     
+    				 </div>
+                     
+                     <div  class="h-p-fieldset h-p-fieldset-orange">
+                     	<p   class="h-p-fieldset-title "><span class="h-p-icon h-p-icon-xxl h-p-icon-bxlp h-p-pad10 h-p-fieldsetrow"></span>供应商</p> 
+                        
+                         <div  class="h-p-fieldset-contant-outline">
+                         <div   class="h-p-fieldset-contant" >
+                           <div class="h-p-fieldset-digi" >
+                               <p >500</p>
+                               <span>保险理赔</span>
+                           </div>
+                           </div>
+                         </div>     
+    				 </div>
+                     <div  class="h-p-fieldset h-p-fieldset-orange">
+                     	<p   class="h-p-fieldset-title "><span class="h-p-icon h-p-icon-xxl h-p-icon-sw h-p-pad10 h-p-fieldsetrow"></span>税务</p> 
+                        
+                         <div  class="h-p-fieldset-contant-outline">
+                         <div   class="h-p-fieldset-contant" >
+                           <div class="h-p-fieldset-digi" >
+                               <p >500</p>
+                               <span>保险理赔</span>
+                           </div>
+                           </div>
+                         </div>     
+    				 </div>
+                     <div  class="h-p-fieldset h-p-fieldset-orange">
+                     	<p   class="h-p-fieldset-title "><span class="h-p-icon h-p-icon-xxl h-p-icon-yh h-p-pad10 h-p-fieldsetrow"></span>银行</p> 
+                        
+                         <div  class="h-p-fieldset-contant-outline">
+                         <div   class="h-p-fieldset-contant" >
+                           <div class="h-p-fieldset-digi" >
+                               <p >500</p>
+                               <span>保险理赔</span>
+                           </div>
+                           </div>
+                         </div>     
+    				 </div>
+            
+             <a  class="rsTmb h-p-tabbtn-left h-p-tabbtn-jcsx" ></a>
+            </div>
+             <!--02业务事务-->
+            <div class="rsContent  h-p-panel ">
+            
+              
+                  <p  class="h-p-title  h-p-panel-title" style="padding:10px;" >业务事务<span  class="h-p-title-aid" >查看各个时间段内发生的业务事务</span><p>
+                  <a class="h-btn h-btn-form h-p-btn-settime" href="#"  ><span class="h-btn-content">设置时序</span></a>
+                <!--table-->
+          <table class="h-table h-table-bordered h-table-allcenter h-p-forwidth"  >
+            <thead>
+              <tr class="h-table-grayhead" >
+                <th colspan="2" rowspan="2"  >业务事务</th>
+                <th colspan="6" >上一年度</th>
+                <th colspan="12">本年度</th>
+                <th colspan="6">下一年度</th>
+              </tr>
+              <tr class="h-table-grayhead" >
+                <th width="40">7月</th>
+                <th width="40">8月</th>
+                <th width="40">9月</th>
+                <th width="40">10月</th>
+                <th width="40">11月</th>
+                <th width="40">12月</th>
+                <th width="40">1月</th>
+                <th width="40">2月</th>
+                <th width="40">3月</th>
+                <th width="40">4月</th>
+                <th width="40">5月</th>
+                <th width="40">6月</th>
+                <th width="40">7月</th>
+                <th width="40">8月</th>
+                <th width="40">9月</th>
+                <th width="40">10月</th>
+                <th width="40">11月</th>
+                <th width="40">12月</th>
+                <th width="40">1月</th>
+                <th width="40">2月</th>
+                <th width="40">3月</th>
+                <th width="40">4月</th>
+                <th width="40">5月</th>
+                <th width="40">6月</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr >
+                <td rowspan="4" width="100" >产前准备</td>
+                <td class="h-p-tdline-right" width="100">地块落实</td>
+                <td colspan="6"   class="h-p-tdbg h-p-tdline-right"><div  class="h-p-timeline"></div> </td>
+                <td  ></td>
+                <td align="left" ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                 <td class="h-p-tdline-right" ></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+              </tr>
+              <tr >
+                <td class="h-p-tdline-right">育苗准备</td>
+                <td   class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"  ></td>
+                <td colspan="6"   class="h-p-tdbg" ><div  class="h-p-timeline"></div></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                 <td class="h-p-tdline-right" ></td>
+               <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+              </tr>
+              <tr >
+                <td class="h-p-tdline-right">育苗物质</td>
+                <td   class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"  ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td colspan="5"   class="h-p-tdbg" ><div  class="h-p-timeline"></div></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td class="h-p-tdline-right" ></td>
+                  <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+              </tr>
+              <tr >
+                <td class="h-p-tdline-right">育苗管理</td>
+                 <td   class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"  ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td    class="h-p-tdbg h-p-tdline-right"></td>
+                <td colspan="5" align="left"><div  class="h-p-timeline"></div></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td class="h-p-tdline-right" ></td>
+                  <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+              </tr>
+              <tr>
+                <td rowspan="3"   >合同管理</td>
+                <td class="h-p-tdline-right">种植申请</td>
+                <td   class="h-p-tdbg"></td>
+                <td   class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"  ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td    class="h-p-tdbg h-p-tdline-right"></td>
+                <td align="left"></td>
+                <td ></td>
+                <td ></td>
+                <td colspan="3" ><div  class="h-p-timeline"></div></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                 <td class="h-p-tdline-right" ></td>
+                 <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+              </tr>
+              <tr>
+                <td class="h-p-tdline-right">大田准备</td>
+                <td   class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"  ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td    class="h-p-tdbg h-p-tdline-right"></td>
+   
+                <td align="left"></td>
+                <td ></td>
+                <td ></td>
+                <td colspan="5" ><div  class="h-p-timeline"></div></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td  class="h-p-tdline-right"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+              </tr>
+              <tr>
+                <td class="h-p-tdline-right">合同预签</td>
+                <td   class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"  ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td    class="h-p-tdbg h-p-tdline-right"></td>
+                <td align="left"></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td colspan="7" ><div  class="h-p-timeline"></div></td>
+                <td class="h-p-tdline-right" ></td>
+                <td class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+              </tr>
+              <tr>
+                <td rowspan="3" style="background-color:#fff" >烟叶物资</td>
+                <td  class="h-p-tdline-right">移栽管理</td>
+                <td   class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"  ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td    class="h-p-tdbg h-p-tdline-right"></td>
+                <td align="left"></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td colspan="4" ><div  class="h-p-timeline"></div></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+              </tr>
+              <tr >
+                <td class="h-p-tdline-right">生产物资</td>
+               <td   class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"  ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td    class="h-p-tdbg h-p-tdline-right"></td>
+                <td align="left"></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td colspan="3" ><div  class="h-p-timeline"></div></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+              </tr>
+              <tr>
+                <td class="h-p-tdline-right">大田准备</td>
+                <td   class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"  ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td    class="h-p-tdbg h-p-tdline-right"></td>
+                <td align="left"></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td colspan="6"  ><div  class="h-p-timeline"></div></td>
+                <td  class="h-p-tdbg"></td>
+              </tr>
+              <tr>
+                <td rowspan="5" >生产过程</td>
+                <td class="h-p-tdline-right">合同预签</td>
+               <td   class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"  ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td    class="h-p-tdbg h-p-tdline-right"></td>
+                <td align="left"></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                 <td class="h-p-tdline-right" ></td>
+                  <td colspan="4"  class="h-p-tdbg"><div  class="h-p-timeline"></div></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+              </tr>
+              <tr>
+                <td class="h-p-tdline-right">移栽管理</td>
+               <td   class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"  ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td    class="h-p-tdbg h-p-tdline-right"></td>
+                <td align="left"></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                 <td class="h-p-tdline-right" ></td>
+                 <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+              </tr>
+              <tr>
+                <td class="h-p-tdline-right">生产物资</td>
+               <td   class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"  ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td    class="h-p-tdbg h-p-tdline-right"></td>
+                <td align="left"></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td class="h-p-tdline-right" ></td>
+                 <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+              </tr>
+              <tr>
+                <td class="h-p-tdline-right">大田准备</td>
+               <td   class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"  ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td    class="h-p-tdbg h-p-tdline-right"></td>
+                <td align="left"></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td class="h-p-tdline-right" ></td>
+                 <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+              </tr>
+              <tr>
+                <td class="h-p-tdline-right">合同预签</td>
+               <td   class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"  ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td   class="h-p-tdbg" ></td>
+                <td    class="h-p-tdbg h-p-tdline-right"></td>
+                <td align="left"></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                 <td class="h-p-tdline-right" ></td>
+                  <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+                <td  class="h-p-tdbg"></td>
+              </tr>
+            </tbody>
+          </table>
+
+           <a  class="rsTmb h-p-tabbtn-left h-p-tabbtn-ywsw"></a>
+            </div>
+            <!--03岗位权责--> 
+            <div class="rsContent h-p-panel " >
+              <p  class="h-p-title  h-p-panel-title" style="padding:10px;" >岗位权限<span  class="h-p-title-aid" >设置岗位人员等信息</span><p>
+              <div  class="h-p-gzzzdiv-all" >
+                    <div class="h-p-gzzzdiv">
+                       <span  class="h-p-icon h-p-icon-114 h-p-icon-gwgl" ></span>
+                       <p  class="h-p-title">岗位管理</p>
+                       <p  class="h-p-info">岗位信息管理，包括岗位基础信息查看及人员岗位分配等</p>
+                       <br>
+                       <a class="h-p-btn-circle"  href="#" ><span class="h-btn-content">进入</span></a>
+                   </div>
+                    <div class="h-p-gzzzdiv">
+                       <span  class="h-p-icon h-p-icon-114 h-p-icon-rygl" ></span>
+                       <p  class="h-p-title"> 人员管理</p>
+                       <p  class="h-p-info">岗位信息管理，包括岗位基础信息查看及人员岗位分配等</p>
+                       <br>
+                       <a class="h-p-btn-circle"  href="#" ><span class="h-btn-content">进入</span></a>
+                   </div>
+                   <div class="h-p-gzzzdiv">
+                       <span  class="h-p-icon h-p-icon-114 h-p-icon-qzgl" ></span>
+                       <p  class="h-p-title">权责管理</p>
+                       <p  class="h-p-info">岗位信息管理，包括岗位基础信息查看及人员岗位分配等</p>
+                       <br>
+                       <a class="h-p-btn-circle"  href="#" ><span class="h-btn-content">进入</span></a>
+                   </div>
+               </div>
+              <a  class="rsTmb h-p-tabbtn-left h-p-tabbtn-gwzz"></a>
+            </div>
+            <!--04信息交互-->
+            <div class="rsContent h-p-panel" >
+                   <!-- TABS  -->
+                      <div class="h-p-panel-title h-pad0" >
+                        <ul  >
+                          <li  id="tab1" class="h-p-tab-info h-p-tab-current" ><a   href="#" onclick="switchTab('tab1','con1')" >对内信息 </a></li>
+                          <li  id="tab2" class="h-p-tab-info "><a  href="#" onclick="switchTab('tab2','con2')" >对外信息</a></li>
+                        </ul>
+                         <div class="clear"></div>
+                        <!-- TABS 对内 -->
+                        <div   id="con1" >
+                              <div  class="h-pad20 h-float-left">
+                                <img src="css/images/portal/temp_img_chart.png" alt="chart"  class="h-p-chart">
+                                <div  class="h-float-left  h-mar10">
+                                  <p  class="h-p-title-jhxx">交互的系统<span><em >10</em>个</span></p>
+                                  <p  class="h-p-info-jhxx" >从系统的维度看信息交互的内容</p>
+                                  <p class="h-p-sample-jhxx" ><span class="h-p-sample-blue"></span> 单方调用（被对方调用） <em>10</em>个 </p>
+                                  <p class="h-p-sample-jhxx" ><span class="h-p-sample-green" ></span> 单方调用（从对方调用）<em >10</em>个</p>
+                                  <p class="h-p-sample-jhxx" ><span class="h-p-sample-yellow" ></span> 双方相互调用 <em>10</em>个 </p>
+                                  <br>
+                                  <a class="h-p-btn-circle"  href="#" ><span class="h-btn-content">查看详细</span></a>
+                                </div>
+                             </div>
+                              <div class="h-pad20 h-float-left">
+                                <img src="css/images/portal/temp_img_chart2.png" alt="chart" class="h-p-chart">
+                                <div class="h-float-left  h-mar10">
+                                  <p  class="h-p-title-jhxx">交互的接口<span><em >10</em>个</span></p>
+                                  <p  class="h-p-info-jhxx">从接口的维度看信息交互的内容</p>
+                                  <p  class="h-p-sample-jhxx"><span  class="h-p-sample-yellow" ></span> 开放的接口（被对方调用） <em >98</em>个 </p>
+                                  <p style="margin-bottom:30px;"  class="h-p-sample-jhxx"><span class="h-p-sample-green"></span> 调用的接口（从对方调用）<em >176</em>个</p>
+                                  <br>
+                                  <a class="h-p-btn-circle"  href="#" ><span class="h-btn-content">查看详细</span></a>
+                                </div>
+                             </div>
+                        </div>
+                        <!-- TABS 对外 -->
+                         <div class="h-hide"   id="con2"  >
+                                <div  class="h-p-gzzzdiv-all" >
+                                    <div class="h-p-gzzzdiv">
+                                       <p  class="h-p-icon h-p-icon-114 h-p-icon-circle" ><em>2</em><span  class="h-p-rednum" > 项</span></p>
+                                       <p  class="h-p-title">代办事项</p>
+                                       <p  class="h-p-info">查看代办事项注册项</p>
+                                       <br>
+                                       <a class="h-p-btn-circle"  href="#" ><span class="h-btn-content">查看详细</span></a>
+                                   </div>
+                                    <div class="h-p-gzzzdiv">
+                                      <p  class="h-p-icon h-p-icon-114 h-p-icon-circle" ><em>18</em><span  class="h-p-rednum" > 类</span></p>
+                                       <p  class="h-p-title"> 预警提醒</p>
+                                       <p  class="h-p-info">查看预警提醒详细信息</p>
+                                       <br>
+                                       <a class="h-p-btn-circle"  href="#" ><span class="h-btn-content">查看详细</span></a>
+                                   </div>
+                                   <div class="h-p-gzzzdiv">
+                                      <p  class="h-p-icon h-p-icon-114 h-p-icon-circle" ><em>20</em><span  class="h-p-rednum"> 个</span></p>
+                                       <p  class="h-p-title">任务加工</p>
+                                       <p  class="h-p-info">查看系统任务加工情况</p>
+                                       <br>
+                                       <a class="h-p-btn-circle"  href="#" ><span class="h-btn-content">查看详细</span></a>
+                                   </div>
+                               </div>
+                        </div>
+                      </div>
+     				 <!-- TABS END -->
+      				 <div class="clear"></div>
+                 <a  class="rsTmb h-p-tabbtn-left h-p-tabbtn-xxjh"></a>
+            </div>
+        </div>
+        <script>
+        jQuery(document).ready(function($) {
+			$('#full-height-slider').royalSlider({
+				arrowsNav: false,
+				loop: true,
+				loopRewind: true,
+				keyboardNavEnabled: true,
+				controlsInside: false,
+				imageScaleMode: 'none',
+				arrowsNavAutoHide: false,
+				navigateByClick:false,
+				controlNavigation: 'tabs',
+				thumbsFitInViewport: false,
+				startSlideId: 0,
+				autoplay: true,
+				sliderDrag :false,
+				transitionType:'move',
+				globalCaption: false,
+				slidesOrientation:'vertical',
+				deeplinking: {
+					enabled: true,
+					change: false
+				},
+				autoPlay: { 
+					enabled: false,
+					delay:3000
+				}
+				
+			});
+		
+		
+       
+        });
+        
+        </script>
+        <!-- 滚动代码结束-->
+      </div>
+
+     
+</body>
+</html>

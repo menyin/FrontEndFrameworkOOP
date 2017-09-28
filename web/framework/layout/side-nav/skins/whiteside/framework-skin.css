@@ -1,0 +1,133 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2016-03
+		-----------------------------------------------
+		说明：
+		1：框架页皮肤样式：仅更换配色
+======================================*/
+.h-f-aside{}
+.h-f-aside-main { background-color: #f0f0f0;  border-right:1px solid #ddd;}
+.h-f-form-app-search { border-color: #e9e9e9; }
+.h-f-form-app-search .h-f-form-control {
+	color: #999999;
+	border-color: #cacccf;
+	background-color: #fdfdfd;
+}
+.h-f-form-control:focus {
+	border-color: #a6c8e0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(166, 200, 224, 0.075), 0 0 4px rgba(166, 200, 224, 0.6);
+	box-shadow: inset 0 1px 1px rgba(166, 200, 224, 0.075), 0 0 4px rgba(166, 200, 224,0.6);
+}
+.h-f-aside-header { background-color: #f7f7f7; }
+.h-f-menu-item,
+.h-f-menu-item:visited {
+	color: #666;
+	border-bottom-color: #e9e9e9;
+	background-color: #fafafa ;
+	border-left: 3px solid transparent}
+.h-f-menu-item:hover {
+	background: #f9f9f9;
+	color: #222;
+}
+.h-f-menu-item.h-f-active,
+.h-f-menu-item.h-f-active:hover {
+	background: #fff;
+	border-left-color:#0085e8;
+	color: #222 !important;
+}
+.h-f-btn-scroll-up,
+.h-f-btn-scroll-down {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(190, 190, 190, .95)), to(rgba(190, 190, 190, .95))) !important;
+	background-image: -moz-linear-gradient(rgba(190, 190, 190, .95) 0, rgba(190, 190, 190, .95) 100%) !important;
+	background-image: -ms-linear-gradient(rgba(190, 190, 190, .95) 0, rgba(190, 190, 190, .95) 100%) !important;
+	background-image: -o-linear-gradient(rgba(190, 190, 190, .95) 0, rgba(190, 190, 190, .95) 100%) !important;
+	background-image: linear-gradient(rgba(190, 190, 190, .95) 0, rgba(190, 190, 190, .95) 100%) !important;
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2151e30, endColorstr=#f2151e30) !important;
+}
+.h-f-icon-menutab-menu { background-image: url(images/icon-menutab-menu.png); }
+.h-f-icon-menutab-process { background-image: url(images/icon-menutab-process.png); }
+.h-f-icon-menutab-history { background-image: url(images/icon-menutab-history.png); }
+.h-f-icon-menutab-favorite { background-image: url(images/icon-menutab-favorite.png); }
+.h-f-aside-control-btn:hover,
+.h-f-menu-tab a:hover {
+	background-color: #ededee;
+}
+.h-f-menu-tab a:hover .h-f-icon-menutab-menu,
+.h-f-menu-tab a.h-f-active .h-f-icon-menutab-menu { background-image: url(images/icon-menutab-menu-active.png); }
+.h-f-menu-tab a:hover .h-f-icon-menutab-process,
+.h-f-menu-tab a.h-f-active .h-f-icon-menutab-process { background-image: url(images/icon-menutab-process-active.png); }
+.h-f-menu-tab a:hover .h-f-icon-menutab-history,
+.h-f-menu-tab a.h-f-active .h-f-icon-menutab-history { background-image: url(images/icon-menutab-history-active.png); }
+.h-f-menu-tab a:hover .h-f-icon-menutab-favorite,
+.h-f-menu-tab a.h-f-active .h-f-icon-menutab-favorite { background-image: url(images/icon-menutab-favorite-active.png); }
+
+.h-f-icon-aside-status { background-image: url(images/icon-arrow-left.png) !important; }
+.h-f-icon-aside-status-small { background-image: url(images/icon-arrow-right.png) !important; }
+
+a:hover .h-f-icon-aside-status { background-image: url(images/icon-arrow-left-hover.png) !important; }
+a:hover .h-f-icon-aside-status-small { background-image: url(images/icon-arrow-right-hover.png) !important; }
+
+
+
+
+.h-f-aside-control-btn { border-color: #ddd; }
+.h-f-menu-tab a.h-f-active,
+.h-f-menu-tab a.h-f-active:hover { background-color: #ededee; }
+
+
+
+.h-f-menu-pulldown .h-f-menu-item.h-f-active, .h-f-menu-pulldown .h-f-menu-item.h-f-active:hover {
+    background-color: #fafafa;
+    border-left-color:#0085e8;
+    color: #1f76eb !important;
+}
+
+
+/*深色树菜单*/
+.h-f-treenav-dark {
+	background-color: #fff;
+	border-color: #eee;
+}
+.h-f-treenav-dark .h-f-treenav-node-link {
+	color: #666;
+}
+.h-f-treenav-dark .h-f-treenav-node-link.h-f-active {
+	color: #1f76eb;
+}
+.h-f-treenav-dark .h-f-treenav-node-link:hover {
+	background-color: #f9f9f9;
+}
+
+.h-f-menu-pulldown .h-f-menu-item .h-f-icon-arrow {
+	background-image: url(images/icon-aside-arrow-down.png) !important;
+}
+.h-f-menu-pulldown .h-f-menu-item.h-f-active .h-f-icon-arrow {
+    background-image: url(images/icon-aside-arrow-up.png) !important;
+}
+.h-f-aside-small .h-f-menu-item.h-f-active, .h-f-aside-small .h-f-menu-item.h-f-active:hover {
+    background-color: #fff;
+}
+.h-f-menu-item .h-f-icon {
+
+    left: 5px;
+
+}
+.h-f-process-title .h-f-pull-text {
+    color: #444;
+
+    border-bottom-color:#ccc;
+
+}
+.h-f-process-title .h-f-pulldown-content {
+    background-color: #f6f6f6;
+}
+.h-f-pulldown-menu a:hover {
+	background-color: #ddd;
+	border-color: #008dea
+}
+.h-f-process-title .h-f-caret {
+	border-top-color: #aaa;
+}

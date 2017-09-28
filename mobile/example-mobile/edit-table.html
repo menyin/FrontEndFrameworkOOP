@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICSSHS-MUI for webapp</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<meta name="x5-fullscreen" content="true">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon.png">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="../project/resources/css/images/icons/undefined">
+
+<!--项目全局样式-->
+<link href="../project/resources/css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/global.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/animate.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/base.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/iconfont.css" rel="stylesheet" type="text/css" />
+<script src="../project/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body class="hm-ov-x-hide">
+<!--page-->
+<div class="hm-page hm-page-active" >
+    <div class="hm-header hm-header-dark">
+        <a class="hm-btn" href="#" onclick="history.go(-1)">
+        <i class="hm-icon-back"></i>
+        </a>
+        <div class="hm-flex-1" >
+        </div>
+        <div class="hm-title">
+            主从可编辑表格
+        </div>
+    </div>
+    <div class="hm-content">
+        <div class="hm-group">
+            <div class="hm-group-header">
+                车辆调运信息
+            </div>
+            <div class="hm-group-content">
+                <ul class="hm-list-detail hm-average-1">
+                	<li><label>车辆号</label><span>闽D88866</span></li>
+                    <li><label>货物数量</label><span>200担</span></li>
+                    <li><label>非标数量</label><span>2包</span></li>
+                </ul>
+                
+            </div>
+        </div>
+        
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                车辆各层次装载情况
+            </div>
+            <div class="hm-group-content">
+                <table class="hm-table " summary="表格摘要">
+      <colgroup>
+      <col style="width:60px">
+      <col>
+      <col>
+      </colgroup>
+      <thead>
+        <tr>
+          <th>层次</th>
+          <th>等级</th>
+          <th>件数</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>
+                <div class="hm-form-control ">
+                  <input type="text" value="" placeholder="请输入">
+                </div>
+           </td>
+          <td>
+                <div class="hm-form-control ">
+                  <input type="text" value="" placeholder="请输入">
+                  <span class=" hm-color-muted">件</span>
+                </div>
+           </td>
+            <td>
+                <a href="#" class="hm-btn"><i class="hm-icon-delete"></i></a>
+           </td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>
+                <div class="hm-form-control ">
+                  <input type="text" value="" placeholder="请输入">
+                </div>
+           </td>
+          <td>
+                <div class="hm-form-control ">
+                  <input type="text" value="" placeholder="请输入">
+                  <span class=" hm-color-muted">件</span>
+                </div>
+           </td>
+            <td>
+                <a href="#" class="hm-btn"><i class="hm-icon-delete"></i></a>
+           </td>
+        </tr>
+        <tr>
+          <td class="hm-text-center">1</td>
+          <td>
+                <div class="hm-form-control ">
+                  <input type="text" value="" placeholder="请输入">
+                </div>
+           </td>
+          <td>
+                <div class="hm-form-control ">
+                  <input type="text" value="" placeholder="请输入">
+                  <span class=" hm-color-muted">件</span>
+                </div>
+           </td>
+            <td>
+                <a href="#" class="hm-btn"><i class="hm-icon-delete"></i></a>
+           </td>
+        </tr>
+        
+        
+      </tbody>
+    </table>
+            </div>
+            <div class="hm-group-footer">
+                <a href="#" class="hm-btn "><i class="hm-color-muted hm-icon-add hm-margin-right-sm"></i>增加层次</a>
+            </div>
+        </div>
+    </div>
+    <div class="hm-footer">
+        <a class="hm-btn hm-btn-default hm-radius hm-flex-1" href="#">
+        上一步
+        </a>
+        <a class="hm-btn hm-btn-primary hm-radius hm-flex-1" href="#">
+        确定
+        </a>
+    </div>
+</div>
+</body>
+</html>

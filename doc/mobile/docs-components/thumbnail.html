@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ICSSHS-MUI for webapp</title>
+  <meta name="description" content="ICSSHS-MUI for webapp">
+  <meta name="keywords" content="ICSSHS-MUI for webapp">
+  <meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+  <meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+  
+  <!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+  
+  <!--针对IOS 浏览器的设置-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon@72.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="icon@2x.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="icon@114.png" sizes="144x144">
+  <link rel="apple-touch-startup-image" href="undefined.png">
+  
+  <!--项目全局样式-->
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+  <!--说明文档样式,实际应用中请不要引用-->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+  <script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+  <div class="docs-page-masthead">
+    <h1>缩略图(Thumbnail)</h1>
+    <p >通过缩略图组件结合布局系统，可以很容易地展示出栅格样式的图像、视频、文本等内容。</p>
+  </div>
+  <h2 >默认样式</h2>
+  <p><code>hm-thumbnail</code>类可直接用于<code>div</code>或者<code>a</code>元素</p>
+  <div class="docs-example">
+    <ul class="hm-average-4" >
+      <li>
+        <a href="#" class="hm-thumbnail">
+          <img src="../../resources/images/img-big.jpg" alt=""/>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="hm-thumbnail">
+          <img src="../../resources/images/img-big.jpg" alt=""/>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="hm-thumbnail">
+          <img src="../../resources/images/img-big.jpg" alt=""/>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="hm-thumbnail">
+          <img src="../../resources/images/img-big.jpg" alt=""/>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="hm-thumbnail">
+          <img src="../../resources/images/img-big.jpg" alt=""/>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="hm-thumbnail">
+          <img src="../../resources/images/img-big.jpg" alt=""/>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="docs-highlight">
+    <pre><code>
+    &lt;ul class="hm-average-4" &gt;
+      &lt;li&gt;
+        &lt;a href="#" class="<span class=" hm-color-danger">hm-thumbnail</span>"&gt;
+          &lt;img src="img-big.jpg" alt=""/&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    </code></pre>
+  </div>
+  
+  <h2 >自定义内容</h2>
+  <p>添加一点点额外的标签，就可以把任何类型的 HTML 内容，例如标题、段落或按钮，加入缩略图组件内。</p>
+  <h3>本身为链接</h3>
+  <div class="docs-example">
+    <ul class="hm-average-3" >
+      <li>
+        <a href="#" class="hm-thumbnail">
+          <img src="../../resources/images/img-big.jpg" alt=""/>
+          <div class="hm-caption">
+            <h2>以用户需求为目标而进行的设计</h2>
+            <p>UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="hm-thumbnail">
+          <img src="../../resources/images/img-big.jpg" alt=""/>
+          <div class="hm-caption">
+            <h2>以用户需求为目标而进行的设计</h2>
+            <p>UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="hm-thumbnail">
+          <img src="../../resources/images/img-big.jpg" alt=""/>
+          <div class="hm-caption">
+            <h2>以用户需求为目标而进行的设计</h2>
+            <p>UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="docs-highlight">
+    <pre><code>
+    &lt;ul class="hm-average-3" &gt;
+      &lt;li&gt;
+        &lt;a href="#" class="<span class=" hm-color-danger">hm-thumbnail</span>"&gt;
+          &lt;img src="img-big.jpg" alt=""/&gt;
+        	&lt;div class="<span class=" hm-color-danger">hm-caption</span>"&gt;
+            &lt;h2&gt;以用户需求为目标而进行的设计&lt;/h2&gt;
+            &lt;p&gt;UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    </code></pre>
+  </div>
+  
+  
+  <h3>带操作按钮</h3>
+  <div class="docs-example">
+    <ul class="hm-average-3" >
+      <li>
+        <div class="hm-thumbnail">
+          <img src="../../resources/images/img-big.jpg" alt=""/>
+          <div class="hm-caption">
+            <h2>以用户需求为目标而进行的设计</h2>
+            <p>UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+            <p class="hm-text-center"><a href="#" class="hm-btn hm-btn-primary hm-btn-inline hm-radius" role="button">按钮</a> <a href="#" class="hm-btn hm-btn-default hm-btn-inline hm-radius" role="button">按钮</a></p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="hm-thumbnail">
+          <img src="../../resources/images/img-big.jpg" alt=""/>
+          <div class="hm-caption">
+            <h2>以用户需求为目标而进行的设计</h2>
+            <p>UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+            <p class="hm-text-center"><a href="#" class="hm-btn hm-btn-primary hm-btn-inline hm-radius" role="button">按钮</a> <a href="#" class="hm-btn hm-btn-default hm-btn-inline hm-radius" role="button">按钮</a></p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="hm-thumbnail">
+          <img src="../../resources/images/img-big.jpg" alt=""/>
+          <div class="hm-caption">
+            <h2>以用户需求为目标而进行的设计</h2>
+            <p>UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+            <p class="hm-text-center"><a href="#" class="hm-btn hm-btn-primary hm-btn-inline hm-radius" role="button">按钮</a> <a href="#" class="hm-btn hm-btn-default hm-btn-inline hm-radius" role="button">按钮</a></p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="docs-highlight">
+    <pre><code>
+&lt;ul class="hm-average-3" &gt;
+  &lt;li&gt;
+    &lt;div class="<span class=" hm-color-danger">hm-thumbnail</span>"&gt;
+      &lt;img src="img-big.jpg" alt=""/&gt;
+        &lt;div class="<span class=" hm-color-danger">hm-caption</span>"&gt;
+        &lt;h2&gt;以用户需求为目标而进行的设计&lt;/h2&gt;
+        &lt;p&gt;UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。&lt;/p&gt;
+        &lt;p class="hm-text-center"&gt;
+            &lt;a href="#" class="hm-btn hm-btn-primary hm-btn-inline hm-radius" role="button">按钮&lt;/a&gt;
+            &lt;a href="#" class="hm-btn hm-btn-default hm-btn-inline hm-radius" role="button">按钮&lt;/a&gt;
+        &lt;/p&gt;
+      &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+    </code></pre>
+  </div>
+  
+  
+  
+  
+  
+</div>
+</body>
+</html>

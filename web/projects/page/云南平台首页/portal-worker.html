@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ICSSHS-UI</title>
+<!--公共-->
+<script src="../../themes-default/resources/js/jquery-1.9.1.js"></script>
+<link href="../../themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+
+<!--个性化样式-->
+<link rel="stylesheet" type="text/css" href="css/custom.css"/>
+
+
+<!--页面高度需设置100%，并保证不出现滚动条；否则所包含的标签无法获取到100%的高度，会导致布局错乱 by 66383210@qq.com-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+	 $("[data-hsui=open-remind]").click(function(){
+			 $("[data-hsui=open-remind]").toggleClass("h-p-hide");
+	  	     $("[data-hsui=close-remind]").toggleClass("h-p-hide");	
+	        $("#remind").animate({height:document.body.clientHeight-130},300,"swing");
+ 	 });
+	 
+	  $("[data-hsui=close-remind]").click(function(){
+			 $("[data-hsui=open-remind]").toggleClass("h-p-hide");
+	  	     $("[data-hsui=close-remind]").toggleClass("h-p-hide");	
+	         $("#remind").animate({height:'200'},300,"swing");
+ 	 });
+ 	
+});
+			
+</script>
+</head>
+<body>
+<div class="h-p-wrapper h-p-wrapper-worker"   >
+              <div  class="h-p-aboutworker"  >
+                   <img src="../../../framework/layout/2015yypt/css/images/framework/img-userhead.png" alt="myhead"  >
+                   <p ><strong >老蔡的烟叶业务工作台</strong></p>
+               	   <p> 您的岗位：收购专员；现阶段的工作要求及内容如下：</p>
+              
+              </div>
+              <div class="clearfix"></div>
+             <div class="h-p-panel-worker" >
+                
+                 <div  class="h-p-panel-worker-l" >
+                      <h3 class="h-p-app-list-title">
+                          <em>
+                          <span class="h-p-icon-menu h-p-icon-kzgz"></span>
+                          </em>
+                          <strong  class="h-p-Requirement-title">  系统公告  </strong>
+                      </h3>
+                      <div  class="h-p-Requirement">
+                          <div  class="h-p-Requirement-list">
+                              <p>收购开始日期为：2015-09-21，不得早于此日期收购，不允许脱线收购。上等烟收购比例上限值为85%，下限值为35%.</p>
+                               <span >来源：云南省烟草公司   2015.03.21</span>
+                          </div>
+                          <div class="h-p-Requirement-list">
+                              <p >收购开始日期为：2015-09-21，不得早于此日期收购，不允许脱线收购。上等烟收购比例上限值为85%，下限值为35%.</p>
+                               <span >来源：云南省烟草公司   2015.03.21</span>
+                          </div>
+                          <div class="h-p-Requirement-list">
+                              <p>收购开始日期为：2015-09-21，不得早于此日期收购，不允许脱线收购。上等烟收购比例上限值为85%，下限值为35%.</p>
+                               <span >来源：云南省烟草公司   2015.03.21</span>
+                          </div>
+                          <div class="h-p-Requirement-list">
+                              <p >收购开始日期为：2015-09-21，不得早于此日期收购，不允许脱线收购。上等烟收购比例上限值为85%，下限值为35%.</p>
+                              <span >来源：云南省烟草公司   2015.03.21</span>
+                          </div>
+                     </div> 
+                 </div>
+                 
+      
+                 <div class="h-p-panel-worker-r" >
+                     <h3 class="h-p-app-list-title">
+                          <em>
+                          <span class="h-p-icon-menu h-p-icon-time"></span>
+                          </em>
+                          <strong class="h-p-Requirement-title">  现阶段需要完成的工作内容  </strong>
+                      </h3>
+                       <!-- 无操作时候的提示面板-->
+                     <!-- <div class="h-p-tip-xycz">
+                       <div class="h-p-area-center">
+                            <div class="h-p-area-center-content" >
+                                <span  class="h-p-nonething" >暂无需要操作</span>
+                              </div>
+                          </div>
+                     </div>  -->
+                      <!-- 需要操作列表-->
+                    <ul class="h-p-submenu-item-w33 ">
+                          <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">计划流水单状态查询 </strong>
+                              <span class="h-p-app-fav-text"> 统计管理 &gt; ... &gt; 单据查询 &gt; 计划衔接</span>
+                            </a>
+                          </li>
+                          <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">供方上报数据查询 </strong>
+                              <span class="h-p-app-fav-text"> 统计管理 &gt; ... &gt; 单据查询 &gt; 计划衔接</span>
+                            </a>
+                          </li>
+                          <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">供需方对比数据统计 </strong>
+                              <span class="h-p-app-fav-text"> 统计管理 &gt; ... &gt; 单据查询 &gt; 计划衔接</span>
+                            </a>
+                          </li>
+                          <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">调拨合同查询 </strong>
+                              <span class="h-p-app-fav-text"> 统计管理 &gt; 计划合同 &gt; 调拨合同</span>
+                            </a>
+                          </li>
+                          <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                          
+                           <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                           <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                           <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                           <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                           <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                           <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                           <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                           <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                           <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                           <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                           <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                           <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                           <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                           <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                           <li>
+                            <div class="h-p-app-toolbar">
+                              <a href="#" class="h-p-icon h-p-icon-delete" title="删除">&nbsp;</a>
+                            </div>
+                            <a href="#" class="h-p-app-fav-item ">
+                              <strong class="h-p-app-fav-name">物理仓库管理 </strong>
+                              <span class="h-p-app-fav-text"> 基础信息管理 &gt; 仓库管理</span>
+                            </a>
+                          </li>
+                           </ul>
+                        <div class="clearfix"></div>
+                        <!--<div  id="remind" >   
+                               <a data-hsui="open-remind" href="#"><span  class="h-p-btn-open">展开<span></a>
+                                <a data-hsui="close-remind" class="h-p-hide" href="#"><span  class="h-p-btn-close">收缩<span></a>
+                                 <div class="h-p-btn-more">   <a href="#" class="" title="更多菜单"  data-hsui="more-menu">更多</a>  </div>
+                                <div class="h-p-remindtop" >
+                                   <h3 class="h-p-app-list-title h-p-app-list-title-notic">
+                                      <em>
+                                      <span class="h-p-icon-menu h-p-icon-notice"></span>
+                                      </em>
+                                      <strong class="h-p-Requirement-title"> 工作提醒 </strong>
+                                       <em class="h-p-notice-num">18</em>
+                                    </h3>
+                                 
+                                </div>
+                                <ul class="h-p-remindlist">
+                                  <li  >
+                                  <span >2015.10.20 星期三</span>
+                                   <a  href="" title="文字就留一行就好了后面用...文字就留一行就好了后面用...文文字就留一行就好了后面用...文字就留一行就好了后面用...文字就留一行就好了后文字就留一行就好了后面用...文字就留一行就好了后面用...文字就留一行就好了后字就留一行就好了后面用...">文字就留一行就好了后面用...文字就留一行就好了后面用...文文字就留一行就好了后面用...文字就留一行就好了后面用...文字就留一行就好了后文字就留一行就好了后面用...文字就留一行就好了后面用</a>
+                                 </li>
+                                
+                                   <li  >
+                                    <span >2015.10.20 星期三</span>
+                                   <a  href="" title="文字就留一行就好了后面用...文字就留一行就好了后面用...文文字就留一行就好了后面用...文字就留一行就好了后面用...文字就留一行就好了后文字就留一行就好了后面用...文字就留一行就好了后面用...文字就留一行就好了后字就留一行就好了后面用...">文字就留一行就好了后面文字就留一行就好了后面用...文文字就留一行就文字就留一行就好了后面用文字就留一行就好了后文字就留一行就好字就留一行就好了后面用</a>
+                                  
+                                 </li>
+                                  <div class="clearfix"></div>
+                                    <li  >
+                                    <span >2015.10.20 星期三</span>
+                                   <a  href="" title="文字就留一行就好了后面用...文字就留一行就好了后面用...文文字就留一行就好了后面用...文字就留一行就好了后面用...文字就留一行就好了后文字就留一行就好了后面用...文字就留一行就好了后面用...文字就留一行就好了后字就留一行就好了后面用...">文字就留一行就好了后面用</a>
+                                 </li>
+                                   <li  >
+                                   <span >2015.10.20 星期三</span>
+                                   <a  href="" title="文字就留一行就好了后面用...文字就留一行就好了后面用...文文字就留一行就好了后面用...文字就留一行就好了后面用...文字就留一行就好了后文字就留一行就好了后面用...文字就留一行就好了后面用...文字就留一行就好了后字就留一行就好了后面用...">文字就留一行就好了后面用</a>
+                                 </li>
+                                    <li  >
+                                    <span >2015.10.20 星期三</span>
+                                   <a  href="" title="文字就留一行就好了后面用...文字就留一行就好了后面用...文文字就留一行就好了后面用...文字就留一行就好了后面用...文字就留一行就好了后文字就留一行就好了后面用...文字就留一行就好了后面用...文字就留一行就好了后字就留一行就好了后面用...">文字就留一行就好了后面用</a>
+                                 </li>
+                                   <li  >
+                                   <span >2015.10.20 星期三</span>
+                                   <a  href="" title="文字就留一行就好了后面用...文字就留一行就好了后面用...文文字就留一行就好了后面用...文字就留一行就好了后面用...文字就留一行就好了后文字就留一行就好了后面用...文字就留一行就好了后面用...文字就留一行就好了后字就留一行就好了后面用...">文字就留一行就好了后面</a>
+                                 </li>
+                                   <li  >
+                                   <span >2015.10.20 星期三</span>
+                                   <a  href="" title="文字就留一行就好了后面用...文字就留一行就好了后面用...文文字就留一行就好了后面用...文字就留一行就好了后面用...文字就留一行就好了后文字就留一行就好了后面用...文字就留一行就好了后面用...文字就留一行就好了后字就留一行就好了后面用...">文字就留一行就好了后面用</a>
+                                 </li>
+                                </ul>
+                         </div>-->
+                 </div>
+                  
+                 
+            </div>  
+</div> 
+ <div  class="h-p-weatherAndtime"> 
+     <div id="time2" > <p class="h-p-timeNumber">09:28</p><p >2015/10/21星期三 </p></div>
+     <!-- <div id="weather2" ><img src="css/images/portal/img-weather.png" width="50px" alt="weather" ><p>20C-22C<span  >晴转多云</span></p> </div>-->
+ </div>   
+
+     
+</body>
+</html>

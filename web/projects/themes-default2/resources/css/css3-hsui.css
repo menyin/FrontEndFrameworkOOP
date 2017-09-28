@@ -1,0 +1,146 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2014-08
+		
+		-----------------------------------------
+		
+		主要是对项目里的
+======================================*/
+
+
+
+/*按钮*/
+
+.h-btn { border-radius: 3px; }
+.h-btn,
+.h-input-clear {
+	-webkit-box-shadow: 0px 2px 2px 0px rgba( 0, 0, 0,0.1);
+	-moz-box-shadow: 0px 2px 2px 0px rgba( 0, 0, 0,0.1);
+	box-shadow: 0px 2px 2px 0px rgba( 0, 0, 0,0.1);
+}
+.h-btn:hover,
+.h-btn-table:hover .h-btn-content {
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-webkit-box-shadow: 0px 4px 4px 0px rgba( 112, 161, 199,0.6);
+	-moz-box-shadow: 0px 4px 4px 0px rgba( 112, 161, 199,0.6);
+	box-shadow: 0px 4px 4px 0px rgba( 112, 161, 199,0.6);
+}
+.h-btn:active,
+.h-btn-table:active .h-btn-content {
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-webkit-box-shadow: 0px 2px 2px 0px rgba( 112, 161, 199,0.6);
+	-moz-box-shadow: 0px 2px 2px 0px rgba( 112, 161, 199,0.6);
+	box-shadow: 0px 2px 2px 0px rgba( 112, 161, 199,0.6);
+}
+.h-btn:hover .h-icon{
+	-webkit-animation-name: bounceIn;
+	animation-name: bounceIn;
+	-webkit-animation-duration: .75s;
+	animation-duration: .75s;
+}
+.h-btn-table,
+.h-btn-nobg,
+.h-btn-table:hover,
+.h-btn.h-disabled,
+.h-btn[disabled],
+.h-input-group .h-btn {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.h-btn.h-disabled:hover .h-icon,
+.h-btn[disabled]:hover .h-icon {
+	-webkit-animation-name: none;
+	animation-name: none;
+}
+.h-btn-table .h-btn-content { border-radius: 3px; }
+/*	面板
+	重要面板
+*/
+.h-panel{
+	-webkit-box-shadow: 0px 0px 5px rgba(117,183,231,0.2), 0px 0px 0px 1px rgba(117,183,231,0.1);
+	-moz-box-shadow: 0px 0px 5px rgba117, 183, 231, 0.2), 0px 0px 0px 1px rgba(117,183,231,0.1);
+	box-shadow: 0px 0px 5px rgba(117,183,231,0.2), 0px 0px 0px 1px rgba(117,183,231,0.1);
+	
+}
+.h-panel:hover{
+	transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-webkit-box-shadow: 0px 0px 8px rgba(117,183,231,0.8), 0px 0px 0px 1px rgba(117,183,231,0.1);
+	-moz-box-shadow: 0px 0px 8px rgba117, 183, 231, 0.8), 0px 0px 0px 1px rgba(117,183,231,0.1);
+	box-shadow: 0px 0px 8px rgba(117,183,231,0.8), 0px 0px 0px 1px rgba(117,183,231,0.1);
+}
+.h-panel-header { border-radius: 3px 3px 0 0; }
+.h-panel .h-panel,
+.h-panel .h-toolbar,
+.h-panel .h-toolbar:hover,
+.h-toolbar-footer {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+/*表单控件*/
+.h-form-control {
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.1), 0px 0px 0px 1px rgba(100,100,100,0.1);
+	-moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(100,100,100,0.1);
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.1), 0px 0px 0px 1px rgba(100,100,100,0.1);
+}
+.h-form-control:hover,
+.h-form-control-hover {
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-webkit-box-shadow: 0px 0px 3px rgba(117,183,231,0.5), 0px 0px 0px 1px rgba(117,183,231,0.1);
+	-moz-box-shadow: 0px 0px 3px rgba(117,183,231,0.5), 0px 0px 0px 1px rgba(117,183,231,0.1);
+	box-shadow: 0px 0px 3px rgba(117,183,231,0.5), 0px 0px 0px 1px rgba(117,183,231,0.1);
+}
+.h-form-control:focus,
+.h-form-control-focus {
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-webkit-box-shadow: 0px 0px 6px rgba(117,183,231,0.8), 0px 0px 0px 1px rgba(117,183,231,1);
+	-moz-box-shadow: 0px 0px 6px rgba(117,183,231, 0.8), 0px 0px 0px 1px rgba(117,183,231,1);
+	box-shadow: 0px 0px 6px rgba(117,183,231,0.8), 0px 0px 0px 1px rgba(117,183,231,1);
+}
+.h-form-control-danger:hover {
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-webkit-box-shadow: 0px 4px 4px 0px rgba(217,83,79,0.1);
+	-moz-box-shadow: 0px 4px 4px 0px rgba(217,83,79, 0.1);
+	box-shadow: 0px 4px 4px 0px rgba(217, 83, 79.1);
+}
+.h-form-control-danger:focus {
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-webkit-box-shadow: 0px 0px 6px rgba(217,83,79,0.8), 0px 0px 0px 1px rgba(217,83,79,0.1);
+	-moz-box-shadow: 0px 0px 6px rgba(217,83,79, 0.8), 0px 0px 0px 1px rgba(217,83,79,0.1);
+	box-shadow: 0px 0px 6px rgba(217,83,79,0.8), 0px 0px 0px 1px rgba(217,83,79,0.1);
+}
+.h-form-control-disabled:not(.h-form-control-normal):hover,
+.h-form-control[disabled]:not(.h-form-control-normal):hover,
+.h-form-control[readonly]:not(.h-form-control-normal):hover,
+fieldset[disabled] .h-form-control:not(.h-form-control-normal):hover {
+	-webkit-animation-name: none;
+	animation-name: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}

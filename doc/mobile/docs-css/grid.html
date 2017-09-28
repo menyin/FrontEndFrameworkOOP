@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<!-- InstanceBegin template="/Templates/inpage-css.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>HSUI-MOBILE</title>
+<!-- InstanceEndEditable -->
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="../../resources/icons/icon.png">
+<link rel="apple-touch-icon" href="../../resources/icons/icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="../../resources/icons/icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="../../resources/icons/icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="../../undefined">
+
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+<link rel="stylesheet" type="text/css" href="../../resources/css/zTreeStyle.css">
+<script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  //框架头部下拉菜单
+  	var intervalID; 
+	var curSel; 
+	$(".docs-has-pulldown").mouseover(function(){ 
+		curSel=$(this); 
+		intervalID=setInterval(onMouseOver,250);//鼠标移入的时候有一定的延时才会滑出下拉菜单，防止用户不经意的操作 
+	}); 
+	function onMouseOver(){ 
+		curSel.addClass("docs-current"); 
+		if(curSel.hasClass("docs-subsystem")){
+				curSel.addClass("docs-subsystem-active")
+			}
+		curSel.find(".docs-pulldown").slideDown("fast");	
+	} 
+	$(".docs-has-pulldown").mouseout(function(){ 
+		clearInterval(intervalID); 
+	}); 
+	
+	$(".docs-has-pulldown").mouseleave(function(){ 
+		if($(this).hasClass("docs-subsystem-active")){
+				$(this).removeClass("docs-subsystem-active")
+			}
+		$(this).find(".docs-pulldown").hide();
+	}); 
+
+
+  
+});
+</script>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<!--header-->
+<div class="docs-header">
+  <div class="docs-container"> 
+    <!--系统logo-->
+    <div class="docs-logo docs-has-pulldown">
+      <div><a href="../../../index.html"><img src="../../resources/images/logo-hsui-mobile.png" alt=""/></a></div>
+      <div class="docs-pulldown"> <span class="docs-arrow"></span>
+        <div class="docs-pulldown-content"><a href="#" class="docs-pull-item">HSUI for web</a> <a href="#" class="docs-pull-item">HSUI for mobile</a> </div>
+      </div>
+    </div>
+    <ul class="docs-header-nav">
+      <li><a href="../../../inpage-start.html">开始使用</a></li>
+      <li class="docs-active"><a href="../../../inpage-css.html">CSS</a></li>
+      <li><a href="../../../inpage-components.html">组件</a></li>
+      <li><a href="../../../inpage-js.html" >JS插件</a></li>
+      <li><a href="docs-example.html">实际案例</a></li>
+    </ul>
+  </div>
+</div>
+
+<!--banner-->
+<div class="docs-banner">
+  <div class="docs-container">
+    <h1>开始使用</h1>
+    <p>HSUI for pad 概览，下载、使用，模板示例，二次开发……</p>
+  </div>
+</div>
+
+<!--main-->
+<div class="docs-main">
+  <div class="docs-container">
+    <div class="docs-aside">
+      <ul class="docs-nav">
+        <li class="docs-nav-header">基本样式</li>
+        <li><a href="/css/normalize">样式统一<span class="docs-nav-en">Normalize</span></a></li>
+        <li><a href="/css/base">基础设置<span class="docs-nav-en">Base</span></a></li>
+        <li><a href="/css/typography">文字排版<span class="docs-nav-en">Typography</span></a></li>
+        <li><a href="/css/print">打印样式<span class="docs-nav-en">Print</span></a></li>
+        <li class="docs-nav-header">布局相关</li>
+        <li><a href="/css/grid">网格<span class="docs-nav-en">Grid</span></a></li>
+        <li><a href="/css/block-grid">等分网格<span class="docs-nav-en">AVG Grid</span></a></li>
+        <li><a href="/css/utility">辅助类<span class="docs-nav-en">Utility</span></a></li>
+        <li class="docs-nav-header">HTML 元素</li>
+        <li><a href="/css/button">按钮<span class="docs-nav-en">Button</span></a></li>
+        <li class="am-active"><a href="/css/code">代码<span class="docs-nav-en">Code</span></a></li>
+        <li><a href="/css/form">表单<span class="docs-nav-en">Form</span></a></li>
+        <li><a href="/css/image">图片<span class="docs-nav-en">Image</span></a></li>
+        <li><a href="/css/table">表格<span class="docs-nav-en">Table</span></a></li>
+      </ul>
+    </div>
+    <div class="docs-content "> <!-- InstanceBeginEditable name="主内容区域" -->
+      <div class="docs-page-masthead">
+        <h1>网格布局</h1>
+        <p class="docs-lead">HSUI定义的一些基础样式。</p>
+      </div>
+      <h2>CSS 盒模型</h2>
+      <p >HSUI 将所有元素的盒模型设置为 border-box。在计算盒模型宽高时包含了padding、border，从而使布局更容易计算。</p>
+      <div class="docs-highlight">
+        <pre><code>*,
+ *:before,
+ *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+ }</code></pre>
+      </div>
+      <p class="hm-text-center"> <img src="../../resources/images/css-box-model.png" alt=""/> </p>
+      <p>参考链接：</p>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing" class="external-link" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing</a></li>
+        <li><a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/" class="external-link" target="_blank">http://www.paulirish.com/2012/box-sizing-border-box-ftw/</a></li>
+        <li><a href="http://css-tricks.com/box-sizing/" class="external-link" target="_blank">Box Sizing</a></li>
+      </ul>
+      <h2 id="字号及单位">字号及单位 <a href="#%E5%AD%97%E5%8F%B7%E5%8F%8A%E5%8D%95%E4%BD%8D" title="Heading anchor" class="doc-anchor"></a></h2>
+      <p>HSUI 将浏览器的基准字号设置为 <code>62.5%</code>，也就是 <code>10px</code>，现在 <code>1rem = 10px</code> —— 为了计算方便。然后在 <code>body</code> 上应用了 <code>font-size: 1.6rem;</code>，将页面字号设置为 <code>16px</code>。</p>
+      <div class="docs-highlight">
+        <pre><code>html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem; /* =16px */
+}</code></pre>
+      </div>
+      <p>与 <code>em</code> 根据上下文变化不同，<code>rem</code> 只跟基准设置关联，只要修改基准字号，所有使用 <code>rem</code> 作为单位的设置都会相应改变。</p>
+      <p>当然，并非所有所有浏览器的默认字号都是 <code>16px</code>，所以在不同的浏览器上会有细微差异，我们也在寻求更好的方法。</p>
+      <p>另外，一些需要根据字号做相应变化的场景我们也使用了 <code>em</code>，需要像素级别精确的场景也使用了 <code>px</code>。</p>
+      <p><strong>参考资源：</strong></p>
+      <ul>
+        <li><a href="http://snook.ca/archives/html_and_css/font-size-with-rem" class="external-link" target="_blank">FONT SIZING WITH REM</a></li>
+        <li><a href="http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/" class="external-link" target="_blank">Type study: Sizing the legible letter</a></li>
+        <li><a href="https://offroadcode.com/prototypes/rem-calculator/" class="external-link" target="_blank">The rem checker</a></li>
+        <li><a href="http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/" class="external-link" target="_blank">Mixins for Rem Font Sizing</a></li>
+      </ul>
+      <!-- InstanceEndEditable --> </div>
+  </div>
+</div>
+</body>
+<!-- InstanceEnd -->
+</html>

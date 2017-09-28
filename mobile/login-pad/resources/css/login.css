@@ -1,0 +1,235 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2014-05
+======================================*/
+
+@import url('reset.css');
+html,
+body {
+	height: 100%;
+	text-rendering: optimizeLegibility;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #333333;
+}
+body,
+div,
+input,
+button { font-family: "Microsoft YaHei"; }
+.h-l-hide { display: none; }
+/*layout*/
+.h-l-page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	min-height: 620px;
+}
+.h-l-wrapper {
+	text-align: center;
+	width: 100%;
+	position: relative;
+	left: 0;
+	top: 50%;
+}
+.h-l-wrapper-con {
+	height: 620px;
+	margin-top: -310px;
+}
+.h-l-wrapper-in {
+	margin: 0 auto;
+	text-align: left;
+	position: relative;
+}
+.h-l-content { position: relative; }
+/*---------------------------------
+	header
+---------------------------------*/
+.h-l-header { padding: 10px 32px; }
+.h-l-header a,
+.h-l-header a:visited {
+	color: #666;
+	text-decoration: none;
+}
+.h-l-header a:hover { text-decoration: underline; }
+.h-l-top-nav {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.h-l-top-nav a {
+	display: inline-block;
+*display:inline;
+*zoom:1;
+	margin-left: 10px;
+}
+/*---------------------------------
+	form-area
+---------------------------------*/
+/*登录标题*/
+.h-l-login-title {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 40px;
+	text-align: center;
+}
+.h-l-login-title strong {
+	background: #f7f7f7;
+	display: block;
+	margin: 0 auto;
+	width: 80px;
+	position: relative;
+	top: 12px;
+	color: #999;
+	font-size: 20px;
+	font-weight: 400;
+}
+/*用户头像*/
+.h-l-user-header {
+	text-align: center;
+	padding-bottom: 10px;
+}
+.h-l-user-header img {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	border: 4px solid #fff;
+}
+/*登录表单区域*/
+.h-l-form-area {
+	position: absolute;
+	right:32px;
+	top: 40px;
+	width: 300px;
+	padding: 20px 30px;
+	background: #f7f7f7;
+	z-index: 9999;
+	border-radius: 4px;
+	margin-left: 140px;
+	text-align: left;
+}
+.h-l-form-title {
+	color: #999;
+	border-bottom: 1px solid #ececec;
+	padding: 10px 0;
+	margin-bottom: 20px;
+}
+.h-l-form-item { margin-bottom: 15px; }
+.h-l-form-item label {
+	float: left;
+	padding-top: 10px;
+}
+.h-l-form-item label input { vertical-align: middle !important; }
+.h-l-input-text {
+	border: 1px solid #d9d9d9;
+	background: url(images/login/bg-input.png) repeat-x;
+	width: 240px;
+	height: 42px;
+	line-height: 42px;
+	padding-left: 60px;
+	font-size: 18px;
+	color: #444;
+	vertical-align: middle !important;
+}
+.h-l-input-text:focus { border: 1px solid #3ca0e8; }
+.h-l-input-text:focus:hover { border: 1px solid #3ca0e8; }
+.h-l-form-code .h-l-input-text {
+	padding-left: 10px;
+	width: 190px;
+}
+.h-l-form-code span { float: right; }
+/*BTN*/
+.h-l-input-btn {
+	display: block;
+	height: 42px;
+	line-height: 42px;
+	width: 100%;
+	background: #498bf4 url(images/login/btn.png);
+	border: 1px solid #3079ed;
+	font-size: 18px;
+	letter-spacing: 10px;
+	color: #fff;
+	border-radius: 3px;
+	text-decoration: none;
+	color: #fff !important;
+	text-align: center;
+}
+a.h-l-input-btn:hover {
+	background-image: url(images/login/btn-hover.png);
+	background-color: #276cff;
+	border-color: #1765e2;
+	color: #fff;
+}
+a.h-l-input-btn:active {
+	background-image: url(images/login/btn-active.png);
+	background-color: #2b87f0;
+	border-color: #0050cf;
+	color: #fff;
+}
+.h-l-input-btn.h-l-disable {
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+	cursor: not-allowed;
+}
+.h-l-icon-user { background-image: url(images/login/icon-user.jpg); }
+.h-l-icon-pw { background-image: url(images/login/icon-pw.jpg); }
+.h-l-btn-bar {
+	float: right;
+	width: 150px;
+}
+.h-l-user-info {
+	text-align: center;
+	margin-bottom: 30px;
+}
+.h-l-user-name {
+	color: #666;
+	font-size: 22px;
+	font-weight: 400;
+}
+.h-l-user-id {
+	font-weight: 400;
+	color: #999;
+	padding-left: 10px;
+	font-size: 22px;
+}
+.h-l-user-company {
+	font-size: 12px;
+	color: #999;
+	padding-bottom: 20px;
+	display: block;
+}
+.h-l-form-logged .h-l-input-btn { width: 100%; }
+.h-l-link { text-align: center; }
+.h-l-link a {
+	color: #427fed !important;
+	text-decoration: none;
+}
+.h-l-link a:hover { text-decoration: underline; }
+/*---------------------------------
+	errorTxt
+---------------------------------*/
+
+.h-l-errorTxt {
+	background: #ffffe3;
+	border: 1px dashed #ff6600;
+	padding: 6px;
+	color: #666;
+}
+.h-l-errorTxt span { color: #f00; }
+/*---------------------------------
+	footer
+---------------------------------*/
+.h-l-footer { padding: 10px 32px; }
+.h-l-footer .h-l-copyRight {
+	height: 40px;
+	line-height: 40px;
+	text-align: right;
+}
+.h-l-footer .h-l-copyRight p { color: #999; }
+.h-l-footer .h-l-copyRight a { color: #999 !important; }
+.h-l-logo-bt { float: left; }

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICSSHS-MUI for webapp</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<meta name="x5-fullscreen" content="true">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon.png">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="../project/resources/css/images/icons/undefined">
+
+<!--项目全局样式-->
+<link href="../project/resources/css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/global.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/animate.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/base.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/iconfont.css" rel="stylesheet" type="text/css" />
+<script src="../project/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body class="hm-ov-x-hide">
+<!--page-->
+<div class="hm-page hm-page-active" >
+    <div class="hm-header hm-header-dark">
+        <a class="hm-btn" href="#"  onclick="history.go(-1)"> <i class="hm-icon-back"></i> </a>
+        <div class="hm-flex-1" >
+        </div>
+        <a class="hm-btn" href="#"> 完成 </a>
+        <div class="hm-title">
+            表单填写
+        </div>
+    </div>
+    <!--content-->
+    <div class="hm-content">
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                表单静态项
+            </div>
+            
+            
+            
+            
+            
+            
+            <div class="hm-group-content">
+                <div class="hm-form">
+                    <div class="hm-form-group hm-vertical-top">
+                        <label class="hm-form-label"> 静态项 </label>
+                        <div class="hm-form-control-static">
+                            此处为静态文本内容（测试文本超长效果，当文本超出后自动换行，自适应内容高度）。
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 只读状态 </label>
+                        <div class="hm-form-control hm-disabled">
+                            <input type="text" value="此处文本为输入框只读样式" placeholder="请输入内容" disabled="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                H5默认控件类型
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-form">
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 文本内容 </label>
+                        <div class="hm-form-control ">
+                            <input type="text" value="" placeholder="请输入内容">
+                            <a href="#" class="hm-btn   hm-btn-circle "> <i class="hm-icon-close"></i> </a>
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 密码 </label>
+                        <div class="hm-form-control     ">
+                            <input type="password" value="" placeholder="请输入密码">
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 数字 </label>
+                        <div class="hm-form-control     ">
+                            <input type="number" value="" placeholder="请输入数字">
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> range </label>
+                        <div class="hm-form-control-wrapper">
+                            <input type="range" value="10">
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 默认选择 </label>
+                        <div class="hm-form-control">
+                            <select type="select">
+                                <option value="">请选择</option>
+                                <option value="">中文</option>
+                                <option value="">英文</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 日期 </label>
+                        <div class="hm-form-control">
+                            <input type="date">
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 日期时间 </label>
+                        <div class="hm-form-control">
+                            <input type="datetime-local">
+                        </div>
+                    </div>
+                    <div class="hm-form-group hm-vertical-top">
+                        <label class="hm-form-label"> 文本区域 </label>
+                        <div class="hm-form-control-wrapper">
+                            <div class="hm-form-control">
+                                <textarea placeholder="请输入内容..." rows="4"></textarea>
+                            </div>
+                            <div class="hm-textarea-counter">
+                                <span>0</span>/200
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hm-form-group hm-vertical-top">
+                        <label class="hm-form-label"> 地图图片 </label>
+                        <div class="hm-form-control-static">
+                            <img src="http://api.map.baidu.com/staticimage/v2?ak=F78cb1bca8facd7ebbafa93be52581ae&center=116.331398,39.897445&width=200&height=100&zoom=11" class="hm-img-responsive" alt=""/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                带操作
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-form">
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 姓名 </label>
+                        <div class="hm-form-control     ">
+                            <input type="text" value="" placeholder="请输入申请经纬度(必填)">
+                        </div>
+                        <a href="#" class="hm-btn"><i class="hm-icon-add"></i></a>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label">GPS</label>
+                        <div class="hm-form-control">
+                            <input type="text" value="" placeholder="请输入申请经纬度(必填)">
+                        </div>
+                        <a href="#" class="hm-btn hm-btn-default hm-radius">自动获取</a>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label">GPS</label>
+                        <div class="hm-form-control">
+                            9090909
+                        </div>
+                        <a href="#" class="hm-btn hm-btn-default hm-radius">自动获取</a>
+                    </div>
+                    <div class="hm-form-group ">
+                        <label class="hm-form-label"> 验证码 </label>
+                        <div class="hm-form-control     ">
+                            <input type="text" value="" placeholder="请输入验证码">
+                        </div>
+                        <img src="../../doc/resources/images/vcode.jpg"  alt=""/>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> </label>
+                        <div class="hm-form-control-wrapper">
+                            <div class="hm-checkbox">
+                                <label>
+                                    <input type="checkbox" value="" name="CheckboxGroup1" id="CheckboxGroup1_0">
+                                    记住密码 </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hm-form-group ">
+                        <span class="hm-flex-1">允许陌生人查看我的信息</span>
+                        <input class="hm-switch" type="checkbox">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                自定义单选及多选
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-form">
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 选择框 </label>
+                        <a class="hm-form-control" href="#"> <span class="hm-flex-1">请选择...</span> <i class="hm-icon-arrow-right "></i> </a>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 多选框： </label>
+                        <a class="hm-form-control" href="#"> <span class="hm-flex-1 hm-ellipsis">选择项一；选择项二；选择项三；选择项四；选择项四；选择项四；选择项四</span> <span class="hm-badge hm-round hm-float-right">88</span> <i class="hm-icon-arrow-down "></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                复杂组合控件
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-form">
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 前置图标 </label>
+                        <div class="hm-form-control">
+                            <i class="hm-icon-me"></i>
+                            <input type="text" value="" placeholder="请输入用户名">
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 后置图标按钮 </label>
+                        <div class="hm-form-control">
+                            <input type="text" value="" placeholder="请输入内容...">
+                            <a href="#" class="hm-btn hm-btn-circle hm-btn-warning"> <i class=" hm-icon-close"></i> </a>
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 图标按钮 </label>
+                        <div class="hm-form-control">
+                            <i class="hm-icon hm-icon-search"></i>
+                            <input type="text" value="" placeholder="请输入内容...">
+                            <a href="#" class="hm-btn"> 搜索 </a>
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 多个按钮 </label>
+                        <div class="hm-form-control  ">
+                            <input type="text" value="" placeholder="请输入数字">
+                            <a href="#" class="hm-btn hm-btn-circle  hm-btn-primary"> <i class=" hm-icon-plus"></i> </a> <a href="#" class="hm-btn hm-btn-circle hm-btn-warning"> <i class="hm-icon-reduce"></i> </a>
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 前后文本 </label>
+                        <div class="hm-form-control    ">
+                            <span>前置文本</span>
+                            <input type="text" value="" placeholder="请输入数字">
+                            <span>万担</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hm-group-footer">
+                这里是填写说明
+            </div>
+        </div>
+        <div class="hm-group">
+            <div class="hm-group-header">
+                图片上传
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-uploader">
+                    <div class="hm-uploader-header">
+                        <span class="hm-color-muted hm-float-right">0/2</span> 图片上传
+                    </div>
+                    <div class="hm-uploader-content">
+                        <ul class="hm-uploader-files">
+                            <li class="hm-uploader-file" style="background-image:url(../../doc/resources/images/img-long.jpg)">
+                            </li>
+                            <li class="hm-uploader-file hm-uploader-status" style="background-image:url(../../doc/resources/images/img-long.jpg)">
+                                <div class="hm-uploader-status-content">
+                                    <i class="hm-icon-alert-danger"></i>
+                                </div>
+                            </li>
+                            <li class="hm-uploader-file hm-uploader-status" style="background-image: url(../../doc/resources/images/img-long.jpg)">
+                                <div class="hm-uploader-status-content">
+                                    <span>50%</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="hm-uploader-input-wrapper">
+                            <div class="hm-uploader-input-content">
+                                <i class=" hm-icon-xl hm-icon-plus"></i>
+                            </div>
+                            <input class="hm-uploader-input" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" multiple>
+                        </div>
+                        <div class="hm-uploader-input-wrapper">
+                            <div class="hm-uploader-input-content">
+                                <i class="hm-icon-photo"></i> 点击拍照
+                            </div>
+                            <input class="hm-uploader-input" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" multiple>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                表单组
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-form">
+                    <div class="hm-form-group hm-vertical-top">
+                        <label class="hm-form-label"> 单选垂直排列： </label>
+                        <div class="hm-form-control-wrapper">
+                            <div class="hm-radio">
+                                <label>
+                                    <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_0">
+                                    未选中 </label>
+                            </div>
+                            <div class="hm-radio">
+                                <label>
+                                    <input name="RadioGroup1" type="radio" id="RadioGroup1_1" value="单选" checked="">
+                                    已选中 </label>
+                            </div>
+                            <div class="hm-radio">
+                                <label>
+                                    <input name="RadioGroup1" type="radio" disabled="" id="RadioGroup1_2" value="单选">
+                                    只读 </label>
+                            </div>
+                            <div class="hm-radio">
+                                <label>
+                                    <input type="radio" disabled="" value="单选" checked="">
+                                    选中只读 </label>
+                            </div>
+                            <div class="hm-radio">
+                                <label>
+                                    <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_3">
+                                    测试很长文本的显示效果--UI即User Interface（用户界面）的简称。UI设计则是指对软件的人机交互、操作逻辑、界面美观的整体设计。好的UI设计不仅是让软件变得有个性有品味，还要让软件的操作变得舒适、简单、自由、充分体现软件的定位和特点。UI还有其它的意义，如Unit Interval，Univ of Iowa，Unlock Instruction，Urgent Interrupt。 </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hm-form-group hm-vertical-top">
+                        <label class="hm-form-label"> 复选垂直排列： </label>
+                        <div class="hm-form-control-wrapper">
+                            <div class="hm-checkbox">
+                                <label>
+                                    <input type="checkbox" value="" name="CheckboxGroup1" id="CheckboxGroup1_1">
+                                    未选中 </label>
+                            </div>
+                            <div class="hm-checkbox">
+                                <label>
+                                    <input type="checkbox" checked="checked" value="" name="CheckboxGroup1" id="CheckboxGroup1_2">
+                                    已选中 </label>
+                            </div>
+                            <div class="hm-checkbox hm-disabled">
+                                <label>
+                                    <input name="CheckboxGroup1" type="checkbox" disabled="disabled" id="CheckboxGroup1_3" value="">
+                                    未选中只读 </label>
+                            </div>
+                            <div class="hm-checkbox hm-disabled">
+                                <label>
+                                    <input type="checkbox" checked="checked" disabled="disabled" value="" name="CheckboxGroup1" id="CheckboxGroup1_4">
+                                    已选中只读 </label>
+                            </div>
+                            <div class="hm-checkbox">
+                                <label>
+                                    <input type="checkbox" value="" name="CheckboxGroup1" id="CheckboxGroup1_5">
+                                    测试很长文本的显示效果--UI即User Interface（用户界面）的简称。UI设计则是指对软件的人机交互、操作逻辑、界面美观的整体设计。好的UI设计不仅是让软件变得有个性有品味，还要让软件的操作变得舒适、简单、自由、充分体现软件的定位和特点。UI还有其它的意义，如Unit Interval，Univ of Iowa，Unlock Instruction，Urgent Interrupt。 </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 单选水平排列： </label>
+                        <div class="hm-form-control-wrapper">
+                            <div class="hm-radio-inline">
+                                <label>
+                                    <input type="radio" value="" name="RadioGroup2" id="RadioGroup2_0">
+                                    未选中 </label>
+                            </div>
+                            <div class="hm-radio-inline">
+                                <label>
+                                    <input name="RadioGroup2" type="radio" id="RadioGroup2_1" value="" checked="">
+                                    已选中 </label>
+                            </div>
+                            <div class="hm-radio-inline">
+                                <label>
+                                    <input name="RadioGroup2" type="radio" disabled="" id="RadioGroup2_2" value="">
+                                    只读 </label>
+                            </div>
+                            <div class="hm-radio-inline">
+                                <label>
+                                    <input type="radio" disabled="" value="" checked="">
+                                    已选中只读 </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 复选水平排列： </label>
+                        <div class="hm-form-control-wrapper">
+                            <div class="hm-checkbox-inline">
+                                <label>
+                                    <input type="checkbox" value="" name="CheckboxGroup2" id="CheckboxGroup2_0">
+                                    未选中 </label>
+                            </div>
+                            <div class="hm-checkbox-inline">
+                                <label>
+                                    <input type="checkbox" checked="checked" value="" name="CheckboxGroup2" id="CheckboxGroup2_1">
+                                    已选中 </label>
+                            </div>
+                            <div class="hm-checkbox-inline hm-disabled">
+                                <label>
+                                    <input type="checkbox" disabled="disabled" value="" name="CheckboxGroup2" id="CheckboxGroup2_2">
+                                    未选中只读 </label>
+                            </div>
+                            <div class="hm-checkbox-inline hm-disabled">
+                                <label>
+                                    <input type="checkbox" checked="checked" disabled="disabled" value="" name="CheckboxGroup2" id="CheckboxGroup2_3">
+                                    已选中只读 </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                可选按钮组
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-form">
+                    <div class="hm-form-group">
+                        <label class="hm-form-label">选项按钮</label>
+                        <div class="hm-form-control-wrapper">
+                            <div class="hm-btns">
+                                <a href="#" class="hm-btn hm-btn-default hm-btn-inline">可选项</a> <a href="#" class="hm-btn hm-btn-selected hm-btn-inline">已选项</a> <a href="#" class="hm-btn hm-btn-selected hm-btn-inline hm-disabled">此项不可选</a> <a href="#" class="hm-btn hm-btn-default hm-btn-inline">可选项</a> <a href="#" class="hm-btn hm-btn-default hm-btn-inline">可选项</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                单选组
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-listview">
+                    <label class="hm-li">
+                    <div class="hm-li-content hm-flex-1">
+                        单选项一
+                    </div>
+                    <div class="hm-li-footer">
+                        <input type="radio" name="RadioGroup3" checked="checked" id="RadioGroup3_0">
+                        <i class="hm-icon-checked hm-color-primary"></i>
+                    </div>
+                    </label>
+                    <label class="hm-li">
+                    <div class="hm-li-content hm-flex-1">
+                        单选项二
+                    </div>
+                    <div class="hm-li-footer">
+                        <input type="radio" name="RadioGroup3" id="RadioGroup3_1">
+                        <i class="hm-icon-checked hm-color-primary"></i>
+                    </div>
+                    </label>
+                </div>
+            </div>
+            <div class="hm-group-footer">
+                点击列表选择
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                多选组
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-listview">
+                    <label class="hm-li">
+                    <div class="hm-li-header">
+                        <input type="checkbox" class="" name="" id="" checked="checked">
+                    </div>
+                    <div class="hm-li-content hm-flex-1">
+                        标题文字
+                    </div>
+                    </label>
+                    <label class="hm-li">
+                    <div class="hm-li-header">
+                        <input type="checkbox" class="" name="" id="">
+                    </div>
+                    <div class="hm-li-content hm-flex-1">
+                        标题文字
+                    </div>
+                    </label>
+                </div>
+            </div>
+            <div class="hm-group-footer">
+                点击列表选择
+            </div>
+        </div>
+        <div class="hm-btn-area">
+            <a class="hm-btn hm-btn-primary hm-radius hm-btn-success" href="javascript:"> 确定 </a>
+        </div>
+        
+        <h2 class="hm-padding-left">表单布局</h2>
+        
+        
+        <!--单项布局样式-->
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                单项布局样式
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-form ">
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 标题： </label>
+                        <div class="hm-form-control     ">
+                            <input type="text" value="" placeholder="请输入内容...">
+                        </div>
+                    </div>
+                    <div class="hm-form-group hm-form-group-vertical">
+                        <label class="hm-form-label"> 内容： </label>
+                        <div class="hm-form-control-wrapper">
+                            <div class="hm-form-control">
+                                <textarea placeholder="请输入内容..." rows="4"></textarea>
+                            </div>
+                            <div class="hm-textarea-counter">
+                                <span>0</span>/200
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hm-form-group hm-form-group-vertical">
+                        <label class="hm-form-label"> 标题： </label>
+                        <div class="hm-form-control-wrapper">
+                            <div class="hm-checkbox">
+                                <label>
+                                    <input type="checkbox" value="" name="CheckboxGroup1" id="">
+                                    未选中,这里是测试文本 </label>
+                            </div>
+                            <div class="hm-checkbox">
+                                <label>
+                                    <input type="checkbox" checked="checked" value="" name="CheckboxGroup1" id="">
+                                    已选中,这里是测试文本</label>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 标题： </label>
+                        <div class="hm-form-control     ">
+                            <input type="text" value="" placeholder="请输入内容...">
+                        </div>
+                    </div>
+                    <div class="hm-btn-area">
+                        <a href="#" class=" hm-btn hm-btn-warning hm-radius"> 提交 </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!--上下结构表单列表-->
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                上下结构表单列表
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-form hm-form-vertical">
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 用户名： </label>
+                        <div class="hm-form-control     ">
+                            <input type="text" value="" placeholder="请输入内容...">
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <label class="hm-form-label"> 密码： </label>
+                        <div class="hm-form-control     ">
+                            <input type="text" value="" placeholder="请输入内容...">
+                        </div>
+                    </div>
+                    <div class="hm-form-group">
+                        <div class="hm-form-control-wrapper">
+                            <div class="hm-checkbox">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    记住密码 </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hm-btn-area">
+                        <a href="#" class=" hm-btn hm-btn-warning hm-radius"> 登录 </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--行内表单-->
+        <div class="hm-group ">
+      <div class="hm-group-header">
+        行内表单
+      </div>
+      <div class="hm-group-content">
+        <div class="hm-form hm-form-inline hm-text-center">
+          <div class="hm-form-group">
+            <label class="hm-form-label">
+              文本框
+            </label>
+            <div class="hm-form-control" style="width:100px;">
+              <input type="text" value="" placeholder="请输入内容...">
+               
+            </div>
+          </div>
+          <div class="hm-form-group">
+            <label class="hm-form-label">
+              单选框
+            </label>
+            <div class="hm-form-control">
+              <select type="select">
+                <option value="">请选择</option>
+                <option value="">中文</option>
+                <option value="">英文</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="hm-group ">
+      <div class="hm-group-header">
+        不带label的行内表单
+      </div>
+      <div class="hm-group-content">
+        <div class="hm-form hm-form-inline hm-text-center">
+          <div class="hm-form-group">
+            <div class="hm-form-control" style="width:100px;">
+              <input type="text" value="" placeholder="请输入内容...">
+            </div>
+          </div>
+          <div class="hm-form-group">
+            <div class="hm-form-control">
+              <select type="select">
+                <option value="">请选择</option>
+                <option value="">中文</option>
+                <option value="">英文</option>
+              </select>
+            </div>
+          </div>
+          <a href="#" class="hm-btn hm-btn-primary hm-radius hm-btn-inline">
+            提交
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    <div class="hm-footer">
+        <a class="hm-btn hm-btn-default hm-radius hm-flex-1" href="#"> 取消 </a> <a class="hm-btn hm-btn-primary hm-radius hm-flex-1" href="#"> 保存 </a>
+    </div>
+</div>
+</body>
+</html>

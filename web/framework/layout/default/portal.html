@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ICSSHS-UI</title>
+<!--布局样式-->
+<link rel="stylesheet" type="text/css" href="css/framework.css"/>
+<!--皮肤样式，主要是色调-->
+<link rel="stylesheet" type="text/css" href="skins/default/framework-skin.css">
+
+<!--页面高度需设置100%，并保证不出现滚动条；否则所包含的标签无法获取到100%的高度，会导致布局错乱 by 66383210@qq.com-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+</style>
+<script src="js/jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function(){
+//编辑我的应用  
+$("[data-hsui=btn-fav-adit]").click(function(){
+		$(".h-f-app-fav-list .h-f-app-toolbar").toggle();
+		$(this).toggleClass("h-f-icon-setting-active");
+	})
+
+//删除我保存的应用		
+$(".h-f-icon-delete").click(function(){
+		$(this).parent().parent().hide();
+	})	
+});
+			
+</script>
+</head>
+<body>
+<div class="h-f-wrapper">
+  <!----------------------------------------------
+  左侧内容
+  
+  说明：如果没有页面底下的快捷导航栏，那么需要设置以下内容
+  1：	  .h-f-app-quick 这个DIV不需要显示，或者设置样式style="display:none"隐藏
+  2：  .h-f-app-favorites 和 .h-f-app-history 两个DIV需要设置以下样式   style="bottom:0;"
+  ----------------------------------------------->
+  <div class="h-f-portal-main">
+    <!--标题-->
+    
+    <div class="h-f-page-header">
+      <!--工具栏-->
+      <div class="h-f-page-toolbar h-f-float-right">
+      	<!--编辑收藏-->
+      	<a href="#" class="h-f-icon h-f-icon-setting" title="编辑收藏"  data-hsui="btn-fav-adit">&nbsp;</a>
+        <!--关闭按钮-->
+        <a href="#" class="h-f-icon h-f-icon-close" style="display:none;"  title="关闭菜单"  data-hsui="close-menu">&nbsp;</a>
+      </div>
+      <!--应用搜索-->
+      <div class="h-f-form-app-search">
+        <form>
+          <div class="h-f-input-group h-f-input-group-search h-mt-10">
+          	<p class="h-f-input-group-icon">
+            	<span class="h-f-icon h-f-icon-search"></span>
+            </p>
+            <input type="text" class="h-f-form-control " value="搜索应用...">
+            <span class="h-f-input-group-btn">
+              <a class="h-f-icon h-f-icon-close" href="#">&nbsp;</a>
+            </span>
+          </div>
+        </form>
+      </div>
+      <div class="h-f-page-title">常用应用</div>
+      
+    </div>
+    <!--我的收藏 -->
+    <div class="h-f-app-favorites" >
+      <!--标题-->
+      <h3 class="h-f-app-favorites-title">我的收藏</h3>
+      <!--
+            我的收藏列表
+        -->
+      <div class="h-f-app-fav-list">
+        <ul>
+          <li>
+            <div class="h-f-app-toolbar">
+              <a href="#" class="h-f-icon h-f-icon-delete" title="删除">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-fav-item ">
+              <strong class="h-f-app-fav-name">计划流水单状态查询 </strong>
+              <span class="h-f-app-fav-text"> 统计管理 > ... > 单据查询 > 计划衔接</span>
+            </a>
+          </li>
+          <li>
+            <div class="h-f-app-toolbar">
+              <a href="#" class="h-f-icon h-f-icon-delete" title="删除">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-fav-item ">
+              <strong class="h-f-app-fav-name">调拨合同查询  </strong>
+              <span class="h-f-app-fav-text"> 统计管理 > 计划合同 > 调拨合同</span>
+            </a>
+          </li>
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!--最近使用-->
+    <div class="h-f-app-history" >
+      <!--标题-->
+      <h3 class="h-f-app-history-title">最近使用</h3>
+      <!--最近使用列表-->
+      <div class="h-f-app-fav-list">
+        <ul>
+          <li>
+            <div class="h-f-app-toolbar">
+              <a href="#" class="h-f-icon h-f-icon-delete" title="删除">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-fav-item ">
+              <strong class="h-f-app-fav-name">计划流水单状态查询 </strong>
+              <span class="h-f-app-fav-text"> 统计管理 > ... > 单据查询 > 计划衔接</span>
+            </a>
+          </li>
+          <li>
+            <div class="h-f-app-toolbar">
+              <a href="#" class="h-f-icon h-f-icon-delete" title="删除">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-fav-item ">
+              <strong class="h-f-app-fav-name">调拨合同查询  </strong>
+              <span class="h-f-app-fav-text"> 统计管理 > 计划合同 > 调拨合同</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <!--快捷应用-->
+    <div class="h-f-app-quick">
+      <div class="h-f-app-quick-list">
+        <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-quick-item h-f-bg-1 ">
+          <span class="h-f-icon h-f-icon-xl"></span>
+          <span class="h-f-app-quick-text"> 地图看板</span>
+        </a>
+        <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-quick-item h-f-bg-2 ">
+          <span class="h-f-icon h-f-icon-xl"></span>
+          <span class="h-f-app-quick-text"> 工作看板</span>
+        </a>
+        <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-quick-item h-f-bg-3 ">
+          <span class="h-f-icon h-f-icon-xl"></span>
+          <span class="h-f-app-quick-text"> 业务看板</span>
+        </a>
+        <a href="../../../../doc/web/docs-example/page-left-side.html" class="h-f-app-quick-item h-f-bg-4 ">
+          <span class="h-f-icon h-f-icon-xl"></span>
+          <span class="h-f-app-quick-text"> 其它看板</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!----------------------------------------------
+  右侧内容
+  ----------------------------------------------->
+  <div class="h-f-portal-aside">
+    <img src="images/portal-right-img.jpg"  alt=""/>
+  </div>
+</div>
+</body>
+</html>

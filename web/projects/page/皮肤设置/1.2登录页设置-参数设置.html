@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ICSSHS-UI</title>
+<link href="../../themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css" />
+<!--页面布局样式,框架页面发现包含以下样式，否则布局会错乱-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+	background: #f9f9f9;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.h-panel { }
+</style>
+</head>
+<body>
+<!-- 布局 +++++++++++++++++++++++++开始+++++++++++++++++++++++++++++++++++++++-->
+<div class="h-box" style="height:100%;">
+
+
+  <div class="h-box-item"  style=" width:auto;  left: 5px; right: 5px; top: 5px; bottom:5px; ">
+  <!--辅助信息-->
+
+	<div class="h-panel h-box-item" style="height:auto;width:auto;left: 0px; right: 0px; top:5px; bottom:5px; ">
+	    <!--面板头部-->
+	<div class="h-panel-header">
+		<div class=" h-pull-left">
+			<div class="h-panel-title">登录页设置</div>
+		</div>
+	</div>
+	<!--面板主体内容-->
+	<div class="h-panel-body ">
+		<!--面板内容说明-->	
+	 <div class=" h-border-b ">
+			<p class=" c-container "><span class=" h-color-muted">选择登录页模式,可以选择有登录页面的，也可以选择自定义设置直接跳转直接进入系统！</span></p>
+		 </div> 
+		 <div  style="position: absolute; overflow: auto;width: auto; height:auto;left:0px; right:0px; top:78px; bottom:32px;">
+		<!--面板左边主体内容-->	
+		<div  class="h-box-item" style="position: absolute;width:500px;bottom:5px;left: 0; top: 0px; right: auto; "> 
+			<div class=" h-pad10 c-loginect-h" >
+			<p class=" h-mb-10" >			
+				<img width="460" height="270" alt="" src="images/login-diagram.jpg">		
+			</P>
+			<div class="h-form-group h-mb-10">
+			<div class="c-title">1.LOGO设置</div>			
+				<a class="c-logobox" href="#"><div class="c-logopic h-mb-5"><img width="" height="60" alt="" src="images/logo-1.jpg"></div></a>
+				<p class=" c-txt-muted"> 点击图片上传LOGO，图片尺寸建议 <span class="h-color-danger">高：40px</span></p>
+			</div>
+			<div class="h-form-group ">
+			<div class="c-title">2.是否显示海晟LOGO</div>	
+				
+				<div class="h-radio">
+					<label><input type="radio">显示</label>
+					<label><input type="radio">不显示</label>
+				</div>
+			</div>
+			</div>	
+		</div>
+		<!--面板右边主体内容-->	
+		<div class="h-box-item h-pad10 " style="width: auto; height:auto; left:510px; right:0px; top:0px; bottom:5px;"> 
+		  <div class="h-form-group h-mb-10">
+			<div class="c-title">3.自定义链接页</div>
+			<div class=" h-panel">
+				<div class="h-toolbar">
+					<div class="h-pull-left h-inline-block-wrapper">
+					<a class="h-btn h-btn-toolbar" href="../../../../doc/web/projects/page/皮肤设置/1.3登录页设置 -新增链接页面（弹出层）.html">
+					<span class="h-btn-content">
+					<span class="h-icon c-icon-add"></span>
+					新增
+					</span>
+					</a>
+					</div>
+				</div>		
+					<table class="h-table " >
+						<thead>
+						<tr>
+						<th width="40" align="center">序号</th>						
+						<th>主体名称</th>
+						<th>链接地址</th>
+						<th width="60" >操作</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td align="center">01</td>
+							<td>关于我们</td>
+							<td align="left">/page/default/news.html</td>
+							<td class="h-text-center">
+							<a class="" title="编辑" href="#"><span class="h-icon c-icon-edit"></span></a>
+							<a class="" title="删除" href="#"><span class="h-icon c-icon-delete"></span></a>
+						</td>
+						<tr>
+							<td align="center">01</td>
+							<td>帮助</td>
+							<td align="left">/page/default/help.html</td>
+							<td class="h-text-center">
+							<a class="" title="编辑" href="#"><span class="h-icon c-icon-edit"></span></a>
+							<a class="" title="删除" href="#"><span class="h-icon c-icon-delete"></span></a>
+						</td>			
+						</tr>
+						</tbody>
+					</table>
+			</div>		
+		</div>
+		  <div class="h-form-group h-mb-10 ">
+			<div class="c-title">4.轮显图组</div>
+			<div class=" h-panel">
+				<div class="h-toolbar">
+					<div class="h-pull-left h-inline-block-wrapper">
+					<a class="h-btn h-btn-toolbar" href="../../../../doc/web/projects/page/皮肤设置/1.4登录页设置 -新增banner（弹出层）.html">
+					<span class="h-btn-content">
+					<span class="h-icon c-icon-add"></span>
+					新增
+					</span>
+					</a>
+					</div>
+				</div>		
+					<table class="h-table ">
+						<thead>
+						<tr>
+						<th width="80" align="center">背景色</th>						
+						<th>背景图</th>
+						<th>小图</th>
+						<th width="60" >操作</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td align="left">#cccccc</td>
+							<td align="left">images/bgpic-1.jpg</td>
+							<td align="left">/images/banner-1.jpg</td>
+							<td class="h-text-center">
+							<a class="" title="编辑" href="#"><span class="h-icon c-icon-edit"></span></a>
+							<a class="" title="删除" href="#"><span class="h-icon c-icon-delete"></span></a>
+						    </td>
+						<tr>
+						<tr>
+							<td align="left">#cccccc</td>
+							<td align="left">images/bgpic-2.jpg</td>
+							<td align="left">/images/banner-2.jpg</td>
+							<td class="h-text-center">
+							<a class="" title=" 编辑" href="#"><span class="h-icon c-icon-edit"></span></a>
+							<a class="" title="删除" href="#"><span class="h-icon c-icon-delete"></span></a>
+						    </td>
+						<tr>
+						<tr>
+							<td align="left">#cccccc</td>
+							<td align="left">images/bgpic-3.jpg</td>
+							<td align="left">/images/banner-3.jpg</td>
+							<td class="h-text-center">
+							<a class="" title="编辑" href="#"><span class="h-icon c-icon-edit"></span></a>
+							<a class="" title="删除" href="#"><span class="h-icon c-icon-delete"></span></a>
+						    </td>
+						<tr>
+						</tbody>
+					</table>
+			</div>		
+		</div>	
+		<div class="h-form-group h-mb-10">
+			<div class="c-title">5.页脚版权信息设置</div>					
+			<textarea class="h-form-control " rows="2">Copyright © 2014 HSIT.COM.CN | 技术支持：中软海晟信息技术有限公司</textarea>
+			</div>
+			</div>			
+		</div>
+	</div>
+	</div>
+			<!--面板底部 按钮操作等-->
+		<div class="h-toolbar h-toolbar-footer h-box-item" style="height:36px;width:auto;left: 0px; right: 0px; top:auto; bottom:0px; ">
+		
+			<div class="h-pull-right"><a class="h-btn h-btn-form h-btn-primary" href="#">
+			<span class="h-btn-content">保 存 </span>
+			</a>
+			<a class="h-btn h-btn-form" href="#">
+			<span class="h-btn-content">返 回</span>
+			</a>
+			</div>
+		 </div>
+	</div>
+			
+
+
+	</div>
+</body>	
+	
+	
+	</div>
+</div>
+</div>
+</body>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICSSHS-MUI for webapp</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<meta name="x5-fullscreen" content="true">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon.png">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="../project/resources/css/images/icons/undefined">
+
+<!--项目全局样式-->
+<link href="../project/resources/css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/global.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/animate.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/base.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/iconfont.css" rel="stylesheet" type="text/css" />
+<script src="../project/resources/js/jquery-1.9.1.js"></script>
+
+</head>
+<body class="hm-ov-x-hide">
+<!--page-->
+<div class="hm-page hm-page-active" >
+
+  <div class="hm-header hm-header-dark">
+        <a class="hm-btn" href="#" onclick="history.go(-1)"><i class="hm-icon-back"></i></a>
+        <div class="hm-flex-1" ></div>
+        <div class="hm-title">图表控件</div>
+        <a class="hm-btn" href="#"><i class="hm-icon-calendar"></i></a>
+  </div>
+  
+  <div class="hm-bar">
+      <div class="hm-segmentedbutton">
+          <a href="#" class="hm-btn hm-active">图形</a>
+          <a href="#" class="hm-btn">报表</a>
+        </div>    
+    </div>
+  
+  <div class="hm-content">
+    
+    <!--数字统计-->
+    <div class="hm-group">
+          <div class="hm-group-header">截止日期2016-02-22</div>
+          <div class="hm-group-content">
+                <ul class="hm-average-3 hm-statistics">
+                	<li>
+                    	<div class="hm-statistics-title">计划收购量</div>
+                        <div class="hm-statistics-desc">
+                        	<strong class="hm-statistics-number">8689</strong>
+                            <small class="hm-statistics-unit">万担</small>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="hm-statistics-title">今日收购量</div>
+                        <div class="hm-statistics-desc">
+                        	<strong class="hm-statistics-number">23</strong>
+                            <small class="hm-statistics-unit">万担</small>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="hm-statistics-title">收购进度</div>
+                        <div class="hm-statistics-desc">
+                        	<strong class="hm-statistics-number">86.8</strong>
+                            <small class="hm-statistics-unit">%</small>
+                        </div>
+                    </li>
+                </ul>
+          </div>
+    </div>
+    <!--柱状图-->
+    <div class="hm-group">
+          <div class="hm-group-content">
+                <div id="column-basic"></div>
+          </div>
+    </div>
+    <!--曲线图-->
+    <div class="hm-group">
+          <div class="hm-group-content">
+                <div id="line-basic"></div>
+          </div>
+    </div>
+    
+    <!--饼图-->
+    <div class="hm-group">
+          <div class="hm-group-content">
+                <div id="pie-basic"></div>
+          </div>
+    </div>
+    
+
+    
+
+    
+    
+    
+    
+  </div>
+  
+</div>
+<script type="text/javascript">
+$(function () {
+	// 曲线图
+	$('#line-basic').highcharts({
+        chart: {
+            type: 'spline'
+        },
+		
+		title: {
+            text: '每日收购走势图',
+			align:'left',
+            x: 0 //center
+        },
+        subtitle: {
+            text: '截止日期：2016-02-20',
+			align:'left',
+            x: 0
+        },
+        xAxis: {
+            categories: ['2/5', '2/6', '2/7', '2/8', '2/9', '2/10']
+        },
+        yAxis: {
+            title: {
+                text: '收购量 (万担)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '万担'
+        },
+        
+        series: [{
+            name: '日收购量',
+            data: [7.0, 6.9, 9.5, 16.5, 13.2, 11.5]
+        }]
+    });
+    // 柱状图
+    $('#column-basic').highcharts({
+		chart: {
+            type: 'column'
+        },
+		
+        title: {
+            text: '各产区收购进度'
+        },
+        subtitle: {
+            text: '截止日期：2016-02-20'
+        },
+        xAxis: {
+            categories: [
+                '某某县',
+                '某某县',
+                '某某县',
+                '某某县',
+                '某某县',
+                '某某县'
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '收购量(万担)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<strong>{point.key}</strong><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: '收购计划',
+			color: '#ddd',
+            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0]
+
+        }, {
+            name: '收购量',
+            data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5]
+
+        }]
+    });
+	// 饼图
+	$('#pie-basic').highcharts({
+        
+		chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: '全市烟叶收购等级占比'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: '占比',
+                colorByPoint: true,
+                data: [{
+                    name: '上等烟',
+                    y: 56.33
+                }, {
+                    name: '中等烟',
+                    y: 24.03,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: '下等烟',
+                    y: 10.38
+                }, {
+                    name: '级外烟',
+                    y: 4.77
+                }]
+            }]
+        });
+		
+		// 区域图
+		$('#area-basic').highcharts({
+        
+		chart: {
+            type: 'area'
+        },
+        title: {
+            text: '烟叶等级收购趋势'
+        },
+        subtitle: {
+            text: '来源: <a href="http://baidu.com">' +'中国烟草在线</a>'
+        },
+        xAxis: {
+            allowDecimals: false,
+            labels: {
+                formatter: function () {
+                    return this.value; // clean, unformatted number for year
+                }
+            }
+        },
+        yAxis: {
+            title: {
+                text: '收购量'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value / 10000 + '万担';
+                }
+            }
+        },
+        tooltip: {
+            pointFormat: '{series.name}收购总量为<b>{point.y:,.0f}</b>担'
+        },
+        plotOptions: {
+            area: {
+                pointStart: 2011,
+                marker: {
+                    enabled: false,
+                    symbol: 'circle',
+                    radius: 2,
+                    states: {
+                        hover: {
+                            enabled: true
+                        }
+                    }
+                }
+            }
+        },
+        series: [{
+            name: '上等烟',
+            data: [ 25600, 75700, 83400,65600, 75700, 83400]
+        }, {
+            name: '中等烟',
+            data: [ 20012, 37004, 45006,25006, 45600, 21200]
+        }]
+    });
+	//漏斗图
+	$('#funnel').highcharts({
+        
+		chart: {
+            type: 'funnel',
+            marginRight: 100
+        },
+        title: {
+            text: '仓库入库分析',
+            x: -50
+        },
+        plotOptions: {
+            series: {
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b> ({point.y:,.0f})',
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+                    softConnector: true
+                },
+                neckWidth: '30%',
+                neckHeight: '25%'
+
+                //-- Other available options
+                // height: pixels or percent
+                // width: pixels or percent
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        series: [{
+            name: '万担',
+            data: [
+                ['A库', 150],
+                ['B库', 520],
+                ['C库', 210],
+                ['D库', 100],
+                ['E库', 80]
+            ]
+        }]
+    });
+	//气泡图
+	
+	$('#bubbles').highcharts({
+
+	    chart: {
+	        type: 'bubble',
+	        zoomType: 'xy'
+	    },
+		tooltip: {
+            headerFormat: '<div style="font-size:0.875rem; margin-bottom:0.5rem;"><b>{point.key}</b></div>',
+            pointFormat: '<b>质量得分为:<span style="color:{series.color};">{point.y:.1f}</span>分</b><br>' +
+                '<b>烟站总数为：{point.z}个</b>',
+            shared: true,
+            useHTML: true
+        },
+		
+		xAxis: [{
+            categories: ['某某县','某某县', '某某县', '某某县','某某县','某某县', '某某县']
+        }],
+
+	    title: {
+	    	text: '各地市烟站质量分布'
+	    },
+	    series: [{
+			name:'质量得分',
+	        data: [[36,86],[54,60],[36,94],[87,30],[57,80],[87,110],[27,88]]
+	    }]
+	
+	});
+	
+	
+	
+	//混合双Y轴图
+	$('#combo-dual-axes').highcharts({
+        chart: {
+            zoomType: 'xy'
+        },
+        title: {
+            text: '各地市收购量'
+        },
+        
+        xAxis: [{
+            categories: ['某某县', '某某县', '某某县', '某某县']
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                format: '{value}',
+                style: {
+                    color: '#89A54E'
+                }
+            },
+            title: {
+                text: '收购均价（元）',
+                style: {
+                    color: '#89A54E'
+                }
+            }
+        }, { // Secondary yAxis
+            title: {
+                text: '收购量（万担',
+                style: {
+                    color: '#4572A7'
+                }
+            },
+            labels: {
+                format: '{value}',
+                style: {
+                    color: '#4572A7'
+                }
+            },
+            opposite: true
+        }],
+        tooltip: {
+            shared: true
+        },
+        
+        series: [{
+            name: '收购量',
+            color: '#4572A7',
+            type: 'column',
+            yAxis: 1,
+            data: [321.0, 456.9, 213.5, 345.5],
+            tooltip: {
+                valueSuffix: '万担'
+            }
+
+        }, {
+            name: '收购均价',
+            color: '#89A54E',
+            type: 'spline',
+			data: [24.9, 26.5, 28.4, 26.2],
+            tooltip: {
+                valueSuffix: '元'
+            }
+        }]
+    });
+});
+		</script>
+<script src="../project/resources/js/highcharts/highcharts_v4-2-3.js"></script>
+<script src="../project/resources/js/highcharts/highcharts-theme-default.js"></script>
+<script src="../project/resources/js/highcharts/highcharts-more.js"></script>
+<script src="../project/resources/js/highcharts/funnel.js"></script>
+
+</body>
+</html>

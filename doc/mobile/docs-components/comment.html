@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ICSSHS-MUI for webapp</title>
+  <meta name="description" content="ICSSHS-MUI for webapp">
+  <meta name="keywords" content="ICSSHS-MUI for webapp">
+  <meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+  <meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+  
+  <!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+  
+  <!--针对IOS 浏览器的设置-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon@72.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="icon@2x.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="icon@114.png" sizes="144x144">
+  <link rel="apple-touch-startup-image" href="undefined.png">
+  
+  <!--项目全局样式-->
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+  <!--说明文档样式,实际应用中请不要引用-->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+  <script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+  <div class="docs-page-masthead">
+    <h1>评论列表(comment)</h1>
+    <p><code>.hm-comment</code>评论列表由用户头像、评论元信息、评论内容组成，就像博客评论或 Twitter 消息等。 </p>
+  </div>
+  <h2 >单个评论</h2>
+  <h3>默认样式</h3>
+  <p>默认样式的评论组件允许在一个内容块的左边或右边展示一个多媒体内容（图像、视频、音频）。</p>
+  <div class="docs-example">
+    <div class="hm-comment">
+      <div class="hm-comment-left">
+        <a href="#">
+          <img class="hm-comment-avatar hm-circle" src="../../resources/images/user-header.jpg" style="width: 64px; height: 64px;">
+        </a>
+      </div>
+      <div class="hm-comment-main">
+        <div class="hm-comment-header">
+          <div class="hm-comment-meta">
+            <a href="#" class="hm-link">Design4U</a>
+            评论于
+            <time>2014-7-13 0:03</time>
+          </div>
+        </div>
+        <div class="hm-comment-content">
+          UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。
+        </div>
+      </div>
+    </div>
+    <div class="hm-comment">
+      <div class="hm-comment-left">
+        <a href="#">
+          <img class="hm-comment-avatar hm-circle" src="../../resources/images/user-header.jpg" style="width: 64px; height: 64px;">
+        </a>
+      </div>
+      <div class="hm-comment-main">
+        <div class="hm-comment-header">
+          <div class="hm-comment-meta">
+            <a href="#" class="hm-link">Design4U</a>
+            评论于
+            <time>2014-7-13 0:03</time>
+          </div>
+        </div>
+        <div class="hm-comment-content">
+          UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。
+        </div>
+        <div class="hm-comment">
+          <div class="hm-comment-left">
+            <a href="#">
+              <img class="hm-comment-avatar hm-circle" src="../../resources/images/user-header.jpg" style="width: 64px; height: 64px;">
+            </a>
+          </div>
+          <div class="hm-comment-main">
+            <div class="hm-comment-header">
+              <div class="hm-comment-meta">
+                <a href="#" class="hm-link">Design4U</a>
+                评论于
+                <time>2014-7-13 0:03</time>
+              </div>
+            </div>
+            <div class="hm-comment-content">
+              UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hm-comment">
+      <div class="hm-comment-main">
+        <div class="hm-comment-header">
+          <div class="hm-comment-meta">
+            <a href="#" class="hm-link">Design4U</a>
+            评论于
+            <time>2014-7-13 0:03</time>
+          </div>
+        </div>
+        <div class="hm-comment-content">
+          UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。
+        </div>
+      </div>
+      <div class="hm-comment-right">
+        <a href="#">
+          <img class="hm-comment-avatar hm-circle" src="../../resources/images/user-header.jpg" style="width: 64px; height: 64px;">
+        </a>
+      </div>
+    </div>
+    <div class="hm-comment">
+      <div class="hm-comment-left">
+        <a href="#">
+          <img class="hm-comment-avatar hm-circle" src="../../resources/images/user-header.jpg" style="width: 64px; height: 64px;">
+        </a>
+      </div>
+      <div class="hm-comment-main">
+        <div class="hm-comment-header">
+          <div class="hm-comment-meta">
+            <a href="#" class="hm-link">Design4U</a>
+            评论于
+            <time>2014-7-13 0:03</time>
+          </div>
+        </div>
+        <div class="hm-comment-content">
+          UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。
+        </div>
+      </div>
+      <div class="hm-comment-right">
+        <a href="#">
+          <img class="hm-comment-avatar hm-circle" src="../../resources/images/user-header.jpg" style="width: 64px; height: 64px;">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  <h3>对齐</h3>
+  <p>图片或其他媒体类型可以顶部、中部<code>hm-comment-middle</code>或底部<code>hm-comment-bottom</code>对齐。默认是顶部对齐。</p>
+  <div class="docs-example">
+    <div class="hm-comment">
+      <div class="hm-comment-left">
+        <a href="#">
+          <img class="hm-comment-avatar hm-circle" src="../../resources/images/user-header.jpg" style="width: 64px; height: 64px;">
+        </a>
+      </div>
+      <div class="hm-comment-main">
+        <div class="hm-comment-header">
+          <div class="hm-comment-meta">
+            <a href="#" class="hm-link">Design4U</a>
+            评论于
+            <time>2014-7-13 0:03</time>
+          </div>
+        </div>
+        <div class="hm-comment-content">
+          用户体验（User Experience，简称UX 或 UE）是一种纯主观的在用户使用一个产品（服务）的过程中建立起来的心理感受。因为它是纯主观的，就带有一定的不确定因素。个体差异也决定了每个用户的真实体验是无法通过其他途径来完全模拟或再现的。但是对于一个界定明确的用户群体来讲，能够通过设计良好的实验来收集其用户体验的共性。计算机技术和互联网的发展，使技术创新形态正在发生转变，以用户为中心、以人为本越来越得到重视，用户体验也因此被称做创新2.0模式的精髓。
+        </div>
+      </div>
+    </div>
+    <div class="hm-comment">
+      <div class="hm-comment-left hm-comment-middle">
+        <a href="#">
+          <img class="hm-comment-avatar hm-circle" src="../../resources/images/user-header.jpg" style="width: 64px; height: 64px;">
+        </a>
+      </div>
+      <div class="hm-comment-main">
+        <div class="hm-comment-header">
+          <div class="hm-comment-meta">
+            <a href="#" class="hm-link">Design4U</a>
+            评论于
+            <time>2014-7-13 0:03</time>
+          </div>
+        </div>
+        <div class="hm-comment-content">
+          用户体验（User Experience，简称UX 或 UE）是一种纯主观的在用户使用一个产品（服务）的过程中建立起来的心理感受。因为它是纯主观的，就带有一定的不确定因素。个体差异也决定了每个用户的真实体验是无法通过其他途径来完全模拟或再现的。但是对于一个界定明确的用户群体来讲，能够通过设计良好的实验来收集其用户体验的共性。计算机技术和互联网的发展，使技术创新形态正在发生转变，以用户为中心、以人为本越来越得到重视，用户体验也因此被称做创新2.0模式的精髓。
+        </div>
+      </div>
+    </div>
+    <div class="hm-comment">
+      <div class="hm-comment-left hm-comment-bottom">
+        <a href="#">
+          <img class="hm-comment-avatar hm-circle" src="../../resources/images/user-header.jpg" style="width: 64px; height: 64px;">
+        </a>
+      </div>
+      <div class="hm-comment-main">
+        <div class="hm-comment-header">
+          <div class="hm-comment-meta">
+            <a href="#" class="hm-link">Design4U</a>
+            评论于
+            <time>2014-7-13 0:03</time>
+          </div>
+        </div>
+        <div class="hm-comment-content">
+          用户体验（User Experience，简称UX 或 UE）是一种纯主观的在用户使用一个产品（服务）的过程中建立起来的心理感受。因为它是纯主观的，就带有一定的不确定因素。个体差异也决定了每个用户的真实体验是无法通过其他途径来完全模拟或再现的。但是对于一个界定明确的用户群体来讲，能够通过设计良好的实验来收集其用户体验的共性。计算机技术和互联网的发展，使技术创新形态正在发生转变，以用户为中心、以人为本越来越得到重视，用户体验也因此被称做创新2.0模式的精髓。
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>评论列表</h2>
+  <p>使用 <code>.hm-comments-list</code> 包裹多个 <code>.hm-comment</code> 即成评论列表。</p>
+  <div class="docs-example">
+    <ul class="hm-comments-list">
+      <li class="hm-comment">
+        <div class="hm-comment-left">
+          <a href="#">
+            <img class="hm-comment-avatar hm-circle" src="../../resources/images/user-header.jpg" style="width: 64px; height: 64px;">
+          </a>
+        </div>
+        <div class="hm-comment-main">
+          <div class="hm-comment-header">
+            <div class="hm-comment-meta">
+              <a href="#" class="hm-link">Design4U</a>
+              评论于
+              <time>2014-7-13 0:03</time>
+            </div>
+          </div>
+          <div class="hm-comment-content">
+            用户体验（User Experience，简称UX 或 UE）是一种纯主观的在用户使用一个产品（服务）的过程中建立起来的心理感受。因为它是纯主观的，就带有一定的不确定因素。个体差异也决定了每个用户的真实体验是无法通过其他途径来完全模拟或再现的。但是对于一个界定明确的用户群体来讲，能够通过设计良好的实验来收集其用户体验的共性。计算机技术和互联网的发展，使技术创新形态正在发生转变，以用户为中心、以人为本越来越得到重视，用户体验也因此被称做创新2.0模式的精髓。
+          </div>
+        </div>
+      </li>
+      <li class="hm-comment">
+        <div class="hm-comment-left">
+          <a href="#">
+            <img class="hm-comment-avatar hm-circle" src="../../resources/images/user-header.jpg" style="width: 64px; height: 64px;">
+          </a>
+        </div>
+        <div class="hm-comment-main">
+          <div class="hm-comment-header">
+            <div class="hm-comment-meta">
+              <a href="#" class="hm-link">Design4U</a>
+              评论于
+              <time>2014-7-13 0:03</time>
+            </div>
+          </div>
+          <div class="hm-comment-content">
+            用户体验（User Experience，简称UX 或 UE）是一种纯主观的在用户使用一个产品（服务）的过程中建立起来的心理感受。因为它是纯主观的，就带有一定的不确定因素。个体差异也决定了每个用户的真实体验是无法通过其他途径来完全模拟或再现的。但是对于一个界定明确的用户群体来讲，能够通过设计良好的实验来收集其用户体验的共性。计算机技术和互联网的发展，使技术创新形态正在发生转变，以用户为中心、以人为本越来越得到重视，用户体验也因此被称做创新2.0模式的精髓。
+          </div>
+          <div class="hm-comment">
+            <div class="hm-comment-left">
+              <a href="#">
+                <img class="hm-comment-avatar hm-circle" src="../../resources/images/user-header.jpg" style="width: 64px; height: 64px;">
+              </a>
+            </div>
+            <div class="hm-comment-main">
+              <div class="hm-comment-header">
+                <div class="hm-comment-meta">
+                  <a href="#" class="hm-link">Design4U</a>
+                  评论于
+                  <time>2014-7-13 0:03</time>
+                </div>
+              </div>
+              <div class="hm-comment-content">
+                用户体验（User Experience，简称UX 或 UE）是一种纯主观的在用户使用一个产品（服务）的过程中建立起来的心理感受。因为它是纯主观的，就带有一定的不确定因素。个体差异也决定了每个用户的真实体验是无法通过其他途径来完全模拟或再现的。但是对于一个界定明确的用户群体来讲，能够通过设计良好的实验来收集其用户体验的共性。计算机技术和互联网的发展，使技术创新形态正在发生转变，以用户为中心、以人为本越来越得到重视，用户体验也因此被称做创新2.0模式的精髓。
+              </div>
+              <div class="hm-comment">
+                <div class="hm-comment-left">
+                  <a href="#">
+                    <img class="hm-comment-avatar hm-circle" src="../../resources/images/user-header.jpg" style="width: 64px; height: 64px;">
+                  </a>
+                </div>
+                <div class="hm-comment-main">
+                  <div class="hm-comment-header">
+                    <div class="hm-comment-meta">
+                      <a href="#" class="hm-link">Design4U</a>
+                      评论于
+                      <time>2014-7-13 0:03</time>
+                    </div>
+                  </div>
+                  <div class="hm-comment-content">
+                    用户体验（User Experience，简称UX 或 UE）是一种纯主观的在用户使用一个产品（服务）的过程中建立起来的心理感受。因为它是纯主观的，就带有一定的不确定因素。个体差异也决定了每个用户的真实体验是无法通过其他途径来完全模拟或再现的。但是对于一个界定明确的用户群体来讲，能够通过设计良好的实验来收集其用户体验的共性。计算机技术和互联网的发展，使技术创新形态正在发生转变，以用户为中心、以人为本越来越得到重视，用户体验也因此被称做创新2.0模式的精髓。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ICSSHS-UI</title>
+<link href="css/framework.css" rel="stylesheet" type="text/css" />
+<!--菜单图标-->
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/menu/layout-padicon/icon-menu.css">
+<!--页面高度需设置100%，并保证不出现滚动条；否则所包含的标签无法获取到100%的高度，会导致布局错乱 by 66383210@qq.com-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+</style>
+<script src="js/jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function(){
+
+
+//编辑我的应用  
+$("[data-hsui=btn-fav-adit]").click(function(){
+		$("[data-hsui=app-delete]").toggle();
+		$(this).toggleClass("h-f-icon-setting-active");
+	})
+
+//收藏应用		
+$("[data-hsui=app-delete]").click(function(){
+		$(this).parent().hide();
+	})	
+
+	
+});
+			
+</script>
+</head>
+<body>
+<div class="h-f-wrapper">
+	<!--标题-->
+    
+    <div class="h-f-page-header">
+      <!--工具栏-->
+      <div class="h-f-page-toolbar h-f-float-right">
+      	<!--编辑收藏-->
+      	<a href="#" class="h-f-icon h-f-icon-setting" title="编辑收藏"  data-hsui="btn-fav-adit">&nbsp;</a>
+        <!--关闭按钮-->
+        <a href="#" class="h-f-icon h-f-icon-close" style="display:none;"  title="关闭菜单"  data-hsui="close-menu">&nbsp;</a>
+      </div>
+      <!--应用搜索-->
+      <div class="h-f-form-app-search">
+        <form>
+          <div class="h-f-input-group h-f-input-group-search h-mt-10">
+          	<p class="h-f-input-group-icon">
+            	<span class="h-f-icon h-f-icon-search"></span>
+            </p>
+            <input type="text" class="h-f-form-control " value="搜索应用...">
+            <span class="h-f-input-group-btn">
+              <a class="h-f-icon h-f-icon-close" href="#">&nbsp;</a>
+            </span>
+          </div>
+        </form>
+      </div>
+      <div class="h-f-page-title">常用应用</div>
+      
+    </div>
+  <!--常用应用 -->
+  <div class="h-f-app-favorites">
+    <div class="h-f-app-favorites-title">
+      <h3 class="h-f-title">我的收藏</h3>
+    </div>
+    <div class="h-f-app-list">
+      <ul class="clearfix">
+      	<li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-1"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-2"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-3"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-4"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-5"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-6"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-7"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-8"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <!--历史应用 -->
+  <div class="h-f-app-history">
+    <div class="h-f-app-history-title">
+      <h3 class="h-f-title">最近使用</h3>
+    </div>
+    <div class="h-f-app-list">
+      <ul class="clearfix">
+      	<li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-1"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-2"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-3"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-4"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-5"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-6"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-7"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+        <li class="h-f-app-item">
+            <div class="h-f-app-toolbar" data-hsui="app-delete">
+              <a href="#" class="h-f-icon h-f-icon-xl h-f-icon-app-delete" title="删除">&nbsp;</a>&nbsp;</a>
+            </div>
+            <a href="../../../../doc/web/docs-example/sample-framework.html" class="h-f-app-link ">
+              <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-8"></span>
+              <span class="h-f-app-name">功能模块名称</span> </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <!--快捷应用-->
+  <div class="h-f-app-quick">
+    <div class="h-f-app-quick-list">
+      <a href="#" class="h-f-app-quick-item  ">
+        <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-1"></span>
+        <span class="h-f-app-quick-text"> 地图看板</span>
+      </a>
+      <a href="#" class="h-f-app-quick-item ">
+        <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-2"></span>
+        <span class="h-f-app-quick-text"> 工作看板</span>
+      </a>
+      <a href="#" class="h-f-app-quick-item ">
+        <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-3"></span>
+        <span class="h-f-app-quick-text"> 业务看板</span>
+      </a>
+      <a href="#" class="h-f-app-quick-item ">
+        <span class="h-f-icon h-f-icon-xxl h-f-icon-menu-4"></span>
+        <span class="h-f-app-quick-text"> 其它看板</span>
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

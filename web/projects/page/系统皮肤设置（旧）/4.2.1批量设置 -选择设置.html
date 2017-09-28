@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ICSSHS-UI</title>
+<link href="../../themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css" />
+<script src="../../../../doc/web/projects/page/framework/themes-app/js/jquery-1.9.1.js"></script>
+<!--页面布局样式,框架页面发现包含以下样式，否则布局会错乱-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+	background: #f9f9f9;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+</style>
+</head>
+<body>
+<!-- 布局 +++++++++++++++++++++++++开始+++++++++++++++++++++++++++++++++++++++-->
+<div class="h-box" style="height:100%;">
+
+
+  <div class="h-box-item"  style=" width:auto;  left: 5px; right: 5px; top: 5px; bottom:5px; ">
+  <!--辅助信息-->
+  <div class="h-alert h-alert-info " >
+	<a class="h-tool h-tool-close h-pull-right" href="#"></a>
+	<span class="h-icon h-icon-info"></span>	
+	<span class="h-alert-text ">点击进行门户默认展现布局皮肤的设置</span>
+</div>
+	<div class="h-panel h-box-item" style="height:auto;width:auto;left: 0px; right: 0px; top:40px; bottom:5px; ">
+	    <!--面板头部-->
+	<div class="h-panel-header">
+		<div class=" h-pull-left">
+			<div class="h-panel-title">选择设置</div>
+		</div>
+		<div class="  h-row-col2-r">
+		  <div class="h-step-progress h-step-center ">
+			 <div class="h-step h-step-1 h-step-active ">
+				<div class="h-step-content">
+				<span class="h-icon">1</span>
+				<strong>选择设置</strong>
+				</div>
+			 </div>
+			 <div class="h-step h-step-2  ">
+				<div class="h-step-content">
+				<span class="h-icon">2</span>
+				<strong>选择布局</strong>
+				</div>
+			 </div>
+			 <div class="h-step h-step-3">
+				<div class="h-step-content">
+				<span class="h-icon">3</span>
+				<strong>选择皮肤</strong>
+				</div>
+			 </div>
+		 </div>
+
+		</div>
+	</div>
+	<!--面板主体内容-->
+	<div class="h-panel-body ">
+		<div class="h-toolbar">
+			<div class="h-pull-left c-toolbar-l">	
+				<a class="h-btn h-btn-toolbar" href="#">
+				<span class="h-btn-content">
+				<span class="h-icon c-icon-xzbj-2"></span>
+				删除布局皮肤
+				</span>
+				</a>
+		
+			</div>
+	    </div>
+		<div  class="h-box-item"   style="position: absolute;bottom: 36px;left: 0; right: 0;top: 74px;overflow: auto;">
+			<table class="h-table h-table-bordered"  >
+			<thead>
+			<tr>
+			<th width="40" align="center"><input type="checkbox"></th>
+			<th width="40" align="center">序号</th>
+			<th align="center">应用</th>
+			<th align="center">采用布局</th>
+			<th align="center">采用皮肤</th>
+			</tr>		
+			</thead>		
+			<tbody  >
+				<tr>
+				<td align="center">
+				<input type="checkbox">
+				</td>
+				<td align="center">1</td>
+				<td>基础设施项目</td>
+				<td align="left">下拉菜单布局</td>
+				<td >蓝色经典皮肤</td>
+			</tr>
+			<tr>
+				<td align="center">
+				<input type="checkbox">
+				</td>
+				<td align="center">2</td>
+				<td>公共资源开发</td>
+				<td align="left"></td>
+				<td ></td>
+			</tr>
+			<tr>
+				<td align="center">
+				<input type="checkbox">
+				</td>
+				<td align="center">3</td>
+				<td>云南公共资源开发</td>
+				<td align="left"></td>
+				<td ></td>
+			</tr>
+			<tr>
+				<td align="center">
+				<input type="checkbox">
+				</td>
+				<td align="center">4</td>
+				<td>生产技术管理</td>
+				<td align="left"></td>
+				<td></td>
+			</tr>	
+			<tr>
+				<td align="center">
+				<input type="checkbox">
+				</td>
+				<td align="center">5</td>
+				<td>公共资源开发</td>
+				<td align="left"></td>
+				<td ></td>
+			</tr>
+			<tr>
+				<td align="center">
+				<input type="checkbox">
+				</td>
+				<td align="center">6</td>
+				<td>云南公共资源开发</td>
+				<td align="left"></td>
+				<td ></td>
+			</tr>
+			<tr>
+				<td align="center">
+				<input type="checkbox">
+				</td>
+				<td align="center">7</td>
+				<td>生产技术管理</td>
+				<td align="left"></td>
+				<td ></td>
+			</tr>				
+			</tbody>
+		</table>
+
+	   </div>
+	
+			
+		<!--面板底部 按钮操作等-->
+		<div class="h-toolbar h-toolbar-footer h-box-item" style="height:36px;width:auto;left: 0px; right: 0px; top:auto; bottom:0px; ">
+		
+			<div class="h-pull-right"><a class="h-btn h-btn-form h-btn-primary" href="#">
+			<span class="h-btn-content">下一步 选择布局 </span>
+			</a>
+			<a class="h-btn h-btn-form" href="#">
+			<span class="h-btn-content">返回</span>
+			</a>
+			</div>
+		 </div>
+	
+	</div>
+</div>
+</div>

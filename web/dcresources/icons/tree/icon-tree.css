@@ -1,0 +1,293 @@
+﻿/**
+@tag 未发布组织
+*/
+.h-icon-unpublish-org_ico_open, .h-icon-unpublish-org_ico_close, .h-icon-unpublish-org_ico_docu
+{ background-image: url(images/unpublish_org.png) !important; }
+/**
+@tag 已发布组织
+*/
+.h-icon-publish-org_ico_open, .h-icon-publish-org_ico_close, .h-icon-publish-org_ico_docu
+{ background-image: url(images/publish_org.png) !important; }
+
+/**
+@tag 已发布独立法人组织
+*/
+.h-icon-publish-ind-org_ico_open, .h-icon-publish-ind-org_ico_close, .h-icon-publish-ind-org_ico_docu
+{ background-image: url(images/independent_org.png) !important; }
+
+/**
+@tag 已注销组织
+*/
+.h-icon-history-org_ico_open, .h-icon-history-org_ico_close, .h-icon-history-org_ico_docu
+{ background-image: url(images/history_org.png) !important; }
+/**
+@tag 未发布部门
+*/
+.h-icon-unpublish-dep_ico_open, .h-icon-unpublish-dep_ico_close, .h-icon-unpublish-dep_ico_docu
+{ background-image: url(images/unpublish_dep.png) !important; }
+/**
+@tag 已发布部门
+*/
+.h-icon-publish-dep_ico_open, .h-icon-publish-dep_ico_close, .h-icon-publish-dep_ico_docu
+{ background-image: url(images/publish_dep.png) !important; }
+/**
+@tag 已注销部门
+*/
+.h-icon-history-dep_ico_open, .h-icon-history-dep_ico_close, .h-icon-history-dep_ico_docu
+{ background-image: url(images/history_dep.png) !important; }
+/**
+@tag 普通角色
+*/
+.h-icon-common-role_ico_open, .h-icon-common-role_ico_close, .h-icon-common-role_ico_docu
+{ background-image: url(images/common_role.png) !important; }
+/**
+@tag 共有角色
+*/
+.h-icon-public-role_ico_open, .h-icon-public-role_ico_close, .h-icon-public-role_ico_docu
+{ background-image: url(images/public_role.png) !important; }
+/**
+@tag 子系统菜单
+*/
+.h-icon-app-menu_ico_open, .h-icon-app-menu_ico_close
+{ background-image: url(images/app_menu.png) !important; }
+/**
+@tag 分支菜单
+*/
+.h-icon-branch-menu_ico_open, .h-icon-branch-menu_ico_close, .h-icon-branch-menu_ico_doc
+{ background-image: url(images/branch_menu.png) !important; }
+/**
+@tag 普通菜单
+*/
+.h-icon-common-menu_ico_open, .h-icon-common-menu_ico_close, .h-icon-common-menu_ico_docu
+{ background-image: url(images/common_menu.png) !important; }
+
+/**
+@tag 高优先菜单
+*/
+.h-icon-more-menu_ico_open, .h-icon-more-menu_ico_close, .h-icon-more-menu_ico_docu
+{ background-image: url(images/more_menu.png) !important; }
+
+/**
+@tag 高优先菜单
+*/
+.h-icon-mid-menu_ico_open, .h-icon-mid-menu_ico_close, .h-icon-mid-menu_ico_docu
+{ background-image: url(images/mid_menu.png) !important; }
+
+/**
+@tag 普通菜单
+*/
+.h-icon-common-menu_ico_open, .h-icon-common-menu_ico_close, .h-icon-common-menu_ico_docu
+{ background-image: url(images/common_menu.png) !important; }
+
+/**
+@tag 模型菜单
+*/
+
+.h-icon-model-menu_ico_open, .h-icon-model-menu_ico_close, .h-icon-model-menu_ico_docu
+{ background-image: url(images/model_menu.png) !important; }
+
+/**
+@tag 功能
+*/
+.h-icon-function_ico_docu { background-image: url(images/function.png) !important; }
+/**
+@tag 用户组
+*/
+.h-icon-position_ico_docu { background-image: url(images/position.png) !important; }
+
+/**
+@tag 业务字典
+*/
+.h-icon-dict-normal_ico_docu { background-image: url(images/normal_dict.png) !important; }
+.h-icon-dict-hetero_ico_docu { background-image: url(images/hetero_dict.png) !important; }
+.h-icon-dict-addon_ico_docu { background-image: url(images/addon_dict.png) !important; }
+
+/**
+@tag 虚拟节点：系统菜单
+*/
+.h-icon-menu-virtual_ico_open,
+.h-icon-menu-virtual_ico_close,
+.h-icon-menu-virtual_ico_docu {
+    background-image: url(images/menu-virtual.png) !important;
+}
+
+/**
+@tag 业务组件
+*/
+.h-icon-app-biz_ico_open,
+.h-icon-app-biz_ico_close,
+.h-icon-app-biz_ico_docu {
+    background-image: url(images/app-biz.png) !important;
+}
+
+/**
+@tag 业务组件
+*/
+.h-icon-third-sys_ico_open,
+.h-icon-third-sys_ico_close,
+.h-icon-third-sys_ico_docu {
+    background-image: url(images/third-sys.png) !important;
+}
+/**
+@tag 服务提供者
+*/
+.h-icon-service-server_ico_open,
+.h-icon-service-server_ico_close,
+.h-icon-service-server_ico_docu{
+    background-image: url(images/service-server.png) !important;
+}
+
+/**
+@tag 服务调用者
+*/
+.h-icon-service-caller_ico_open,
+.h-icon-service-caller_ico_close,
+.h-icon-service-caller_ico_docu{
+    background-image: url(images/service-caller.png) !important;
+}
+
+/**
+@tag 互相调用
+*/
+.h-icon-service-each_ico_open,
+.h-icon-service-each_ico_close,
+.h-icon-service-each_ico_docu{
+    background-image: url(images/service-each.png) !important;
+}
+
+
+/**
+@tag 组织菜单中自身专用的菜单
+*/
+.h-icon-org-menu-exclude_ico_open,
+.h-icon-org-menu-exclude_ico_close,
+.h-icon-org-menu-exclude_ico_docu {
+    background-image: url(images/org-menu-exclude.png) !important;
+}
+
+/**
+@tag  业务事务
+*/
+.h-icon-routine_ico_open,
+.h-icon-routine_ico_close,
+.h-icon-routine_ico_docu {
+    background-image: url(images/biz.png) !important;
+}
+
+/**
+@tag  事务时序组
+*/
+.h-icon-routine-sequence_ico_open,
+.h-icon-routine-sequence_ico_close,
+.h-icon-routine-sequence_ico_docu {
+    background-image: url(images/biz-sequence.png) !important;
+}
+
+/**
+@tag 面板类型
+*/
+.h-icon-panel-folder_ico_open,
+.h-icon-panel-folder_ico_close,
+.h-icon-panel-folder_ico_docu {
+    background-image: url(images/panel-folder.png) !important;
+}
+
+/**
+@tag 面板
+*/
+.h-icon-panel_ico_open,
+.h-icon-panel_ico_close,
+.h-icon-panel_ico_docu {
+    background-image: url(images/panel.png) !important;
+}
+
+/**
+@tag 岗位(启用)
+*/
+.h-icon-post_ico_open,
+.h-icon-post_ico_close,
+.h-icon-post_ico_docu {
+    background-image: url(images/post.png) !important;
+}
+
+/**
+@tag 岗位（不启用）
+*/
+.h-icon-unpost_ico_open,
+.h-icon-unpost_ico_close,
+.h-icon-unpost_ico_docu {
+    background-image: url(images/unpost.png) !important;
+}
+
+/**
+@tag 角色
+*/
+.h-icon-role_ico_open,
+.h-icon-role_ico_close,
+.h-icon-role_ico_docu {
+    background-image: url(images/role.png) !important;
+}
+
+/**
+@tag 层级
+*/
+.h-icon-org-level_ico_open,
+.h-icon-org-level_ico_close,
+.h-icon-org-level_ico_docu {
+    background-image: url(images/org_level.png) !important;
+}
+
+/**
+@tag 类型
+*/
+.h-icon-org-type_ico_open,
+.h-icon-org-type_ico_close,
+.h-icon-org-type_ico_docu {
+    background-image: url(images/org_type.png) !important;
+}
+
+
+/**
+@tag 移动组件
+*/
+.h-icon-appmobile_ico_open,
+.h-icon-appmobile_ico_close,
+.h-icon-appmobile_ico_docu {
+    background-image: url(images/app-mobile.png) !important;
+}
+
+/**模型树菜单开始**/
+
+.h-icon-model_app_ico_open, .h-icon-model_app_ico_close{ background-image: url(images/app_menu.png) !important; }
+
+.h-icon-model_bizs_ico_open, .h-icon-model_bizs_ico_close { background-image: url(images/model/bizs.gif) !important; }
+.h-icon-model_biz_ico_docu { background-image: url(images/model/biz.gif) !important; }
+.h-icon-model_biz_ico_open, .h-icon-model_biz_ico_close { background-image: url(images/model/biz.gif) !important; }
+
+.h-icon-model_entitys_ico_open, .h-icon-model_entitys_ico_close  { background-image: url(images/model/entitys.gif) !important; }
+.h-icon-model_entity_ico_docu { background-image: url(images/model/entity.png) !important; }
+.h-icon-model_entity_ico_open, .h-icon-model_entity_ico_close  { background-image: url(images/model/entity.png) !important; }
+
+
+.h-icon-model_views_ico_open, .h-icon-model_views_ico_close{ background-image: url(images/model/views.gif) !important; }
+.h-icon-model_view_ico_docu{ background-image: url(images/model/view.gif) !important; }
+.h-icon-model_view_ico_open, .h-icon-model_view_ico_close{ background-image: url(images/model/view.gif) !important; }
+
+.h-icon-model_forms_ico_open, .h-icon-model_forms_ico_close{ background-image: url(images/model/forms.png) !important; }
+.h-icon-model_form_ico_docu{ background-image: url(images/model/form.png) !important; }
+.h-icon-model_form_ico_open, .h-icon-model_form_ico_close{ background-image: url(images/model/form.png) !important; }
+
+.h-icon-model_module_ico_open, .h-icon-model_module_ico_close{ background-image: url(images/model/app_module.png) !important; }
+.h-icon-model_editors_ico_open,.h-icon-model_editors_ico_close{ background-image: url(images/model/editors.gif) !important; }
+.h-icon-model_editor_ico_docu{ background-image: url(images/model/app_editor.png) !important; }
+
+.h-icon-model_inherent_ico_docu{ background-image: url(images/model/inherent.gif) !important; }
+.h-icon-model_msr_ico_docu{ background-image: url(images/model/msr.gif) !important; }
+.h-icon-model_ds_ico_docu{ background-image: url(images/model/datasource.gif) !important; }
+.h-icon-model_addon_ico_docu{ background-image: url(images/model/addon.gif) !important; }
+.h-icon-model_status_ico_docu{ background-image: url(images/model/table_gear.gif) !important; }
+.h-icon-model_statView_ico_docu{ background-image: url(images/model/stat_query.png) !important; }
+
+
+/**模型树菜单结束**/
+

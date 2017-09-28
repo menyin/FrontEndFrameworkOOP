@@ -1,0 +1,113 @@
+﻿/*======================================
+		HSIT-UI CSS
+		Date:     2016-03-17
+======================================*/
+::-moz-selection{ /*选择颜色*/ 
+background:#ffffff; background-color:transparent; 
+ 
+ } 
+::selection { 
+background-color:rgba(255,255,255,0.2); 
+ 
+}
+.c-relative{ position:relative;}
+.c-process-table{  background-color:#fff;width:100%; font-size:14px; margin-bottom:40px; }
+.c-process-table caption{ font-size:20px;font-family:微软雅黑; padding:10px;}
+.c-process-table thead{background-color:#e4e4e4; height:40px;}
+.c-process-table td{border:1px solid #fff; border-bottom:3px solid #fff;}
+.c-process-table th{border:1px solid #fff;padding:8px; min-width:130px;}
+
+.c-thead-title{background-color:#283651; border-radius:20px;; color:#fff; margin:auto; padding:2px 20px; }
+.c-red { background-color:#ffe8e0;}
+.c-blue { background-color:#d5e6ff}
+.c-green { background-color:#ccffae}
+.c-violet { background-color:#f2cdf2}
+.c-pink { background-color:#ffeaec}
+.c-orange { background-color:#ffe5b8}
+.c-yellow { background-color:#fdffc5}
+.c-cyan{ background-color:#c5f2ff}
+.c-left-title{ color:#fff; width:100%; height:100%;position:absolute; text-align:center; min-height:70px;}
+.c-left-w{ width:136px;}
+.c-left-title:after{  content: ""; 
+  border-width: 30px 70px 0px 70px;
+  border-style: solid dashed dashed dashed;
+  position: absolute;
+  bottom: -26px;
+  left: 0;}
+.c-left-title:before{  content: ""; 
+  border-width: 30px 70px 0px 70px;
+  border-color: #fff transparent transparent;
+  border-style: solid dashed dashed dashed;
+  position: absolute;
+  bottom: -30px;
+  left: 0;}  
+.c-left-title p{ font-size:21px; font-family:微软雅黑; margin-top:-5px;word-wrap: normal;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-overflow: ellipsis;/* IE/Safari */
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;/* Opera */}
+.c-end .c-left-title:after{  border-width: 0 0 0 0;}
+.c-end .c-left-title:before{  border-width: 0 0 0 0;}
+
+
+.c-center{position:absolute;top:50%; margin-left:-65px; left:50%;margin-top:-15px;width: 130px; }
+.c-red .c-left-title{ background-color:#f26839; z-index:100}
+.c-red .c-left-title:after{  content: ""; 
+  border-color: #f26839 transparent transparent;}
+.c-blue .c-left-title{ background-color:#3581f1;z-index:90} 
+.c-blue .c-left-title:after{  content: ""; 
+  border-color: #3581f1 transparent transparent;}
+.c-green .c-left-title{ background-color:#6eb943; z-index:80}
+.c-green .c-left-title:after{  content: ""; 
+  border-color: #6eb943 transparent transparent;}
+.c-violet .c-left-title{ background-color:#a360a3; z-index:70}
+.c-violet .c-left-title:after{  content: ""; 
+  border-color: #a360a3 transparent transparent;}
+.c-pink .c-left-title{ background-color:#e06a77; z-index:60}
+.c-pink .c-left-title:after{  content: ""; 
+  border-color: #e06a77 transparent transparent;}
+.c-orange .c-left-title{ background-color:#ed9d47; z-index:50}
+.c-orange .c-left-title:after{  content: ""; 
+  border-color: #ed9d47 transparent transparent;}
+.c-yellow .c-left-title{ background-color:#c4be60; z-index:40}
+.c-yellow .c-left-title:after{  content: ""; 
+  border-color: #c4be60 transparent transparent;}
+.c-cyan .c-left-title{ background-color:#65bfc0; z-index:30}
+.c-cyan .c-left-title:after{  content: ""; 
+  border-color: #65bfc0 transparent transparent;}
+
+.c-menus{ padding:10px;min-height: 70px; position:relative;}
+a.c-menu-link{
+  font-weight:bold;
+  display: block;
+  padding:3px;
+  padding-left: 16px;
+  background-image: url(images/list-style-default.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  word-wrap: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;}
+a.c-menu-disable{
+	 color:#000 !important;
+	 font-weight:normal;
+	 opacity:0.8;
+	 background-image: url(images/list-style-disable.png)!important;
+	 cursor: not-allowed;
+	}
+a.c-menu-link:hover{background-image: url(images/list-style-over.png); color:#0000ff}
+
+.c-more{ 
+  background: url(images/icon-more-c.png) no-repeat;
+  width: 31px;
+  height:31px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}.c-more:hover{ background: url(images/icon-moreover-c.png) no-repeat;}

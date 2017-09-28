@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>loading</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+</head>
+<body>
+<div class="c-loading-page">
+    <div>
+        <div class="c-loading">
+          <div class="c-circle1"></div>
+          <div class="c-circle2"></div>
+          <div class="c-circle3"></div>
+        </div>
+        <p>微信服务器正在验证中</p>
+    </div>
+    <style>
+.c-loading-page {
+	font-size: 1rem;/* =14px */
+	color: #666;
+	font-family: "Microsoft YaHei";
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 10000;
+	text-align:center;
+}
+.c-loading-page:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle
+}
+.c-loading-page > * {
+	display: inline-block;
+	font-size: 1rem;
+	max-width: 100%;
+	vertical-align: middle;
+}
+.c-loading {
+	margin: 20px 0;
+	width: 100%;
+	text-align: center;
+}
+.c-loading > div {
+	width: 14px;
+	height: 14px;
+	background-color: #67CF22;
+	border-radius: 100%;
+	display: inline-block;
+	-webkit-animation: circledelay 1.4s infinite ease-in-out;
+	animation: circledelay 1.4s infinite ease-in-out;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	margin: 0 5px;
+}
+.c-loading .c-circle1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+	background-color:#82cf00;
+}
+.c-loading .c-circle2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+	background-color:#75caf2;
+
+}
+.c-loading .c-circle3 {
+	background-color:#fda93f;
+
+}
+ @-webkit-keyframes circledelay {
+ 0%, 80%, 100% {
+-webkit-transform: scale(0.0)
+}
+ 40% {
+-webkit-transform: scale(1.0)
+}
+}
+ @keyframes circledelay {
+ 0%, 80%, 100% {
+ transform: scale(0.0);
+ -webkit-transform: scale(0.0);
+}
+40% {
+ transform: scale(1.0);
+ -webkit-transform: scale(1.0);
+}
+}
+</style>
+</div>
+</body>
+</html>

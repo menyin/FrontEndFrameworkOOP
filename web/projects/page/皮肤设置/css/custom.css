@@ -1,0 +1,384 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2014-08
+======================================*/
+/**
+登录页配置
+*/
+.c-icon-dlypz { background-image: url(images/icon-dlypz.png) !important; }
+/**
+框架配置 
+*/
+.c-icon-kjpz { background-image: url(images/icon-kjpz.png) !important; }
+/**
+工程配置
+*/
+.c-icon-gcpz { background-image: url(images/icon-gcpz.png) !important; }
+/**
+设置 16
+*/
+.c-icon-install { background-image: url(images/icon-sz.png) !important; }
+/**
+新增 16
+*/
+.c-icon-add { background-image: url(images/icon-add.png) !important; }
+/**
+删除 16
+*/
+.c-icon-delete { background-image: url(images/icon-delete.png) !important; }
+/**
+编辑 16
+*/
+.c-icon-edit { background-image: url(images/icon-edit.png) !important; }
+/**
+设为当前 16
+*/
+.c-icon-selected { background-image: url(images/icon-swdq.png) !important; }
+/*系统配置*/
+
+.c-trigger-box {
+	float: right;
+	display: block;
+	margin: 5px;
+	top: 0px;
+	position: relative;
+	right: 5px;
+	font-size: 0;
+}
+.c-trigger {
+	cursor: pointer;
+	float: left;
+	width: 47px;
+	height: 22px;
+	margin: 0px;
+	background-image: url(images/toggleon.png);
+	overflow: hidden;
+}
+.c-pad10 { padding: 10px; }
+.c-trigger-checked { background-image: url(images/toggleoff.png); ; }
+.c-row .h-thumbnail-horizontal:hover {
+	background-color: #ecf4f9;
+	border: 1px solid #bbd6e8;
+	position: relative
+}
+/* 登录页设置 style*/
+.c-title {
+	margin-bottom: 5px !important;
+	font-weight: bold !important;
+}
+.c-title-selected {
+	height: 24px;
+	overflow: auto;
+	font-weight: bold !important;
+}
+.c-logintxt-h {
+	height: 52px;
+	overflow: auto;
+}
+.c-hometxt-h {
+	height: 102px;
+	overflow: auto;
+}
+.c-custom-h {
+	height: 18px;
+	overflow: auto;
+}
+.c-txt-muted {
+	color: #999999 !important;
+	font-size: 12px;
+	margin-bottom: 10px !important;
+}
+.c-box {
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+	width: 320px;
+	display: inline-block;
+	border: 3px solid #eee\0;
+	border: 3px solid #eee;
+	margin: 20px 10px;
+	padding: 10px;
+	vertical-align: top;
+}
+
+.c-box .h-col-l,
+.c-box .h-col-r{ display:block;}
+.c-box:hover { border: 3px solid #7dc255; }
+.c-box img { margin-bottom: 5px; }
+.c-homebox {
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+	border: 3px solid #eee\0;
+	border: 3px solid #eee;
+	margin: 10px 10px 10px 0px;
+	;
+	padding: 10px;
+	height: 140px;
+	vertical-align: top;
+}
+.c-homebox:hover { border: 3px solid #7dc255; }
+.c-text-c { text-align: center; }
+.c-layout-item {
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+	min-width: 700px;
+	display: inline-block;
+	border: 3px solid #fff;
+	margin: 10px;
+	padding: 10px;
+	vertical-align: top;
+}
+.c-loginect-h img { border: 1px solid #ececec; }
+.c-selected,
+.c-layout-item:hover { border: 3px solid #7dc255 }
+.c-btn-right {
+	float: right;
+	display: block;
+}
+.c-preview-title {
+	color: #666666;
+	margin-bottom: 5px;
+}
+.c-layout-btn {
+	padding: 10px;
+	display: block;
+	float: right;
+}
+.c-content-c {
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.h-col-r li { margin-bottom: 10px; }
+.c-layout-title {
+	height: 28px;
+	overflow: hidden;
+	text-align: center;
+	line-height: 28px;
+}
+.c-skin-pre {
+	height: 80px;
+	border-bottom: 1px solid #dddddd;
+	padding: 10px;
+}
+.c-skin-pre img {
+	width: 130px;
+	height: 80px;
+	margin-left: 10px;
+	border: 1px solid #ececec;
+}
+.c-position-l {
+	display: block;
+	float: left;
+}
+.c-position-r {
+	display: block;
+	float: right;
+}
+.c-font-gray {
+	color: #888;
+	font-size: 12px;
+}
+.c-container { margin: 10px; }
+.c-left {
+	float: left;
+	display: block;
+}
+.c-btn-logo {
+	height: 30px;
+	;
+	margin-top: 5px;
+}
+.c-btn-p {
+	height: 30px;
+	margin-left: 0;
+}
+.c-label-w {
+	width: 80px;
+	display: inline;
+	margin: 0 10px;
+}
+/*登录页面-参数设置 style*/
+.c-logopic {
+	height: 60px;
+	width: 460px;
+	background-color: #fff;
+}
+.c-logopic img {
+	height: 60px;
+	width: 460px;
+	border: 1px solid #eee;
+}
+/*选择设置-批量设置  style*/
+.c-theme {
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+	border: 1px solid #ececec;
+	display: inline-block;
+
+	margin: 0px 0px 10px 0px;
+	padding: 10px;
+	vertical-align: top;
+	height: 94px;
+}
+.c-theme img {
+	width: 150px;
+	height: 90px;
+}
+.c-box img { margin-bottom: 5px; }
+.c-themetxt {
+	margin-top: -103px;
+	margin-left: 155px;
+	width: auto;
+	display: block;
+}
+.c-systemlogo {
+	height: 40px;
+	width: 98%;
+	background-color: #bcbcbd;
+}
+.c-systemlogo img {
+	height: 40px;
+	width: auto;
+	border: 1px solid #eee;
+}
+.c-system {
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+	border: 1px solid #ececec;
+	border: 1px solid #eeeeee\0;
+	margin: 0px 0px 10px 0px;
+	padding: 10px;
+	vertical-align: top;
+	height: 94px;
+}
+.c-pagebox {
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+	width: 240px;
+	display: inline-block;
+	border: 3px solid #eee;
+	border: 3px solid #eee\0;
+	margin: 0px 20px 10px 0px;
+	padding: 10px;
+	vertical-align: top;
+}
+.c-pagebox:hover { border: 3px solid #7dc255; }
+.c-col-l img {
+	width: 320px;
+	height: 173px;
+	border: 1px solid #eee;
+}
+.h-col-l img {
+	width: 160px;
+	height: 120px;
+	border: 1px solid #eee;
+}
+.c-selected { border: 3px solid #7dc255 }
+.c-form-width { width: 60px; }
+.c-form-link {
+	width: 100%;
+	height: 40px;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+.c-imgbox { }
+/*高度设置*/
+.c-textarea-h { height: 168px; }
+.c-title-h,
+.c-txt-h {
+	height: 18px;
+	overflow: auto;
+}
+.c-layout-h { height: 145px; }
+.c-skin-h { height: 300px; }
+.c-home-h { height: 340px; }
+.c-skinpage-h { height: 210px; }
+.c-txtcustom-h {
+	height: 80px;
+	overflow: auto;
+}
+.c-txthome-h {
+	height: 118px;
+	overflow: auto;
+}
+.c-txtpre-h {
+	height: 52px;
+	overflow: auto;
+	margin-bottom: 10px;
+}
+.c-txtskin-h {
+	height: 36px;
+	overflow: auto;
+}
+.c-txtset-h {
+	height: 120px;
+	overflow: auto;
+}
+/*宽度*/
+.c-linkname-w { width: 220px; }
+.c-left {
+	float: left;
+	display: block;
+}
+.c-right {
+	float: right;
+	display: block;
+}
+.c-center {
+	margin-left: auto;
+	margin-right: auto;
+	width: 240px;
+}
+.c-col-3 {
+	width: 33.3333%;
+	float: left;
+	display: block;
+}
+.c-systemlogo-box {
+	height: 40px;
+	width: 98%;
+	margin-top: -34px;
+	background: #0073c6 url(images/logo-1.png) !important;
+}
+.c-logo-pic {
+	border: 2px dotted #cccc33;
+	margin-left: 10px;
+	font-size: 0;
+	width: 35px;
+	height: 35px;
+	float: left;
+	display: block;
+}
+.c-logobody {
+	height: 40px;
+	width: 98%;
+	margin-top: -35px;
+	background-color: #0073c6;
+}
+.c-logo-s img {
+	margin-left: 15px;
+	border: 0;
+}
+.c-form-sysname {
+	color: #333;
+	font-family: "Microsoft YaHei";
+	font-weight: 300;
+	margin: 10px;
+	width: 50%;
+}
+.c-form-s {
+	width: 80px;
+	float: left;
+	display: block;
+	vertical-align: left;
+}
+.c-col-2 {
+	width: 49.99%;
+	float: left;
+	display: block;
+	min-width: 350px;
+}
+.c-padlr-10 { padding: 0 10px; }

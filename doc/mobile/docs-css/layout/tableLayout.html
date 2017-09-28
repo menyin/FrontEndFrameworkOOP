@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+<meta charset="utf-8">
+<title>WEBAPP通用框架HTML</title>
+<meta name="description" content="HSIT-UI for mobile">
+<meta name="keywords" content="HSIT-UI  for mobile">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/global.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/base.css">
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../../../resources/css/docs.css">
+</head>
+<body>
+<div class="docs-content">
+	<div class="docs-page-masthead">
+        <h1>表格布局(tableLayout)</h1>
+        <p>表格布局：是一个容器以行列的形式显示子容器元素，通过<code>.hm-tableLayout</code>定义容器为表格布局，通过<code>.hm-table-row</code>来定义表格行,通过<code>.hm-table-cell</code>来定义单元格，一格为一列。
+        </p>
+    </div>
+    
+    
+    <!--基础表格-->
+    <h2>基础表格布局</h2>
+    <p>通过<code>.hm-tableLayout</code>来定义表格布局。默认表格布局宽度100%，无边框，单元格无间距</p>
+    <div class="docs-highlight">
+<pre> &lt;div class="<span class="docs-color-red">hm-tableLayout</span>" &gt;
+    	&lt;div class="<span class="docs-color-red">hm-table-row</span>"&gt;
+            &lt;div class="<span class="docs-color-red">hm-table-cell</span>"&gt;单元格&lt;/div&gt;
+            ...
+        &lt;/div&gt;
+        ...
+    &lt;/div&gt;
+</pre>
+    </div>
+    <div class="hm-tableLayout">
+    	<div class="hm-table-row">
+        	<div class="hm-table-cell hm-bg-info">单元格</div>
+            <div class="hm-table-cell hm-bg-info">单元格</div>
+            <div class="hm-table-cell hm-bg-info">单元格</div>
+        </div>
+        <div class="hm-table-row">
+        	<div class="hm-table-cell hm-bg-info">单元格</div>
+            <div class="hm-table-cell hm-bg-info">单元格</div>
+            <div class="hm-table-cell hm-bg-info">单元格</div>
+        </div>
+        <div class="hm-table-row">
+        	<div class="hm-table-cell hm-bg-info">单元格</div>
+            <div class="hm-table-cell hm-bg-info">单元格</div>
+            <div class="hm-table-cell hm-bg-info">单元格</div>
+        </div>
+    </div>
+    
+    
+    <!--单元格有间距的表格-->
+    <h2>实例：单元格有间距的表格布局</h2>
+    <p>通过<code>style="border-spacing:10px;"</code>来设定间距的值</p>
+    <div class="docs-highlight">
+<pre> &lt;div class="<span class="docs-color-red">hm-tableLayout</span>" style="<span class="docs-color-red">border-spacing:10px;</span>"&gt;
+    	&lt;div class="<span class="docs-color-red">hm-table-row</span>"&gt;
+            &lt;div class="<span class="docs-color-red">hm-table-cell</span>"&gt;单元格&lt;/div&gt;
+            ...
+        &lt;/div&gt;
+        ...
+    &lt;/div&gt;
+</pre>
+    </div>
+    <div class="hm-tableLayout" style="border-spacing:10px;">
+    	<div class="hm-table-row">
+        	<div class="hm-table-cell hm-bg-info">单元格</div>
+            <div class="hm-table-cell hm-bg-info">单元格</div>
+            <div class="hm-table-cell hm-bg-info">单元格</div>
+        </div>
+        <div class="hm-table-row">
+        	<div class="hm-table-cell hm-bg-info">单元格</div>
+            <div class="hm-table-cell hm-bg-info">单元格</div>
+            <div class="hm-table-cell hm-bg-info">单元格</div>
+        </div>
+        <div class="hm-table-row">
+        	<div class="hm-table-cell hm-bg-info">单元格</div>
+            <div class="hm-table-cell hm-bg-info">单元格</div>
+            <div class="hm-table-cell hm-bg-info">单元格</div>
+        </div>
+    </div>
+	
+    
+    
+</div>
+</body>
+</html>

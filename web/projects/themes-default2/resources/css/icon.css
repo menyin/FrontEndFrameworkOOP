@@ -1,0 +1,198 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2014-05
+======================================*/
+
+/*=============================
+	图标        h-icon  h-icon-图标名称        默认为16X16
+	大图标      h-icon-图标名称-l             大号图标24X24
+	加大号图标   h-icon-图标名称-xl            大号图标32X32   
+	xxl图标     h-icon-图标名称-xxl           大号图标48X48
+    xxxl图标    h-icon-图标名称-xxxl          大号图标64X64
+	
+	注：根据主题样式的需要，图标的大小型号可以做出相应的尺寸调整
+=============================*/
+.h-icon {
+	display: inline-block;
+*display:inline;
+*zoom:1;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url(images/component/icon/icon-default.png);
+}
+.h-icon-l {
+	width: 24px;
+	height: 24px;
+	background-image: url(images/component/icon/icon-default-l.png);
+}
+.h-icon-xl {
+	width: 32px;
+	height: 32px;
+	background-image: url(images/component/icon/icon-default-xl.png);
+}
+.h-icon-xxl {
+	width: 48px;
+	height: 48px;
+	background-image: url(images/component/icon/icon-default-xxl.png);
+}
+.h-icon-xxxl {
+	width: 64px;
+	height: 64px;
+	background-image: url(images/component/icon/icon-default-xxxl.png);
+}
+/*=============================
+alert 图标
+=============================*/
+/*帮助信息*/
+.h-icon-info { background-image: url(images/component/alert/icon-alert-info.png) !important; }
+.h-icon-info-l { background-image: url(images/component/alert/icon-alert-info-l.png) !important; }
+.h-icon-info-xl { background-image: url(images/component/alert/icon-alert-info-xl.png) !important; }
+.h-icon-info-xxl { background-image: url(images/component/alert/icon-alert-info-xxl.png) !important; }
+.h-alert .h-icon-info { background-image: url(images/component/alert/icon-alert-info-white.png) !important; }
+.h-alert .h-icon-info-l { background-image: url(images/component/alert/icon-alert-info-white-l.png) !important; }
+.h-alert .h-icon-info-xl { background-image: url(images/component/alert/icon-alert-info-white-xl.png) !important; }
+.h-alert .h-icon-info-xxl { background-image: url(images/component/alert/icon-alert-info-white-xxl.png) !important; }
+/*成功信息*/
+.h-icon-success { background-image: url(images/component/alert/icon-alert-success.png) !important; }
+.h-icon-success-l { background-image: url(images/component/alert/icon-alert-success-l.png) !important; }
+.h-icon-success-xl { background-image: url(images/component/alert/icon-alert-success-xl.png) !important; }
+.h-icon-success-xxl { background-image: url(images/component/alert/icon-alert-success-xxl.png) !important; }
+.h-alert .h-icon-success { background-image: url(images/component/alert/icon-alert-success-white.png) !important; }
+.h-alert .h-icon-success-l { background-image: url(images/component/alert/icon-alert-success-white-l.png) !important; }
+.h-alert .h-icon-success-xl { background-image: url(images/component/alert/icon-alert-success-white-xl.png) !important; }
+.h-alert .h-icon-success-xxl { background-image: url(images/component/alert/icon-alert-success-white-xxl.png) !important; }
+/*警示信息*/
+.h-icon-warning { background-image: url(images/component/alert/icon-alert-warning.png) !important; }
+.h-icon-warning-l { background-image: url(images/component/alert/icon-alert-warning-l.png) !important; }
+.h-icon-warning-xl { background-image: url(images/component/alert/icon-alert-warning-xl.png) !important; }
+.h-icon-warning-xxl { background-image: url(images/component/alert/icon-alert-warning-xxl.png) !important; }
+.h-alert .h-icon-warning { background-image: url(images/component/alert/icon-alert-warning-white.png) !important; }
+.h-alert .h-icon-warning-l { background-image: url(images/component/alert/icon-alert-warning-white-l.png) !important; }
+.h-alert .h-icon-warning-xl { background-image: url(images/component/alert/icon-alert-warning-white-xl.png) !important; }
+.h-alert .h-icon-warning-xxl { background-image: url(images/component/alert/icon-alert-warning-white-xxl.png) !important; }
+/*错误信息*/
+.h-icon-danger { background-image: url(images/component/alert/icon-alert-danger.png) !important; }
+.h-icon-danger-l { background-image: url(images/component/alert/icon-alert-danger-l.png) !important; }
+.h-icon-danger-xl { background-image: url(images/component/alert/icon-alert-danger-xl.png) !important; }
+.h-icon-danger-xxl { background-image: url(images/component/alert/icon-alert-danger-xxl.png) !important; }
+.h-alert .h-icon-danger { background-image: url(images/component/alert/icon-alert-danger-white.png) !important; }
+.h-alert .h-icon-danger-l { background-image: url(images/component/alert/icon-alert-danger-white-l.png) !important; }
+.h-alert .h-icon-danger-xl { background-image: url(images/component/alert/icon-alert-dange-whiter-xl.png) !important; }
+.h-alert .h-icon-danger-xxl { background-image: url(images/component/alert/icon-alert-danger-white-xxl.png) !important; }
+/*=============================
+多选排序功能按钮图标
+=============================*/
+/*向上*/
+.h-icon-to-up { background-image: url(images/component/icon/icon-to-up.png) !important; }
+/*向下*/
+.h-icon-to-down { background-image: url(images/component/icon/icon-to-down.png) !important; }
+/*移到左边*/
+.h-icon-to-left { background-image: url(images/component/icon/icon-to-left.png) !important; }
+/*移到右边*/
+.h-icon-to-right { background-image: url(images/component/icon/icon-to-right.png) !important; }
+/*移到第一个*/
+.h-icon-to-first { background-image: url(images/component/icon/icon-to-first.png) !important; }
+/*移到最后一个*/
+.h-icon-to-last { background-image: url(images/component/icon/icon-to-last.png) !important; }
+/*=============================
+带激活状态图标
+=============================*/
+/*组织树*/
+.h-icon-org { background-image: url(images/component/icon/icon-org.png) !important; }
+.h-icon-org-active { background-image: url(images/component/icon/icon-org-active.png) !important; }
+/*我的收藏*/
+.h-icon-fav { background-image: url(images/component/icon/icon-fav.png) !important; }
+.h-icon-fav-active { background-image: url(images/component/icon/icon-fav-active.png) !important; }
+/*=============================
+控件按钮图标
+=============================*/
+/*搜索*/
+.h-icon-search { background-image: url(images/component/icon/icon-control-search.png) !important; }
+/*定位搜索*/
+.h-icon-search-locate { background-image: url(images/component/icon/icon-control-search-locate.png) !important; }
+/*更多、高级*/
+.h-icon-more { background-image: url(images/component/icon/icon-control-more.png) !important; }
+/*下拉选择*/
+.h-icon-dropdown { background-image: url(images/component/icon/icon-control-dropdown.png) !important; }
+/**日期*/
+.h-icon-date { background-image: url(images/component/icon/icon-control-date.png) !important; }
+/**时间*/
+.h-icon-time { background-image: url(images/component/icon/icon-control-time.png) !important; }
+/**
+	消息中心图标
+*/
+/*未读消息*/
+.h-icon-message-unread { background-image: url(images/component/icon/icon-message-unread.png) !important; }
+/*已读消息*/
+.h-icon-message-read { background-image: url(images/component/icon/icon-message-read.png) !important; }
+/*发送成功*/
+.h-icon-message-send-success { background-image: url(images/component/icon/icon-message-send-success.png) !important; }
+/*发送失败*/
+.h-icon-message-send-failed { background-image: url(images/component/icon/icon-message-send-failed.png) !important; }
+/*信息草稿*/
+.h-icon-message-draft { background-image: url(images/component/icon/icon-message-draft.png) !important; }
+
+/*回复*/
+.h-icon-message-reply { background-image: url(images/component/icon/icon-message-reply.png) !important; }
+/*星标*/
+.h-icon-star { background-image: url(images/component/icon/icon-star.png); }
+/*已加标*/
+.h-icon-star-active { background-image: url(images/component/icon/icon-star-active.png) !important; }
+/*附件*/
+.h-icon-attachment { background-image: url(images/component/icon/icon-attachment.png) !important; }
+/*系统消息*/
+.h-icon-message-system { background-image: url(images/component/icon/icon-message-system.png) !important; }
+/*通知*/
+.h-icon-notification { background-image: url(images/component/icon/icon-notification.png) !important; }
+/*用户消息*/
+.h-icon-message-user { background-image: url(images/component/icon/icon-message-user.png) !important; }
+/*用户信息*/
+.h-icon-userinfo { background-image: url(images/component/icon/icon-userinfo.png) !important; }
+
+
+
+a.h-icon:hover {
+	filter: alpha(Opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+	
+	-webkit-animation-name: bounceIn2;
+	animation-name: bounceIn2;
+	-webkit-animation-duration: .75s;
+	animation-duration: .75s;
+}
+.h-icon-restore { background-image: url(images/component/icon/icon-restore.png) !important;}
+.h-icon-maximize { background-image: url(images/component/icon/icon-maximize.png) !important; }
+.h-icon-minimize { background-image: url(images/component/icon/icon-minimize.png) !important; }
+.h-icon-up { background-image: url(images/component/icon/icon-up.png) !important; }
+.h-icon-down { background-image: url(images/component/icon/icon-down.png) !important; }
+.h-icon-left { background-image: url(images/component/icon/icon-left.png) !important; }
+.h-icon-right { background-image: url(images/component/icon/icon-right.png) !important; }
+.h-icon-close { background-image: url(images/component/icon/icon-close.png) !important; }
+.h-alert .h-icon-close,
+.h-alert .h-close { background-image: url(images/component/icon/icon-close-white.png) !important;}
+.h-icon-help { background-image: url(images/component/icon/icon-help.png) !important;}
+/*工具带激活状态*/
+.h-icon-favorite { background-image: url(images/component/icon/icon-favorite.png) !important; }
+.h-icon-favorite-acitve { background-image: url(images/component/icon/icon-favorite-active.png) !important; }
+.h-icon-setting { background-image: url(images/component/icon/icon-setting.png) !important; }
+.h-icon-setting-active { background-image: url(images/component/icon/icon-setting-active.png) !important;}
+.h-icon-tab-close { background-image: url(images/component/icon/icon-tab-close.png) !important;}
+
+.h-icon-delete-danger-l{background-image: url(images/component/icon/icon-delete-danger-l.png) !important;}
+/*事务时序选择*/
+.h-icon-time-selected{background-image: url(images/component/icon/icon-time-selected.png) !important;}
+/*logo图标*/
+.h-icon-logo-xxxl{background-image: url(images/component/icon/icon-logo.png) !important;}
+/*表格可编辑*/
+.h-icon-editable{background-image: url(images/component/icon/icon-editable.png) !important;}
+
+/*图片上传组件图标*/
+.h-icon-view-big-l{background-image: url(images/component/icon/icon-view-big-l.png) !important;}
+.h-icon-download-l{background-image: url(images/component/icon/icon-download-l.png) !important;}

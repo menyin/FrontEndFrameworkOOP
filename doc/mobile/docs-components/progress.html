@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ICSSHS-MUI for webapp</title>
+  <meta name="description" content="ICSSHS-MUI for webapp">
+  <meta name="keywords" content="ICSSHS-MUI for webapp">
+  <meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+  <meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+  
+  <!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+  
+  <!--针对IOS 浏览器的设置-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon@72.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="icon@2x.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="icon@114.png" sizes="144x144">
+  <link rel="apple-touch-startup-image" href="undefined.png">
+  
+    <!--项目全局样式-->
+    <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+    <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+  <!--说明文档样式,实际应用中请不要引用-->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+  <script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+  <div class="docs-page-masthead">
+    <h1>进度条(progress)</h1>
+    <p><code>.hm-progress</code>通过这些简单、灵活的进度条，为当前工作流程或动作提供实时反馈。 </p>
+  </div>
+  
+  <h2 >基本实例</h2>
+  <h3>默认样式的进度条</h3>
+  <div class="docs-example docs-example-progress">
+        <div class="hm-progress">
+            <div class="hm-progress-bar" style="width: 60%;">
+                <span class="hm-sr-only">60% Complete</span>
+            </div>
+        </div>
+
+  </div>
+  
+  
+  
+  <h3>带有提示标签的进度条</h3>
+  <div class="docs-example docs-example-progress">
+        <div class="hm-progress">
+            <div class="hm-progress-bar" style="width: 60%;">
+                60% Complete
+            </div>
+        </div>
+
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  <p>在展示很低的百分比时，如果需要让文本提示能够清晰可见，可以为进度条设置 <code>min-width</code> 属性。</p>
+  <div class="docs-example docs-example-progress">
+        <div class="hm-progress">
+            <div class="hm-progress-bar" style="min-width: 2em;">
+                0%
+            </div>
+        </div>
+        <div class="hm-progress ">
+            <div class="hm-progress-bar" style="min-width: 2em; width:2%;">
+                2%
+            </div>
+        </div>
+
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  <h2>根据情境变化效果</h2>
+  <p>进度条组件使用与按钮和警告框相同的类，根据不同情境展现相应的效果。</p>
+  <div class="docs-example docs-example-progress">
+        <div class="hm-progress ">
+            <div class="hm-progress-bar hm-progress-bar-success" style="width: 35%;">
+                35% Complete
+            </div>
+        </div>
+        
+        <div class="hm-progress ">
+            <div class="hm-progress-bar hm-progress-bar-info" style="width: 45%;">
+                45% Complete
+            </div>
+        </div>
+        
+        <div class="hm-progress ">
+            <div class="hm-progress-bar hm-progress-bar-warning" style="width: 60%;">
+                60% Complete
+            </div>
+        </div>
+        
+        <div class="hm-progress ">
+            <div class="hm-progress-bar hm-progress-bar-danger" style="width: 75%;">
+                75% Complete
+            </div>
+        </div>
+
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  
+  <h2>条纹效果</h2>
+  <p>通过渐变可以为进度条创建条纹效果。</p>
+  <div class="docs-example docs-example-progress">
+        <div class="hm-progress ">
+            <div class="hm-progress-bar hm-progress-bar-success hm-progress-bar-striped" style="width: 35%;">
+                35% Complete
+            </div>
+        </div>
+        
+        <div class="hm-progress ">
+            <div class="hm-progress-bar hm-progress-bar-info hm-progress-bar-striped" style="width: 60%;">
+                60% Complete
+            </div>
+        </div>
+        
+        <div class="hm-progress ">
+            <div class="hm-progress-bar hm-progress-bar-warning hm-progress-bar-striped" style="width: 60%;">
+                60% Complete
+            </div>
+        </div>
+        
+        <div class="hm-progress ">
+            <div class="hm-progress-bar hm-progress-bar-danger hm-progress-bar-striped" style="width: 75%;">
+                75% Complete
+            </div>
+        </div>
+
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  
+  <h2>动画效果</h2>
+  <p>为 <code>.hm-progress-bar-striped</code> 添加 <code>.hm-active</code> 类，使其呈现出由右向左运动的动画效果。</p>
+  <div class="docs-example docs-example-progress">
+        <div class="hm-progress ">
+            <div class="hm-progress-bar hm-progress-bar-success hm-progress-bar-striped hm-active" style="width: 60%;">
+                60% Complete
+            </div>
+        </div>
+        
+        
+
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  
+  <h2>堆叠效果</h2>
+  <p>把多个进度条放入同一个 <code>.hm-progress</code> 中，使它们呈现堆叠的效果。</p>
+  <div class="docs-example docs-example-progress">
+        <div class="hm-progress ">
+            <div class="hm-progress-bar hm-progress-bar-success" style="width: 35%;">
+                35%
+            </div>
+       
+            <div class="hm-progress-bar hm-progress-bar-info" style="width: 20%;">
+                20%
+            </div>
+        
+            <div class="hm-progress-bar hm-progress-bar-warning" style="width: 10%;">
+                10%
+            </div>
+        
+            <div class="hm-progress-bar hm-progress-bar-danger" style="width: 10%;">
+                10% 
+            </div>
+        </div>
+
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  
+  <h2>可控制进度条</h2>
+  <p>进度条组件使用与按钮和警告框相同的类，根据不同情境展现相应的效果。</p>
+  <div class="docs-example docs-example-progress">
+        <div class="hm-progress ">
+            <div class="hm-progress-bar " style="width:0%;">
+               0
+            </div>
+            <div class="hm-progress-handle" style="left: 0%;"></div>
+        </div>
+        <div class="hm-progress ">
+            <div class="hm-progress-bar " style="width:100%;">
+                100
+            </div>
+            <div class="hm-progress-handle" style="left: 100%;"></div>
+        </div>
+        <div class="hm-progress ">
+            <div class="hm-progress-bar " style="width: 35%;">
+                35
+            </div>
+            <div class="hm-progress-handle" style="left: 35%;"></div>
+            
+        </div>
+        <div class="hm-progress ">
+            <div class="hm-progress-bar " style="width: 30%;margin-left:30%;">
+                35-60
+            </div>
+            <div class="hm-progress-handle" style="left:30%;"></div>
+            <div class="hm-progress-handle" style="left: 60%;"></div>
+            
+        </div>
+        
+        
+
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  
+
+ 
+  
+  
+  
+  
+ 
+</div>
+</body>
+</html>

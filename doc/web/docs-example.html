@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="docs-html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>597-WEB</title>
+<meta name="description" content="CNY-MUI for webapp">
+<meta name="keywords" content="CNY-MUI for webapp">
+<meta name="author" content="cny,email:845257580@qq.com,qq:845257580">
+<meta name="Copyright" Content="陈南阳 版权所有 2017">
+
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="../resources/icons/icon.png">
+<link rel="apple-touch-icon" href="../resources/icons/icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="../resources/icons/icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="../resources/icons/icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="../undefined">
+
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../web/projects/themes-default/resources/css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../web/projects/themes-default/resources/css/base.css">
+<link rel="stylesheet" type="text/css" href="../../web/projects/themes-default/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../web/projects/themes-default/resources/css/css3-hsui.css">
+<link rel="stylesheet" type="text/css" href="../../web/projects/themes-default/resources/css/icon.css">
+<link rel="stylesheet" type="text/css" href="../../web/projects/themes-default/resources/css/global.css">
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../resources/css/docs.css">
+<script src="../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  //框架头部下拉菜单
+  	var intervalID; 
+	var curSel; 
+	$(".docs-has-pulldown").mouseover(function(){ 
+		curSel=$(this); 
+		intervalID=setInterval(onMouseOver,250);//鼠标移入的时候有一定的延时才会滑出下拉菜单，防止用户不经意的操作 
+	}); 
+	function onMouseOver(){ 
+		curSel.addClass("docs-current"); 
+		if(curSel.hasClass("docs-subsystem")){
+				curSel.addClass("docs-subsystem-active")
+			}
+		curSel.find(".docs-pulldown").slideDown("fast");	
+	} 
+	
+	$(".docs-has-pulldown").mouseout(function(){ 
+		clearInterval(intervalID); 
+	}); 
+	
+	$(".docs-has-pulldown").mouseleave(function(){ 
+		if($(this).hasClass("docs-subsystem-active")){
+				$(this).removeClass("docs-subsystem-active")
+			}
+		$(this).find(".docs-pulldown").hide();
+	}); 
+	
+	
+	//可收缩展开列表
+     $("[data-action=accordion] > li > a").click(function() {
+          $(this).next().slideToggle();
+          $(this).find("i").toggleClass("docs-icon-minus-square-o");
+          $(this).find("i").toggleClass("docs-icon-plus-square-o");
+		  
+		  $(this).parent().addClass("docs-active");
+		  $("[data-action=accordion] > li > a").not(this).parent().removeClass("docs-active");;
+		  
+          $("[data-action=accordion] > li > a").not(this).next().slideUp();
+          $("[data-action=accordion] > li > a").not(this).find("i").removeClass("docs-icon-minus-square-o").addClass("docs-icon-plus-square-o");
+         
+     })
+	 
+	 //侧边栏二级菜单
+     $("[data-action=accordion]  ul li").click(function() {
+          $(this).addClass("docs-active");
+		  $("[data-action=accordion]  ul li").not(this).removeClass("docs-active");;
+         
+     })
+
+
+  
+});
+</script>
+</head>
+<body class="docs-fluid">
+<!--header-->
+<div class="docs-header">
+    <div class="docs-container">
+        <!--系统logo-->
+        <div class="docs-logo docs-has-pulldown">
+            <div>
+                <a href="../../index.html"><img src="../resources/images/logo.png" alt=""/></a>
+            </div>
+            <div class="docs-pulldown">
+                <span class="docs-arrow"></span>
+                <div class="docs-pulldown-content">
+                    <a href="../mobile/docs-example.html" class="docs-pull-item">597 for mobile</a>
+                </div>
+            </div>
+        </div>
+        <ul class="docs-header-nav">
+            <li> <a href="docs-getting-started.html">开始使用</a> </li>
+            <li> <a href="docs-css.html">CSS</a> </li>
+            <li> <a href="docs-components.html">组件</a> </li>
+            <li class="docs-active"> <a href="docs-example.html">实际案例</a> </li>
+        </ul>
+    </div>
+</div>
+<!--main-->
+<div class="docs-main">
+    <div class="docs-container">
+        <div class="docs-aside">
+            <ul class="docs-nav" data-action="accordion">
+                <li class="docs-active"> <a href="#">框架案例<span class="docs-nav-en">Web</span><i class="docs-icon-plus-square-o"></i></a>
+                    <ul>
+                        <li class="docs-active"> <a href="docs-example/sample-resume.html" target="content-ifram">简历页<span class="docs-nav-en">resume</span></a> </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <div class="docs-iframe ">
+            <iframe src="docs-example/sample-resume.html" name="content-ifram" id="content-ifram" frameborder="0" scrolling="auto"></iframe>
+        </div>
+    </div>
+</div>
+</body>
+</html>

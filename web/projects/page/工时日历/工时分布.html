@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ICSSHS-UI</title>
+<link href="../../themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/action/themes-default/icon-action.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<!--页面布局样式,框架页面发现包含以下样式，否则布局会错乱-->
+<style type="text/css">
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.h-panel {
+	height: 100%;
+}
+</style>
+</head>
+<body>
+<!-- 布局 +++++++++++++++++++++++++开始+++++++++++++++++++++++++++++++++++++++--> 
+<!-- 面板 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+<div class="h-panel" style=" width:960px; height:500px; margin:10px auto;"> 
+  <!--面板头部-->
+  <div class="h-panel-header">
+    <div class=" h-pull-left">
+      <div class="h-panel-title">工时分布</div>
+    </div>
+    <div class="h-text-center h-pt-5">
+        <a href="#" class="h-pad10">2016<span class="h-caret"></span></a>
+    	<div class="h-btn-group">
+          <a class="h-btn" href="#">
+            <span class="h-btn-content"><</span>
+          </a>
+          <a class="h-btn h-active" href="#">
+            <span class="h-btn-content">三月 </span><span class="c-caret" ></span>
+          </a>
+          <a class="h-btn" href="#">
+            <span class="h-btn-content">></span>
+          </a>
+        </div>
+    </div>
+    <div class="h-pull-right"> <a href="#" class="h-close"></a> </div>
+  </div>
+  
+  <!--面板内容，一般放表单，数字，图表等-->
+  <div class="h-panel-body" style="padding:20px 20px;">
+      <p class="h-pad10">您三月份的工时为 25h，未填工时<span class="h-color-warning">200h</span> ,本月涉及项目 3个；加班25h ，调休25h，请假25h。</p>
+      
+    <div class="c-scrolldiv"   style="height:400px;">
+      <table cellspacing="0" class="c-Gantt">
+			<thead>
+				<tr><th  > </th>
+					<th >01</th><th>02</th><th  class="c-date-doing"> 03 </th><th>04</th><th>05</th><th>06</th><th>07</th>
+                    <th>08</th><th>09</th><th>10</th><th>11</th><th>12</th><th >13</th><th>14</th>
+                     <th>15</th><th>16</th><th>17</th><th>18</th><th>19</th><th>20</th><th><span class="c-date-today">21</span></th>
+                      <th>22</th><th>23</th><th>24</th><th>25</th><th>26</th><th>27</th><th>28</th>
+				</tr>
+                <tr > <th> </th>
+					 <th >一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th><th>日</th>
+					 <th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th><th>日</th>
+                	 <th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th><th>日</th>
+                     <th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th><th>日</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+                    <td class="c-date-nopass"><a href="#" class="c-date-chat h-icon c-icon-havechat"></a><span class="c-project-name ">2015年广东信息化应用扩展项目</span><!--<div class="c-dropdown-area">
+              <span class=" h-panel-title">项目经理A</span>
+                                        <p>用时太多多用时太多</p> 
+
+<span class=" h-panel-title">项目经理A</span>
+                                        <p>用时太多多用时太多</p> 
+            </div>--></td>
+                    <td></td>
+                    <td></td>
+					<td class="c-date-select"><div class="c-worktime">工<sup>5</sup></div></td>
+					<td class="c-date-select"><div class="c-worktime"><span class="c-date-overtime">加2</span></div></td>
+					<td class="c-date-select"><div class="c-worktime">工<sup>5</sup><span class="c-date-overtime">加<sup>4</sup></span></div></td>
+					<td  class="c-date-select"></td>
+                    <td  class="c-weakend "></td>
+					<td></td>
+					<td  ></td>
+					<td ></td>
+					<td></td>
+					<td></td>
+					<td  class="c-weakend"></td>
+                    <td  class="c-weakend"></td>
+					<td ></td>
+					<td class="c-date-pass" > </td>
+					<td  > </td>
+					<td  > </td>
+					<td  > </td>
+                    <td class="c-weakend"></td>
+					<td class="c-weakend"></td>
+					<td ></td>
+					<td></td>
+                    <td></td>
+					<td></td>
+					<td></td>
+					<td class="c-weakend"></td>
+                    <td class="c-weakend"></td>
+				</tr>
+				<tr>
+                <td  ><span class="c-project-name">2015年广西贺州烟叶移动应用及</span></td>
+				<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="c-weakend"></td>
+					<td class="c-weakend"></td>
+					<td></td>
+                    <td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+                    <td class="c-weakend"></td>
+                    <td class="c-weakend"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td></td>
+					<td class="c-weakend"></td>
+					<td class="c-weakend"></td>
+                    <td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+                    <td></td>
+                    <td class="c-weakend"></td>
+                    <td class="c-weakend"></td>	
+				</tr>
+                <tr>
+                <td  ><span class="c-project-name">请假</span></td>
+				<td></td>
+					<td></td>
+					<td></td>
+					<td  ></td>
+					<td  ></td>
+					<td class="c-weakend"></td>
+					<td class="c-weakend"></td>
+					<td ><div class="c-worktime c-holidaytime">假<sup>4</sup></div></td>
+                   <td  ><div class="c-worktime c-holidaytime">假</div></td>
+					<td  ></td>
+					<td></td>
+					<td></td>
+                    <td class="c-weakend"></td>
+                    <td class="c-weakend"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td></td>
+					<td class="c-weakend"></td>
+					<td class="c-weakend"></td>
+                    <td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+                    <td></td>
+                    <td class="c-weakend"></td>
+                    <td class="c-weakend"></td>	
+				</tr>
+                <tr>
+                <td  ><span class="c-project-name">调休</span></td>
+				<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="c-weakend"></td>
+					<td class="c-weakend"></td>
+					<td></td>
+                    <td></td>
+					<td ><div class="c-worktime c-resttime">休<sup>4</sup></div></td>
+					<td  ><div class="c-worktime c-resttime">休</div></td>
+					<td></td>
+                    <td class="c-weakend"></td>
+                    <td class="c-weakend"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td></td>
+					<td class="c-weakend"></td>
+					<td class="c-weakend"></td>
+                    <td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+                    <td></td>
+                    <td class="c-weakend"></td>
+                    <td class="c-weakend"></td>	
+				</tr>
+ 
+			</tbody>
+			 
+		</table>
+    
+   </div> 
+  </div>
+  <!--面板底部工具-->
+  <div class="h-toolbar h-toolbar-footer" >
+      <div class="h-pull-left"> 
+                        <span class="h-icon c-icon-info" style="margin-right:5px;"></span> <span class="c-helpinfo"> <em class="c-helpinfo-yes"></em>为填写,<em class="c-helpinfo-pass"></em>为审批通过，<em class="c-helpinfo-nopass"></em>为审批不通过,<em class="c-helpinfo-worktime">加<sup>X</sup></em>为有加正常班x小时,<em class="c-helpinfo-overtime">加<sup>X</sup></em>为有加班x小时。<em class="c-helpinfo-holiday">假</em>为请一天假，<em class="c-helpinfo-rest">休</em>为调一天休。</span> </div>
+    </div>
+</div>
+
+<!-- 布局 +++++++++++++++++++++++++结束+++++++++++++++++++++++++++++++++++++++-->
+
+</body>
+</html>

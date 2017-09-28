@@ -1,0 +1,116 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2015-10
+======================================*/
+
+/*-------------------------------------------------------------
+	菜单CSS命令规约：
+	
+	子系统图标：h-f-icon-system-xxx；
+	模块图标：  h-f-icon-module-xxx，其对应的衍生图标为：
+h-f-icon-module-xxx_ext 如果模块图标其下无分支时，模块图标还需要衍生一个类菜单的图标出来。
+	菜单图标：  h-f-icon-menu-xxx；
+
+-------------------------------------------------------------*/
+
+/**
+@group 子系统图标=====================================================
+*/
+/**
+@tag 子系统名称1
+*/
+.h-f-icon-system-1 { background-image: url(images/icon-system-1.png) !important; }
+/**
+@tag 子系统名称1
+*/
+.h-f-icon-system-2 { background-image: url(images/icon-system-2.png) !important; }
+/**
+@tag 子系统名称1
+*/
+.h-f-icon-system-3 { background-image: url(images/icon-system-3.png) !important; }
+/**
+@tag 子系统名称1
+*/
+.h-f-icon-system-4 { background-image: url(images/icon-system-4.png) !important; }
+/**
+@tag 子系统名称1
+*/
+.h-f-icon-system-5 { background-image: url(images/icon-system-5.png) !important; }
+/**
+@tag 子系统名称1
+*/
+.h-f-icon-system-6 { background-image: url(images/icon-system-6.png) !important; }
+
+/**
+@group 模块图标=====================================================
+*/
+/**
+@tag 模块标签1
+*/
+.h-f-icon-module-1 { background-image: url(images/icon-module-1.png) !important; }
+/**
+@tag 模块标签2
+*/
+.h-f-icon-module-2 { background-image: url(images/icon-module-2.png) !important; }
+/**
+@tag 模块标签3
+*/
+.h-f-icon-module-3 { background-image: url(images/icon-module-3.png) !important; }
+/**
+@tag 模块标签4
+*/
+.h-f-icon-module-4 { background-image: url(images/icon-module-4.png) !important; }
+/**
+@tag 模块标签5
+*/
+.h-f-icon-module-5 { background-image: url(images/icon-module-5.png) !important; }
+/**
+@tag 模块标签6
+*/
+.h-f-icon-module-6 { background-image: url(images/icon-module-6.png) !important; }
+
+
+
+
+
+
+
+/**
+@group 菜单图标=====================================================
+*/
+
+/**
+@tag 菜单标签
+*/
+.h-f-icon-menu-1 { background-image: url(images/icon-menu-1.png) !important; }
+/**
+@tag 菜单名称
+*/
+.h-f-icon-menu-2 { background-image: url(images/icon-menu-2.png) !important; }
+/**
+@tag 菜单名称
+*/
+.h-f-icon-menu-3 { background-image: url(images/icon-menu-3.png) !important; }
+/**
+@tag 菜单名称
+*/
+.h-f-icon-menu-4 { background-image: url(images/icon-menu-4.png) !important; }
+/**
+@tag 菜单名称
+*/
+.h-f-icon-menu-5 { background-image: url(images/icon-menu-5.png) !important; }
+/**
+@tag 菜单名称
+*/
+.h-f-icon-menu-6 { background-image: url(images/icon-menu-6.png) !important; }
+/**
+@tag 菜单名称
+*/
+.h-f-icon-menu-7 { background-image: url(images/icon-menu-7.png) !important; }
+/**
+@tag 菜单名称
+*/
+.h-f-icon-menu-8 { background-image: url(images/icon-menu-8.png) !important; }

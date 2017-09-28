@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+<meta charset="utf-8">
+<title>WEBAPP通用框架HTML</title>
+<meta name="description" content="HSIT-UI for mobile">
+<meta name="keywords" content="HSIT-UI  for mobile">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/global.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/base.css">
+
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../../../resources/css/docs.css">
+</head>
+<body class="docs-body">
+<div class="docs-content">
+<div class="docs-page-masthead">
+  <h1>绝对位置布局(absoluteLayout)</h1>
+  <p>绝对位置布局：在此布局中的子元素可以相互重叠，通过<code>style="z-index:数值";</code>设置前后关系。 </p>
+</div>
+
+<!--默认的9个位置-->
+<h2>实例：默认的9个位置</h2>
+<p class="docs-p">使用绝对位置布局的父容器需添加样式<code>.hm-pos-re</code>。子容器通过<code>.hm-pos-ab .hm-pos-to-</code>来实现9个位置的定位</p>
+<div class="docs-example">
+  <div class="docs-area">
+    <div class="hm-pos-re" style="height:200px;">
+      <div class="hm-pos-ab hm-pos-to-lt">
+        <a class="hm-btn hm-btn-primary" href="#">左上</a>
+      </div>
+      <div class="hm-pos-ab hm-pos-to-lc">
+        <a class="hm-btn hm-btn-primary" href="#">左中</a>
+      </div>
+      <div class="hm-pos-ab hm-pos-to-lb">
+        <a class="hm-btn hm-btn-primary" href="#">左下</a>
+      </div>
+      <div class="hm-pos-ab hm-pos-to-ct">
+        <a class="hm-btn hm-btn-primary" href="#">中上</a>
+      </div>
+      <div class="hm-pos-ab hm-pos-to-cc">
+        <a class="hm-btn hm-btn-primary" href="#">中中</a>
+      </div>
+      <div class="hm-pos-ab hm-pos-to-cb">
+        <a class="hm-btn hm-btn-primary" href="#">中下</a>
+      </div>
+      <div class="hm-pos-ab hm-pos-to-rt">
+        <a class="hm-btn hm-btn-primary" href="#">右上</a>
+      </div>
+      <div class="hm-pos-ab hm-pos-to-rc">
+        <a class="hm-btn hm-btn-primary" href="#">右中</a>
+      </div>
+      <div class="hm-pos-ab hm-pos-to-rb">
+        <a class="hm-btn hm-btn-primary" href="#">右下</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="docs-highlight">
+  <pre><code> &lt;div class="<span class="docs-color-red">hm-pos-re</span>" &gt;
+    	&lt;div class="<span class="docs-color-red">hm-pos-ab hm-pos-to-lt</span>"&gt;左上&lt;/div&gt;
+        &lt;div class="<span class="docs-color-red">hm-pos-ab hm-pos-to-lc</span>"&gt;左中&lt;/div&gt;
+        &lt;div class="<span class="docs-color-red">hm-pos-ab hm-pos-to-lb</span>"&gt;左下&lt;/div&gt;
+        &lt;div class="<span class="docs-color-red">hm-pos-ab hm-pos-to-ct</span>"&gt;中上&lt;/div&gt;
+        &lt;div class="<span class="docs-color-red">hm-pos-ab hm-pos-to-cc</span>"&gt;中中&lt;/div&gt;
+        &lt;div class="<span class="docs-color-red">hm-pos-ab hm-pos-to-cb</span>"&gt;中下&lt;/div&gt;
+        &lt;div class="<span class="docs-color-red">hm-pos-ab hm-pos-to-rt</span>"&gt;右上&lt;/div&gt;
+        &lt;div class="<span class="docs-color-red">hm-pos-ab hm-pos-to-rc</span>"&gt;右中&lt;/div&gt;
+        &lt;div class="<span class="docs-color-red">hm-pos-ab hm-pos-to-rb</span>"&gt;右下&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+<!--指定位置的定位-->
+<h2>实例：指定位置的定位</h2>
+<p class="docs-p">父容器添加样式<code>.hm-pos-re</code>。子容器通过<code>.hm-pos-ab</code>以及相应的left/right/top/bottom的值进行定位</p>
+
+
+<div class="docs-example">
+  <div class="docs-area">
+    <div class="hm-pos-re" style="height:200px;">
+  <div class="hm-pos-ab" style="left:30px; top:30px;">
+    <a class="hm-btn hm-btn-primary" href="#">距离左侧30px，顶部30px;</a>
+  </div>
+  <div class="hm-pos-ab" style="right:30px; top:30px;">
+    <a class="hm-btn hm-btn-primary"  href="#">距离右侧30px，顶部30px;</a>
+  </div>
+  <div class="hm-pos-ab" style="left:30px; bottom:30px;">
+    <a class="hm-btn hm-btn-primary" href="#">距离左侧30px，底部30px;</a>
+  </div>
+  <div class="hm-pos-ab" style="right:30px; bottom:30px;">
+    <a class="hm-btn hm-btn-primary" href="#">距离右侧30px，底部30px;</a>
+  </div>
+</div>
+  </div>
+</div>
+<div class="docs-highlight">
+  <pre> &lt;div class="<span class="docs-color-red">hm-pos-re</span>" &gt;
+    	&lt;div class="<span class="docs-color-red">hm-pos-ab</span> style="<span class="docs-color-red">left:30px; top:30px;</span>"&gt;距离左侧30px，顶部30px;&lt;/div&gt;
+        &lt;div class="<span class="docs-color-red">hm-pos-ab</span>" style="<span class="docs-color-red">right:30px; top:30px;</span>"&gt;距离右侧30px，顶部30px;&lt;/div&gt;
+        &lt;div class="<span class="docs-color-red">hm-pos-ab</span>" style="<span class="docs-color-red">left:30px; bottom:30px;</span>"&gt;距离左侧30px，底部30px;&lt;/div&gt;
+        &lt;div class="<span class="docs-color-red">hm-pos-ab</span>" style="<span class="docs-color-red">right:30px; bottom:30px;</span>"&gt;距离右侧30px，底部30px;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+
+</body>
+</html>

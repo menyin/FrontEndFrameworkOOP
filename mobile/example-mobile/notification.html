@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICSSHS-MUI for webapp</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<meta name="x5-fullscreen" content="true">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon.png">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="../project/resources/css/images/icons/undefined">
+
+<!--项目全局样式-->
+<link href="../project/resources/css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/global.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/animate.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/base.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/iconfont.css" rel="stylesheet" type="text/css" />
+<script src="../project/resources/js/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	//同一页面存在多个弹窗控件时的调用方式
+	var curPopup;
+	var curAnimationIn;  //弹窗进入时的动画
+	var curAnimationOut;  //弹窗退出时的
+	$("[data-action^='popup-']").click(function(){
+		curPopup=$(this).attr("data-action");//获取所在显示的弹窗ID
+		curAnimationIn=$(this).attr("data-animation");//获取弹窗显示的动画方式
+		
+		$("#"+curPopup).fadeIn();//打开模态框
+		$(".hm-popup").removeClass(curAnimationOut);//清除上次退出时的动画
+		$("#"+curPopup).find(".hm-popup").addClass(curAnimationIn);//设定弹窗显示的动画方式
+		$("body").addClass("hm-ov-hide");//隐藏滚动条
+		
+		
+		
+  });
+	//关闭浮窗
+	$("[data-action=close-popup]").click(function() {
+		         curAnimationOut=$(this).attr("data-animation");//获取弹窗关闭的动画方式
+				$(".hm-popup").removeClass(curAnimationIn);//清除打开时的动画
+				$("#"+curPopup).find(".hm-popup").addClass(curAnimationOut);//设定关闭时的动画
+				$(this).parents(".hm-popup-wrapper").fadeOut("fast");//关闭弹层
+				$("body").removeClass("hm-ov-hide");//重新显示body的滚动条
+				
+	})
+	
+	
+	
+});
+</script>
+</head>
+<body class="hm-ov-x-hide">
+<!--page-->
+<div class="hm-page hm-page-active" >
+    <div class="hm-header hm-header-dark">
+        <a class="hm-btn" href="#" onclick="history.go(-1)">
+        <i class="hm-icon-back"></i>
+        </a>
+        <div class="hm-flex-1" >
+        </div>
+        <div class="hm-title">
+            通知栏
+        </div>
+    </div>
+    <div class="hm-content">
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                通知栏示例
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-listview">
+                    <a class="hm-li hm-li-link" href="javascript:void(0);" data-action="popup-notification" data-animation="fadeInDown">
+                        <div class="hm-li-content hm-flex-1">显示通知栏</div>
+                        <div class="hm-li-footer"></div>
+                    </a> 
+                </div>
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                通知栏样式
+            </div>
+            <div class="hm-group-content">
+                
+                <div class="hm-notification" >
+                	<div class="hm-notification-content">
+                        <h2 class="hm-notification-title">测试标题</h2>
+                        <span>这是一个通知，推送相关的通知、消息、事件等 :)</span>
+                    </div>
+                    <i class="hm-icon-close" data-action="close-notification"></i>
+                    
+                </div>
+                <div class="hm-notification hm-notification-primary" >
+                	<div class="hm-notification-content">
+                        <h2 class="hm-notification-title">测试标题</h2>
+                        <span>这是一个通知，推送相关的通知、消息、事件等 :)</span>
+                    </div>
+                    <i class="hm-icon-close"></i>
+                    
+                </div>
+                <div class="hm-notification hm-notification-info" >
+                	<div class="hm-notification-content">
+                        <h2 class="hm-notification-title">测试标题</h2>
+                        <span>这是一个通知，推送相关的通知、消息、事件等 :)</span>
+                    </div>
+                    <i class="hm-icon-close"></i>
+                    
+                </div>
+                <div class="hm-notification hm-notification-success" >
+                	<div class="hm-notification-content">
+                        <h2 class="hm-notification-title">测试标题</h2>
+                        <span>这是一个通知，推送相关的通知、消息、事件等 :)</span>
+                    </div>
+                    <i class="hm-icon-close"></i>
+                    
+                </div>
+                <div class="hm-notification hm-notification-warning" >
+                	<div class="hm-notification-content">
+                        <h2 class="hm-notification-title">测试标题</h2>
+                        <span>这是一个通知，推送相关的通知、消息、事件等 :)</span>
+                    </div>
+                    <i class="hm-icon-close"></i>
+                    
+                </div>
+                <div class="hm-notification hm-notification-danger" >
+                	<div class="hm-notification-content">
+                        <h2 class="hm-notification-title">测试标题</h2>
+                        <span>这是一个通知，推送相关的通知、消息、事件等 :)</span>
+                    </div>
+                    <i class="hm-icon-close"></i>
+                    
+                </div>
+            </div>
+           
+            
+           
+            
+            
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+
+<!--操作列表弹窗(actions)===============================开始-->
+<div class="hm-popup-wrapper hm-popup-wrapper-auto" id="popup-notification">
+  <!--<div class="hm-mask" data-action="close-popup" data-animation="fadeOutUp"></div>-->
+  <div class="hm-popup hm-popup-top">
+      <div class="hm-notification" id="notification-default">
+                        <div class="hm-notification-content">
+                            <h2 class="hm-notification-title">测试标题</h2>
+                            <span>这是一个通知，推送相关的通知、消息、事件等 :)</span>
+                        </div>
+                        <i class="hm-icon-close" data-action="close-popup" data-animation="fadeOutUp"></i>
+    </div>
+    </div>
+</div>
+<!--操作列表弹窗(actions)======结束-->
+</body>
+</html>

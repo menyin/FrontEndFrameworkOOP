@@ -1,0 +1,1165 @@
+@charset "utf-8";
+/*  待处理 */
+#weather {
+	width: 114px;
+	height: 39px;
+	position: absolute;
+	left: 16px;
+	top: 64px;
+	background-image: url(images/portal/img-weather.png);
+	background-repeat: no-repeat
+}
+#time {
+	width: 72px;
+	height: 41px;
+	position: absolute;
+	right: 16px;
+	top: 64px;
+	background-image: url(images/portal/img-time.png);
+	background-repeat: no-repeat
+}
+#weather2 {
+	float: left;
+	border-left: solid #82af00 1px;
+	color: #fff;
+	padding-left: 15px;
+	margin-left: 15px;
+}
+#weather2 img {
+	margin-top: 10px;
+	margin-right: 5px;
+}
+#weather2 p {
+	float: right;
+	font-size: 28px;
+}
+#weather2 span {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	line-height: 14px;
+}
+#time2 {
+	float: left;
+	color: #fff;
+	font-size: 14px !important;
+}
+.h-p-timeNumber {
+	font-size: 48px;
+	line-height: 48px
+}
+/*
+	基础样式
+*/
+html,
+body {
+	text-rendering: optimizeLegibility;
+	font-family: "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #333333;
+}
+.h-p-wrapper {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+.h-p-widthauto { width: auto !important }
+.h-p-mt20 { margin-top: 20px; }
+.h-p-pad20 { padding: 20px; }
+.h-p-pad10 { padding: 10px; }
+.h-p-float-left { float: left !important; }
+.h-p-float-right { float: right !important; }
+.h-p-icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	vertical-align: middle;
+	background-image: url("images/portal/icon-default.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.h-p-icon-l {
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	background-image: url("images/portal/icon-default-l.png");
+}
+.h-p-icon-xl {
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	background-image: url("images/portal/icon-default-xl.png");
+}
+.h-p-icon-xxl {
+	width: 48px;
+	height: 48px;
+	line-height: 48px;
+	background-image: url("images/portal/icon-default-xxl.png");
+}
+.h-p-icon-xxxl {
+	width: 64px;
+	height: 64px;
+	line-height: 64px;
+	background-image: url("images/portal/icon-default-xxxl.png");
+}
+.h-p-icon-114 {
+	width: 114px;
+	height: 114px;
+	line-height: 114px;
+	background-image: url("images/portal/icon-default-xxxl.png");
+}
+.h-p-hide { display: none; }
+.h-p-slider {
+	padding-top: 38px;
+	margin: auto;
+	height: 100%;
+}
+.h-p-slider-bluebg { background-color: #6aa1e1; }
+.h-p-panel {
+	height: 100%;
+	background: #fff;
+}
+.h-p-panel-header {
+	padding: 5px 10px;
+	background-color: #eee;
+}
+.h-p-icon-close-black {
+	display: inline-block;
+	width: 16px;
+	height: 30px;
+	margin-top: 1px;
+	line-height: 30px;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0 4px;
+	background-image: url(images/portal/icon-close-black.png) !important;
+}
+.h-p-panel-gray { background: #edf0f0; }
+.tempdiv {
+	margin: auto;
+	height: 100%;
+	text-align: center
+}
+.h-p-titleBar {
+	/*padding:8px 16px 8px 16px; 界面算法控制*/	
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#f3f5f5', GradientType=0 ); /*ie*/
+	border-bottom: #eaeaea solid 1px\9; /*ie*/
+	background: -ms-linear-gradient(top, #f8f8f8, #f3f5f5);        /* IE 10 */
+	background: -moz-linear-gradient(top, #f8f8f8, #f3f5f5);/*火狐*/
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#f3f5f5));/*谷歌*/
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+.h-p-noborder {
+	border: none !important;
+	border-image: none!important;
+}
+/* --------------------------------------------------------------------
+
+---------------------管理层------------------------------------------ */
+
+.h-p-topTab {
+	text-align: center;
+	width: 100%;
+	height: 38px;
+}
+.h-p-bgmanager { background-color: #0758c0; }
+.h-p-panel-l {
+	float: left;
+	width: 15%;
+	height: 100%;
+}
+.h-p-panel-c {
+	float: left;
+	width: 65%;
+	height: 100%;
+	border-left: #CCC solid 1px;
+}
+.h-p-panel-r {
+	float: left;
+	width: 15%;
+	height: 100%;
+	padding: 16px;
+}
+.h-p-title {
+	font-size: 20px;
+	color: #666;
+	padding: 5px 0px 5px 0px;
+	line-height: 16px;
+}
+.h-p-title-aid {
+	padding-left: 8px;
+	color: #bbb;
+	font-size: 14px;
+}
+.h-p-panel-title {
+	padding: 5px 10px 5px 10px;
+	background-color: #f5f5f5
+}
+.h-p-back-title {
+	padding: 5px;
+	background-color: #f5f5f5
+}
+.h-p-title-module {
+	color: #666;
+	font-size: 18px;
+	padding: 0 0 4px 0;
+}
+.h-p-list { }
+.h-p-list li {
+	padding: 10px;
+	padding-left: 32px;
+	background-image: url(images/portal/icon-table.png);
+	background-size: 16px;
+	background-position: 5px center;
+	background-repeat: no-repeat;
+}
+/***************
+*
+*  外部插件 Tabs
+*
+****************/
+
+.rsMinW .rsTabs {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+}
+.rsMinW .rsTab {
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	height: auto;
+	width: auto;
+	font-size: 17px;
+	padding: 3px 20px 7px 20px;
+	min-width: 72px;
+	text-decoration: none;
+	color: #fff;
+ *display:inline;
+ *zoom:1;
+}
+.rsMinW .rsTab a { color: #fff; }
+.rsMinW .rsTab:active {
+	background-color: #6491d1;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) inset;
+}
+.rsMinW .rsTab.rsNavSelected {
+	background: #f8f8f8;
+	border-top: #8ec100 solid 4px;
+}
+.rsMinW .rsTab.rsNavSelected a { color: #666666; }
+.rsTmb { display: block; }
+/* lefttab  */
+
+#h-p-leftTab {
+	width: 112px;
+	margin-left: 5px;
+}
+#h-p-leftTab.rsOverflow { margin-left: 117px; }
+#h-p-leftTab.rsMinW .rsTab { border-bottom: #6096de solid 1px; }
+#h-p-leftTab.rsMinW .rsTab.rsNavSelected {
+	background: none;
+	background-image: url(images/portal/tabbtn-left-selected.png);
+	background-repeat: no-repeat;
+	background-position: 10px 15px;
+	border-top: none;
+}
+#h-p-leftTab.rsMinW .rsTab:hover {
+	background: none;
+	background-image: url(images/portal/tabbtn-left-hover.png);
+	background-repeat: no-repeat;
+	background-position: 10px 15px;
+	border-top: none;
+}
+#h-p-leftTab.rsMinW .rsTab:active {
+	background: none;
+	background-image: url(images/portal/tabbtn-left-selected.png) !important;
+	background-repeat: no-repeat;
+	background-position: 10px 15px;
+	border-top: none;
+	box-shadow: none;
+}
+#h-p-leftTab.rsMinW .rsTab a {
+	padding-left: 0;
+	padding-bottom: 10px;
+	height: 102;
+}
+/***************
+*
+*   Tabs  end
+*
+****************/	
+	
+/* tab btns */
+.rsMinW .rsTab a {
+	padding-left: 30px;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+.rsTab >.h-p-btn-ywzl { background-image: url(images/portal/btn-ywzl.png); }
+.rsNavSelected>.h-p-btn-ywzl { background-image: url(images/portal/btn-ywzl-select.png); }
+.rsTab >.h-p-btn-ywxq { background-image: url(images/portal/btn-ywxq.png); }
+.rsNavSelected>.h-p-btn-ywxq { background-image: url(images/portal/btn-ywxq-select.png); }
+.rsTab >.h-p-btn-ywfx { background-image: url(images/portal/btn-ywfx.png); }
+.rsNavSelected>.h-p-btn-ywfx { background-image: url(images/portal/btn-ywfx-select.png); }
+.rsTab >.h-p-btn-glkz { background-image: url(images/portal/btn-glkz.png); }
+.rsNavSelected>.h-p-btn-glkz { background-image: url(images/portal/btn-glkz-select.png); }
+.rsTab >.h-p-btn-ywzc { background-image: url(images/portal/btn-ywzc.png); }
+.rsNavSelected>.h-p-btn-ywzc { background-image: url(images/portal/btn-ywzc-select.png); }
+/*-------------------------------------------------------
+-----------业务总览---------------------------------*/
+
+.h-p-mainTimeline a {
+	float: left;
+	margin: 0 16px;
+	color: #999;
+	background-image: url(images/portal/icon-timeline-dot.png);
+	background-position: center 13px;
+	background-repeat: no-repeat;
+	height: 100%;
+	padding-top: 30px;
+}
+.h-p-mainTimeline {
+	background-image: url(images/portal/img-timelineBg.png);
+	background-repeat: repeat-x;
+	background-position: center;
+	height: 40px;
+	margin-left: 3%;
+}
+.h-p-timeline-Selected {
+	background-image: url(images/portal/icon-timeline-Selected.png) !important;
+	background-position: center 10px !important;
+}
+.h-p-mainTimeline a:hover {
+	color: #9aca40;
+	background-image: url(images/portal/icon-timeline-dot-hover.png);
+}
+.h-p-modulebox {
+	height: 100%;
+	background-color: #eeeff1;
+	margin-top: 5px;
+}
+.h-p-bg-white { background-color: #fff !important; }
+
+@media only screen and (min-width:1024px) {
+.h-p-mainTimeline { margin-left: 5%; }
+.h-p-mainTimeline a { margin: 0 16px; }
+}
+/*---------------------------------------------------
+---------------业务详情---------------------------------*/
+.h-p-bg-sea {
+	background-image: url(images/portal/bg-ywxq.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-color: #0758c0;
+}
+.h-p-seaTilte-div {
+	position: absolute;
+	margin-top: -70px;
+	margin-left: -16px;
+}
+.h-p-seaTilte {
+	padding: 16px 0 0 32px;
+	color: #fff;
+	font-size: 20px;
+}
+.h-p-seaSample {
+	float: left;
+	padding-left: 56px;
+	color: #fff;
+	background-image: url(images/portal/btn-fishdot-sample.png);
+	background-repeat: no-repeat;
+	background-position: 35px 6px
+}
+.h-p-qipao {
+	margin-top: -32px;
+	padding-right: 310px;
+	width: 0;
+	height: 400px;
+	float: left;
+	background-image: url(images/portal/bg-qipao.png);
+	background-repeat: no-repeat;
+}
+.h-p-qipaoTitle {
+	position: absolute;
+	;
+	right: 20%;
+	color: #fff;
+	font-size: 20px;
+	margin-top: -24px;
+}
+#hs-fish {
+	width: 1100px;
+	height: 400px;
+	margin-left: -520px;
+	margin-top: -160px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+.h-p-fish {
+	width: 0px;
+	padding-right: 770px;
+	height: 400px;
+	float: left;
+	background-image: url(images/portal/bg-fish.png);
+	background-repeat: no-repeat;
+}
+.h-p-btn-fishdot {
+	width: 38px;
+	height: 42px;
+	padding: 7px 12px 10px 12px;
+	line-height: 20px;
+	position: absolute;
+	display: inline-block;
+	font-size: 16px;
+	color: #333;
+	background-image: url(images/portal/btn-fishdot.png)
+}
+.h-p-btn-fishdot-center {
+	padding-top: 17px;
+	padding-bottom: 0px;
+}
+.h-p-btn-fishdot:hover {
+	background-image: url(images/portal/btn-fishdot-hover.png);
+	color: #000;
+}
+.h-p-btn-fishdot-delected { background-image: url(images/portal/btn-fishdot-selected.png) }
+.h-p-btn-fishdot-delected:hover { background-image: url(images/portal/btn-fishdot-selected-hover.png) }
+.h-p-btn-qipao {
+	position: absolute;
+	display: inline-block;
+	width: 50px;
+	font-size: 20px;
+	line-height: 22px;
+	color: rgb(255, 255, 255);
+}
+.h-p-btn-qipao:hover {
+	background-image: url(images/portal/btn-qipao-hover.png);
+	color: #00f6ff;
+}
+/* --------------------------------------------
+---------------------------------管理控制---------------------------------*/
+
+
+
+.h-p-TimelineTab {
+	background-image: url(images/portal/img-timelineTabBg.png);
+	background-repeat: repeat-y;
+	background-position: 136px center;
+	width: 170px;
+	float: left;
+	margin-left: 16px;
+	text-align: center;
+}
+.h-p-TimelineTab a {
+	display: block;
+	font-size: 16px;
+	padding: 5px 40px 7px 10px;
+	color: #333;
+	background-image: url(images/portal/img-timelineTab-btn.png);
+	background-position: 0 center;
+	background-repeat: no-repeat;
+	margin: 7px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.h-p-TimelineTab a:hover {
+	color: #fff;
+	background-image: url(images/portal/img-timelineTab-btn-Hover.png);
+	background-position: 0 center;
+	background-repeat: no-repeat;
+}
+.h-p-TimelineTab-Selected {
+	background-image: url(images/portal/img-timelineTab-btn-Selected.png) !important;
+	color: #fff !important;
+}
+.h-p-title-glkz { width: 70% }
+.h-p-glkz-right {
+	background-color: #FFF;
+	height: 100%;
+	position: absolute;
+	right: 10px;
+	left: 200px;
+}
+.h-p-btn-glkz-right {
+	float: right;
+	padding: 0 0 0 5px;
+	border: #CCC solid 1px;
+}
+.h-p-btn-set { margin-top: 16px; }
+.h-p-btn-set span {
+	background-image: url(images/portal/icon-set.png);
+	background-position: 45px center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	padding: 5px 40px 5px 10px;
+}
+.h-p-btn-plus { margin-top: 16px; }
+.h-p-btn-plus span {
+	background-image: url(images/portal/icon_plus.png);
+	background-position: 45px center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	padding: 5px 40px 5px 10px;
+}
+.h-p-list-title { width: 70% }
+.h-p-glyq {
+	width: 35%;
+	left: 20px;
+	top: 45px;
+	position: absolute;
+	min-width: 250px;
+	bottom: 80px;
+}
+.h-p-list-glyq {
+	position: absolute;
+	overflow: auto;
+	width: 100%;
+	left: 10px;
+	right: 10px;
+	top: 55px;
+	height: 100%
+}
+.h-p-list-sjglyq {
+	position: absolute;
+	overflow: auto;
+	bottom: 0;
+	left: 0px;
+	right: 0px;
+	top: 41px;
+}
+.h-p-list-glyq li,
+.h-p-list-kzgz li {
+	background-color: #fbfbfb;
+	padding: 10px !important;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+.h-p-item-time {
+	font-size: 14px;
+	color: #999
+}
+p.h-p-item-time { margin-top: 8px }
+.h-p-app-list li { padding: 8px; }
+.h-p-icon-glyq { background-image: url(images/portal/icon-glyq.png) !important }
+.h-p-list-kzgz {
+	position: absolute;
+	overflow: auto;
+	right: 10px;
+	left: 10px;
+	top: 55px;
+	height: 100%
+}
+.h-p-kzgz {
+	width: 55%;
+	position: absolute;
+	right: 10px;
+	margin-left: 10px;
+	bottom: 80px;
+	top: 45px;
+}
+.h-p-icon-kzgz { background-image: url(images/portal/icon-kzgz.png) !important }
+.h-p-seemorediv {
+	background: #fff;
+	top: 40px;
+	position: absolute;
+	right: 0px;
+	height: 360px;
+	width: 300px;
+	z-index: 400;
+	overflow: hidden;
+	border: solid #CCC 1px;
+	border-radius: 5px;
+}
+/*业务时序*/
+
+.h-p-btn-settime {
+	position: absolute;
+	right: 130px;
+	top: 5px;
+}
+.h-p-tdbg { background-color: #f3f4f9 }
+.h-p-tdline-right { border-right: #cfcfcf 1px solid !important; }
+.h-p-timeline {
+	width: 100%;
+	height: 14px;
+	background-color: #6aa1e1;
+}
+.h-p-forwidth {
+	margin: 20px 130px 0px 20px !important;
+	width: auto;
+}
+/* ---------------------------------------------
+----------业务支撑-------------------------------------- */
+.h-p-tabbtn-left {
+	width: 90px;
+	height: 100px;
+}
+.h-p-tabbtn-jcsx { background-image: url(images/portal/btn-basic.png); }
+.h-p-tabbtn-ywsw { background-image: url(images/portal/btn-time.png); }
+.h-p-tabbtn-gwzz { background-image: url(images/portal/btn-post.png); }
+.h-p-tabbtn-xxjh { background-image: url(images/portal/tabbtn-xxjh.png); }
+/*基础属性*/
+
+.h-p-leftTabcontant {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 117px;
+	right: 0;
+}
+.h-p-fieldset {
+	float: left;
+	margin: 16px
+}
+.h-p-fieldset-title {
+	font-size: 20px;
+	color: #666;
+	margin-left: 10px;
+}
+.h-p-fieldset-contant-outline {
+	border: #CCC solid 1px;
+	border-top: #ccc solid 2px;
+	border-radius: 5px;
+	width: auto;
+	min-width: 200px;
+	text-align: center;
+	padding: 16px;
+}
+.h-p-fieldset-contant {
+	margin: auto;
+	display: inline-block;
+}
+.h-p-fieldset-digi {
+	float: left;
+	text-align: center;
+	margin: auto;
+	font-size: 18px;
+	color: #999;
+	line-height: 32px;
+	width: 100px;
+	padding: 10px 5px 10px 5px;
+}
+.h-p-fieldset-digi:hover {
+	background-color: #f6f6f6;
+	border-radius: 60px;
+}
+.h-p-fieldset-digi p { font-size: 36px; }
+.h-p-fieldset-digi span { color: #999; }
+.h-p-fieldset-green .h-p-fieldsetrow:after {
+	content: "";
+	position: relative;
+	top: 40px;
+	left: 18px;
+	padding-left: 24px;
+	background-image: url(images/portal/img-row-green.png);
+	background-repeat: no-repeat;
+}
+.h-p-fieldset-green .h-p-fieldset-contant-outline { border-top: #8ec100 solid 2px; }
+.h-p-fieldset-green .h-p-fieldset-digi p { color: #9aca40 }
+.h-p-fieldset-orange .h-p-fieldsetrow:after {
+	content: "";
+	position: relative;
+	top: 40px;
+	left: 18px;
+	padding-left: 24px;
+	background-image: url(images/portal/img-row-orange.png);
+	background-repeat: no-repeat;
+}
+.h-p-fieldset-orange .h-p-fieldset-contant-outline { border-top: #ffbb42 solid 2px; }
+.h-p-fieldset-orange .h-p-fieldset-digi p { color: #ffbb42 }
+.h-p-content-iframe {
+	top: 36px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0px;
+}
+.h-p-icon-yh { background-image: url(images/portal/icon-yh.png) }
+.h-p-icon-sw { background-image: url(images/portal/icon-sw.png) }
+.h-p-icon-bxlp { background-image: url(images/portal/icon-bxlp.png) }
+.h-p-icon-gys { background-image: url(images/portal/icon-gys.png) }
+.h-p-icon-fwzz { background-image: url(images/portal/icon-fwzz.png) }
+.h-p-icon-yn { background-image: url(images/portal/icon-yn.png) }
+.h-p-icon-yyzz { background-image: url(images/portal/icon-yyzz.png) }
+/*岗位权责*/
+.h-p-icon-gwgl { background-image: url(images/portal/icon-gwgl.png) }
+.h-p-icon-rygl { background-image: url(images/portal/icon-rygl.png) }
+.h-p-icon-qzgl { background-image: url(images/portal/icon-qzgl.png) }
+.h-p-gzzzdiv-all {
+	width: 70%;
+	margin-left: 10%;
+	margin-top: 5%
+}
+.h-p-gzzzdiv {
+	text-align: center;
+	width: 33.33%;
+	float: left;
+	height: 300px;
+	padding-top: 10px;
+}
+.h-p-info {
+	width: 200px;
+	margin: auto;
+	color: #999;
+}
+.h-p-btn-circle {
+	border: 2px solid #7DC1E6;
+	border-radius: 20px;
+	padding: 5px 20px 5px 20px;
+}
+.h-p-gzzzdiv .h-p-title { line-height: 24px; }
+/*信息交互*/
+.h-p-tab-current { border-bottom: #99cb34 solid 3px; }
+.h-p-tab-info {
+	padding: 10px 20px 10px 20px;
+	font-size: 20px;
+	text-align: center;
+	float: left;
+	color: #666;
+}
+.h-p-chart {
+	float: left;
+	margin-top: 64px;
+	margin-left: 32px;
+}
+.h-p-title-jhxx {
+	font-size: 20px;
+	color: #666;
+	margin-bottom: -6px;
+}
+.h-p-title-jhxx em {
+	font-size: 32px;
+	color: #90bf00
+}
+.h-p-info-jhxx {
+	color: #999;
+	margin-bottom: 16px;
+}
+.h-p-sample-jhxx { font-size: 16px; }
+.h-p-sample-jhxx span {
+	padding-left: 20px;
+	font-size: 8px;
+	margin-right: 10px;
+}
+.h-p-sample-jhxx em {
+	font-size: 24px;
+	color: #90bf00;
+	font-weight: normal
+}
+.h-p-sample-blue { background-color: #1dacd6; }
+.h-p-sample-green { background-color: #99cb34; }
+.h-p-sample-yellow { background-color: #ffcc00; }
+.h-p-icon-circle {
+	border: #7fb926 solid 2px;
+	border-radius: 80px;
+	background-image: none
+}
+.h-p-icon-circle em {
+	color: #e6681b;
+	font-size: 48px;
+	line-height: 24px;
+	margin-top: -10px;
+}
+.h-p-rednum {
+	display: block;
+	line-height: 10px;
+	margin-top: -40px;
+}
+/* --------------------------------------------
+-------------------------数据共享 -------------------------*/
+.h-p-bgshare { background-image: url(images/portal/bg-share.jpg); }
+.h-p-bigtab { height: 46px; }
+.h-p-bigtab .h-tab-item a {
+	padding: 11px 10px;
+	font-size: 16px;
+}
+.h-p-bigtab .h-active a {
+	padding-bottom: 14px !important;
+	font-weight: normal;
+	background-image: url(images/portal/tab-rowgreen.png);
+	background-position: top center;
+	background-repeat: no-repeat;
+	border-top: 4px solid #8ec100;
+}
+.h-p-bigtab .h-tab-item em {
+	font-size: 20px;
+	color: #e9972b;
+	padding: 5px;
+}
+a.h-p-btn-back {
+	background: #666;
+	color: #fff;
+	padding: 5px 10px 5px 10px;
+	margin: 0px 0px 0px 40px;
+}
+a.h-p-btn-back span {
+	background-image: url(images/portal/btn-back.png);
+	background-position: right!important;
+	background-repeat: no-repeat;
+	padding: 10px;
+}
+.h-p-showdiv {
+	background: #fff;
+	bottom: -5px;
+	position: absolute;
+	right: 0;
+	left: 0;
+	height: 0px;
+}
+.h-p-tcenter { text-align: center }
+.h-p-bigtitle {
+	margin: 10px 10px 10px 40px;
+	font-size: 30px;
+	color: #999;
+}
+.h-p-logo-tobatcco {
+	margin: auto;
+	background-image: url(images/portal/logo-tobacco.png);
+	background-repeat: no-repeat;
+	height: 80px;
+	width: 80px;
+}
+.h-p-logo-tobatcco-font { font-size: 18px }
+.h-p-contactDiv {
+	margin: auto;
+	margin-top: 10px;
+	display: inline-block;
+}
+.h-p-contactUL {
+	float: left;
+	padding: 5px;
+	overflow: hidden
+}
+.h-p-contactUL li { padding: 10px; }
+.h-p-contacticon {
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 30px 40px 30px 40px;
+	float: left
+}
+.h-p-contacticon-in { background-image: url(images/portal/contact-in.png); }
+.h-p-contacticon-noin { background-image: url(images/portal/nocontact-in.png); }
+.h-p-contacticon-out { background-image: url(images/portal/contact-out.png); }
+.h-p-contacticon-noout { background-image: url(images/portal/nocontact-out.png); }
+.h-p-contacticon-inout { background-image: url(images/portal/contact-inout.png); }
+.h-p-contacticon-noinout { background-image: url(images/portal/nocontact-inout.png); }
+.h-p-contacticon-nocontact { background-image: url(images/portal/nocontact.png); }
+.h-p-contact-fontdiv {
+	float: left;
+	text-align: left;
+}
+.h-p-contact-system {
+	font-size: 16px;
+	max-width: 160px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.h-p-contact-company {
+	font-size: 12px;
+	color: #bbb;
+	max-width: 160px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.h-p-contact-number {
+	font-size: 12px;
+	color: #999;
+	max-width: 160px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.h-p-contact-number em { color: #ff0000; }
+.h-p-contact-no {
+	font-size: 18px;
+	margin-top: 20px;
+	color: #999;
+}
+.h-p-row-inout { }
+.h-p-row-out { }
+.h-p-mt30- { margin-top: -20px }
+/* --------------------------------------------
+---------------------------------执行层--------------------------------- */
+.h-p-wrapper-worker { background-color: #8ec100 }
+.h-p-aboutworker {
+	padding: 20px;
+	color: white;
+	background-image: url(images/portal/img-chair.png);
+	background-repeat: no-repeat;
+	background-position: center 10px;
+	background-size: 323px 254px
+}
+.h-p-aboutworker img {
+	float: left;
+	margin-right: 10px;
+	margin-top: -5px;
+}
+.h-p-weatherAndtime {
+	position: absolute;
+	right: 15px;
+	top: 22px;
+}
+.h-p-aboutworker p strong {
+	font-size: 32px;
+	font-weight: normal;
+}
+.h-p-Requirement-title {
+	font-size: 22px;
+	color: #999;
+	line-height: 10px;
+}
+.h-p-panel-worker {
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+}
+.h-p-panel-worker-l {
+	position: absolute;
+	left: 0;
+	width: 350px;
+	top: 106px;
+	bottom: 0;
+	padding: 20px 0 0 20px;
+	background-color: #f6f6f6;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.h-p-panel-worker-l { top: 105px; }
+}
+.h-p-Requirement {
+	overflow: auto;
+	position: absolute;
+	top: 80px;
+	left: 30px;
+	bottom: 10px;
+	right: 0px;
+}
+.h-p-Requirement-list {
+	font-size: 16px;
+	padding-bottom: 20px;
+	padding-top: 10px;
+	width: 320px;
+	color: #666;
+	border-bottom: #CCC dotted 1px;
+}
+.h-p-Requirement-list span {
+	font-size: 13px;
+	color: #a0a0a0;
+	margin-top: 5px;
+}
+.h-p-panel-worker-r {
+	position: absolute;
+	left: 400px;
+	right: 16px;
+	top: 125px;
+	bottom: 0;
+}
+#remind {
+	background-color: #FFF;
+	top: 50%;
+	bottom: 0px;
+	position: absolute;
+	right: 0;
+	left: 0;
+}
+.h-p-remindtop {
+	height: 20px;
+	font-size: 20px;
+	color: #999;
+	padding: 10px 10px 10px 20px;
+	border-top: 1px solid #E5E9E9;
+	margin: 20px -20px 0 -20px;
+}
+.h-p-app-list-title-notic { width: 70%; }
+.h-p-btn-open {
+	float: right;
+	padding-right: 40px;
+	margin-top: 10px;
+	background-image: url(images/portal/btn-open.png);
+	background-position: 35px center;
+	background-repeat: no-repeat;
+}
+.h-p-btn-close {
+	float: right;
+	padding-right: 40px;
+	margin-top: 10px;
+	background-image: url(images/portal/btn-close.png);
+	background-position: 35px center;
+	background-repeat: no-repeat;
+}
+.h-p-notice-num {
+	color: #FFF;
+	padding: 0px 4px;
+	position: absolute;
+	height: 16px!important;
+	width: auto !important;
+	line-height: 16px;
+	border-radius: 8px;
+	background-color: #ff5d31;
+	font-size: 12px;
+	top: 5px;
+	left: 150px;
+}
+.h-p-remindlist {
+	position: absolute;
+	right: 0;
+	left: 16px;
+	overflow: auto;
+	top: 85px;
+	bottom: 16px;
+}
+.h-p-remindlist li {
+	padding: 10px 150px 5px 30px;
+	background-image: url(images/portal/icon-remind.png);
+	background-repeat: no-repeat;
+	background-position: 0 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	height: 20px;
+}
+.h-p-remindlist li span {
+	float: right;
+	color: #999;
+	position: relative;
+	right: -140px;
+}
+.h-p-icon-time { background-image: url(images/portal/icon-now.png)!important; }
+.h-p-btn-more {
+	float: right;
+	margin-top: 30px;
+	margin-right: 20px;
+	padding-right: 15px;
+	line-height: 30px;
+	background-image: url(images/portal/icon-moreDotB.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.h-p-halfHight { bottom: 50% !important; }
+.h-p-icon-notice { background-image: url(images/portal/icon-notice.png)!important; }
+/* ------无需要操作时提示------*/
+.h-p-tip-xycz {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	top: 64px;
+	right: 0;
+	overflow: auto;
+}
+.h-p-app-toolbar {
+	position: absolute;
+	width: 50px;
+	left: 0;
+	top: 0;
+	height: 100%;
+	text-align: left;
+	z-index: 2;
+	display: none;
+}
+.h-p-app-toolbar .h-p-icon {
+	margin-top: 7px;
+	margin-left: 22px;
+}
+.h-p-app-list li { position: relative; }
+.h-p-app-list-title {
+	font-size: 18px;
+	line-height: 1;
+	padding-bottom: 10px;
+	height: 48px;
+	position: relative;
+}
+.h-p-app-list-title em {
+	float: left;
+	display: block;
+	height: 48px;
+	width: 48px;
+}
+.h-p-app-list-title strong,
+.h-p-app-list-title small {
+	display: block;
+	margin-left: 55px;
+}
+.h-p-app-list-title strong {
+	font-family: "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei";
+	font-weight: 400;
+	padding-top: 17px;
+	padding-bottom: 5px;
+}
+.h-p-app-list-title small {
+	font-size: 12px;
+	color: #999;
+	font-weight: normal;
+}
+.h-p-icon-menu {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	vertical-align: text-top;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url(images/portal/icon-default-xxl.png);
+}
+.h-p-area-center {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+}
+.h-p-area-center-content {
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0px;
+}
+/*.h-p-nonething{background-image:url(images/portal/icon-nosuggest.png); background-repeat:no-repeat; background-position:center; font-size:18px; font-family:微软雅黑; padding-top:120px; color:#bbb;}*/
+.h-p-nonething {
+	font-size: 18px;
+	font-family: 微软雅黑;
+	color: #bbb;
+}
+.h-p-submenu-item-w33 {
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	top: 64px;
+	right: 0;
+	overflow: auto;
+}
+.h-p-submenu-item-w33 li {
+	width: 50%;
+	float: left
+}
+.h-p-icon-delete { background-image: url(images/portal/icon-delete.png) !important; }
+.h-p-app-fav-item {
+	display: block;
+	padding: 10px 10px 10px 55px;
+	background: url(images/portal/icon-app-fav-item.png) no-repeat 7px 50%;
+	border-radius: 3px;
+	border: 1px solid transparent;
+}
+.h-p-app-fav-item:hover,
+.h-p-app-fav-item:active { }
+.h-p-app-fav-name {
+	display: block;
+	padding-bottom: 5px;
+	font-size: 16px;
+	line-height: 1;
+}
+.h-p-app-fav-text {
+	color: #999;
+	font-size: 12px;
+}

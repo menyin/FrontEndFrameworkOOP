@@ -1,0 +1,140 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2016-05
+		-----------------------------------------------
+		说明：
+		1：框架页皮肤样式：仅更换配色
+======================================*/
+
+
+/*头部*/
+.h-f-header { background: #5f9d32; }
+.h-f-header .h-f-info .h-f-info-item-separate,
+.h-f-header-separate { background-image: url(images/frame_header_separate.png); }
+.h-f-header-nav a:hover { background: #5a952f; }
+/*顶部下拉框*/
+.h-f-pulldown-content { border-color: #5f9d32; }
+/*顶部下拉框*/
+.h-f-subsystem-item:hover {
+	background-color: #f6faf3 !important;
+	border-color: transparent;
+}
+.h-f-subsystem-item:active,
+.h-f-subsystem-item-active {
+	background-color: #e5f1df !important;
+	border-color: transparent !important;
+}
+/*侧边栏背景及边框*/
+.h-f-aside-main {
+	background-color: #ebf5e5;
+	border-right: 1px solid #91c357;
+}
+/*侧边栏顶部标签栏*/
+.h-f-aside-header { background-color: #91c357; }
+.h-f-aside-control-btn { border-color: #86bd4e; }
+.h-f-aside-control-btn:hover,
+.h-f-menu-tab a:hover { background-color: #b2d571; }
+.h-f-menu-tab a.h-f-active,
+.h-f-menu-tab a.h-f-active:hover { background-color: #e6f3e1; }
+.h-f-icon-menutab-menu { background-image: url(images/icon-menutab-menu.png); }
+.h-f-icon-menutab-process { background-image: url(images/icon-menutab-process.png); }
+.h-f-icon-menutab-history { background-image: url(images/icon-menutab-history.png); }
+.h-f-icon-menutab-favorite { background-image: url(images/icon-menutab-favorite.png); }
+.h-f-menu-tab a:hover .h-f-icon-menutab-menu,
+.h-f-menu-tab a.h-f-active .h-f-icon-menutab-menu { background-image: url(images/icon-menutab-menu-active.png); }
+.h-f-menu-tab a:hover .h-f-icon-menutab-process,
+.h-f-menu-tab a.h-f-active .h-f-icon-menutab-process { background-image: url(images/icon-menutab-process-active.png); }
+.h-f-menu-tab a:hover .h-f-icon-menutab-history,
+.h-f-menu-tab a.h-f-active .h-f-icon-menutab-history { background-image: url(images/icon-menutab-history-active.png); }
+.h-f-menu-tab a:hover .h-f-icon-menutab-favorite,
+.h-f-menu-tab a.h-f-active .h-f-icon-menutab-favorite { background-image: url(images/icon-menutab-favorite-active.png); }
+.h-f-icon-aside-status { background-image: url(images/icon-arrow-left.png) !important; }
+.h-f-icon-aside-status-small { background-image: url(images/icon-arrow-right.png) !important; }
+a:hover .h-f-icon-aside-status { background-image: url(images/icon-arrow-left-active.png) !important; }
+a:hover .h-f-icon-aside-status-small { background-image: url(images/icon-arrow-right-active.png) !important; }
+/*下拉流程*/
+.h-f-process-title .h-f-pull-text {
+	color: #444;
+	border-bottom-color: #d2e5c8;
+}
+.h-f-process-title .h-f-pulldown-content { background-color: #f2f8ee; }
+.h-f-pulldown-menu a:hover {
+	background-color: #e0edda;
+	border-color: #5f9d32
+}
+.h-f-process-title .h-f-caret { border-top-color: #5f9d32; }
+/*左侧菜单样式*/
+.h-f-submenu-title a,
+.h-f-menu-item,
+.h-f-menu-item:visited {
+	color: #333;
+	border-color: #d2e5c8;
+	background-color: #e5f1df;
+	border-left: 3px solid transparent;
+}
+.h-f-submenu-title a:hover,
+.h-f-menu-item:hover {
+	background-color: #f1f9ea;
+	color: #222;
+}
+.h-f-submenu-title.h-f-active a,
+.h-f-menu-pulldown .h-f-menu-item.h-f-active,
+.h-f-menu-pulldown .h-f-menu-item.h-f-active:hover,
+.h-f-menu-item.h-f-active,
+.h-f-menu-item.h-f-active:hover {
+	background-color: #f2f8ef;
+	border-left-color: #5f9d32;
+	border-bottom-color: transparent;
+	color: #333 !important;
+}
+.h-f-menu-pulldown .h-f-menu-item.h-f-active,
+.h-f-menu-pulldown .h-f-menu-item.h-f-active:hover,
+.h-f-menu-item.h-f-active,
+.h-f-menu-item.h-f-active:hover { background-image: none; }
+.h-f-btn-scroll-up,
+.h-f-btn-scroll-down {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .2)), to(rgba(0, 0, 0, .2))) !important;
+	background-image: -moz-linear-gradient(rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, .2) 100%) !important;
+	background-image: -ms-linear-gradient(rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, .2) 100%) !important;
+	background-image: -o-linear-gradient(rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, .2) 100%) !important;
+	background-image: linear-gradient(rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, .2) 100%) !important;
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000033, endColorstr=#00000033) !important;
+}
+/*树菜单*/
+.h-f-treenav-node-link:hover {
+	background-color: #e0edda;
+	color: #499016;
+}
+.h-f-treenav,
+.h-f-treenav-dark {
+	background-color: #f9fbf8;
+	border-bottom-color: #d2e5c8;
+}
+.h-f-treenav-dark .h-f-treenav-node-link { color: #333; }
+.h-f-treenav-dark .h-f-treenav-node-link.h-f-active { color: #499016; }
+.h-f-treenav-dark .h-f-treenav-node-link:hover { background-color: #e0edda; }
+.h-f-menu-pulldown .h-f-menu-item .h-f-icon-arrow { background-image: url(images/icon-aside-arrow-down.png) !important; }
+.h-f-menu-pulldown .h-f-menu-item.h-f-active .h-f-icon-arrow { background-image: url(images/icon-aside-arrow-up.png) !important; }
+.h-f-aside-small .h-f-menu-item.h-f-active,
+.h-f-aside-small .h-f-menu-item.h-f-active:hover { background-color: #fff; }
+.h-f-menu-item .h-f-icon { left: 5px; }
+.h-f-submenu-title-link a { color: #333; }
+.h-f-form-app-search { border-color: #e9e9e9; }
+.h-f-form-app-search .h-f-form-control {
+	color: #999999;
+	border-color: #cacccf;
+	background-color: #fdfdfd;
+}
+.h-f-form-control:focus {
+	border-color: #a6c8e0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(166, 200, 224, 0.075), 0 0 4px rgba(166, 200, 224, 0.6);
+	box-shadow: inset 0 1px 1px rgba(166, 200, 224, 0.075), 0 0 4px rgba(166, 200, 224,0.6);
+}
+.h-f-slide-header {
+	background: #e4eee0;
+	border-bottom-color: #d2e5c8;
+}
+.h-f-aside-slide-area { background-color: #ebf5e5; }

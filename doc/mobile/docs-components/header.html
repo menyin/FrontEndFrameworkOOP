@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ICSSHS-MUI for webapp</title>
+  <meta name="description" content="ICSSHS-MUI for webapp">
+  <meta name="keywords" content="ICSSHS-MUI for webapp">
+  <meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+  <meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+  
+  <!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+  
+  <!--针对IOS 浏览器的设置-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon@72.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="icon@2x.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="icon@114.png" sizes="144x144">
+  <link rel="apple-touch-startup-image" href="undefined.png">
+  
+  <!--项目全局样式-->
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+  <!--说明文档样式,实际应用中请不要引用-->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+  <script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+		//下拉菜单---------------------------------------
+		$("[data-action=dropdown]").click(function(){ 
+			curSel=$(this); 
+			curSel.toggleClass("hm-active"); //显示选中状态
+			curSel.next(".hm-dropdown-content").slideToggle("fast");//显示下拉菜单
+		}); 
+		
+		//下拉菜单---------------------------------------
+		$("[data-action=dropdown-modal]").click(function(){ 
+			curSel=$(this); 
+			curSel.toggleClass("hm-active"); //显示选中状态
+			curSel.next(".hm-dropdown-content").slideToggle("fast");//显示下拉菜单
+			$(".hm-mask").fadeIn();
+		}); 
+		
+		//点击遮罩层关闭下拉菜单---------------------------------------
+		$("[data-action=close-dropdown]").click(function(){ 
+			$("[data-action=dropdown-modal]").removeClass("hm-active"); 
+			$("[data-action=dropdown-modal]").next(".hm-dropdown-content").slideUp("fast");//显示下拉菜单
+			$(".hm-mask").fadeOut();
+		}); 
+		
+	});
+	</script>
+</head>
+<body>
+<div class="docs-content">
+  <div class="docs-page-masthead">
+    <h1>页头(header)</h1>
+    <p>页面头部 </p>
+  </div>
+  <h2>页头样式</h2>
+  <h3>默认样式</h3>
+  <p>通过添加<code>.hm-header</code>class。</p>
+  <div class="docs-example">
+    <div class="hm-header">
+      <a class="hm-btn" href="#" onclick="history.go(-1)"><i class="hm-icon-back"></i></a>
+      <div class="hm-flex-1" >
+      </div>
+      <a class="hm-btn" href="#"><i class="hm-icon-delete"></i></a>
+      <a class="hm-btn" href="#">退出<i class="hm-icon-quit"></i></a>
+      <div class="hm-title">
+        标题文字
+      </div>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  <h3>深色样式</h3>
+  <p>通过添加<code>.hm-header-dark</code>class。</p>
+  <div class="docs-example">
+    <div class="hm-header hm-header-dark">
+      <a class="hm-btn" href="#" onclick="history.go(-1)"><i class="hm-icon-back"></i></a>
+      <div class="hm-flex-1" >
+      </div>
+      <a class="hm-btn" href="#">完成</a>
+      <div class="hm-title">
+        标题文字
+      </div>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  <h2>页头按钮显示样式</h2>
+  <h3>文字形式</h3>
+  <div class="docs-example">
+    <div class="hm-header">
+      <a class="hm-btn" href="#">返回</a>
+      <div class="hm-flex-1" >
+      </div>
+      <a class="hm-btn" href="#">删除</a>
+      <div class="hm-title">
+        标题文字
+      </div>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  <h3>图标形式</h3>
+  <div class="docs-example">
+    <div class="hm-header">
+      <a class="hm-btn" href="#" onclick="history.go(-1)"><i class="hm-icon-back"></i></a>
+      <div class="hm-flex-1" >
+      </div>
+      <a class="hm-btn" href="#"><i class="hm-icon-delete"></i></a>
+      <div class="hm-title">
+        标题文字
+      </div>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  <h3>图标+文字</h3>
+  <div class="docs-example">
+    <div class="hm-header">
+      <a class="hm-btn" href="#"><i class="hm-icon-back"></i>返回</a>
+      <div class="hm-flex-1" >
+      </div>
+      <a class="hm-btn" href="#"><i class="hm-icon-delete"></i>删除</a>
+      <div class="hm-title">
+        标题文字
+      </div>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  <h3>多图标</h3>
+  <div class="docs-example">
+    <div class="hm-header">
+      <a class="hm-btn" href="#" onclick="history.go(-1)"><i class="hm-icon-back"></i></a>
+      <div class="hm-flex-1" >
+      </div>
+      
+      <a class="hm-btn" href="#"><i class="hm-icon-add"></i></a>
+      <a class="hm-btn" href="#"><i class="hm-icon-delete"></i></a>
+      <a class="hm-btn" href="#"><i class="hm-icon-more"></i></a>
+      <div class="hm-title">
+        标题文字
+      </div>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  <h2>页头复杂组合</h2>
+  
+  
+  
+  <h3>页头带分段按钮</h3>
+  <div class="docs-example">
+    <div class="hm-header">
+      <a class="hm-btn" href="#" onclick="history.go(-1)"><i class="hm-icon-back"></i></a>
+      <div class="hm-flex-1" >
+      </div>
+      <a class="hm-btn" href="#"><i class="hm-icon-more"></i></a>
+      <div class="hm-container-center">
+        <div class="hm-segmentedbutton">
+          <a href="#" class="hm-btn hm-active">已审核</a>
+          <a href="#" class="hm-btn">未审核</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  <h3>页头带下拉选择</h3>
+  <div class="docs-example">
+    <div class="hm-header">
+      <a class="hm-btn" href="#" onclick="history.go(-1)"><i class="hm-icon-back"></i></a>
+      <div class="hm-flex-1" >
+      </div>
+      <div class="hm-dropdown ">
+          <a class="hm-btn" href="javascript:void(0);" data-action="dropdown"><i class="hm-icon-more"></i></a>
+          <div class="hm-dropdown-content" style="right:0; left:auto;">
+            <div class="hm-listview">
+        	<div class="hm-li"><div class="hm-li-content">列表项</div></div>
+            <div class="hm-li"><div class="hm-li-content">列表项</div></div>
+            <div class="hm-li"><div class="hm-li-content">列表项</div></div>
+            <div class="hm-li"><div class="hm-li-content">列表项</div></div>
+            <div class="hm-li"><div class="hm-li-content">列表项</div></div>
+            <div class="hm-li"><div class="hm-li-content">列表项</div></div>
+        </div>
+          </div>
+        </div>
+      <div class="hm-container-center">
+        
+        <!--下拉列表-->
+        <div class="hm-dropdown ">
+          <a class="hm-btn " data-action="dropdown">下拉列表<span class="hm-caret"></span></a>
+          <div class="hm-dropdown-content">
+            <div class="hm-listview">
+        	<div class="hm-li"><div class="hm-li-content">列表项</div></div>
+            <div class="hm-li"><div class="hm-li-content">列表项</div></div>
+            <div class="hm-li"><div class="hm-li-content">列表项</div></div>
+            <div class="hm-li"><div class="hm-li-content">列表项</div></div>
+            <div class="hm-li"><div class="hm-li-content">列表项</div></div>
+            <div class="hm-li"><div class="hm-li-content">列表项</div></div>
+        </div>
+          </div>
+        </div>
+    
+    
+      </div>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  
+  
+  <h3>页头带搜索</h3>
+  <h4>搜索框居中，宽度固定</h4>
+  <div class="docs-example">
+    <div class="hm-header">
+      <a class="hm-btn" href="#" onclick="history.go(-1)"><i class="hm-icon-back"></i></a>
+      <div class="hm-flex-1" >
+      </div>
+      <a class="hm-btn" href="#"><i class="hm-icon-add"></i></a>
+      <div class="hm-container-center">
+        <div class="hm-searchbar hm-round" style="width:320px;">
+        <a class="hm-btn" href="#">
+          区域<span class="hm-caret"></span>
+        </a>
+        <div class="hm-form-control hm-flex-1">
+          <input type="text" value="" placeholder="搜索关键字...">
+          <a class="hm-btn" href="#"><i class="hm-icon-close"></i></a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  <h4>搜索框自适应，左右留出内容</h4>
+  <div class="docs-example">
+    <div class="hm-header">
+      <a class="hm-btn" href="#" onclick="history.go(-1)"><i class="hm-icon-back"></i></a>
+      <div class="hm-flex-1" >
+      	<div class="hm-searchbar hm-round">
+        <a class="hm-btn" href="#">
+          区域<span class="hm-caret"></span>
+        </a>
+        <div class="hm-form-control   hm-flex-1">
+          <input type="text" value="" placeholder="搜索关键字...">
+          <a class="hm-btn" href="#"><i class="hm-icon-close"></i></a>
+        </div>
+      </div>
+      </div>
+      <a class="hm-btn" href="#"><i class="hm-icon-add"></i></a>
+      
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+</body>
+</html>

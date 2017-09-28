@@ -1,0 +1,26 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2015-08
+======================================*/
+
+/*-------------------------------------------------------------
+	GIS工具菜单图标
+-------------------------------------------------------------*/
+
+/*各类化学成分*/
+.h-f-icon-module-huaxue{background-image: url(images/icon-module-huaxue.png) !important;}
+/*海拔*/
+.h-f-icon-module-haiba{background-image: url(images/icon-module-haiba.png) !important;}
+/*经纬度*/
+.h-f-icon-module-jingweidu{background-image: url(images/icon-module-jingweidu.png) !important;}
+/*地形(坡度)*/
+.h-f-icon-module-podu{background-image: url(images/icon-module-podu.png) !important;}
+/*农化样点*/
+.h-f-icon-module-nonhua{background-image: url(images/icon-module-nonhua.png) !important;}
+/*烟田剖面样点*/
+.h-f-icon-module-yantianpoumian{background-image: url(images/icon-module-yantianpoumian.png) !important;}
+/*理化性质*/
+.h-f-icon-module-lihuaxingzhi{background-image: url(images/icon-module-lihuaxingzhi.png) !important;}

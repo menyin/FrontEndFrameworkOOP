@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ICSSHS-UI</title>
+<link href="../../themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/action/themes-default/icon-action.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/menu/layout-default/icon.css">
+<!--页面布局样式,框架页面发现包含以下样式，否则布局会错乱-->
+<style type="text/css">
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+ 
+
+</style>
+</head>
+<body>
+<!-- 布局 +++++++++++++++++++++++++开始+++++++++++++++++++++++++++++++++++++++--> 
+<!-- 面板 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+<div class="h-panel" style=" width:960px; margin:40px auto;box-shadow: 0px 0px 6px rgba(0,0,0,0.4);"> 
+  <!--面板头部-->
+  <div class="h-panel-header">
+   <div class="h-pull-left ">
+      <div class="h-panel-title">  3月18日工时填写 </div>   
+    </div>
+    <div class="h-pull-right"> <a href="#" class="h-close"></a> </div>
+  </div>
+  
+  <!--面板内容，一般放表单，数字，图表等-->
+  <div class="h-panel-body">
+      <div class="h-toolbar h-noborder">
+   
+          <div class="h-form-control-wrapper h-text-center h-pad10">
+            <div class="h-checkbox h-checkbox-inline">
+              <label>
+                <input type="checkbox">
+                上午 </label>
+            </div>
+            <div class="h-checkbox h-checkbox-inline">
+              <label>
+                <input type="checkbox">
+                下午 </label>
+            </div>
+            <div class="h-checkbox h-checkbox-inline">
+              <label>
+                <input type="checkbox">
+                加班 </label>
+            </div>
+          </div>
+ 
+      </div>
+      <table cellpadding="0" cellspacing="0"  class="c-Gantt c-datetime" >
+			<thead>
+				<tr > 
+					<th ><span >0:00</span></th><th><span >1:00</span></th><th><span >2:00</span> </th><th ><span >3:00</span> </th><th><span >4:00</span></th><th><span >5:00</span></th><th><span >6:00</span></th><th><span >7:00</span></th><th><span >8:00</span></th><th ><span >9:00</span></th>
+                    <th class="max" ><span >10:00</span></th><th class="max" ><span >11:00</span></th><th class="max" ><span >12:00</span></th><th class="max" ><span >13:00</span></th><th class="max" ><span >14:00</span></th><th class="max" ><span >15:00</span></th><th class="max" ><span >16:00</span></th><th class="max" ><span >17:00</span></th>
+                    <th ><span >18:0</span></th><th><span >19:0</span></th><th><span >20:0</span> </th><th ><span >21:0</span> </th><th><span >22:0</span></th><th><span >23:0</span></th><th><span >24:0</span></th><th><span ></span></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+                   
+                    <td class="c-date-disable"> </td>
+                    <td ></td>
+					<td ></td>
+					<td  ></td>
+					<td ></td>
+					<td></td>
+                    <td ></td>
+					<td></td>
+					<td ></td>
+					<td ></td>
+					<td class="c-helpinfo-blue " ></td>
+					<td class="c-helpinfo-blue t"></td>
+					<td class="c-helpinfo-blue c-select" ></td>
+                    <td class=" c-date-disable"> </td>
+                    <td class="c-helpinfo-grass c-select"></td>
+					<td class="c-helpinfo-orange "></td>
+					<td class="c-helpinfo-violet"></td>
+					<td></td>
+					<td></td>
+                    <td  class="c-select"></td>
+					<td></td>
+					<td ></td>
+					<td></td>
+                    <td></td>
+                     <td></td>
+                    <td class="c-date-disable"> </td>
+				</tr>
+				
+			</tbody>
+			 
+		</table>
+        <div style="width:100%; height:100px; position:relative">
+         
+                    <div class="h-input-group c-project-select" style="left:200px; top:20px;">
+                       <div class="c-project-select-btns"  > <a class=" h-icon  h-icon-more" href="#" > </a>
+                        <span class="c-vline" ></span>
+                        <a class="h-btn  h-btn-form h-btn-green" href="#" > <span class="h-btn-content">确定</span> </a> 
+                        <a class="h-btn  h-btn-form" href="#" > <span class="h-btn-content">清除</span> </a>
+                       </div>
+                        <input type="text" class="h-form-control" style="padding-right:200px;padding-left:10px; height:40px" id="" placeholder="2016年湘西精益生产项目">
+                    </div>
+         
+         
+          </div>
+
+        <div  class="h-bg-muted h-pad10">
+              <div class="h-row h-row-col2-rf">
+                  <div class="h-col-l">
+                    <div class="h-col-content h-pad20">
+                      <p >您本日工时为：6h</p> 
+                     <p class="h-color-warning" >未填工时：1h</p>  
+                    </div>   
+                 </div>
+                
+                <div class="h-col-r">
+                     <div class="h-col-content"> 
+                         <p > <em class="c-helpinfo-div"></em> 1h 所属项目：2016年广东信息化应用扩展项目 </p> 
+                         <p > <em class="c-helpinfo-div c-helpinfo-grass"></em> 1h 所属项目：2013年广东信息化应用扩展项目 </p>  
+                         <p > <em class="c-helpinfo-div c-helpinfo-orange"></em> 1h 所属项目：2014年广东信息化应用扩展项目 </p>
+                         <p > <em class="c-helpinfo-div c-helpinfo-violet"></em> 1h 所属项目：2015年广东信息化应用扩展项目 </p> 
+                         <p > <em class="c-helpinfo-div c-helpinfo-red"></em> 1h 所属项目：2015年广东信息化应用扩展项目 </p> 
+                         <p > <em class="c-helpinfo-div c-helpinfo-green"></em> 1h 所属项目：2015年广东信息化应用扩展项目 </p> 
+                         <p > <em class="c-helpinfo-div c-helpinfo-cyan"></em> 1h 所属项目：2015年广东信息化应用扩展项目 </p>  
+                     </div>   
+               </div>
+             </div>   
+       </div>
+     
+  </div>
+  <!--面板底部工具-->
+  <div class="h-toolbar h-toolbar-footer" >
+      <div class="h-pull-left"> 
+                        <span class="h-icon c-icon-info" style="margin-right:5px;"></span> <span class="c-helpinfo"> 先选择时间，后选择所属项目,保存结束；点击（或框选）时间格选择，再次单击取消选择；双击已填时间格直接取消填写。</span> </div>
+                        
+     <div class="h-pull-right"><a class="h-btn  h-btn-form" href="#"> <span class="h-btn-content">取消</span> </a><a class="h-btn h-btn-primary h-btn-form" href="#" > <span class="h-btn-content" style="width:50px;" >保存 </span> </a> </div>
+    </div>                   
+    </div>
+</div>
+
+<!-- 布局 +++++++++++++++++++++++++结束+++++++++++++++++++++++++++++++++++++++-->
+
+</body>
+</html>

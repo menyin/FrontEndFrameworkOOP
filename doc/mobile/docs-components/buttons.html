@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICSSHS-MUI for webapp</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="undefined.png">
+
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+<script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+    <div class="docs-page-masthead">
+        <h1>按钮系列(buttons)</h1>
+        <p>可作为按钮使用的标签或元素,一般为<code>&lt;a&gt;</code><code>&lt;button&gt;</code><code>&lt;input&gt;</code>标签，通过样式<code>.hm-btn</code>来定义。 </p>
+    </div>
+    <h2 >基本使用</h2>
+    <!--基础样式-->
+    <h3 >基础样式</h3>
+    <p>在要应用按钮样式的元素上添加 <code>.hm-btn</code>，再设置相应的颜色；考虑到移动端的布局特性，按钮默认显示为块级元素，设置了<code>display:block</code>。</p>
+    <ul>
+        <li><code>.hm-btn</code> - 基础按钮，无样式</li>
+        <li><code>.hm-btn-default</code> - 默认，带边框灰色按钮</li>
+        <li><code>.hm-btn-selected</code> - 已选择按钮</li>
+        <li><code>.hm-btn-link</code> - 链接按钮</li>
+    </ul>
+    <div class="docs-example docs-example-btn-classes">
+        <a href="#" class="hm-btn ">基础按钮</a> 
+        <a href="#" class="hm-btn hm-btn-default">默认按钮</a> 
+        <a href="#" class="hm-btn hm-btn-selected ">已选择按钮</a> 
+        <a href="#" class="hm-btn hm-btn-link">链接按钮</a>
+    </div>
+    <!--按钮颜色-->
+    <h3 >按钮颜色</h3>
+    <p>在<code>.hm-btn</code>上追加颜色样式。</p>
+    <ul>
+        <li><code>.hm-btn-primary</code> - 首选，蓝色按钮</li>
+        <li><code>.hm-btn-success</code> - 成功，绿色按钮</li>
+        <li><code>.hm-btn-info</code> - 一般信息，浅蓝色按钮</li>
+        <li><code>.hm-btn-warning</code> - 警告，橙色按钮</li>
+        <li><code>.hm-btn-danger</code> - 危险，红色按钮</li>
+    </ul>
+    <div class="docs-example docs-example-btn-classes">
+        <a href="#" class="hm-btn hm-btn-inline hm-btn-primary">首选按钮</a> 
+        <a href="#" class="hm-btn hm-btn-inline hm-btn-success">成功按钮</a> 
+        <a href="#" class="hm-btn hm-btn-inline hm-btn-info">信息按钮</a> 
+        <a href="#" class="hm-btn hm-btn-inline hm-btn-warning">警告按钮</a> 
+        <a href="#" class="hm-btn hm-btn-inline hm-btn-danger">危险按钮</a> 
+        <a href="#" class="hm-btn hm-btn-inline hm-btn-dark">黑色按钮</a>
+    </div>
+    
+    <!--按钮大小-->
+    <h3 >按钮大小</h3>
+    <p>在<code>.hm-btn</code>上追加大小样式。</p>
+    <ul>
+        <li><code>.hm-btn-xs</code> - 加小按钮</li>
+        <li><code>.hm-btn-sm</code> - 小按钮</li>
+        <li><code>.hm-btn-lg</code> - 大按钮</li>
+        <li><code>.hm-btn-xl</code> - 加大按钮</li>
+    </ul>
+    <div class="docs-example docs-example-btn-classes">
+        <a href="#" class="hm-btn hm-btn-inline hm-btn-default hm-btn-xs">加小按钮</a> 
+        <a href="#" class="hm-btn hm-btn-inline hm-btn-default hm-btn-sm">小按钮</a> 
+        <a href="#" class="hm-btn hm-btn-inline hm-btn-default ">正常按钮</a> 
+        <a href="#" class="hm-btn hm-btn-inline hm-btn-default hm-btn-lg">大按钮</a> 
+        <a href="#" class="hm-btn hm-btn-inline hm-btn-default hm-btn-xl">加大按钮</a>
+    </div>
+    
+    <!--按钮形状-->
+    <h3 >按钮形状</h3>
+    <p>在<code>.hm-btn</code>上追加形状样式。</p>
+    <ul>
+        <li><code>.hm-radius</code> - 圆角按钮</li>
+        <li><code>.hm-round</code> - 椭圆形按钮</li>
+    </ul>
+    <div class="docs-example docs-example-btn-classes">
+        <a href="#" class="hm-btn hm-btn-primary">默认为直角</a> 
+        <a href="#" class="hm-btn hm-btn-primary hm-radius">圆角按钮</a> 
+        <a href="#" class="hm-btn hm-btn-primary hm-round">椭圆形按钮</a>
+    </div>
+    <!--按钮状态-->
+    <h3 >按钮状态</h3>
+    <p>在<code>.hm-btn</code>上追加状态样式。</p>
+    <ul>
+        <li><code>.hm-disabled</code> - 不可用</li>
+    </ul>
+    <div class="docs-example docs-example-btn-classes">
+        <a href="#" class="hm-btn hm-btn-primary hm-disabled">不可用按钮</a>
+    </div>
+    <h2>空心按钮</h2>
+    <p>通过给按钮添加 <code>.hm-btn-hollow</code>类，可使按钮成为空心按钮。</p>
+    <div class="docs-example docs-example-btn-classes">
+        <a href="#" class="hm-btn hm-btn-hollow hm-btn-primary">首选按钮</a> 
+        <a href="#" class="hm-btn hm-btn-hollow hm-btn-success">成功按钮</a> 
+        <a href="#" class="hm-btn hm-btn-hollow hm-btn-info">信息按钮</a> 
+        <a href="#" class="hm-btn hm-btn-hollow hm-btn-warning">警告按钮</a> 
+        <a href="#" class="hm-btn hm-btn-hollow hm-btn-danger">危险按钮</a>
+    </div>
+    <h2>行内按钮</h2>
+    <p>按钮默认显示为块级元素，通过给按钮添加 <code>.hm-btn-inline</code>类，按钮也变为了行内（inline-block）元素,而且宽度也会变成auto。</p>
+    <div class="docs-example docs-example-btn-classes">
+        <a class="hm-btn hm-btn-primary hm-btn-inline" href="#">行内按钮</a>
+    </div>
+    <h2>可选行内按钮</h2>
+    <div class="docs-example ">
+        <div class="hm-btns">
+            <a class="hm-btn hm-btn-default hm-btn-inline" href="#">可选项1</a> 
+            <a class="hm-btn hm-btn-selected hm-btn-inline" href="#">可选项2</a> 
+            <a class="hm-btn hm-btn-default hm-btn-inline" href="#">可选项3</a> 
+            <a class="hm-btn hm-btn-selected hm-btn-inline" href="#">可选项4</a> 
+            <a class="hm-btn hm-btn-default hm-btn-inline" href="#">可选项5</a> 
+            <a class="hm-btn hm-btn-default hm-btn-inline" href="#">可选项6</a>
+        </div>
+    </div>
+    <h2>分段按钮组</h2>
+    <p>多个分段按钮组。</p>
+    <div class="docs-example">
+        <div class="hm-segmentedbutton">
+            <a href="#" class="hm-btn hm-active">已审核</a> <a href="#" class="hm-btn">未审核</a>
+        </div>
+    </div>
+    
+    <!--实例：按钮带徽章-->
+    <h2>按钮带徽章</h2>
+    <p>给链接、导航等元素嵌套<code> &lt;span class="badge"&gt; </code>元素，可以很醒目的展示新的或未读的信息条目。</p>
+    <h3>徽章做为行内元素</h3>
+    <div class="docs-example docs-example-btn-classes">
+        <a href="#" class="hm-btn hm-btn-default">按钮带徽章 <span class="hm-badge hm-badge-danger hm-round">8</span></a>
+    </div>
+    <div class="docs-highlight">
+        <pre>&lt;a class="<span class="hm-color-danger">hm-btn hm-btn-default</span>" href="#" &gt;
+    按钮文字&lt;span class="<span class="hm-color-danger">hm-badge hm-badge-danger hm-round</span>"&gt;8&lt;/span&gt;
+&lt;/a&gt;</pre>
+    </div>
+    <h3>徽章在按钮右侧垂直居中</h3>
+    <div class="docs-example docs-example-btn-classes">
+        <a href="#" class="hm-btn hm-has-badge hm-btn-default">按钮带徽章<br>
+        徽章在右侧居中<span class="hm-badge hm-badge-danger hm-round">8</span></a>
+    </div>
+    <div class="docs-highlight">
+        <pre>&lt;a class="<span class="hm-color-danger">hm-btn hm-btn-default hm-has-badge</span>" href="#" &gt;
+    按钮文字&lt;span class="<span class="hm-color-danger">hm-badge hm-badge-danger hm-round</span>"&gt;8&lt;/span&gt;
+&lt;/a&gt;</pre>
+    </div>
+    <h2>图标按钮</h2>
+    <h3>图标在按钮内部</h3>
+    <div class="docs-example docs-example-btn-classes">
+        <a class="hm-btn hm-btn-default" href="#"><i class="hm-icon-add"></i><span>图标在左侧</span></a> 
+        <a class="hm-btn hm-btn-default" href="#"><span>图标在右侧</span><i class="hm-icon-add"></i></a> 
+        <a class="hm-btn hm-btn-default hm-btn-vertical" href="#"><i class="hm-icon-add"></i><span class="hm-tabs-label">图标在上方</span></a>
+        <a class="hm-btn hm-btn-default hm-btn-vertical" href="#"><span class="hm-tabs-label">图标在下方</span><i class="hm-icon-add"></i></a>
+    </div>
+    <h3>无文字图标按钮</h3>
+    <p>通过给按钮添加类<code>.hm-btn-circle</code>。</p>
+    <div class="docs-example docs-example-btn-classes">
+        <a href="#" class="hm-btn hm-btn-circle"><i class="hm-icon-add"></i></a> 
+        <a href="#" class="hm-btn hm-btn-circle hm-btn-primary "><i class="hm-icon-add"></i></a> 
+        <a href="#" class="hm-btn hm-btn-circle hm-btn-success "><i class="hm-icon-add"></i></a> 
+        <a href="#" class="hm-btn hm-btn-circle hm-btn-info "><i class="hm-icon-add"></i></a> 
+        <a href="#" class="hm-btn hm-btn-circle hm-btn-warning"><i class="hm-icon-add"></i></a> 
+        <a href="#" class="hm-btn hm-btn-circle hm-btn-danger"><i class="hm-icon-add"></i></a>
+    </div>
+</div>
+</body>
+</html>

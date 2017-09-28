@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HSUI-MOBILE</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="../../resources/icons/icon.png">
+<link rel="apple-touch-icon" href="../../resources/icons/icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="../../resources/icons/icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="../../resources/icons/icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="../../undefined">
+
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+<link rel="stylesheet" type="text/css" href="../../resources/css/zTreeStyle.css">
+<script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+});
+</script>
+</head>
+<body>
+<div class="docs-content ">
+<div class="docs-page-masthead">
+        <h1>目录结构</h1>
+        <p class="docs-lead">以下是HSUI所提供的文档目录结构。 </p>
+      </div>
+      <div class="docs-highlight">
+        <pre>
+            	<code>
+HSUI
+├── resources
+│     ├── css
+│     │     ├── images             <span class="docs-color-muted">// CSS里用到的所有图片</span>
+│     │     │     ├── alert
+│     │     │     ├── form
+│     │     │     ├── framework
+│     │     │     └── icons
+│     │     ├── animate.css      <span class="docs-color-muted"> // CSS3动画库</span>
+│     │     ├── base.css         <span class="docs-color-muted"> // HSUI 所有样式文件</span>
+│     │     ├── global.css       <span class="docs-color-muted"> // HSUI 所有样式文件</span>
+│     │     ├── icon.css         <span class="docs-color-muted"> // 图标</span>
+│     │     └── normalize.css    <span class="docs-color-muted">  // 统一样式</span>
+│     ├── images                  <span class="docs-color-muted"> // 页面上插入的图片</span>
+│     │     ├── app-icon72x72@2x.png
+│     │     └── favicon.png
+│     └── js
+│            ├── jquery-1.9.1.js   <span class="docs-color-muted"> // HSUI所有的插件都是基于jquery</span>
+│            └── hsui.js           <span class="docs-color-muted"> // 插件JS或者前端人员自已编写的JS</span>
+├── framework-grid.html
+├── framework-slider.html
+└── page-alert-loading.html
+</code>
+    		</pre>
+      </div>
+      <div class="docs-callout docs-callout-warning">
+        <h4>HSUI 插件全部依赖 jQuery</h4>
+        <p>请注意，<strong>HSUI 的所有 JavaScript 插件都依赖 jQuery，</strong>因此 jQuery 必须在 HSUI 之前引入。 HSUI目前所支持的 jQuery 版本为jquery-1.9.1。</p>
+      </div>
+    </div>
+</body>
+</html>

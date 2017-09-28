@@ -1,0 +1,95 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2014-08
+======================================*/
+/**
+组织个性化
+*/
+.c-icon-zzgxh { background-image: url(images/icon-zzgxh.png) !important; }
+
+/**
+用户个性化
+*/
+.c-icon-yhgxh { background-image: url(images/icon-yhgxh.png) !important; }
+/**
+系统参数定义
+*/
+.c-icon-xtcsdy { background-image: url(images/icon-xtcsdy.png) !important; }
+/**
+布局安装/卸载
+*/
+.c-icon-bjazxz { background-image: url(images/icon-bjazxz.png) !important; }
+
+/**
+设置皮肤布局
+*/
+.c-icon-szpfbj { background-image: url(images/icon-szpfbj.png) !important; }
+
+/**
+LOGO设置
+*/
+.c-icon-logosz { background-image: url(images/icon-logosz.png) !important; }
+
+/**
+账户策略
+*/
+.c-icon-zhcl { background-image: url(images/icon-zhcl.png) !important; }
+/**
+IP访问策略
+*/
+.c-icon-ipfwcl{ background-image: url(images/icon-ipfwcl.png) !important; }
+/**
+登录策略
+*/
+.c-icon-dlcl{ background-image: url(images/icon-dlcl.png) !important; }
+/**
+公共权限
+*/
+.c-icon-ggqx{ background-image: url(images/icon-ggqx.png) !important; }
+/**
+模型权限
+*/
+.c-icon-mxqx{ background-image: url(images/icon-mxqx.png) !important; }
+/**
+基础数据导出
+*/
+.c-icon-jcsjdc{ background-image: url(images/icon-jcsjdc.png) !important; }
+/**
+基础数据导入
+*/
+.c-icon-jcsjdr{ background-image: url(images/icon-jcsjdr.png) !important; }
+
+/**
+业务字典导出
+*/
+.c-icon-ywzddc{ background-image: url(images/icon-ywzddc.png) !important; }
+/**
+基础数据导入
+*/
+.c-icon-ywzddr{ background-image: url(images/icon-ywzddr.png) !important; }
+
+
+
+
+.c-trigger-box {float:right;display:block;margin:5px;top: 0px;position:relative;right:5px;font-size:0;}
+.c-trigger{cursor: pointer;
+    float: left;
+  width: 47px; height: 22px;
+  margin: 0px;
+ background-image: url(images/toggleon.png);
+  overflow: hidden;
+  }
+.c-trigger-checked
+{
+ background-image: url(images/toggleoff.png);
+;}
+ .h-thumbnail-horizontal:hover{background-color: #ecf4f9;
+    border: 1px solid #bbd6e8;
+    position: relative}
+
+
+
+

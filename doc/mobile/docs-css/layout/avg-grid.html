@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+<meta charset="utf-8">
+<title>WEBAPP通用框架HTML</title>
+<meta name="description" content="HSIT-UI for mobile">
+<meta name="keywords" content="HSIT-UI  for mobile">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/global.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../../../mobile/project/resources/css/base.css">
+
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../../../resources/css/docs.css">
+</head>
+<body class="docs-body">
+<div class="docs-content">
+  <div class="docs-page-masthead">
+    <h1>等分网格(Average Grid)</h1>
+    <p>线性布局：Average Grid，通过使用 ul / ol 创建等分列，用于内容的排列。</p>
+  </div>
+  
+  <!--基本使用-->
+  <h2>基本使用</h2>
+  <p  >只添加 <code>.hm-average-*</code>,这里的数字表示几等分，最多支持12等分，比如 <code>.hm-average-4</code> 会将子元素&lt; li &gt; 的宽度设置为25%。</p>
+  <div class="docs-example docs-example-average">
+    <div class="docs-area">
+      <ul class="hm-average-4">
+        <li>
+          <div>内容</div>
+        </li>
+        <li>
+          <div>内容</div>
+        </li>
+        <li>
+          <div>内容</div>
+        </li>
+        <li>
+          <div>内容</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code>&lt;ul class="<span class="docs-color-red">hm-average-4</span>" &gt;
+    	&lt;li&gt;内容&lt;/li&gt;
+    	&lt;li&gt;内容&lt;/li&gt;
+    	&lt;li&gt;内容&lt;/li&gt;
+    	&lt;li&gt;内容&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+  </div>
+  
+  
+  <!--九宫格-->
+  <h2>案例：九宫格</h2>
+  <p>九宫格布局是等分网格的一种使用案例，只添加 <code>.hm-average-3</code>,就可以实现等分三列布局</p>
+  <div class="docs-example docs-example-average">
+    <div class="docs-area">
+      <ul class="hm-average-3">
+        <li><div>内容</div></li>
+        <li><div>内容</div></li>
+        <li><div>内容</div></li>
+        <li><div>内容</div></li>
+        <li><div>内容</div></li>
+        <li><div>内容</div></li>
+        <li><div >内容</div></li>
+        <li><div>内容</div></li>
+        <li><div>内容</div></li>
+      </ul>
+    </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code>&lt;ul class="<span class="docs-color-red">hm-average-3</span>" &gt;
+    	&lt;li&gt;内容&lt;/li&gt;
+    	&lt;li&gt;内容&lt;/li&gt;
+    	&lt;li&gt;内容&lt;/li&gt;
+    	&lt;li&gt;内容&lt;/li&gt;
+        &lt;li&gt;内容&lt;/li&gt;
+        &lt;li&gt;内容&lt;/li&gt;
+        &lt;li&gt;内容&lt;/li&gt;
+        &lt;li&gt;内容&lt;/li&gt;
+        &lt;li&gt;内容&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+  </div>
+  
+  
+</div>
+</body>
+</html>

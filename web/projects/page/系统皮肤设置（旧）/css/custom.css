@@ -1,0 +1,181 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2014-08
+======================================*/
+/**
+设置门户默认的布局皮肤
+*/
+.c-icon-mrpfbj{ background-image: url(images/icon-mrpfbj.png) !important; }
+/**
+批量设置应用的布局皮肤 
+*/
+.c-icon-plszbjpf{ background-image: url(images/icon-plszbjpf.png) !important; }
+/**
+安装布局
+*/
+.c-icon-azbj{ background-image: url(images/icon-azbj.png) !important; }
+/**
+皮肤管理
+*/
+.c-icon-pfgl{ background-image: url(images/icon-pfgl.png) !important; }
+/**
+下载布局
+*/
+.c-icon-xzbj{ background-image: url(images/icon-xzbj.png) !important; }
+/**
+查看应用
+*/
+.c-icon-ckyy{ background-image: url(images/icon-ckyy.png) !important; }
+/**
+卸载布局
+*/
+.c-icon-xzbj-2{ background-image: url(images/icon-xzbj-2.png) !important; }
+/**
+安装皮肤
+*/
+.c-icon-azpf{ background-image: url(images/icon-azpf.png) !important; }
+/**
+返回
+*/
+.c-icon-back{ background-image: url(images/icon-back.png) !important; }
+
+/**
+使用此布局
+*/
+.c-icon-sycbj{ background-image: url(images/icon-sycbj.png) !important; }
+
+/**
+使用此皮肤
+*/
+.c-icon-sycpf{ background-image: url(images/icon-sycpf.png) !important; }
+
+/**
+上传logo
+*/
+.c-icon-sclogo{ background-image: url(images/icon-sclogo.png) !important; }
+/**
+设为站点logo
+*/
+.c-icon-swzdlogo{ background-image: url(images/icon-swzdlogo.png) !important; }
+
+
+
+
+
+
+
+.h-alert {
+    margin-bottom: 10px;
+} 
+
+
+
+
+.h-step-progress{min-width:500px;}
+
+	
+
+.c-row-col2-rf-p.h-col-r{ margin-right:5px;}
+.c-row-col2-rf-p .h-col-l {
+    margin-left: -275px;
+    width: 275px;
+
+}
+
+
+
+
+
+/* 皮肤设置页面 style*/
+.c-box   { 
+background-color: #fff;	
+    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+	min-width:350px;
+    display: inline-block;
+   border:3px solid #f1f1f1\0;
+  border:3px solid #ffffff;
+    margin: 20px  20px  10px  20px;
+    padding: 10px;
+    vertical-align: top; }
+.c-box:hover{border:3px solid #7dc255;}
+.c-skin-h{height:140px;}
+	 
+.c-layout-item{background-color: #fff;	
+    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+	min-width:700px;
+    display: inline-block;
+   border:3px solid #f1f1f1\0;
+  border:3px solid #ffffff;
+    margin: 20px  20px  10px  20px;
+    padding: 10px;
+    vertical-align: top;
+    }
+.c-layout-h{ height: 145px;}
+.c-selected,.c-layout-item:hover{  border:3px solid #7dc255}
+
+
+
+.c-preview-title{color:#666666;margin-bottom:5px;}
+.c-layout-btn{
+ padding: 10px;
+ display:block;float:right;
+
+}
+
+.h-col-r li{margin-bottom:10px;}
+.c-layout-title{height:20px;overflow:hidden;}
+
+.c-skin-pre{height: 80px;border-bottom:1px solid #dddddd;padding:10px;}
+.c-skin-pre img{width:130px;height:80px;margin-left:10px;border:1px  solid #ececec;}
+.c-position-l{display:block;float:left;}
+
+.c-position-r{display:block;float:right;}
+
+
+.c-font-gray {color: #888;font-size:12px;}
+.c-container {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-top: 10px;}
+
+
+
+.c-txtpre-h{height:90px;overflow: auto; margin-bottom:5px;}
+.c-txtskin-h {height:60px;overflow: auto;}
+.c-txtset-h{height:115px;overflow: auto;}
+.c-btn-logo,.c-btn-p{height:30px;text-align:right;}
+
+.c-label-w{width:80px;}
+
+/*选择设置-批量设置  style*/
+.c-label{  
+    color: #333333;
+    cursor: pointer;
+   vertical-align: center;
+	width:50px;
+	}
+/*logo设置 style*/
+.c-toolbar-t{border-top:1px solid #dddddd;}
+.c-pre-logo{height:36px;background-color:#0073c6;font-size:0;margin-bottom:5px;min-width:800px}
+.c-prelogo-l{background:url(images/pre-logo-l.jpg) no-repeat scroll left top!important ;height:36px;;width:325px;float:left;display:block;}
+.c-prelogo-r {background:url(images/pre-logo-r.jpg) no-repeat scroll right top!important ;height:36px;width:440px;float:right;display:block;}
+.c-logo-preview{margin:10px;}
+
+.c-txtlogo-h{height:40px;overflow: auto;}
+.c-logo-contect{height:40px;overflow: auto;margin-bottom:5px;margin-top:5px; }
+.c-logo-title {overflow:hidden;width:350px;height:24px;margin-top:5px;}
+.c-row-col2-rf-logo   img {margin-top:2px;margin-bottom:8px;}
+
+.c-logo-h{height:65px;}	
+
+.c-selected {border:3px solid #7dc255;}
+.c-logobox img{width:350px;height:36px;margin-top:0px;}
+.c-right{    position: relative !important;
+    right: 0;
+    bottom: 0px;
+	top:0;
+	
+}

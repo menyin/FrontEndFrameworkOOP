@@ -1,0 +1,139 @@
+<!doctype html>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ICSSHS-UI</title>
+<link href="../../themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/action/themes-default/icon-action.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/gadget/icon-gadget.css">
+
+<script src="../../themes-default/resources/js/jquery-1.9.1.js"></script>
+<!--页面布局样式,框架页面发现包含以下样式，否则布局会错乱-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+	background: #f9f9f9;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".c-gadget-add").click(function(){ 
+		$(this).hide();
+		$(this).siblings().show();
+	});
+	$(".c-gadget-delete").click(function(){ 
+		$(this).hide();
+		$(this).siblings().show();
+	}); 
+}); 
+</script>
+</head>
+<body >
+<!-- 布局 +++++++++++++++++++++++++开始+++++++++++++++++++++++++++++++++++++++-->
+<div class="c-gadget-addlist">
+    <ul class="h-list-group">
+        <li class="h-list-group-item ">
+            <div class="h-thumbnail h-thumbnail-horizontal">
+                <p class="h-image-area">
+                	<span class="h-icon h-icon-gadget-notice"></span></p>
+                <div class="h-caption">
+                    <h3 class="h-caption-title">通知公告</h3>
+                    <p class="h-caption-content h-ellipsis">设置和显示系统公告</p>
+                    <p class="h-text-right"><a class="h-btn h-btn-form h-btn-primary" href="#"> <span class="h-btn-content">添加</span> </a></p>
+                </div>
+            </div>
+        </li>
+        <li class="h-list-group-item ">
+            <div class="h-thumbnail h-thumbnail-horizontal">
+                <p class="h-image-area">
+                <span class="h-icon h-icon-gadget-todo"></span></p>
+                <div class="h-caption">
+                    <h3 class="h-caption-title">待办事项</h3>
+                    <p class="h-caption-content h-ellipsis">列表显示待办事项</p>
+                    <p class="h-text-right"><a class="h-btn h-btn-form h-btn-primary" href="#"> <span class="h-btn-content">添加</span> </a></p>
+                </div>
+            </div>
+        </li>
+        <li class="h-list-group-item ">
+            <div class="h-thumbnail h-thumbnail-horizontal">
+                <p class="h-image-area"><span class="h-icon h-icon-gadget-message"></span></p>
+                <div class="h-caption">
+                    <h3 class="h-caption-title">消息列表</h3>
+                    <p class="h-caption-content h-ellipsis">查看系统及用户消息</p>
+                    <p class="h-text-right"><a class="h-btn h-btn-form h-btn-primary" href="#"> <span class="h-btn-content">添加</span> </a></p>
+                </div>
+            </div>
+        </li>
+        <li class="h-list-group-item ">
+            <div class="h-thumbnail h-thumbnail-horizontal">
+                <p class="h-image-area"><span class="h-icon h-icon-gadget-works"></span></p>
+                <div class="h-caption">
+                    <h3 class="h-caption-title">最近工作</h3>
+                    <p class="h-caption-content h-ellipsis">最近的工作记录</p>
+                    <p class="h-text-right"><a class="h-btn h-btn-form h-btn-primary" href="#"> <span class="h-btn-content">添加</span> </a></p>
+                </div>
+            </div>
+        </li>
+        <li class="h-list-group-item ">
+            <div class="h-thumbnail h-thumbnail-horizontal">
+                <p class="h-image-area"><span class="h-icon h-icon-gadget-system"></span></p>
+                <div class="h-caption">
+                    <h3 class="h-caption-title">系统模块</h3>
+                    <p class="h-caption-content h-ellipsis">系统配置相关功能模块</p>
+                    <p class="h-text-right"><a class="h-btn h-btn-form h-btn-primary" href="#"> <span class="h-btn-content">添加</span> </a></p>
+                </div>
+            </div>
+        </li>
+        <li class="h-list-group-item ">
+            <div class="h-thumbnail h-thumbnail-horizontal">
+                <p class="h-image-area"><span class="h-icon h-icon-gadget-note"></span></p>
+                <div class="h-caption">
+                    <h3 class="h-caption-title">个人便签</h3>
+                    <p class="h-caption-content h-ellipsis">快捷记录工作便签</p>
+                    <p class="h-text-right"><a class="h-btn h-btn-form" href="#"> <span class="h-btn-content">卸载</span> </a></p>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="h-list-group-item ">
+            <div class="h-thumbnail h-thumbnail-horizontal">
+                <p class="h-image-area"><span class="h-icon h-icon-gadget-favorites"></span></p>
+                <div class="h-caption">
+                    <h3 class="h-caption-title">收藏</h3>
+                    <p class="h-caption-content h-ellipsis">个人收藏的功能模块</p>
+                    <p class="h-text-right"><a class="h-btn h-btn-form" href="#"> <span class="h-btn-content">卸载</span> </a></p>
+                </div>
+            </div>
+        </li>
+        <li class="h-list-group-item ">
+            <div class="h-thumbnail h-thumbnail-horizontal">
+                <p class="h-image-area"><span class="h-icon h-icon-gadget-board"></span></p>
+                <div class="h-caption">
+                    <h3 class="h-caption-title">业务看板</h3>
+                    <p class="h-caption-content h-ellipsis">业务相关数据看板</p>
+                    <p class="h-text-right"><a class="h-btn h-btn-form" href="#"> <span class="h-btn-content">卸载</span> </a></p>
+                </div>
+            </div>
+        </li>
+        
+    </ul>
+</div>
+
+
+<!-- 布局 +++++++++++++++++++++++++结束+++++++++++++++++++++++++++++++++++++++-->
+
+</body>
+</html>

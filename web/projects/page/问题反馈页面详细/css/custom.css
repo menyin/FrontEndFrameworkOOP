@@ -1,0 +1,33 @@
+body{font-family: "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei";
+    font-weight: 400; background:#f9f9f9;}
+
+.c-question-title{ padding:15px; border-bottom:#ddd 1px solid; font-size:22px; }
+.c-question-title-badge{font-size:12px; color:#f0a000;}
+.c-question-info li{float:left; font-size:12px; padding:20px 10px; color:#999}
+.c-icon-see{ background-image:url(images/icon-view.png)}
+.c-icon-reply{ background-image:url(images/icon-feedback.png)}
+
+.c-question-main{position:absolute;left: 1px; right: 1px;top:62px; bottom:0px; overflow-y:auto;}
+.c-question-list{ position:relative;border-top:0px;}
+.c-question-list td{border-bottom:#ddd 1px solid !important;vertical-align: top !important; background-color:#fff; }
+.c-question-list p{ white-space:pre-wrap !important;word-break:break-all; }
+.c-question-originator{width:180px; padding:20px !important;; color:#666; line-height:2em;position: relative;}
+.c-question-name{font-size:18px; color:#000;}
+.c-question-talk{margin-left:220px;border-left:#ddd 1px solid; }
+.c-question-talk-top{background-color:#fbfbfb;padding:5px 10px;; height:20px; }
+.c-time{font-size:12px; float:right; color:#999; padding:5px;}
+.c-question-model{ padding:10px 20px 0px 20px;}
+.c-question-originator:after{content: "";
+    display: inline-block;
+    width: 12px;
+    height:20px;
+    background-image: url(images/img-leftrow-gray.png);
+    position:absolute;
+    top: 30px;
+    left: 209px;}
+.c-question-reply td{background-color:#f4f9fb !important; border-color:#c3cfd9}
+.c-question-reply .c-question-originator:after{ background-image: url(images/img-leftrow-blue.png) !important;}
+.c-question-reply .c-question-talk-top{background-color:#e2eff6;}
+、
+/*重写cando*/
+.k-grid td{ padding: 0px;    border-width: 0 0 0px 1px;}

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICSSHS-MUI for webapp</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="undefined.png">
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+<script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+    <div class="docs-page-masthead">
+        <h1>列表(listview)</h1>
+        <p>列表通过样式<code>.hm-listview</code>来定义。属于移动端使用较为频繁的组件之一。 </p>
+    </div>
+    <div class="docs-callout docs-callout-warning">
+        <h4>请注意</h4>
+        <p> 基于kendoUI实现列表样式时，需要把整个完整标签都放在kendouUI原有的LI标签里面。 </p>
+        <div class="docs-highlight">
+            <pre>
+    
+    <span class=" hm-color-muted">HSUI的标签结构：</span>
+    &lt;div class="<span class="docs-color-red">hm-li</span>"&gt;...&lt;/div&gt;
+    
+    <span class=" hm-color-muted">基于KENDOUUI的标签结构：</span>
+    &lt;li&gt;
+        &lt;div class="<span class="docs-color-red">hm-li</span>"&gt;...&lt;/div&gt;
+    &lt;/li&gt;
+    
+</pre>
+        </div>
+    </div>
+    <h2>基本样式</h2>
+    <h3>列表项类型</h3>
+    <p>给列表项，添加类<code>.hm-li-static</code>可以快速创建一个带有只读列表项的列表。</p>
+    <div class="docs-example">
+        <div class="hm-listview">
+            <div class="hm-li-divider">
+                列表分隔
+            </div>
+            <div class="hm-li">
+                <div class="hm-li-content hm-flex-1">
+                    静态列表
+                </div>
+            </div>
+            <a href="#" class="hm-li hm-li-link">
+            <div class="hm-li-content hm-flex-1">
+                带跳转的列表，如果右侧不想带箭头可以不写<code>hm-li-link</code>
+            </div>
+            <div class="hm-li-footer">
+            </div>
+            </a>
+        </div>
+    </div>
+    <h3>列表项结构</h3>
+    <p>列表项默认为线性行布局，由三部份组成（可选）,<code>hm-li-header</code> <code>hm-li-content</code> <code>hm-li-footer</code>,并需要指定某一部份为主要部份并添加<code>hm-flex-1</code>样式。</p>
+    <div class="docs-example">
+        <div class="hm-listview">
+            <div class="hm-li">
+                <div class="hm-li-header ">
+                    header
+                </div>
+                <div class="hm-li-content hm-flex-1">
+                    content
+                </div>
+                <div class="hm-li-footer">
+                    footer
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre>&lt;div class="<span class="docs-color-red">hm-listview</span>"&gt;
+     &lt;div class="<span class="docs-color-red">hm-li</span>"&gt;
+    	&lt;div class="<span class="docs-color-red">hm-li-header</span>"&gt;...&lt;/div&gt;
+        &lt;div class="<span class="docs-color-red">hm-li-content</span>"&gt;...&lt;/div&gt;
+        &lt;div class="<span class="docs-color-red">hm-li-footer</span>"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+    </div>
+    <!--情景列表-->
+    <h3>情景列表</h3>
+    <p>列表项默认为水平线性布局，由三部份组成（可选）,<code>hm-li-header</code> <code>hm-li-content</code> <code>hm-li-footer</code>,并需要指定某一部份为主要部份并添加<code>hm-flex-1</code>样式。</p>
+    <div class="docs-example">
+        <div class="hm-listview">
+            <div class="hm-li hm-li-success">
+                <div class="hm-li-content hm-flex-1">
+                    hm-li-success
+                </div>
+            </div>
+            <div class="hm-li hm-li-info">
+                <div class="hm-li-content hm-flex-1">
+                    hm-li-info
+                </div>
+            </div>
+            <div class="hm-li hm-li-warning">
+                <div class="hm-li-content hm-flex-1">
+                    hm-li-warning
+                </div>
+            </div>
+            <div class="hm-li hm-li-danger">
+                <div class="hm-li-content hm-flex-1">
+                    hm-li-danger
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--有序列表-->
+    <h3>有序列表</h3>
+    <p>列表前带有序号。</p>
+    <div class="docs-example">
+        <ol class="hm-listview">
+            <li class="hm-li-divider"> 分隔 </li>
+            <li class="hm-li">
+                <div class="hm-li-content hm-flex-1">
+                    列表项标题
+                </div>
+            </li>
+            <li class="hm-li">
+                <div class="hm-li-content hm-flex-1">
+                    列表项标题
+                </div>
+            </li>
+        </ol>
+    </div>
+    
+    <!--列表项可设置为列布局-->
+    <h3>列表项可设置为列布局</h3>
+    <p>列表项通过追加 <code>hm-li-column</code>样式，可实现列布局，支持多行复杂内容结构。</p>
+    <div class="docs-example">
+        <div class="hm-listview">
+            <div class="hm-li  hm-li-column">
+                <a href="#" class="hm-li-link">
+                <div class="hm-li-content hm-flex-1">
+                    <h2>列表项标题</h2>
+                    <p class="hm-li-desc">UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+                </div>
+                <div class="hm-li-footer">
+                </div>
+                </a>
+                <div class="hm-bar">
+                    <div class="hm-flex-1">
+                        说明文字
+                    </div>
+                    <a href="#" class="hm-btn hm-btn-default hm-btn-inline hm-radius"> 查阅 </a> <a href="#" class="hm-btn hm-btn-danger hm-btn-inline hm-radius"> 删除 </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>样式变换</h2>
+    <!--内嵌列表-->
+    <h3>内嵌列表</h3>
+    <p>在 <code>.hm-listview</code> 的基础上添加样式<code>.hm-listview-inset</code>，从而定义为内嵌列表。当列表与页面上的其它元素混合使用时很有用。</p>
+    <div class="docs-example">
+        <div class="hm-listview hm-listview-inset">
+            <div class="hm-li">
+                <div class="hm-li-content hm-flex-1">
+                    列表项标题
+                </div>
+            </div>
+            <div class="hm-li">
+                <div class="hm-li-content hm-flex-1">
+                    列表项标题
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--列表斑马纹-->
+    <h3>列表斑马纹</h3>
+    <p>在 <code>.hm-listview</code> 的基础上添加样式<code>.hm-listview-stripe</code>为列表添加间隔行条纹。</p>
+    <div class="docs-example">
+        <div class="hm-listview hm-listview-stripe">
+            <div class="hm-li">
+                <div class="hm-li-content hm-flex-1">
+                    列表项标题
+                </div>
+            </div>
+            <div class="hm-li">
+                <div class="hm-li-content hm-flex-1">
+                    列表项标题
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>列表案例</h2>
+    <div class="docs-example docs-example-listview">
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                静态列表
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-listview">
+                    <div class="hm-li-divider">
+                        A
+                    </div>
+                    <div class="hm-li">
+                        <div class="hm-li-content hm-flex-1">
+                            纯文字
+                        </div>
+                    </div>
+                    <div class="hm-li">
+                        <div class="hm-li-content hm-flex-1">
+                            带说明的文字
+                        </div>
+                        <div class="hm-li-footer">
+                            说明文字
+                        </div>
+                    </div>
+                    <div class="hm-li-divider">
+                        B
+                    </div>
+                    <div class="hm-li">
+                        <div class="hm-li-content hm-flex-1">
+                            带徽章的文字
+                        </div>
+                        <div class="hm-li-footer">
+                            <span class="hm-badge hm-badge-danger hm-round">8</span>
+                        </div>
+                    </div>
+                    <div class="hm-li">
+                        <div class="hm-li-content hm-flex-1">
+                            带徽章的文字
+                        </div>
+                        <div class="hm-li-footer">
+                            <span class="hm-badge hm-badge-success hm-round">成功</span>
+                        </div>
+                    </div>
+                    <div class="hm-li">
+                        <div class="hm-li-content hm-flex-1">
+                            带开关的文字
+                        </div>
+                        <div class="hm-li-footer">
+                            <input class="hm-switch" type="checkbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                带跳转的列表
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-listview">
+                    <a href="#" class="hm-li hm-li-link">
+                    <div class="hm-li-content hm-flex-1">
+                        带跳转的列表
+                    </div>
+                    <div class="hm-li-footer">
+                    </div>
+                    </a> <a href="#" class="hm-li hm-li-link">
+                    <div class="hm-li-content hm-flex-1">
+                        带说明的跳转列表
+                    </div>
+                    <div class="hm-li-footer">
+                        说明文字
+                    </div>
+                    </a> <a href="#" class="hm-li hm-li-link">
+                    <div class="hm-li-content hm-flex-1">
+                        带徽章的跳转列表
+                    </div>
+                    <div class="hm-li-footer">
+                        <span class="hm-badge hm-badge-danger hm-round">8</span>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                带图标的列表
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-listview">
+                    <div class="hm-li">
+                        <div class="hm-li-header">
+                            <i class="hm-icon-download"></i>
+                        </div>
+                        <div class="hm-li-content hm-flex-1">
+                            带字体图标的列表
+                        </div>
+                        <div class="hm-li-footer">
+                            说明文字
+                        </div>
+                    </div>
+                    <div class="hm-li">
+                        <div class="hm-li-header">
+                            <i class="hm-icon-lg hm-icon-download"></i>
+                        </div>
+                        <div class="hm-li-content hm-flex-1">
+                            带字体图标的列表
+                        </div>
+                        <div class="hm-li-footer">
+                            说明文字
+                        </div>
+                    </div>
+                    <div class="hm-li">
+                        <div class="hm-li-header">
+                            <i class="hm-icon-xl hm-icon-download"></i>
+                        </div>
+                        <div class="hm-li-content hm-flex-1">
+                            带字体图标的列表
+                        </div>
+                        <div class="hm-li-footer">
+                            说明文字
+                        </div>
+                    </div>
+                    <div class="hm-li">
+                        <div class="hm-li-header">
+                            <div class="hm-img-thumbnail" style="background-image:url(../../resources/images/img-long.jpg); width:64px; height:64px;">
+                            </div>
+                        </div>
+                        <div class="hm-li-content hm-flex-1">
+                            <h2>背景图片缩略图</h2>
+                            <p class="hm-li-desc">无论图片宽高如何，都保证不变形</p>
+                        </div>
+                        <div class="hm-li-footer">
+                            说明文字
+                        </div>
+                    </div>
+                    <div class="hm-li">
+                        <div class="hm-li-header">
+                            <img src="../../resources/images/img-long.jpg" class="" style="width:64px; height:64px;" alt="">
+                        </div>
+                        <div class="hm-li-content hm-flex-1">
+                            <h2>图片缩略图</h2>
+                            <p class="hm-li-desc">直接插入图片，如果宽度比例不对容易显示变形</p>
+                        </div>
+                        <div class="hm-li-footer">
+                            说明文字
+                        </div>
+                    </div>
+                    <a href="#" class="hm-li hm-li-link">
+                    <div class="hm-li-header">
+                        <img src="../../resources/images/img-listview-thumb.jpg" class="" style="width:64px;" alt="">
+                    </div>
+                    <div class="hm-li-content hm-flex-1">
+                        带图标的跳转列表
+                    </div>
+                    <div class="hm-li-footer">
+                        2016.02
+                    </div>
+                    </a> <a href="#" class="hm-li hm-li-link">
+                    <div class="hm-li-header">
+                        <img src="../../resources/images/img-listview-thumb.jpg" class=" " style="width:80px;" alt="">
+                    </div>
+                    <div class="hm-li-content hm-flex-1">
+                        带图标徽章的跳转列表
+                    </div>
+                    <div class="hm-li-footer">
+                        <span class="hm-badge hm-badge-danger hm-round">8</span>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                带描述的列表
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-listview">
+                    <a href="#" class="hm-li hm-li-link">
+                        <div class="hm-li-content hm-flex-1">
+                            <h2><span class="hm-float-right">2016-02</span>带二级标题的可跳转链接</h2>
+                            <h3 class="hm-li-subtitle">二级标题</h3>
+                            <p class="hm-li-desc hm-line-clamp">UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+                        </div>
+                        <div class="hm-li-footer">
+                        </div>
+                    </a> 
+                    <a href="#" class="hm-li hm-li-link">
+                        <div class="hm-li-header">
+                            <img src="../../resources/images/img-listview-thumb.jpg" class=" hm-radius" style="width:40px;" alt="">
+                        </div>
+                        <div class="hm-li-content hm-flex-1">
+                            <h2>列表标题</h2>
+                            <p class="hm-li-desc hm-ellipsis">UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+                        </div>
+                        <div class="hm-li-footer">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hm-group hm-group-nopad">
+            <div class="hm-group-header">
+                多跳转的列表
+            </div>
+            <div class="hm-group-content">
+                <div class="hm-listview">
+                    <div  class="hm-li">
+                        <div class="hm-li-content hm-flex-1">
+                            <a href="#">
+                            <h2>多跳转列表</h2>
+                            <p class="hm-li-desc hm-ellipsis">UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+                            </a>
+                        </div>
+                        <div class="hm-li-footer">
+                            <a href="#" class="hm-btn hm-btn-default hm-btn-inline hm-radius"> 查阅 </a> <a href="#" class="hm-btn hm-btn-danger hm-btn-inline hm-radius"> 删除 </a>
+                        </div>
+                    </div>
+                    <div  class="hm-li  hm-li-column">
+                        <a href="#" class="hm-li-link">
+                        <div class="hm-li-content hm-flex-1">
+                            <h2>多跳转带工具栏列表</h2>
+                            <p class="hm-li-desc">UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+                        </div>
+                        <div class="hm-li-footer">
+                        </div>
+                        </a>
+                        <div class="hm-bar">
+                            <div class="hm-flex-1">
+                                说明文字
+                            </div>
+                            <a href="#" class="hm-btn hm-btn-default hm-btn-inline hm-radius"> 查阅 </a> <a href="#" class="hm-btn hm-btn-danger hm-btn-inline hm-radius"> 删除 </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hm-group-header">
+            内嵌列表
+        </div>
+        <div class="hm-listview hm-listview-inset">
+            <a href="#" class="hm-li hm-li-link">
+            <div class="hm-li-header">
+                <img src="../../resources/images/img-listview-thumb.jpg" class=" hm-radius" style="width:40px;" alt="">
+            </div>
+            <div class="hm-li-content hm-flex-1">
+                <h2>内嵌列表</h2>
+                <p class="hm-li-desc hm-ellipsis">UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+            </div>
+            <div class="hm-li-footer">
+            </div>
+            </a> <a href="#" class="hm-li hm-li-link">
+            <div class="hm-li-header">
+                <img src="../../resources/images/img-listview-thumb.jpg" class=" hm-radius" style="width:40px;" alt="">
+            </div>
+            <div class="hm-li-content hm-flex-1">
+                <h2>内嵌列表</h2>
+                <p class="hm-li-desc hm-ellipsis">UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。</p>
+            </div>
+            <div class="hm-li-footer">
+            </div>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

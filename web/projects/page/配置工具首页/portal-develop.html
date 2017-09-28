@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ICSSHS-UI</title>
+<link href="../../themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css" />
+<!--页面高度需设置100%，并保证不出现滚动条；否则所包含的标签无法获取到100%的高度，会导致布局错乱 by 66383210@qq.com-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+	background: #fff;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+</style>
+</head>
+<body>
+<!-- 布局 +++++++++++++++++++++++++开始+++++++++++++++++++++++++++++++++++++++-->
+<div class="h-box" style="height:100%;">
+  <div class="h-box-item"  style=" width:auto; height:auto; left: 0; right: 0; top: 0; bottom:auto;">
+    <p class="h-pad10 h-border-b h-text-center">
+    <span class=" h-pr-20">应用名称：调拨系统</span>  
+    <span class=" h-pr-20">当前版本：1.0.1</span>
+    <span class=" h-pr-20">应用代码：1001486X</span>
+    <span class=" h-pr-20">创建时间：2014-01-01</span></p>
+    
+    <!---->
+    <div style="overflow:auto;">
+    <div class="c-menu-area" >
+      <div class="c-caption">
+        <p class="c-caption-title">
+          <span class="h-icon h-icon-l c-icon-help"></span>
+          <strong  >导航说明</strong>
+        </p>
+        <p class="c-caption-text"> 鼠标移动到左侧链接上查看功能说明，点击链接分别进行实体导入、业务视图创建、业务表单创建、应用功能创建等操作。 </p>
+      </div>
+      <!--button-->
+      <a  href="#" class="c-menu-item">
+        <div class="c-link c-link-import">
+        	 <span class="h-icon h-icon-l c-icon-import-white"></span>
+             <p>实体导入</p>
+        </div>
+        <div class="c-caption">
+          <p class="c-caption-title">
+            <span class="h-icon h-icon-l c-icon-import"></span>
+            <strong  >实体导入</strong>
+          </p>
+          <p class="c-caption-text"> 业务实体是配置工具所有功能的一个基础模块，所有的业务视图，业务表单和应用功能都是针对业务实体来操作。一般情况下实体和业务数据表表是一对一的关系，这边可以通过连接数据源快速导入数据库表来创建业务实体对象。前提是你要配置好连接数据源。 </p>
+        </div>
+      </a>
+      <a  href="#" class="c-menu-item">
+        <div class="c-link c-link-view">
+        	<span class="h-icon h-icon-l c-icon-view-white"></span>
+             <p>业务视图创建</p>
+        </div>
+          <div class="c-caption">
+          <p class="c-caption-title">
+            <span class="h-icon h-icon-l c-icon-view"></span>
+            <strong  >业务视图创建</strong>
+          </p>
+          <p class="c-caption-text">业务视图用于数据的查询和展示，通过配置视图的实体，连接关系，展示字段和参数等。你可以创建一个用于展示和查询的表格视图。</p>
+        </div>
+      </a>
+      <a  href="#" class="c-menu-item">
+        <div class="c-link c-link-form">
+        	<span class="h-icon h-icon-l c-icon-form-white"></span>
+             <p>业务表单创建</p>
+        </div>
+          <div class="c-caption">
+          <p class="c-caption-title">
+            <span class="h-icon h-icon-l c-icon-form"></span>
+            <strong  >业务表单创建</strong>
+          </p>
+          <p class="c-caption-text">业务表单用于具体单据的录入和查看。通过配置表单项和表单操作，你可以创建一个保存单据数据的录入界面。</p>
+        </div>
+      </a>
+      <a  href="#" class="c-menu-item">
+        <div class="c-link c-link-application">
+        	<span class="h-icon h-icon-l c-icon-application-white"></span>
+             <p>应用功能创建</p>
+        </div>
+          <div class="c-caption">
+          <p class="c-caption-title">
+            <span class="h-icon h-icon-l c-icon-application"></span>
+            <strong>应用功能创建</strong>
+          </p>
+          <p class="c-caption-text">一个应用功能相当于一个完整的功能菜单（需求），包含对一个业务实体的CRUD操作。一般它又一个业务视图和业务表单组成。实现对一个业务实体的查询，新增/修改/删除等功能操作。我们的一个菜单就是对于一个应用功能。</p>
+        </div>
+      </a>
+      
+      
+    </div>
+    </div>
+  </div>
+  <div class="h-box-item"  style="width:50%; height:auto; left: 0; right: auto; top: 280px; bottom:0; border-top:1px solid #eee; border-right:1px solid #eee">
+  <div class="c-list-area" >
+      <div class="c-list-title">
+      	<span class="h-icon h-icon-xxl c-icon-history"></span>
+        <strong>最近操作模型</strong>
+      </div>
+
+      <div class="c-list-group">
+            <div class=" h-pl-30 h-pr-30">
+            <a href="#" class="h-thumbnail h-thumbnail-horizontal">
+                  <p class="h-image-area">
+                  	<span class="h-icon h-icon-xxl"></span>
+                  </p>
+                  <div class="h-caption">
+                    <h3 class="h-caption-title">【填报】销售出库QRY_MK101 </h3>
+                    <p class="h-caption-content">调拨统计/入库/视图/[填报]销售出库<br>
+admin 2014-07-30 11:09</p>
+                  </div>
+              </a>
+              <a href="#" class="h-thumbnail h-thumbnail-horizontal">
+                  <p class="h-image-area">
+                  	<span class="h-icon h-icon-xxl"></span>
+                  </p>
+                  <div class="h-caption">
+                    <h3 class="h-caption-title">【填报】销售出库QRY_MK101 </h3>
+                    <p class="h-caption-content">调拨统计/入库/视图/[填报]销售出库<br>
+admin 2014-07-30 11:09</p>
+                  </div>
+              </a>
+              <a href="#" class="h-thumbnail h-thumbnail-horizontal">
+                  <p class="h-image-area">
+                  	<span class="h-icon h-icon-xxl"></span>
+                  </p>
+                  <div class="h-caption">
+                    <h3 class="h-caption-title">【填报】销售出库QRY_MK101 </h3>
+                    <p class="h-caption-content">调拨统计/入库/视图/[填报]销售出库<br>
+admin 2014-07-30 11:09</p>
+                  </div>
+              </a>
+              <a href="#" class="h-thumbnail h-thumbnail-horizontal">
+                  <p class="h-image-area">
+                  	<span class="h-icon h-icon-xxl"></span>
+                  </p>
+                  <div class="h-caption">
+                    <h3 class="h-caption-title">【填报】销售出库QRY_MK101 </h3>
+                    <p class="h-caption-content">调拨统计/入库/视图/[填报]销售出库<br>
+admin 2014-07-30 11:09</p>
+                  </div>
+              </a>
+              <a href="#" class="h-thumbnail h-thumbnail-horizontal">
+                  <p class="h-image-area">
+                  	<span class="h-icon h-icon-xxl"></span>
+                  </p>
+                  <div class="h-caption">
+                    <h3 class="h-caption-title">【填报】销售出库QRY_MK101 </h3>
+                    <p class="h-caption-content">调拨统计/入库/视图/[填报]销售出库<br>
+admin 2014-07-30 11:09</p>
+                  </div>
+              </a>
+              
+			</div>
+      </div>
+    </div>
+  </div>
+  <div class="h-box-item"  style="width: auto; height:auto; left: 50%; right: 0; top: 280px; bottom:0; border-top:1px solid #eee;  ">
+  	<div class="c-list-area" >
+      <div class="c-list-title">
+      	<span class="h-icon h-icon-xxl c-icon-chart"></span>
+        <strong>汇总数据</strong>
+      </div>
+
+      <div class="c-list-group">
+            <div class=" h-pl-30 h-pr-30">
+            这里放图表控件
+			</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 布局 +++++++++++++++++++++++++结束+++++++++++++++++++++++++++++++++++++++-->
+
+</body>
+</html>

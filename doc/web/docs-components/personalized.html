@@ -1,0 +1,1055 @@
+<!doctype html>
+<html class="docs-html">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>ICSSHS-UI</title>
+  <!--项目全局样式-->
+  <link href="../../../web/projects/themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+  <link href="../../../web/projects/themes-default/resources/css/css3-hsui.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="../../../web/dcresources/icons/action/themes-default/icon-action.css">
+  <!--说明文档样式,实际应用中请不要引用-->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+  <script src="../../../web/projects/themes-default/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+  <div class="docs-page-masthead">
+    <h1>个性化页面实例</h1>
+  </div>
+  
+  <!--------------------------------------------------------------------
+  	检测进度
+  ---------------------------------------------------------------------->
+  <h2>初始化工具实例</h2>
+  <div class="h-panel">
+    <div class="h-panel-header">
+      <div class=" h-pull-left">
+        <div class="h-panel-title">初始化工具</div>
+      </div>
+      <div class="h-pull-right">
+        <a href="#" class="h-icon h-icon-up"></a>
+        <a href="#" class="h-icon h-icon-left"></a>
+        <a href="" class="h-icon h-icon-maximize"></a>
+      </div>
+    </div>
+    <div class="h-panel-body">
+      <!--未启动-->
+      <div class="h-bar clearfix">
+        <div class="h-float-left h-text-center" style=" width:160px;">
+          <span class="h-font-36 h-font-yahei h-color-muted ">未启动</span>
+        </div>
+        <div class="h-float-right h-text-right h-pt-10" style=" width:160px;">
+          <a class="h-btn h-btn-form h-btn-primary" href="#">
+            <span class="h-btn-content">启动</span>
+          </a>
+        </div>
+        <div style=" margin:0 120px">
+          <div class="h-font-16b h-pt-5">初始化组织索引</div>
+          <div class=" h-font-12 h-color-muted">点击右侧按钮开始初始化</div>
+        </div>
+      </div>
+      <!--进行中-->
+      <div class="h-bar clearfix">
+        <div class="h-float-left h-text-center" style=" width:160px;">
+          <span class="h-font-36 h-font-yahei h-color-primary ">86%</span>
+        </div>
+        <div class="h-float-right h-text-right h-pt-10" style=" width:160px;">
+          <a class="h-btn h-btn-form h-btn-danger" href="#">
+            <span class="h-btn-content">停止</span>
+          </a>
+        </div>
+        <div style=" padding:0 160px; ">
+          <div class="h-font-b">正在初始化：
+            <span class="  h-color-primary">编码：09344 名称：烟叶等级</span>
+          </div>
+          <div class="h-progress">
+            <div class="h-progress-bar" style="width:70%;"></div>
+          </div>
+          <div class="clearfix">
+            <div class="h-float-left">已完成：5/32项</div>
+            <div class="h-float-right">85%</div>
+          </div>
+        </div>
+      </div>
+      <!--已完成-->
+      <div class="h-bar clearfix">
+        <!--请采用平台提供的hbox布局，左右两侧内容固定-->
+        <div class="h-float-left h-text-center" style=" width:160px;">
+          <span class="h-font-36 h-font-yahei h-color-success ">已完成</span>
+        </div>
+        <div class="h-float-right h-text-right h-pt-10" style=" width:160px;">
+          <a class="h-btn h-btn-form h-btn-primary" href="#">
+            <span class="h-btn-content">启动</span>
+          </a>
+        </div>
+        <div style=" margin:0 120px">
+          <div class="h-font-16b h-pt-5">初始化组织索引</div>
+          <div class=" h-font-12 h-color-muted">点击右侧按钮重新开始初始化</div>
+        </div>
+      </div>
+      <div class="h-pad20">
+        <div class=" h-font-14b ">共初始化了64项，其中失败的4项，成功的60项</div>
+        <div class=" h-mt-10 h-mb-10" >
+          <span class="h-icon h-icon-success h-mr-10"></span>
+          初始化组织索引第一部份已完成</div>
+        <div  class=" h-mt-10 h-mb-10">
+          <span class="h-icon h-icon-loading h-mr-10"></span>
+          正在初始化组织索引第二部份</div>
+        <div  class=" h-mt-10 h-mb-10">
+          <span class="h-icon h-icon-stop h-mr-10"></span>
+          索引第三部份正在等待初始化</div>
+        <div  class=" h-mt-10 h-mb-10">
+          <span class="h-icon h-icon-stop h-mr-10"></span>
+          索引四部份正在等待初始化</div>
+        <div class=" h-border-b2 h-mt-10 h-pb-5">
+          <a href="#" class="h-icon h-icon-up"></a>
+          <strong class="h-color-danger h-pl-5">以下4项初始化失败</strong>
+        </div>
+        <ul >
+          <li class="h-pad5 h-border-b">
+            <span class=" h-float-right h-color-danger">初始化失败
+              <span class="h-icon h-icon-danger h-ml-5"></span>
+            </span>
+            <span class="h-float-left" style="width:130px;">编码：ID530112</span>
+            名称：烟叶等级</li>
+          <li class="h-pad5 h-border-b">
+            <span class=" h-float-right h-color-danger">初始化失败
+              <span class="h-icon h-icon-danger h-ml-5"></span>
+            </span>
+            <span class="h-float-left" style="width:130px;">编码：D530112</span>
+            名称：烟叶等级</li>
+          <li class="h-pad5 h-border-b">
+            <span class=" h-float-right h-color-danger">初始化失败
+              <span class="h-icon h-icon-danger h-ml-5"></span>
+            </span>
+            <span class="h-float-left" style="width:130px;">编码：D530112</span>
+            名称：烟叶等级</li>
+          <li class="h-pad5 h-border-b">
+            <span class=" h-float-right h-color-danger">初始化失败
+              <span class="h-icon h-icon-danger h-ml-5"></span>
+            </span>
+            <span class="h-float-left" style="width:130px;">编码：D530112</span>
+            名称：烟叶等级</li>
+        </ul>
+        <div class=" h-border-b2 h-mt-10 h-pb-5">
+          <a href="#" class="h-icon h-icon-up"></a>
+          <strong class="  h-color-success h-ml-5">以下68项初始化成功</strong>
+        </div>
+        <ul>
+          <li class="h-pad5 h-border-b">
+            <span class=" h-float-right h-color-success">初始化成功
+              <span class="h-icon h-icon-success h-ml-5"></span>
+            </span>
+            <span class="h-float-left" style="width:130px;">编码：D530112</span>
+            名称：烟叶等级</li>
+          <li class="h-pad5 h-border-b">
+            <span class=" h-float-right h-color-success">初始化成功
+              <span class="h-icon h-icon-success h-ml-5"></span>
+            </span>
+            <span class="h-float-left" style="width:130px;">编码：D530112</span>
+            名称：烟叶等级</li>
+          <li class="h-pad5 h-border-b">
+            <span class=" h-float-right h-color-success">初始化成功
+              <span class="h-icon h-icon-success h-ml-5"></span>
+            </span>
+            <span class="h-float-left" style="width:130px;">编码：D530112</span>
+            名称：烟叶等级</li>
+          <li class="h-pad5 h-border-b">
+            <span class=" h-float-right h-color-success">初始化成功
+              <span class="h-icon h-icon-success h-ml-5"></span>
+            </span>
+            <span class="h-float-left" style="width:130px;">编码：D530112</span>
+            名称：烟叶等级</li>
+          <li class="h-pad5 h-border-b">
+            <span class=" h-float-right h-color-success">初始化成功
+              <span class="h-icon h-icon-success h-ml-5"></span>
+            </span>
+            <span class="h-float-left" style="width:130px;">编码：D530112</span>
+            名称：烟叶等级</li>
+          <li class="h-pad5 h-border-b">
+            <span class=" h-float-right h-color-success">初始化成功
+              <span class="h-icon h-icon-success h-ml-5"></span>
+            </span>
+            <span class="h-float-left" style="width:130px;">编码：D530112</span>
+            名称：烟叶等级</li>
+          <li class="h-pad5 h-border-b">
+            <span class=" h-float-right h-color-success">初始化成功
+              <span class="h-icon h-icon-success h-ml-5"></span>
+            </span>
+            <span class="h-float-left" style="width:130px;">编码：D530112</span>
+            名称：烟叶等级</li>
+          <li class="h-pad5 h-border-b">
+            <span class=" h-float-right h-color-success">初始化成功
+              <span class="h-icon h-icon-success h-ml-5"></span>
+            </span>
+            <span class="h-float-left" style="width:130px;">编码：D530112</span>
+            名称：烟叶等级</li>
+          <li class="h-pad5 h-border-b">
+            <span class=" h-float-right h-color-success">初始化成功
+              <span class="h-icon h-icon-success h-ml-5"></span>
+            </span>
+            <span class="h-float-left" style="width:130px;">编码：D530112</span>
+            名称：烟叶等级</li>
+          <li class="h-pad5 h-border-b">
+            <span class=" h-float-right h-color-success">初始化成功
+              <span class="h-icon h-icon-success h-ml-5"></span>
+            </span>
+            <span class="h-float-left" style="width:130px;">编码：D530112</span>
+            名称：烟叶等级</li>
+          <li class="h-pad5 h-border-b">
+            <span class=" h-float-right h-color-success">初始化成功
+              <span class="h-icon h-icon-success h-ml-5"></span>
+            </span>
+            <span class="h-float-left" style="width:130px;">编码：D530112</span>
+            名称：烟叶等级</li>
+        </ul>
+      </div>
+    </div>
+    <div class="h-toolbar h-toolbar-footer">
+      <div class="h-pull-left">左侧内容</div>
+      <div class="h-pull-right">右侧内容</div>
+    </div>
+  </div>
+  <h2>查询统计</h2>
+  <div class="h-panel">
+    <div class="h-panel-header">
+      <div class=" h-pull-left">
+        <div class="h-panel-title">查询统计结果</div>
+      </div>
+    </div>
+    <div class="h-panel-body">
+      <div class="h-mar10 h-text-center h-font-24 h-font-yahei">福建中烟烟叶加工数据统计</div>
+      <div class="h-mar10 h-font-12 h-color-muted" >
+        <table class="h-table-noborder ">
+          <tbody>
+            <tr>
+              <td>日期范围：2013/12/01-2014/03/30</td>
+              <td>调拔年度：2014年</td>
+              <td>加工单位：厦门卷烟工业有限公司</td>
+              <td>委托单位：三明金叶复烤厂</td>
+            </tr>
+            <tr>
+              <td>业务类型：购销供商协同</td>
+              <td>库存地区：三明市仓库</td>
+              <td>烟叶类型：烤烟</td>
+              <td>烟叶产地：三明市</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--table-->
+      <div class="h-mar10" >
+        <table class="h-table h-table-bordered">
+          <thead>
+            <tr>
+              <th width="40" align="center">序号</th>
+              <th>编号</th>
+              <th>主体名称</th>
+              <th>处置面积(亩)</th>
+              <th>变化</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <td align="center">合计</td>
+              <td></td>
+              <td align="left" class=" h-text-right"></td>
+              <td class=" h-text-right">500.00</td>
+              <td class=" h-text-right"><strong class=" h-text-danger">-3.18</strong></td>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td align="center">1</td>
+              <td>350322200808048888</td>
+              <td align="left">老蔡</td>
+              <td class="h-text-right">352.00</td>
+              <td class="h-text-right">0.00</td>
+            </tr>
+            <tr>
+              <td align="center">2</td>
+              <td>350322200808048888</td>
+              <td align="left">老蔡</td>
+              <td class="h-text-right">352.00</td>
+              <td class="h-text-right">0.00</td>
+            </tr>
+            <tr>
+              <td align="center">3</td>
+              <td>350322200808048888</td>
+              <td align="left">老蔡</td>
+              <td class="h-text-right">352.00</td>
+              <td class="h-text-right">0.00</td>
+            </tr>
+            <tr>
+              <td align="center">4</td>
+              <td>350322200808048888</td>
+              <td align="left">老蔡</td>
+              <td class="h-text-right">352.00</td>
+              <td class="h-text-right">0.00</td>
+            </tr>
+            <tr>
+              <td align="center">5</td>
+              <td>350322200808048888</td>
+              <td align="left">老蔡</td>
+              <td class="h-text-right">352.00</td>
+              <td class="h-text-right">0.00</td>
+            </tr>
+            <tr>
+              <td align="center">6</td>
+              <td>350322200808048888</td>
+              <td align="left">老蔡</td>
+              <td class="h-text-right">352.00</td>
+              <td class="h-text-right">0.00</td>
+            </tr>
+            <tr>
+              <td align="center">7</td>
+              <td>350322200808048888</td>
+              <td align="left">老蔡</td>
+              <td class="h-text-right">352.00</td>
+              <td class="h-text-right">0.00</td>
+            </tr>
+            <tr>
+              <td align="center">8</td>
+              <td>350322200808048888</td>
+              <td align="left">老蔡</td>
+              <td class="h-text-right">352.00</td>
+              <td class="h-text-right">0.00</td>
+            </tr>
+            <tr>
+              <td align="center">9</td>
+              <td>350322200808048888</td>
+              <td align="left">老蔡</td>
+              <td class="h-text-right">352.00</td>
+              <td class="h-text-right">0.00</td>
+            </tr>
+            <tr>
+              <td align="center">10</td>
+              <td>350322200808048888</td>
+              <td align="left">老蔡</td>
+              <td class="h-text-right">352.00</td>
+              <td class="h-text-right">0.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="h-mar10" >
+        <div class="h-text-right h-mar0 h-font-12 h-color-muted">
+          <span class="h-pl-10 h-pr-10">统计日期：2014/03/30</span>
+          <span class="h-pl-10 h-pr-10">统计人：老蔡</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>消息中心</h2>
+  <div class="h-container">
+    <div class="h-row">
+      <div class="h-col-g12-5">
+        <div class="h-col-content">
+          <div class="h-panel">
+            <div class="h-panel-header">
+              <div class="h-pull-left">
+                <div class="h-panel-title h-inline-block">表格信息</div>
+              </div>
+            </div>
+            <div class="h-toolbar">
+              <div class="h-pull-left h-inline-block-wrapper">
+                <div class="h-inline-block">
+                  <div class="h-checkbox h-checkbox-inline">
+                    <label>
+                      <input type="checkbox">
+                      全选</label>
+                  </div>
+                </div>
+                <a class="h-btn h-btn-toolbar" href="#">
+                  <span class="h-btn-content">
+                    <span class="h-icon h-icon-delete"></span>
+                    删除 </span>
+                </a>
+              </div>
+              <div class="h-pull-right">
+                <div class="h-form-inline">
+                  <div class="h-form-group">
+                    <div class="h-form-control-wrapper">
+                      
+                      <div class="h-input-group">
+                        <input type="text" class="h-form-control" placeholder="搜索消息...">
+                        <!--跟在输入框后面的内容-->
+                        <span class="h-input-group-btn">
+                          <!--清除按钮-->
+                          <a class="h-close" href="#"></a>
+                          <a class="h-btn" href="#">
+                            <span class="h-btn-content">
+                              <span class="h-icon h-icon-search"></span>
+                            </span>
+                          </a>
+                        </span>
+                      </div>
+                    
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="h-panel-body">
+              <div class="h-pad10">
+                <div class="h-list-group">
+                  <div class="h-list-group-item ">
+                    <div class="h-row h-row-col3-cf" style="padding-left:26px; padding-right:60px;">
+                      <div class="h-col-l" style="width:26px; margin-left:-26px;">
+                        <div class="h-col-content">
+                          <input type="checkbox">
+                          <a href="#" class="h-icon h-icon-message-unread"></a>
+                          <a href="#" class="h-icon h-icon-attachment" title="有附件"></a>
+                        </div>
+                      </div>
+                      <div class="h-col-c" style="">
+                        <a href="#" class="h-block">
+                          <h4 class="h-list-group-item-heading">列表标题</h4>
+                          <p class="h-list-group-item-text h-font-b">这里是文本内容，主要是对该条列表的简要说明文字</p>
+                        </a>
+                      </div>
+                      <div class="h-col-r" style=" width:60px; margin-right:-60px;">
+                        <div class="h-text-right">
+                          <span class="h-color-muted">2分钟前</span>
+                          <br>
+                          <a href="#" class="h-icon h-icon-delete" title="删除"></a>
+                          <a href="#" class="h-icon h-icon-edit" title="回复"></a>
+                          <a href="#" class="h-icon h-icon-star" title="加星标"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-list-group-item ">
+                    <div class="h-row h-row-col3-cf" style="padding-left:26px; padding-right:60px;">
+                      <div class="h-col-l" style="width:26px; margin-left:-26px;">
+                        <div class="h-col-content">
+                          <input type="checkbox">
+                          <a href="#" class="h-icon h-icon-message-read"></a>
+                          <a href="#" class="h-icon h-icon-attachment" title="有附件"></a>
+                        </div>
+                      </div>
+                      <div class="h-col-c" style="">
+                        <a href="#" class="h-block">
+                          <h4 class="h-list-group-item-heading">列表标题</h4>
+                          <p class="h-list-group-item-text">这里是文本内容，主要是对该条列表的简要说明文字</p>
+                        </a>
+                      </div>
+                      <div class="h-col-r" style=" width:60px; margin-right:-60px;">
+                        <div class="h-text-right">
+                          <span class="h-color-muted">昨天</span>
+                          <br>
+                          <a href="#" class="h-icon h-icon-delete" title="删除"></a>
+                          <a href="#" class="h-icon h-icon-edit" title="回复"></a>
+                          <a href="#" class="h-icon h-icon-star-active" title="去除星标"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-list-group-item ">
+                    <div class="h-row h-row-col3-cf" style="padding-left:26px; padding-right:60px;">
+                      <div class="h-col-l" style="width:26px; margin-left:-26px;">
+                        <div class="h-col-content">
+                          <input type="checkbox">
+                          <a href="#" class="h-icon h-icon-message-unread"></a>
+                          <a href="#" class="h-icon h-icon-attachment" title="有附件"></a>
+                        </div>
+                      </div>
+                      <div class="h-col-c" style="">
+                        <a href="#" class="h-block">
+                          <h4 class="h-list-group-item-heading">列表标题</h4>
+                          <p class="h-list-group-item-text">这里是文本内容，主要是对该条列表的简要说明文字</p>
+                        </a>
+                      </div>
+                      <div class="h-col-r" style=" width:60px; margin-right:-60px;">
+                        <div class="h-text-right">
+                          <span class="h-color-muted">09月08日</span>
+                          <br>
+                          <a href="#" class="h-icon h-icon-delete" title="删除"></a>
+                          <a href="#" class="h-icon h-icon-edit" title="回复"></a>
+                          <a href="#" class="h-icon h-icon-star" title="加星标"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-list-group-item ">
+                    <div class="h-row h-row-col3-cf" style="padding-left:26px; padding-right:60px;">
+                      <div class="h-col-l" style="width:26px; margin-left:-26px;">
+                        <div class="h-col-content">
+                          <input type="checkbox">
+                          <a href="#" class="h-icon h-icon-message-unread"></a>
+                          <a href="#" class="h-icon h-icon-attachment" title="有附件"></a>
+                        </div>
+                      </div>
+                      <div class="h-col-c" style="">
+                        <a href="#" class="h-block">
+                          <h4 class="h-list-group-item-heading">列表标题</h4>
+                          <p class="h-list-group-item-text">这里是文本内容，主要是对该条列表的简要说明文字</p>
+                        </a>
+                      </div>
+                      <div class="h-col-r" style=" width:60px; margin-right:-60px;">
+                        <div class="h-text-right">
+                          <span class="h-color-muted">09月08日</span>
+                          <br>
+                          <a href="#" class="h-icon h-icon-delete" title="删除"></a>
+                          <a href="#" class="h-icon h-icon-edit" title="回复"></a>
+                          <a href="#" class="h-icon h-icon-star" title="加星标"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-list-group-item ">
+                    <div class="h-row h-row-col3-cf" style="padding-left:26px; padding-right:60px;">
+                      <div class="h-col-l" style="width:26px; margin-left:-26px;">
+                        <div class="h-col-content">
+                          <input type="checkbox">
+                          <a href="#" class="h-icon h-icon-message-unread"></a>
+                          <a href="#" class="h-icon h-icon-attachment" title="有附件"></a>
+                        </div>
+                      </div>
+                      <div class="h-col-c" style="">
+                        <a href="#" class="h-block">
+                          <h4 class="h-list-group-item-heading">列表标题</h4>
+                          <p class="h-list-group-item-text">这里是文本内容，主要是对该条列表的简要说明文字</p>
+                        </a>
+                      </div>
+                      <div class="h-col-r" style=" width:60px; margin-right:-60px;">
+                        <div class="h-text-right">
+                          <span class="h-color-muted">09月08日</span>
+                          <br>
+                          <a href="#" class="h-icon h-icon-delete" title="删除"></a>
+                          <a href="#" class="h-icon h-icon-edit" title="回复"></a>
+                          <a href="#" class="h-icon h-icon-star" title="加星标"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-list-group-item ">
+                    <div class="h-row h-row-col3-cf" style="padding-left:26px; padding-right:60px;">
+                      <div class="h-col-l" style="width:26px; margin-left:-26px;">
+                        <div class="h-col-content">
+                          <input type="checkbox">
+                          <a href="#" class="h-icon h-icon-message-unread"></a>
+                          <a href="#" class="h-icon h-icon-attachment" title="有附件"></a>
+                        </div>
+                      </div>
+                      <div class="h-col-c" style="">
+                        <a href="#" class="h-block">
+                          <h4 class="h-list-group-item-heading">列表标题</h4>
+                          <p class="h-list-group-item-text">这里是文本内容，主要是对该条列表的简要说明文字</p>
+                        </a>
+                      </div>
+                      <div class="h-col-r" style=" width:60px; margin-right:-60px;">
+                        <div class="h-text-right">
+                          <span class="h-color-muted">09月08日</span>
+                          <br>
+                          <a href="#" class="h-icon h-icon-delete" title="删除"></a>
+                          <a href="#" class="h-icon h-icon-edit" title="回复"></a>
+                          <a href="#" class="h-icon h-icon-star" title="加星标"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-list-group-item ">
+                    <div class="h-row h-row-col3-cf" style="padding-left:26px; padding-right:60px;">
+                      <div class="h-col-l" style="width:26px; margin-left:-26px;">
+                        <div class="h-col-content">
+                          <input type="checkbox">
+                          <a href="#" class="h-icon h-icon-message-unread"></a>
+                          <a href="#" class="h-icon h-icon-attachment" title="有附件"></a>
+                        </div>
+                      </div>
+                      <div class="h-col-c" style="">
+                        <a href="#" class="h-block">
+                          <h4 class="h-list-group-item-heading">列表标题</h4>
+                          <p class="h-list-group-item-text">这里是文本内容，主要是对该条列表的简要说明文字</p>
+                        </a>
+                      </div>
+                      <div class="h-col-r" style=" width:60px; margin-right:-60px;">
+                        <div class="h-text-right">
+                          <span class="h-color-muted">09月08日</span>
+                          <br>
+                          <a href="#" class="h-icon h-icon-delete" title="删除"></a>
+                          <a href="#" class="h-icon h-icon-edit" title="回复"></a>
+                          <a href="#" class="h-icon h-icon-star" title="加星标"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="h-col-g12-7">
+        <div class="h-col-content">
+          <div class="h-panel">
+          	<div class="h-toolbar">
+              <div class="h-pull-left h-inline-block-wrapper">
+                
+                <a class="h-btn h-btn-toolbar" href="#">
+                  <span class="h-btn-content">
+                    <span class="h-icon h-icon-delete"></span>
+                    删除 </span>
+                </a>
+                <a class="h-btn h-btn-toolbar" href="#">
+                  <span class="h-btn-content">
+                    <span class="h-icon h-icon-edit"></span>
+                    回复 </span>
+                </a>
+              </div>
+              
+            </div>
+            <div class="h-panel-body">
+              
+              	<div class="h-pad10 h-bg-muted-light">
+                    <div class="h-font-20 h-font-yahei h-pb-20">[警告]常交易计划量超标<a href="#" class="h-icon h-icon-star h-ml-10" title="加星标"></a></div>
+                    <ul>
+                        <li><span class="h-float-left" style="width:60px;">发件人：</span>design4u</li>
+                        <li><span class="h-float-left" style="width:60px;">收件人：</span>我(caixf)</li>
+                        <li><span class="h-float-left" style="width:60px;">时间：</span>2014年09月04日 05:41 (星期四)</li>
+                        <li>
+                        <span class="h-float-left">附件：</span>
+                        
+                        	<p style="margin-left:60px;">
+                            	<a href="#" class=" h-link">烟叶收购文档.doc</a><br>
+                            	<a href="#" class=" h-link">烟叶收购文档.doc</a><br>
+                            	<a href="#" class=" h-link">烟叶收购文档.doc</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="h-pad20 h-border-t" style="height:230px;">
+                	经历多事的2013, 2014已如期而至, 还有多少磨难, 还有多少期待, 沧桑的岁月缘何存在, 愿此短函, 带您走进尘封的岁月
+                </div>
+                <div class="h-pad20 h-border-t h-mt-20 h-bg-muted-light">
+                	
+                    <textarea class="h-form-control"  rows="4"></textarea>
+                    <div class="h-mt-10">
+                    <a href="#" class="h-link h-float-right">完整模式回复</a>
+                    <a class="h-btn h-btn-form h-btn-primary " href="#">
+                        <span class="h-btn-content">发送</span>
+                      </a>
+                      <a class="h-btn h-btn-form" href="#">
+                        <span class="h-btn-content">取消</span>
+                      </a>
+                      </div>
+                </div>
+             
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <h2>业务时序表格</h2>
+  <table class="h-table h-table-bordered h-table-allcenter h-table-nohover">
+            <thead>
+              <tr class="h-table-grayhead" >
+                <th colspan="2" align="center" >业务事务</th>
+                <th width="60">1月</th>
+                <th width="60">2月</th>
+                <th width="60">3月</th>
+                <th width="60">4月</th>
+                <th width="60">5月</th>
+                <th width="60">6月</th>
+                <th width="60">7月</th>
+                <th width="60">8月</th>
+                <th width="60">9月</th>
+                <th width="60">10月</th>
+                <th width="60">11月</th>
+                <th width="60">12月</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr >
+                <td width="118"  rowspan="4" align="center" valign="middle" >产前准备</td>
+                <td width="120" class="h-valign-middle h-text-center">地块落实</td>
+                <td  class="h-text-center"><span class="h-icon h-icon-l h-icon-time-selected"></span></td>
+                <td align="left" >&nbsp;</td>
+                <td class="h-text-center"><span class="h-icon h-icon-l h-icon-time-selected"></span></td>
+                <td >&nbsp;</td>
+                <td ></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ><span class="h-icon h-icon-l h-icon-time-selected"></span></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+              <tr >
+                <td align="center">育苗准备</td>
+                <td>&nbsp;</td>
+                <td align="left">&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ><span class="h-icon h-icon-l h-icon-time-selected"></span></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+              <tr >
+                <td align="center">育苗物质</td>
+                <td>&nbsp;</td>
+                <td align="left">&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+              <tr >
+                <td align="center">育苗管理</td>
+                <td>&nbsp;</td>
+                <td align="left">&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+              <tr>
+                <td rowspan="3" align="center"  style="padding-top:30px">合同管理</td>
+                <td align="center">种植申请</td>
+                <td>&nbsp;</td>
+                <td align="left">&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center">大田准备</td>
+                <td>&nbsp;</td>
+                <td align="left">&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center">合同预签</td>
+                <td>&nbsp;</td>
+                <td align="left">&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+              <tr>
+                <td rowspan="3" align="center" style="padding-top:30px">烟叶物资</td>
+                <td align="center">移栽管理</td>
+                <td>&nbsp;</td>
+                <td align="left">&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+              <tr >
+                <td align="center">生产物资</td>
+                <td>&nbsp;</td>
+                <td align="left">&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center">大田准备</td>
+                <td>&nbsp;</td>
+                <td align="left">&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+              <tr>
+                <td rowspan="5" align="center" style="padding-top:80px">生产过程</td>
+                <td align="center">合同预签</td>
+                <td>&nbsp;</td>
+                <td align="left">&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center">移栽管理</td>
+                <td>&nbsp;</td>
+                <td align="left">&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center">生产物资</td>
+                <td>&nbsp;</td>
+                <td align="left">&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center">大田准备</td>
+                <td>&nbsp;</td>
+                <td align="left">&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center">合同预签</td>
+                <td>&nbsp;</td>
+                <td align="left">&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td ></td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+          
+  <h2>查询统计</h2>
+  <div class=" h-container">
+  <div class="h-row">
+    <div class="h-col-g12-9">
+      <div class=" h-col-content">
+        <fieldset class="h-mar0">
+          <legend>
+          <label>统计维度设置</label>
+          </legend>
+          <div class="h-ml-10 h-mr-10 h-mb-10">
+           <!--item-selectot--代码开始------------------------------------->
+            <div class="h-item-selector clearfix">
+              <div class="h-multi-select-container h-float-left">
+                <div class="h-multi-select">
+                  <div class="h-multi-select-title">可选项</div>
+                  <div class="h-multi-select-contant">
+                    <select  multiple class="h-form-control h-form-control-noborder">
+                      <option value="">这里是可以选择的项</option>
+                      <option value="">这里是可以选择的项</option>
+                      <option value="">这里是可以选择的项</option>
+                      <option value="">这里是可以选择的项</option>
+                      <option value="">这里是可以选择的项</option>
+                      <option value="">这里是可以选择的项</option>
+                      <option value="">这里是可以选择的项</option>
+                      <option value="">这里是可以选择的项</option>
+                      <option value="">这里是可以选择的项</option>
+                      <option value="">这里是可以选择的项</option>
+                      <option value="">这里是可以选择的项</option>
+                      <option value="">这里是可以选择的项</option>
+                      <option value="">这里是可以选择的项</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="h-itemselector-btns-container">
+                <div class="h-itemselector-btns">
+                  <div class="h-btn-group-v">
+                    <a class="h-btn" href="#">
+                      <span class="h-btn-content">
+                        <span class="h-icon h-icon-to-first"></span>
+                      </span>
+                    </a>
+                    <a class="h-btn" href="#">
+                      <span class="h-btn-content">
+                        <span class="h-icon h-icon-to-up"></span>
+                      </span>
+                    </a>
+                    <a class="h-btn" href="#">
+                      <span class="h-btn-content">
+                        <span class="h-icon h-icon-to-right"></span>
+                      </span>
+                    </a>
+                    <a class="h-btn" href="#">
+                      <span class="h-btn-content">
+                        <span class="h-icon h-icon-to-left"></span>
+                      </span>
+                    </a>
+                    <a class="h-btn" href="#">
+                      <span class="h-btn-content">
+                        <span class="h-icon h-icon-to-down"></span>
+                      </span>
+                    </a>
+                    <a class="h-btn" href="#">
+                      <span class="h-btn-content">
+                        <span class="h-icon h-icon-to-last"></span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="h-multi-select-container h-float-right">
+                <div class="h-multi-select">
+                  <div class="h-multi-select-title">已选项</div>
+                  <div class="h-multi-select-contant">
+                    <select  multiple class="h-form-control h-form-control-noborder">
+                      <option value="">这里已选择的项</option>
+                      <option value="">这里已选择的项</option>
+                      <option value="">这里已选择的项</option>
+                      <option value="">这里已选择的项</option>
+                      <option value="">这里已选择的项</option>
+                      <option value="">这里已选择的项</option>
+                      <option value="">这里已选择的项</option>
+                      <option value="">这里已选择的项</option>
+                      <option value="">这里已选择的项</option>
+                      <option value="">这里已选择的项</option>
+                      <option value="">这里已选择的项</option>
+                      <option value="">这里已选择的项</option>
+                      <option value="">这里已选择的项</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+           <!--item-selectot--代码结束------------------------------------->
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="h-col-g12-3">
+      <div class=" h-col-content">
+        <fieldset class="h-mar0">
+          <legend>
+          <label>请选择统计项</label>
+          </legend>
+          <div class="h-form-group h-ml-10">
+            <div class="h-form-control-wrapper">
+              <div class="h-checkbox">
+                <label>
+                  <input type="checkbox">
+                  统计项一 </label>
+              </div>
+              <div class="h-checkbox">
+                <label>
+                  <input type="checkbox">
+                  统计项一 </label>
+              </div>
+              <div class="h-checkbox">
+                <label>
+                  <input type="checkbox">
+                  统计项一 </label>
+              </div>
+              <div class="h-checkbox">
+                <label>
+                  <input type="checkbox">
+                  统计项一 </label>
+              </div>
+              <div class="h-checkbox">
+                <label>
+                  <input type="checkbox">
+                  统计项一 </label>
+              </div>
+              <div class="h-checkbox">
+                <label>
+                  <input type="checkbox">
+                  统计项一 </label>
+              </div>
+              <div class="h-checkbox">
+                <label>
+                  <input type="checkbox">
+                  复选框 </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
+          
+          
+          
+</div>
+</div>
+</body>
+</html>

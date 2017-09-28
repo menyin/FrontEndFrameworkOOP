@@ -1,0 +1,201 @@
+<!doctype html>
+<html class="docs-html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ICSSHS-UI</title>
+<link href="../../../web/projects/themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+	background:#f9f9f9;
+}
+
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.h-panel{ height:100%;
+-webkit-box-sizing: border-box \;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	*behavior: url(boxsizing.htc);/*to use  box-sizing in lte ie7*/
+}
+.h-panel-header{}
+.h-panel-body{ position:absolute; left:0; top:38px; bottom:0;right:0;}
+
+</style>
+</head>
+<body>
+<div class="h-box" style="height:100%;">
+  <!--左侧面板--->
+  <div class="h-box-item"  style="width:200px; height:auto; left: 5px; right: auto; top: 5px; bottom:5px;">
+    <div class="h-panel"> 
+      <!--面板头部-->
+      <div class="h-panel-header">
+              <div class="h-panel-title h-pull-left">面板标题</div>
+              <div class="h-pull-right">
+                <span class="h-close"></span>
+              </div>
+            </div>
+      <div class="h-panel-body">
+      </div>
+    </div>
+  </div>
+  <!--右侧面板--->
+  <div class="h-box-item"  style=" height:auto; left: 210px; right:5px; top: 5px; bottom:5px;">
+    <div class="h-panel h-panel-disable">
+    	
+        	<div class="h-alert h-alert-info">
+                <a href="#" class="h-close h-pull-right"></a>
+                <span class="h-icon h-icon-info"></span>
+                <strong>温馨提示</strong>
+                <small>请点击【新增】按钮,或者点选
+列表项【编辑】按钮</small>
+              </div>
+        
+        <div class="h-mask h-mask-white"></div>
+        <!--该iframe用于解决DIV层被OBJECT控件遮盖问题-->
+      	<iframe src="about:blank"  frameBorder=0 class="h-mask-iframe"></iframe>
+    
+    </div>
+    <div class="h-panel"> 
+      <!--面板头部-->
+      <div class="h-panel-header">
+              <div class="h-panel-title h-pull-left">面板标题</div>
+              <div class="h-pull-right">面板标题右侧内容
+                <span class="h-close"></span>
+              </div>
+            </div>
+      <div class="h-panel-body">
+        <!--h-fomr 默认的表单布局-->
+            <form class="h-form">
+              <div class="h-container">
+                <div class="h-row">
+                  <div class="h-col-g12-4">
+                    <!--h-form-group 用来包含标签与输入控件的容器，便于整体布局的控制-->
+                    <div  class="h-form-group">
+                      <label for="">必填项
+                        <span class="h-text-required">*</span>
+                      </label>
+                      <input type="text" class="h-form-control" id="" placeholder="请输入内容">
+                    </div>
+                  </div>
+                  <div class="h-col-g12-4">
+                    <div  class="h-form-group">
+                      <label for="">必填项
+                        <span class="h-text-required">*</span>
+                      </label>
+                      <input type="text" class="h-form-control" id="" placeholder="请输入内容">
+                    </div>
+                  </div>
+                  <div class="h-col-g12-4">
+                    <div  class="h-form-group">
+                      <label for="">表单项一</label>
+                      <input type="text" class="h-form-control" id="" placeholder="请输入内容">
+                    </div>
+                  </div>
+                </div>
+                <div class="h-row">
+                  <div class="h-col-g12-4">
+                    <div  class="h-form-group">
+                      <label for="">带按钮输入框</label>
+                      <div class="h-input-group">
+                        <input type="text" class="h-form-control" disabled>
+                        <span class="h-input-group-btn">
+                          <a class="h-btn h-btn-toolbar disabled" href="#">
+                            <span class="h-btn-content">
+                              <span class="h-icon h-icon-action-name">&nbsp;</span>
+                            </span>
+                          </a>
+                        </span>
+                        <!--下拉菜单-->
+                        <div class="h-dropdown-area h-hide">
+                          <ul>
+                            <li>
+                              <a href="#">下拉菜单一</a>
+                            </li>
+                            <li>
+                              <a href="#">下拉菜单二</a>
+                            </li>
+                            <li>
+                              <a href="#">下拉菜单三</a>
+                            </li>
+                            <li class="h-separate"></li>
+                            <li>
+                              <a href="#">下拉菜单四</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-col-g12-4">
+                    <div  class="h-form-group">
+                      <label for="">表单项一</label>
+                      <input type="text" class="h-form-control" id="" placeholder="请输入内容">
+                    </div>
+                  </div>
+                  <div class="h-col-g12-4">
+                    <div  class="h-form-group">
+                      <label for="">表单项一</label>
+                      <input type="text" class="h-form-control" id="" placeholder="请输入内容">
+                    </div>
+                  </div>
+                </div>
+                <div class="h-row">
+                  <div class="h-col-g12-4">
+                    <div  class="h-form-group">
+                      <label for="">表单项一</label>
+                      <input type="text" class="h-form-control" id="" placeholder="请输入内容">
+                    </div>
+                  </div>
+                  <div class="h-col-g12-4">
+                    <div  class="h-form-group">
+                      <label for="">表单项一</label>
+                      <input type="text" class="h-form-control" id="" placeholder="请输入内容">
+                    </div>
+                  </div>
+                  <div class="h-col-g12-4">
+                    <div  class="h-form-group">
+                      <label for="">表单项一</label>
+                      <div class="h-row">
+                        <div class="h-col-g12-4">
+                          <div class="h-checkbox">
+                            <label>
+                              <input type="checkbox">
+                              复选框 </label>
+                          </div>
+                        </div>
+                        <div class="h-col-g12-4">
+                          <div class="h-checkbox">
+                            <label>
+                              <input type="checkbox">
+                              复选框 </label>
+                          </div>
+                        </div>
+                        <div class="h-col-g12-4">
+                          <div class="h-checkbox">
+                            <label>
+                              <input type="checkbox">
+                              复选框 </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ICSSHS-UI</title>
+<link href="../../../web/projects/themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+<link href="../../../web/projects/themes-default/resources/css/css3-hsui.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../../web/dcresources/icons/action/themes-default/icon-action.css">
+<!--页面布局样式,框架页面发现包含以下样式，否则布局会错乱-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.h-panel { height: 100%; }
+.h-panel-body{ position:absolute; left:0; top:38px; bottom:0; right:0;}
+</style>
+</head>
+<body>
+<!-- 布局 +++++++++++++++++++++++++开始+++++++++++++++++++++++++++++++++++++++-->
+<div class="h-box" style="height:100%;">
+  <div class="h-box-item"  style=" height:auto; left: 5px; right:5px;  top: 5px; bottom:5px; ">
+    <div class="h-panel h-panel-primary">
+      <!--面板头部-->
+      <div class="h-panel-header">
+        <div class=" h-pull-left">
+          <div class="h-panel-title">面板标题</div>
+        </div>
+      </div>
+      <div class="h-toolbar">
+    <div class="h-pull-left h-inline-block-wrapper">
+      <a class="h-btn h-btn-toolbar" href="#">
+        <span class="h-btn-content">
+          <span class="h-icon h-icon-add"></span>
+          增加 </span>
+      </a>
+      
+      <a class="h-btn h-btn-toolbar" href="#">
+        <span class="h-btn-content">
+          <span class="h-icon h-icon-delete"></span>
+          删除 </span>
+      </a>
+      <span class="h-btn-separator"></span>
+    </div>
+    <div class="h-pull-right h-text-right">
+      <div class="h-form-inline" >
+        <div class="h-form-group">
+          <div class="h-form-label-wrapper">
+            <label class="h-form-label h-text-right" for="">委托单位</label>
+          </div>
+          <div class="h-form-control-wrapper">
+            <input type="text" class="h-form-control" id="" placeholder="委托单位" />
+          </div>
+        </div>
+        <div class="h-form-group">
+          <div class="h-form-label-wrapper">
+            <label class="h-form-label h-text-right" for="">烟叶品种</label>
+          </div>
+          <div class="h-form-control-wrapper">
+            <input type="text" class="h-form-control" id="" placeholder="烟叶品种" value="烟叶品种" />
+          </div>
+        </div>
+        <a class="h-btn" href="#">
+          <span class="h-btn-content">查询</span>
+        </a>
+        <a class="h-btn" href="#">
+          <span class="h-btn-content">高级
+            <span class="h-caret"></span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+      
+      <!--面板内容，一般放表单，数字，图表等-->
+      <div class="h-panel-body">
+      <table class="h-table">
+            <thead>
+              <tr>
+                <th width="20" align="center"><input type="checkbox"></th>
+                <th>编号</th>
+                <th>名称</th>
+                <th width="60">操作</th>
+              </tr>
+            </thead>
+            
+            <tbody>
+              <tr>
+                <td align="center"><input type="checkbox"></td>
+                <td>350322200808048888 </td>
+                <td align="left" >老蔡</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="../projects/themes-default2/layout5.html" title="编辑">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr>
+                <td align="center"><input type="checkbox"></td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="../projects/themes-default2/layout5.html" title="编辑">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr>
+                <td align="center"><input type="checkbox"></td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="../projects/themes-default2/layout5.html" title="编辑">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr>
+                <td align="center"><input type="checkbox"></td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="../projects/themes-default2/layout5.html" title="编辑">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              
+              <tr>
+                <td align="center"><input type="checkbox"></td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="../projects/themes-default2/layout5.html" title="编辑">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr>
+                <td align="center"><input type="checkbox"></td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="../projects/themes-default2/layout5.html" title="编辑">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr>
+                <td align="center"><input type="checkbox"></td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="../projects/themes-default2/layout5.html" title="编辑">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr>
+                <td align="center"><input type="checkbox"></td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="../projects/themes-default2/layout5.html" title="编辑">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr>
+                <td align="center"><input type="checkbox"></td>
+                <td>选中样式</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="../projects/themes-default2/layout5.html" title="编辑">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+              <tr>
+                <td align="center"><input type="checkbox"></td>
+                <td>350322200808048888</td>
+                <td align="left">老蔡</td>
+                <td class="h-text-right"><a class="h-btn h-btn-table hf-btn-nobg" href="../projects/themes-default2/layout5.html" title="编辑">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-edit"></span>
+                    </span>
+                  </a>
+                  <a class="h-btn h-btn-table hf-btn-nobg" href="#" title="删除">
+                    <span class="h-btn-content">
+                      <span class="h-icon h-icon-delete"></span>
+                    </span>
+                  </a></td>
+              </tr>
+            </tbody>
+          </table>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+<!-- 布局 +++++++++++++++++++++++++结束+++++++++++++++++++++++++++++++++++++++-->
+
+</body>
+</html>

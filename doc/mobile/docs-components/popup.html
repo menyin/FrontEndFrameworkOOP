@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICSSHS-MUI for webapp</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="undefined.png">
+
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+<script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	//同一页面存在多个弹窗控件时的调用方式
+	var curPopup;
+	var curAnimationIn;  //弹窗进入时的动画
+	var curAnimationOut;  //弹窗退出时的
+	$("[data-action^='popup-']").click(function(){
+		curPopup=$(this).attr("data-action");//获取所在显示的弹窗ID
+		curAnimationIn=$(this).attr("data-animation");//获取弹窗显示的动画方式
+		
+		$("#"+curPopup).fadeIn();//打开模态框
+		$(".hm-popup").removeClass(curAnimationOut);//清除上次退出时的动画
+		$("#"+curPopup).find(".hm-popup").addClass(curAnimationIn);//设定弹窗显示的动画方式
+		$("body").addClass("hm-ov-hide");//隐藏滚动条
+		
+		
+		
+  });
+	//关闭浮窗
+	$("[data-action=close-popup]").click(function() {
+		         curAnimationOut=$(this).attr("data-animation");//获取弹窗关闭的动画方式
+				$(".hm-popup").removeClass(curAnimationIn);//清除打开时的动画
+				$("#"+curPopup).find(".hm-popup").addClass(curAnimationOut);//设定关闭时的动画
+				$(this).parents(".hm-popup-wrapper").fadeOut("fast");//关闭弹层
+				$("body").removeClass("hm-ov-hide");//重新显示body的滚动条
+				
+	})
+	
+	
+	
+});
+</script>
+</head>
+<body>
+<div class="docs-content">
+<div class="docs-page-masthead">
+  <h1> 弹窗(popup) </h1>
+  <p> 所有的弹窗都统一，包括模态太非模态弹窗，弹窗内容覆盖于页面其它内容之上，且带有半透明遮罩层，可关闭。 </p>
+</div>
+<h2> 弹窗介绍 </h2>
+<h3> 弹窗的调用案例 </h3>
+<p> 首先来看一下弹窗的调用案例，使我们对弹窗有一个基础的了解 </p>
+<!--打开对话窗-->
+<a href="javascript:void(0);" class="hm-btn hm-btn-primary hm-radius hm-btn-inline" data-action="popup-dialog" data-animation="slideInRight">
+  打开对话窗
+</a>
+<p>
+  <strong>通过上面的案例，我们可以看到弹窗的调用包括三个部份内容：</strong>
+</p>
+<ul>
+  <li> 一是：打开弹窗事件的代码,包括两部份内容data-action="popup-dialog"（打开哪个弹窗，跟弹窗代码的ID相对应）和 data-animation="slideInRight"（弹窗进入时的动画） </li>
+  <li> 二是：对应的弹窗内容的代码，通过ID来选择，通常放于页面的最底部 </li>
+  <li> 三是：关闭弹窗事件的代码,包括两部份内容data-action="close-popup"（关闭当前的弹窗）和 data-animation="slideOutRight"（弹窗退出时的动画，可不指定） </li>
+</ul>
+<h3> 弹窗的代码结构</h3>
+<p> 弹出窗<code>.hm-popup-wrapper</code>内部由三部份内容组成，一是半透明遮罩层，二是控制按钮，三是弹出内容. </p>
+<p> 一是：半透明的遮罩层,通过<code>.hm-mask</code>来定义，分别有以下三种模式： </p>
+<ul>
+  <li>
+    <code>.hm-mask</code>黑色半透明（默认） </li>
+  <li>
+    <code>.hm-mask-white</code>白色半透明 </li>
+  <li>
+    <code>.hm-mask-transparent</code>全透明 </li>
+  <li> 当然也可以是非模态，不使用遮罩层。 </li>
+</ul>
+<div class="docs-callout docs-callout-warning">
+  <h4>请注意</h4>
+  <p>
+    <code>hm-mask</code>可以不依赖于<code>hm-popup-wrapper</code>而单独，效果是一样的，使用场景详见【
+    <a href="dropdown.html" class="hm-link">
+      下拉组件之模态下拉列表
+    </a>
+    】。 </p>
+</div>
+<p> 二是：控制按钮，在全屏模式下可不使用这一按钮，通过标题栏的关闭按钮来控制。 </p>
+<p> 三是：弹出内容，通过<code>.hm-popup</code>来定义，默认情况下弹出层的内容水平垂直居中，无需设定宽高。 </p>
+<ul>
+  <li>
+    <code>.hm-popup-tips</code>提示框</li>
+  <li>
+    <code>.hm-popup-tips-dark</code>深色提示框 </li>
+  <li>
+    <code>.hm-popup-dialog</code>使用频率最多的一种，默认不需要指定宽高，内容自动水平垂直居中（默认） </li>
+  <li>
+    <code>.hm-popup-lt</code>不需要指定宽度，内容位于左上角，可指定<code>left</code>、<code>top</code>值，默认为16px; </li>
+  <li>
+    <code>.hm-popup-lb</code>不需要指定宽度，内容位于左下角，可指定<code>left</code>、<code>bottom</code>值，默认为16px; </li>
+  <li>
+    <code>.hm-popup-rt</code>不需要指定宽度，内容位于右上角，可指定<code>right</code>、<code>top</code>值,，默认为16px </li>
+  <li>
+    <code>.hm-popup-rb</code>不需要指定宽度，内容位于右下角，可指定<code>right</code>、<code>bottom</code>值，默认为16px </li>
+  <li>
+    <code>.hm-popup-tc</code>不需要指定宽度，内容位于顶部，水平居中，可指定<code>margin-top</code>值，默认为16px </li>
+  <li>
+    <code>.hm-popup-bc</code>不需要指定宽度，内容位于底部，水平居中，可指定<code>margin-bottom</code>值，默认为16px </li>
+  <li>
+    <code>.hm-popup-full</code>全屏弹窗，可指定<code>left</code>、<code>right</code>、<code>top</code>、<code>bottom</code>值，为四个边的距离。 </li>
+  <li>
+    <code>.hm-popup-left</code>左侧半屏，可指定<code>width</code>或<code>right</code>,必选且只能选其一 </li>
+  <li>
+    <code>.hm-popup-right</code>右侧半屏，可指定<code>width</code>或<code>left</code>,必选且只能选其一 </li>
+  <li>
+    <code>.hm-popup-top</code>顶部半屏,可指定<code>bottom</code>或<code>height</code>或不指定（高度自适应）,必选且只能选其一 </li>
+  <li>
+    <code>.hm-popup-bottom</code>底部半屏,可指定<code>top</code>或<code>height</code>或不指定（高度自适应）,必选且只能选其一 </li>
+</ul>
+<div class="docs-callout docs-callout-warning">
+  <h4>请注意</h4>
+  <p> 一个弹出框架内尽量不要有多个popup的位置，否则可能出现不可预期的布局错乱。 </p>
+</div>
+
+<!--默认弹窗-->
+
+<h2> 默认弹窗</h2>
+<p>例如loading等，背景透明，内容垂直水平居中。</p>
+<div class="docs-example docs-example-popup" >
+  <div class="hm-popup-wrapper">
+    <div class="hm-mask">
+    </div>
+    <div class="hm-popup">
+      这里是弹窗内容区域，没有背景，没有边框，内容可以是文字也可以是其它任何标签，默认垂直水平居中。
+    </div>
+  </div>
+</div>
+
+<!--提示信息-->
+
+<h2> 提示信息(tips) </h2>
+<h3> 白色提示信息（默认） </h3>
+<p>
+  <code>.hm-popup-tips</code>，设置为提示信息框 </p>
+<div class="docs-example docs-example-popup" >
+  <div class="hm-popup-wrapper">
+    <div class="hm-mask">
+      &nbsp;
+    </div>
+    <div class="hm-popup hm-popup-tips">
+      这里是提示信息
+    </div>
+  </div>
+</div>
+<h3> 黑色提示信息</h3>
+<p> 通过<code>.hm-popup-tips-dark</code>，设置为深色提示信息框 </p>
+<div class="docs-example docs-example-popup" >
+  <div class="hm-popup-wrapper">
+    <div class="hm-mask">
+      &nbsp;
+    </div>
+    <div class="hm-popup hm-popup-tips-dark">
+      提示信息
+    </div>
+  </div>
+</div>
+
+<!--对话窗-->
+<h2> 对话窗(dialog) </h2>
+
+<!--基本形式-->
+<h3>普通对话框</h3>
+<p>
+  <code>.hm-popup-dialog</code>普通对话框，使用频率最高的一种，通常包括四个部份，标题、按钮、内容、页脚，默认不需要指定宽高，已设定最小宽度，最大宽度，以及最大高度值，也可以自己指定宽高。 </p>
+<div class="docs-example docs-example-popup" >
+  <div class="hm-popup-wrapper">
+    <div class="hm-mask">
+      &nbsp;
+    </div>
+    <div class="hm-popup hm-popup-dialog">
+      <a href="#" class="hm-btn hm-btn-circle" data-action="close-popup">
+        <i class="hm-icon-close"></i>
+      </a>
+      <div class="hm-linearLayout">
+        <div class="hm-header">
+          <h1 class="hm-title" > 对话窗口 </h1>
+        </div>
+        <div class="hm-content">
+          <div class="hm-feedback ">
+            <div class="hm-feedback-title"> 你是否要执行该操作 </div>
+            <div  class="hm-feedback-desc"> 执行该操作将带来不可逆的后果，请再次确认你是否一定要执行该操作？
+            
+            
+            执行该操作将带来不可逆的后果，请再次确认你是否一定要执行该操作？ </div>
+          </div>
+        </div>
+        <div class="hm-footer">
+          <a href="#" class="hm-btn hm-btn-default hm-radius hm-flex-1">
+            取消
+          </a>
+          <a href="#" class="hm-btn hm-btn-primary hm-radius hm-flex-1">
+            确定
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<p>
+  带封面的对话窗，给头部添加<code>.hm-header-cover</code>，并指定封面图片。 </p>
+<div class="docs-example docs-example-popup" >
+  <div class="hm-popup-wrapper">
+    <div class="hm-mask">
+      &nbsp;
+    </div>
+    <div class="hm-popup hm-popup-dialog">
+      <a href="#" class="hm-btn hm-btn-circle" data-action="close-popup">
+        <i class="hm-icon-close"></i>
+      </a>
+      <div class="hm-linearLayout">
+        <div class="hm-header hm-header-cover" style="background-image:url(../../resources/images/img-big.jpg);">
+          <h1 class="hm-title">什么是UED</h1>
+        </div>
+        <div class="hm-content">
+          UED是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。
+        </div>
+        <div class="hm-footer">
+          <a href="#" class="hm-btn hm-btn-default hm-radius hm-flex-1">
+            取消
+          </a>
+          <a href="#" class="hm-btn hm-btn-primary hm-radius hm-flex-1">
+            确定
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!--指定宽高-->
+<h3>指定宽高</h3>
+<p>宽度需指定在<code>.hm-popup</code>上，而高度则需指定到<code>.hm-linearLayout </code>上</p>
+<div class="docs-example docs-example-popup" >
+  <div class="hm-popup-wrapper">
+    <div class="hm-mask">
+      &nbsp;
+    </div>
+    <div class="hm-popup hm-popup-dialog" style="width:300px;">
+      <div class="hm-linearLayout " style=" height:300px;">
+        <div class="hm-content">
+          <div class="hm-feedback ">
+            <div class="hm-feedback-title"> 你是否要执行该操作 </div>
+            <div  class="hm-feedback-desc"> 执行该操作将带来不可逆的后果，请再次确认你是否一定要执行该操作？ </div>
+          </div>
+        </div>
+        <div class="hm-footer">
+          <a href="#" class="hm-btn hm-btn-default hm-radius hm-flex-1">
+            取消
+          </a>
+          <a href="#" class="hm-btn hm-btn-primary hm-radius hm-flex-1">
+            确定
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--带提示图标的对话窗-->
+<h3>带提示图标的对话窗</h3>
+<p> 在内容里增加成功反馈提示<code>hm-feedback hm-feedback-success</code></p>
+<div class="docs-example docs-example-popup" >
+  <div class="hm-popup-wrapper">
+    <div class="hm-mask">
+      &nbsp;
+    </div>
+    <div class="hm-popup hm-popup-dialog">
+      <div class="hm-linearLayout">
+        <div class="hm-content">
+          <div class="hm-feedback">
+            <div class="hm-feedback-header hm-bg-success">
+            	<i class=" hm-icon-xl hm-icon-alert-success"></i>
+            </div>
+            <div class="hm-feedback-title"> 恭喜您，申请成功了！ </div>
+            <div class="hm-feedback-desc"> 您已成功申请了一张烟叶会员卡 </div>
+          </div>
+        </div>
+        </div>
+        <div class="hm-footer">
+          <a href="#" class="hm-btn hm-btn-default hm-radius hm-flex-1">
+            确定
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h3> 带CSS3动画的场景提示 </h3>
+<p> 当操作时系统反馈成功信息时，提示用户。 </p>
+<div class="docs-example docs-example-popup" >
+  <div class="hm-popup-wrapper">
+    <div class="hm-mask">
+      &nbsp;
+    </div>
+    <div class="hm-popup hm-popup-dialog">
+      <div class="hm-linearLayout">
+        <div class="hm-content">
+          <div class="hm-feedback ">
+            <div class="hm-feedback-animation-success">
+              <span class="hm-img-sun"></span>
+              <span class="hm-img-leaf2"></span>
+            </div>
+            <div class="hm-feedback-title"> 恭喜您，申请成功了！ </div>
+            <div class="hm-feedback-desc"> 您已成功申请了一张烟叶会员卡 </div>
+          </div>
+        </div>
+        <div class="hm-footer">
+          <a href="#" class="hm-btn hm-btn-default hm-radius hm-flex-1">
+            确定
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p>更多的操作反馈请查看
+  <a href="feedback.html" class="hm-link">
+    【操作反馈】
+  </a>
+</p>
+<h2> 全屏弹窗 </h2>
+<!--全屏窗-->
+<h3> 全屏窗 </h3>
+<p>
+  <code>.hm-popup-full</code>,全屏弹窗,。 </p>
+<div class="docs-example docs-example-popup" >
+  <div class="hm-popup-wrapper">
+    <div class="hm-mask">
+      &nbsp;
+    </div>
+    <div class="hm-popup hm-popup-full">
+      <div class="hm-linearLayout">
+        <div class="hm-header">
+          <a href="javascript:void(0);" class="hm-btn" data-action="close-popup">
+            <i class="hm-icon-close"></i>
+          </a>
+          <div class="hm-flex-1">
+          </div>
+          <h1 class="hm-title"> 对话窗口 </h1>
+        </div>
+        <div class="hm-content">
+          <!--内容垂直水平居中-->
+          <div class="hm-vertical-align hm-pull-full">
+            <div class="hm-feedback">
+              <div class="hm-feedback-animation-loading">
+                <span class="hm-img-leaf"></span>
+              </div>
+              <div class="hm-feedback-title"> 正在加载 </div>
+            <div class="hm-feedback-desc"> 正在努力加载中,请稍候...  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--全屏窗-->
+<h3> 半屏窗 </h3>
+<p> 半屏弹窗,<code>.hm-popup-left</code>、<code>.hm-popup-right</code>、<code>.hm-popup-top</code>、<code>.hm-popup-bottom</code>。 </p>
+<div class="docs-example docs-example-popup" >
+  <div class="hm-popup-wrapper">
+    <div class="hm-mask">
+      &nbsp;
+    </div>
+    <div class="hm-popup hm-popup-right" style="width:280px;">
+      <div class="hm-linearLayout">
+        <div class="hm-header">
+          <a href="javascript:void(0);" class="hm-btn" data-action="close-popup">
+            <i class="hm-icon-close"></i>
+          </a>
+          <div class="hm-flex-1">
+          </div>
+          <h1 class="hm-title"> 对话窗口 </h1>
+        </div>
+        <div class="hm-content">
+          内容
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h2> 操作列表弹窗(actions) </h2>
+<!--加载提示动画-->
+<p> 操作列表，通过.hm-popup-actions样式来定义操作列表。创建类似 iOS 的操作列表。 </p>
+<div class="docs-example docs-example-popup" >
+  <div class="hm-popup-wrapper">
+    <div class="hm-mask">
+      &nbsp;
+    </div>
+    <div class="hm-popup hm-popup-actions">
+      <div class="hm-listview">
+        <div class="hm-li">
+          <div class="hm-li-content hm-flex-1">
+            操作项
+          </div>
+        </div>
+        <div class="hm-li">
+          <div class="hm-li-content hm-flex-1">
+            操作项
+          </div>
+        </div>
+        <div class="hm-li">
+          <div class="hm-li-content hm-flex-1">
+            操作项
+          </div>
+        </div>
+      </div>
+      <a href="#" class="hm-btn hm-btn-danger hm-radius hm-margin-top">
+        取消
+      </a>
+    </div>
+  </div>
+</div>
+
+<!--弹窗内容===============================开始-->
+<div class="hm-popup-wrapper" id="popup-dialog">
+  <div class="hm-mask" data-action="close-popup" data-animation="slideOutRight">
+  </div>
+  <div class="hm-popup hm-popup-right" style="width:280px;">
+    <div class="hm-header">
+      <a href="javascript:void(0);" class="hm-btn" data-action="close-popup" data-animation="slideOutRight">
+        <i class="hm-icon-close"></i>
+      </a>
+      <div class="hm-flex-1"></div>
+      <h1 class="hm-title">对话窗口</h1>
+    </div>
+    <div class="hm-content">内容</div>
+  </div>
+</div>
+<!--弹窗内容===============================结束-->
+
+</body>
+</html>

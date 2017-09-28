@@ -1,0 +1,84 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2014-08
+======================================*/
+/**
+浮窗模式
+*/
+.c-icon-fcms { background-image: url(images/icon-fcms.png) !important; }
+
+/**
+跳转模式
+*/
+.c-icon-tzms{ background-image: url(images/icon-tzms.png) !important; }
+/**
+批量模式
+*/
+.c-icon-plms { background-image: url(images/icon-plms.png) !important; }
+/**
+主从模式
+*/
+.c-icon-zcms { background-image: url(images/icon-zcms.png) !important; }
+
+
+/**
+应用资源导入
+*/
+.c-icon-yyzydr { background-image: url(images/icon-yyzydr.png) !important; }
+
+/**
+组织数据导入
+*/
+.c-icon-zzsjdr{ background-image: url(images/icon-zzsjdr.png) !important; }
+/**
+用户数据导入
+*/
+.c-icon-yhsjdr { background-image: url(images/icon-yysjdr.png) !important; }
+/**
+tso资源导入
+*/
+.c-icon-tsodr { background-image: url(images/icon-tsodr.png) !important; }
+
+/**
+RONE资源导入
+*/
+.c-icon-r1zydr { background-image: url(images/icon-r1zydr.png) !important; }
+
+/**
+RONE资源导出
+*/
+.c-icon-r1zydc { background-image: url(images/icon-r1zydc.png) !important; }
+
+/**
+实施数据导入
+*/
+.c-icon-sssjdr { background-image: url(images/icon-sssjdr.png) !important; }
+
+/**
+实施数据导出
+*/
+.c-icon-sssjdc { background-image: url(images/icon-sssjdc.png) !important; }
+
+
+.c-trigger-box {float:right;display:block;margin:5px;top: 0px;position:relative;right:5px;font-size:0;}
+.c-trigger{cursor: pointer;
+    float: left;
+  width: 47px; height: 22px;
+  margin: 0px;
+ background-image: url(images/toggleon.png);
+  overflow: hidden;
+  }
+.c-trigger-checked
+{
+ background-image: url(images/toggleoff.png);
+;}
+ .h-thumbnail-horizontal:hover{background-color: #ecf4f9;
+    border: 1px solid #bbd6e8;
+    position: relative}
+
+
+
+

@@ -1,0 +1,121 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2014-08
+======================================*/
+
+.c-menu-area,
+.c-list-title { font-family: "Microsoft YaHei", "Microsoft JhengHei", "黑体" !important; }
+.c-menu-area {
+	height: 220px;
+	width: 940px;
+	margin: 0 auto;
+	position: relative;
+	background: url(images/navigation-line.png) no-repeat 127px 85px;
+}
+.c-caption {
+	position: absolute;
+	right: 0px;
+	top: 30px;
+	width: 250px;
+	height: 160px;
+	background: #fff;
+}
+.c-caption-title {
+	vertical-align: top;
+	padding-bottom: 10px;
+}
+.c-caption-title strong {
+	font-size: 22px;
+	color: #666;
+	font-weight: 400;
+}
+.c-caption-title .h-icon {
+	float: left;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.c-caption-text { color: #999; }
+.c-icon-help { background-image: url(images/icon-help.png); }
+.c-icon-import { background-image: url(images/icon-import.png); }
+.c-icon-view { background-image: url(images/icon-view.png); }
+.c-icon-form { background-image: url(images/icon-form.png); }
+.c-icon-application { background-image: url(images/icon-application.png); }
+.c-icon-help-white { background-image: url(images/icon-help-white.png); }
+.c-icon-import-white { background-image: url(images/icon-import-white.png); }
+.c-icon-view-white { background-image: url(images/icon-view-white.png); }
+.c-icon-form-white { background-image: url(images/icon-form-white.png); }
+.c-icon-application-white { background-image: url(images/icon-application-white.png); }
+.c-menu-item { }
+.c-menu-item .c-caption { display: none; }
+.c-menu-item:hover .c-caption {
+	display: block;
+	z-index: 1;
+}
+.c-link {
+	position: absolute;
+	height: 128px;
+	width: 128px;
+	background: no-repeat 0 center;
+	text-align: center;
+}
+.c-link span { margin-top: 30px; }
+.c-link p {
+	color: #fff;
+	padding: 0 30px;
+	padding-top: 8px;
+	font-size: 16px;
+	line-height: 1.2;
+}
+.c-link-import {
+	left: 0px;
+	top: 70px;
+	background-image: url(images/icon-import1.png);
+}
+.c-link-view {
+	left: 170px;
+	top: 30px;
+	background-image: url(images/icon-view1.png);
+}
+.c-link-form {
+	left: 340px;
+	top: 70px;
+	background-image: url(images/icon-form1.png);
+}
+.c-link-application {
+	left: 510px;
+	top: 30px;
+	background-image: url(images/icon-application1.png);
+}
+.c-menu-item:hover .c-link-import { background-image: url(images/icon-import2.png); }
+.c-menu-item:hover .c-link-view { background-image: url(images/icon-view2.png); }
+.c-menu-item:hover .c-link-form { background-image: url(images/icon-form2.png); }
+.c-menu-item:hover .c-link-application { background-image: url(images/icon-application2.png); }
+.c-list-area { }
+.c-list-title { margin: 15px 30px 0; }
+.c-list-title strong {
+	display: inline-block;
+	height: 48px;
+	line-height: 48px;
+	font-size: 18px;
+	font-weight: 400;
+	padding-left: 10px;
+}
+.c-icon-history { background-image: url(images/icon-history.png) }
+.c-icon-chart { background-image: url(images/icon-chart.png) }
+.c-list-group {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 70px;
+	bottom: 0;
+	overflow: auto;
+}
+.c-list-group { }
+.c-list-group .h-image-area {
+	width: 48px;
+	margin-top: 10px;
+}
+.c-list-group .h-caption { margin-left: 48px; }

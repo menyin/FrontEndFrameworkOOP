@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ICSSHS-UI</title>
+<link href="../../themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css" />
+<!--页面布局样式,框架页面发现包含以下样式，否则布局会错乱-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+	background: #f9f9f9;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.h-panel { }
+</style>
+</head>
+<body>
+<!-- 布局 +++++++++++++++++++++++++开始+++++++++++++++++++++++++++++++++++++++-->
+<div class="h-box" style="height:100%;">
+    <div class="h-box-item"  style=" width:auto;  left: 5px; right: 5px; top: 5px; bottom:5px; ">
+        <!--辅助信息-->
+        <div class="h-panel h-box-item" style="height:auto;width:5;left: 0px; right: 0px; top:5px; bottom:5px; ">
+            <!--面板头部-->
+            <div class="h-panel-header">
+                <div class=" h-pull-left">
+                    <div class="h-panel-title">
+                        工程设置
+                    </div>
+                </div>
+            </div>
+            <!--面板主体内容-->
+            <div class="h-panel-body ">
+                <!--面板内容说明--> 
+                <!--<div class=" h-border-b ">
+			<p class=" c-container "><span class="c-font-gray">设置进入系统后的工程内容，包括工程主题，间距，cssfile和渲染模式</span></p>
+		 </div>--> 
+                <!--面板内容-->
+                <div  class=" h-pad10" style="position: absolute; overflow: auto;width: auto; height:auto;left:0px; right:0px; top:38px; bottom:32px;">
+                    <div class="  h-box-item h-pad10" style="width:280px; height:auto; left: 0px; right: auto; top:0px; bottom:0px;" >
+                        <div class="   c-box c-skin-h"  style="margin-left:0px;margin-top:0px;" >
+                            <div class="  c-col-l " >
+                                <img width="240" height="160" alt="" src="images/framwork-popup.jpg">
+                            </div>
+                            <div class=" h-col-r " style="">
+                                <p class="c-title ">默认主题</p>
+                                <p class="c-txt-muted c-txtpre-h " >系统默认主题，点击菜单从左侧全屏滑出导航菜单，支持多系统切换、支持无限级菜单（其中一级菜单及二级菜单需要提供特定格式的图标）、支持多种皮肤颜色的选择</p>
+                                <div class=" c-btn-p">
+                                    <div class="c-left">
+                                        <span class="h-icon h-icon-success"></span> <span class="h-alert-text h-color-success h-font-b "> <strong>当前使用 </strong> </span>
+                                    </div>
+                                    <div class="  c-btn-right">
+                                        <a class="h-btn"  href="#"> <span class="h-btn-content"> <span class="h-icon c-icon-install"></span> 设置参数 </span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--面板左边主体内容-->
+                    
+                    <div  class="h-box-item h-pad10" style="width: auto; height:auto; left: 370px;  right: 5px; top: 0px; bottom:0px; " >
+                        <div class="h-form-group ">
+                            <div class="c-title">
+                                间距
+                            </div>
+                            <p class="h-form-group h-mb-5">
+                                <input id="" class="c-label-w h-form-control " style="margin-left:0px;" type="text" placeholder="10">
+                                <span class="h-color-muted">像素</span></p>
+                            <p class="c-txt-muted ">应用中默认的间隔，包括页面底边距和模块与模块之间的间距</p>
+                        </div>
+                        <div class="h-form-group  h-mb-10">
+                            <div class="c-title">
+                                设置cssfiles
+                            </div>
+                            <input id="" class="h-form-control  h-mb-5" type="text" placeholder="请输入内容">
+                            <p class="h-color-muted  h-font-12 ">应用额外包含进来的css文件名（全局性的），多个值用逗号分隔，例如dbxt,print</p>
+                        </div>
+                        
+                        <!--面板右边主体内容-->
+                        
+                        <div class=" h-form-group h-mb-10 " >
+                            <div class="c-title">
+                                页面渲染模式
+                            </div>
+                            <div class="h-radio ">
+                                <label>
+                                    <input type="radio" class="h-mb-5">
+                                    iframe模式</label>
+                                <p class="c-txt-muted">页面的渲染模式，值可为div|iframe，如果tab页指定的url是集成的，那么就采用iframe模式</p>
+                                <label>
+                                    <input type="radio" class="h-mb-5">
+                                    div模式</label>
+                                <p class="c-txt-muted">页面的渲染模式，值可为div|iframe，如果tab页指定的url是内部的，那么就采用div模式</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--面板主题内容 end-->
+            
+        </div>
+        <!--面板底部 按钮操作等-->
+        <div class="h-toolbar h-toolbar-footer h-box-item" style="height:36px;width:auto;left: 0px; right: 0px; top:auto; bottom:0px; ">
+            <div class="h-pull-right">
+                <a class="h-btn h-btn-form h-btn-primary" href="#"> <span class="h-btn-content">保 存 </span> </a> <a class="h-btn h-btn-form" href="#"> <span class="h-btn-content">返 回</span> </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

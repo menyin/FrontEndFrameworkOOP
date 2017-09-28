@@ -1,0 +1,285 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2014-05
+======================================*/
+
+/*工具栏图标*/
+
+/**
+@group 通用图标
+/
+
+/**
+@tag 增加
+*/
+.h-icon-add { background-image: url(images/icon-add.png) !important; }
+
+.h-icon-add_table { background-image: url(images/icon-add.png) !important; }
+/**
+@tag  删除、清空
+*/
+.h-icon-delete { background-image: url(images/icon-delete.png) !important; }
+/**
+@tag 编辑
+*/
+.h-icon-edit { background-image: url(images/icon-edit.png) !important; }
+/**
+@tag 批量编辑
+*/
+.h-icon-batch-edit { background-image: url(images/icon-batch-edit.png) !important; }
+/**
+@tag 预览、查看、详细
+*/
+.h-icon-view { background-image: url(images/icon-view.png) !important; }
+/**
+@tag 保存
+*/
+.h-icon-save { background-image: url(images/icon-save.png) !important; }
+/**
+@tag 复制
+*/
+.h-icon-copy { background-image: url(images/icon-copy.png) !important; }
+/**
+@tag 确认、审核、核对
+*/
+.h-icon-confirm { background-image: url(images/icon-confirm.png) !important; }
+/**
+@tag 作废、失效
+*/
+.h-icon-invalid { background-image: url(images/icon-invalid.png) !important; }
+/**
+@tag 拒绝、驳回
+*/
+.h-icon-refuse { background-image: url(images/icon-refuse.png) !important; }
+/**
+@tag 取消
+*/
+.h-icon-cancel { background-image: url(images/icon-cancel.png) !important; }
+/**
+@tag 退出
+*/
+.h-icon-quit { background-image: url(images/icon-quit.png) !important; }
+/**
+@tag 开始、播放、恢复
+*/
+.h-icon-play { background-image: url(images/icon-play.png) !important; }
+/**
+@tag 暂停
+*/
+.h-icon-suspend { background-image: url(images/icon-suspend.png) !important; }
+/**
+@tag 结束、停止
+*/
+.h-icon-stop { background-image: url(images/icon-stop.png) !important; }
+/**
+@tag 分配
+*/
+.h-icon-assign { background-image: url(images/icon-assign.png) !important; }
+/**
+@tag 预警
+*/
+.h-icon-alarm { background-image: url(images/icon-alarm.png) !important; }
+/**
+@tag 设置
+*/
+.h-icon-setting { background-image: url(images/icon-setting.png) !important; }
+/**
+@tag 刷新
+*/
+.h-icon-refresh { background-image: url(images/icon-refresh.png) !important; }
+/**
+@tag 上一步、返回、重做
+*/
+.h-icon-back { background-image: url(images/icon-back.png) !important; }
+/**
+@tag 下一步
+*/
+.h-icon-next { background-image: url(images/icon-next.png) !important; }
+/**
+@tag 锁定
+*/
+.h-icon-lock { background-image: url(images/icon-lock.png) !important; }
+/**
+@tag  解锁
+*/
+.h-icon-unlock { background-image: url(images/icon-unlock.png) !important; }
+/**
+@tag 上传
+*/
+.h-icon-upload { background-image: url(images/icon-upload.png) !important; }
+/**
+@tag 下载
+*/
+.h-icon-download { background-image: url(images/icon-download.png) !important; }
+/**
+@tag 导入
+*/
+.h-icon-import { background-image: url(images/icon-import.png) !important; }
+/**
+@tag 导出
+*/
+.h-icon-export { background-image: url(images/icon-export.png) !important; }
+/**
+@tag 发送、发布
+*/
+.h-icon-send { background-image: url(images/icon-send.png) !important; }
+/**
+@tag 重传
+*/
+.h-icon-resend { background-image: url(images/icon-resend.png) !important; }
+/**
+@tag 上报、提交
+*/
+.h-icon-upsend { background-image: url(images/icon-upsend.png) !important; }
+/**
+@tag 下发
+*/
+.h-icon-downsend { background-image: url(images/icon-downsend.png) !important; }
+/**
+@tag 签章
+*/
+.h-icon-seal { background-image: url(images/icon-seal.png) !important; }
+/**
+@tag 图表
+*/
+.h-icon-chart { background-image: url(images/icon-chart.png) !important; }
+/**
+@tag  打印
+*/
+.h-icon-print { background-image: url(images/icon-print.png) !important; }
+/**
+@tag  操作
+*/
+.h-icon-operate { background-image: url(images/icon-operate.png) !important; }
+/**
+@tag  签收、签入
+*/
+.h-icon-sign-in { background-image: url(images/icon-signIn.png) !important; }
+/**
+@tag  用户
+*/
+.h-icon-user { background-image: url(images/icon-user.png) !important; }
+
+/**
+@tag  发消息
+*/
+.h-icon-send-message { background-image: url(images/icon-send-message.png) !important; }
+/**
+@tag  通讯录
+*/
+.h-icon-address{ background-image: url(images/icon-address.png) !important; }
+/**
+@tag  用户组
+*/
+.h-icon-user-groups{ background-image: url(images/icon-user-groups.png) !important; }
+/**
+@tag  审批
+*/
+.h-icon-approval { background-image: url(images/icon-approval.png) !important; }
+/**
+@tag  归档
+*/
+.h-icon-pigeonhole { background-image: url(images/icon-pigeonhole.png) !important; }
+/**
+@tag  转发
+*/
+.h-icon-repeat { background-image: url(images/icon-repeat.png) !important; }
+
+/*=================
+	Add by zhangyh
+	2015-04-07
+===================*/
+/**
+@tag  上移
+*/
+.h-icon-arrow-up { background-image: url(images/icon-arrow-up.png) !important; }
+/**
+@tag  下移
+*/
+.h-icon-arrow-down { background-image: url(images/icon-arrow-down.png) !important; }
+/**
+@tag  新建分支文件
+*/
+.h-icon-page-add { background-image: url(images/icon-page-add.png) !important; }
+/**
+@tag  新建文件夹
+*/
+.h-icon-folder-add{ background-image: url(images/icon-folder-add.png) !important; }
+/**
+@tag  业务事务
+*/
+.h-icon-routine{ background-image: url(images/icon-routine.png) !important; }
+/**
+@tag  收起侧边栏
+*/
+.h-icon-side-contract{ background-image: url(images/icon-side-contract.png) !important; }
+/**
+@tag  展开侧边栏
+*/
+.h-icon-side-expand{ background-image: url(images/icon-side-expand.png) !important; }
+/**
+@tag  预览表格
+*/
+.h-icon-view-form{ background-image: url(images/icon-view-form.png) !important; }
+/**
+@tag  全选
+*/
+.h-icon-check-all{ background-image: url(images/icon-check-all.png) !important; }
+/**
+@tag  事务时序组
+*/
+.h-icon-routine-sequence{ background-image: url(images/icon-routine-sequence.png) !important; }
+/**
+@tag  系统菜单
+*/
+.h-icon-system-menu{ background-image: url(images/icon-system-menu.png) !important; }
+/**
+@tag  业务组件
+*/
+.h-icon-subassembly{ background-image: url(images/icon-subassembly.png) !important; }
+/**
+@tag  不选
+*/
+.h-icon-check-none{ background-image: url(images/icon-check-none.png) !important; }
+/**
+@tag  专用叶子菜单
+*/
+.h-icon-page-exclusive{ background-image: url(images/icon-page-exclusive.png) !important; }
+/**
+@tag  函数
+*/
+.h-icon-function{ background-image: url(images/icon-function.png) !important; }
+/**
+@tag  收缩
+*/
+.h-icon-contract{ background-image: url(images/icon-contract.png) !important; }
+/**
+@tag  设置事务组织层级
+*/
+.h-icon-setclass{ background-image: url(images/icon-setclass.png) !important; }
+
+/**
+@tag  批量授权
+*/
+.h-icon-grant{ background-image: url(images/icon-grant.png) !important; }
+
+/**
+@tag  重置密码
+*/
+.h-icon-resetPw{ background-image: url(images/icon-restPw.png) !important; }
+
+/**
+@tag  权限调整
+*/
+.h-icon-authorityad{ background-image: url(images/icon-authorityad.png) !important; }
+/**
+@tag  公共菜单
+*/
+.h-icon-public-menu{ background-image: url(images/icon-public-menu.png) !important; }
+/**
+@tag  非公共菜单
+*/
+.h-icon-private-menu{ background-image: url(images/icon-private-menu.png) !important; }

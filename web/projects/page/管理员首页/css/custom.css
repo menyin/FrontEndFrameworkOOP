@@ -1,0 +1,55 @@
+body{font-family: "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei";
+font-weight: 400; background:#f9f9f9;}
+.c-page-header {
+border-bottom: 1px solid #eee;
+}
+.c-page-title {
+padding: 20px 30px;
+display: block;
+font-size: 30px;
+line-height: 1;
+color: #999;
+font-weight: 400;
+background:#fff;
+}
+
+
+.h-f-app-favorites .h-f-title, .h-f-app-history .h-f-title {
+font-size: 20px;
+line-height: 1;
+color: #999;
+}
+
+.c-menu-item h2{
+	font-size: 16px;
+	line-height:1;
+	color:#FFF;
+	background:rgba(0,0,0,0.2);
+	padding:5px;
+	font-weight:normal;
+	margin-left:2px;
+	}
+.c-menu-list{ 
+	margin:0 0;}
+.c-menu-item { 
+	float:left; 
+	width:49%;
+	margin:2px 2px;}
+
+
+/*---------------------*/
+.c-app-menu p{
+	margin:0 auto;
+	position:relative;
+	padding-top:30px;
+	width:130px;
+	color:#FFF;
+	background-repeat:no-repeat;
+	background-position:center top;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	}
+.c-icon-menu-yzcd{
+	background:url(images/icon-menu-yzcd.png);
+	}

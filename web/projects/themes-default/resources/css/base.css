@@ -1,0 +1,472 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2014-05
+======================================*/
+/*global*/
+.h-valign-middle {vertical-align: middle !important;}
+
+.h-ov-visibel { overflow: visible !important; }
+.h-ov-hide { overflow: hidden !important; }
+/*鼠标样式*/
+.h-cursor-pointer { cursor: pointer !important; }
+/*显示或隐藏*/
+.h-hide { display: none !important; }
+.h-block { display: block !important; }
+/*显示或隐藏*/
+.h-noborder{ border:none !important;}
+/*文字超出截断加"..."*/
+.h-ellipsis{
+	word-wrap: normal;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-overflow: ellipsis;/* IE/Safari */
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;/* Opera */
+}
+/*清除浮动*/
+.clear {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	display: block;
+	visibility: hidden;
+}
+.clearfix:before,
+.clearfix:after {
+	content: '\0020';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+/*文字大小*/
+.h-font-b { font-weight: bold !important; }
+.h-font-12 { font-size: 12px !important; }
+.h-font-14 { font-size: 14px !important; }
+.h-font-18 { font-size: 18px !important; }
+.h-font-20 { font-size: 20px !important; }
+.h-font-24 { font-size: 24px !important; }
+.h-font-36 { font-size: 36px !important; }
+.h-font-14b {
+	font-size: 14px !important;
+	font-weight: bold !important;
+}
+.h-font-16b {
+	font-size: 16px !important;
+	font-weight: bold !important;
+}
+.h-font-18b {
+	font-size: 18px !important;
+	font-weight: bold !important;
+}
+.h-font-20b {
+	font-size: 20px !important;
+	font-weight: bold !important;
+}
+.h-font-24b {
+	font-size: 24px !important;
+	font-weight: bold !important;
+}
+.h-font-36b {
+	font-size: 36px !important;
+	font-weight: bolder !important;
+}
+/*字体*/
+.h-font-simsun { font-family: SimSun !important; }/* 宋体 */
+.h-font-georgia { font-family: Georgia, "Times New Roman", Times, serif !important; }
+.h-font-yahei { font-family: "Microsoft YaHei", "Microsoft JhengHei", "黑体" !important; }
+.h-font-normal { font-weight: normal !important; }
+.h-ws-normal { white-space: normal !important; }
+.h-ws-break {
+	word-wrap: break-word !important;
+	word-break: normal !important;
+	white-space:normal !important;
+}
+.h-ws-prewrap { white-space: pre-wrap !important; }
+.h-ws-hide {
+	white-space: nowrap !important;
+	overflow: hidden !important;
+	text-overflow: ellipsis !important;
+	width: 100% !important;
+}
+/*文字对齐*/
+.h-text-left { text-align: left !important; }
+.h-text-center { text-align: center !important; }
+.h-text-right { text-align: right !important; }
+.h-text-indent { text-indent: 2em !important; }
+/*文字颜色*/
+.h-color-muted { color: #999999 !important; }
+.h-color-primary { color: #428bca !important; }
+.h-color-success { color: #468847 !important; }
+.h-color-info { color: #3a87ad !important; }
+.h-color-warning { color: #fd8108 !important; }
+.h-color-danger { color: #b94a48 !important; }
+.h-color-required {
+	font-weight: 900 !important;
+	color: #f60 !important;
+	font-family: "宋体" !important;
+}
+/*背景颜色*/
+
+.h-bg-muted-light,
+.h-bg-muted-light > td { background-color: #f9f9f9 !important; }
+
+.h-bg-primary-light,
+.h-bg-primary-light > td { background-color: #d0dff7 !important; }
+
+.h-bg-success-light,
+.h-bg-success-light > td {
+	background-color: #dff0d8 !important;
+}
+.h-bg-success-light > td {
+	border-bottom: 1px solid #a4d192 !important;
+	border-left: 1px solid #a4d192 !important;
+}
+.h-bg-success-light:hover > td { background-color: #cfefc2 !important; }
+
+
+
+
+
+
+.h-bg-warning-light,
+.h-bg-warning-light > td {
+	background-color: #fcf8e3 !important;
+}
+.h-bg-warning-light > td {
+	border-bottom: 1px solid #d9cf93 !important;
+	border-left: 1px solid #d9cf93 !important;
+}
+.h-bg-warning-light:hover > td { background-color: #faf4d2 !important; }
+
+.h-bg-danger-light,
+.h-bg-danger-light > td {
+	background-color: #f2dede !important;
+}
+.h-bg-danger-light > td {
+	border-bottom: 1px solid #d99f9f !important;
+	border-left: 1px solid #d99f9f !important;
+}
+.h-bg-danger-light:hover > td { background-color: #f2c9c9 !important; }
+
+.h-bg-info-light,
+.h-bg-info-light > td {
+	background-color: #d9edf7 !important;
+}
+.h-bg-info-light > td {
+	border-bottom: 1px solid #a6cfe4 !important;
+	border-left: 1px solid #a6cfe4 !important;
+}
+.h-bg-info-light:hover > td { background-color: #c6e6f6 !important; }
+
+
+
+
+.h-bg-muted { background-color: #f3f3f3 !important; }
+.h-bg-primary { background-color: #5090f6 !important; }
+.h-bg-warning { background-color: #f0ad4e !important; }
+.h-bg-danger { background-color: #d9534f !important; }
+.h-bg-success { background-color: #5cb85c !important; }
+.h-bg-info { background-color: #5bc0de !important; }
+.h-bg-muted-dark { background-color: #cacccf !important; }
+.h-bg-primary-dark { background-color: #3079ed !important; }
+.h-bg-warning-dark { background-color: #eea236 !important; }
+.h-bg-danger-dark { background-color: #d43f3a !important; }
+.h-bg-success-dark { background-color: #4cae4c !important; }
+.h-bg-info-dark { background-color: #46b8da !important; }
+/*内边距*/
+.h-pad0 { padding: 0 !important; }
+.h-pad5 { padding: 5px !important; }
+.h-pad10 { padding: 10px !important; }
+.h-pad20 { padding: 20px !important; }
+.h-pl-5 { padding-left: 5px !important; }
+.h-pl-10 { padding-left: 10px !important; }
+.h-pl-20 { padding-left: 20px !important; }
+.h-pl-30 { padding-left: 30px !important; }
+.h-pl-40 { padding-left: 40px !important; }
+.h-pr-5 { padding-right: 5px !important; }
+.h-pr-10 { padding-right: 10px !important; }
+.h-pr-20 { padding-right: 20px !important; }
+.h-pr-30 { padding-right: 30px !important; }
+.h-pr-40 { padding-right: 40px !important; }
+.h-pt-5 { padding-top: 5px !important; }
+.h-pt-10 { padding-top: 10px !important; }
+.h-pt-15 { padding-top: 15px !important; }
+.h-pt-20 { padding-top: 20px !important; }
+.h-pt-30 { padding-top: 30px !important; }
+.h-pb-5 { padding-bottom: 5px !important; }
+.h-pb-10 { padding-bottom: 10px !important; }
+.h-pb-15 { padding-bottom: 15px !important; }
+.h-pb-20 { padding-bottom: 20px !important; }
+.h-pb-30 { padding-bottom: 30px !important; }
+/*外边距*/
+.h-mar-auto { margin: auto !important; }
+.h-mar0 { margin: 0 !important; }
+.h-mar5 { margin: 5px !important; }
+.h-mar10 { margin: 10px !important; }
+.h-mar20 { margin: 20px !important; }
+.h-mt-5 { margin-top: 5px !important; }
+.h-mt-10 { margin-top: 10px !important; }
+.h-mt-20 { margin-top: 20px !important; }
+.h-mt-30 { margin-top: 30px !important; }
+.h-mt-35 { margin-top: 35px !important; }
+.h-mb-5 { margin-bottom: 5px !important; }
+.h-mb-10 { margin-bottom: 10px !important; }
+.h-mb-20 { margin-bottom: 20px !important; }
+.h-mb-30 { margin-bottom: 30px !important; }
+.h-ml-4 { margin-left: 4px !important; }
+.h-ml-5 { margin-left: 5px !important; }
+.h-ml-10 { margin-left: 10px !important; }
+.h-ml-20 { margin-left: 20px !important; }
+.h-ml-30 { margin-left: 30px !important; }
+.h-mr-5 { margin-right: 5px !important; }
+.h-mr-10 { margin-right: 10px !important; }
+.h-mr-20 { margin-right: 20px !important; }
+.h-mr-30 { margin-right: 30px !important; }
+/*透明度*/
+.h-alpha-05 {
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.h-alpha-03 {
+	filter: alpha(opacity=30);
+	-moz-opacity: 0.3;
+	-khtml-opacity: 0.3;
+	opacity: 0.3;
+}
+/*箭头*/
+.h-arrow-b {
+	border: 4px solid #f90;
+	border-left-color: #fff;
+	border-right-color: #fff;
+	border-bottom-color: #fff;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	vertical-align: middle;
+	margin: 0 2px;
+}
+.h-arrow-t {
+	border: 4px solid #f90;
+	border-left-color: #fff;
+	border-right-color: #fff;
+	border-top-color: #fff;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	vertical-align: text-top;
+	margin: 0 2px;
+}
+.h-arrow-r {
+	border: 4px solid #f90;
+	border-right-color: #fff;
+	border-top-color: #fff;
+	border-bottom-color: #fff;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	vertical-align: middle;
+	margin: 0 2px;
+}
+.h-arrow-l {
+	border: 4px solid #f90;
+	border-left-color: #fff;
+	border-top-color: #fff;
+	border-bottom-color: #fff;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	vertical-align: middle;
+	margin: 0 2px;
+}
+/*边框*/
+
+.h-border { border: 1px solid #ddd !important; }
+.h-border-t { border-top: 1px solid #ddd !important; }
+.h-border-b { border-bottom: 1px solid #ddd !important; }
+.h-border-r { border-right: 1px solid #ddd !important; }
+.h-border-l { border-left: 1px solid #ddd !important; }
+.h-border-n { border: none !important; }
+/*两个像素边框*/
+.h-border-t2 { border-top: 2px solid #ddd !important; }
+.h-border-b2 { border-bottom: 2px solid #ddd !important; }
+.h-border-r2 { border-right: 2px solid #ddd !important; }
+.h-border-l2 { border-left: 2px solid #ddd !important; }
+.h-border-2 { border: 2px solid #ddd !important; }
+/*浮动*/
+.h-float-left { float: left !important; }
+.h-float-right { float: right !important; }
+.h-float-none { float: none !important; }
+/*定位方式*/
+.h-pos-ab { position: absolute !important; }
+.h-pos-re { position: relative !important; }
+.h-height-auto { height: auto !important; }
+.h-pull-left {
+	position: absolute !important;
+	left: 0;
+	top: 5px;
+}
+.h-pull-right {
+	position: absolute !important;
+	right: 0;
+	top: 5px;
+}
+/* 固定到浏览器的四个角落*
+/
+/*非IE6主流浏览器通用的方法*/ 
+.h-fixed-top /* 头部固定 */ {
+	position: fixed !important;
+	bottom: auto;
+	top: 0px;
+}
+.h-fixed-bottom /* 底部固定 */ {
+	position: fixed !important;
+	bottom: 0px;
+	top: auto;
+}
+.h-fixed-left /* 左侧固定 */ {
+	position: fixed !important;
+	right: auto;
+	left: 0px;
+}
+.h-fixed-right /* 右侧固定 */ {
+	position: fixed !important;
+	right: 0px;
+	left: auto;
+}
+/* 让position:fixed在IE6下可用! */
+* html,
+* html body /* 修正IE6振动bug */ {
+	background-image: url(about:blank);
+	background-attachment: fixed;
+}
+* html .h-fixed-top /* IE6 头部固定 */ {
+	position: absolute;
+	bottom: auto;
+top:expression(eval(document.documentElement.scrollTop));
+}
+* html .h-fixed-right /* IE6 右侧固定 */ {
+	position: absolute;
+	right: auto;
+left:expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft, 10)||0)-(parseInt(this.currentStyle.marginRight, 10)||0));
+}
+* html .h-fixed-bottom /* IE6 底部固定  */ {
+	position: absolute;
+	bottom: auto;
+top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop, 10)||0)-(parseInt(this.currentStyle.marginBottom, 10)||0)));
+}
+* html .h-fixed-left /* IE6 左侧固定 */ {
+	position: absolute;
+	right: auto;
+left:expression(eval(document.documentElement.scrollLeft));
+}
+/*loading 图标  动画   配合 h-icon使用*/
+.h-icon-loading { background-image: url(images/component/loading/loading-16.gif) !important; }
+.h-icon-loading-l { background-image: url(images/component/loading/loading-24.gif)!important; }
+.h-icon-loading-xl { background-image: url(images/component/loading/loading-32.gif)!important; }
+.h-icon-loading-xxl { background-image: url(images/component/loading/loading-48.gif)!important; }
+.h-icon-loading-xxxl { background-image: url(images/component/loading/loading-64.gif)!important; }
+/*水平垂直居中于某一区块的loading */
+/*
+.h-loading-container{ position:absolute; left:50%; top:50%; width:300px;}
+.h-loading{
+		text-align:center;
+		width:100%;
+		position:absolute;
+		left:-50%;
+		top:-50px;
+	
+	}
+*/
+
+
+/*水平垂直居中于某一区块的内容 */
+.h-area-center {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+}
+.h-area-center-content {
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: -50px;
+}
+.h-loading {
+	color: #999;
+	text-align: center;
+}
+.h-loading .h-icon { margin-right: 5px; }
+.h-loading-vertical .h-loading-text {
+	display: block;
+	margin-top: 5px;
+	font-weight: 900;
+}
+.h-loading-vertical .h-icon { margin: 0; }
+
+	
+
+/*-------------------------------------------------------------	
+	h-mask         遮罩层,默认为黑色半透明
+	h-mask-white   白色半透明
+	h-mask-iframe  该iframe用于解决DIV层被OBJECT控件遮盖问题
+-------------------------------------------------------------*/
+
+/* 遮罩层 */
+.h-mask-wrapper,
+.h-mask,
+.h-mask-iframe{
+	width:100%;
+	height:100%;
+	position:absolute;
+	text-align:center;
+	display:block;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index:10000;
+	border: 0;
+}
+.h-mask {
+	background: #000;
+	filter: alpha(opacity=30);
+	-moz-opacity: 0.3;
+	-khtml-opacity: 0.3;
+	opacity: 0.3;
+	z-Index:-1;
+}
+.h-mask-white {
+	background: #fff;
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+.h-mask-iframe {
+	visibility: inherit;
+	z-Index: -2;
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}

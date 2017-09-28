@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ICSSHS-UI</title>
+<link href="css/framework.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.9.1.js"></script>
+<!--页面高度需设置100%，并保证不出现滚动条；否则所包含的标签无法获取到100%的高度，会导致布局错乱 by 66383210@qq.com-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+  //框架头部下拉菜单
+  	var intervalID; 
+	var curSel; 
+	$(".h-f-has-pulldown").mouseover(function(){ 
+		curSel=$(this); 
+		intervalID=setInterval(onMouseOver,250);//鼠标移入的时候有一定的延时才会滑出下拉菜单，防止用户不经意的操作 
+	}); 
+	function onMouseOver(){ 
+		curSel.addClass("h-f-current"); 
+		if(curSel.hasClass("h-f-subsystem")){
+				curSel.addClass("h-f-subsystem-active")
+			}
+		curSel.find(".h-f-pulldown").slideDown("fast");	
+	} 
+	$(".h-f-has-pulldown").mouseout(function(){ 
+		clearInterval(intervalID); 
+	}); 
+	
+	$(".h-f-has-pulldown").mouseleave(function(){ 
+		if($(this).hasClass("h-f-subsystem-active")){
+				$(this).removeClass("h-f-subsystem-active")
+			}
+		$(this).find(".h-f-pulldown").hide();
+	}); 
+  //收缩左侧栏
+  
+  $("[data-hsui=aside-contral]").click(function(){
+  	$(".h-f-aside").toggleClass("h-f-aside-small");
+	$(".h-f-content").toggleClass("h-f-content-big");
+	$(".h-f-icon-aside-status").toggleClass("h-f-icon-aside-status-small");
+  });
+  
+  //点击后向右滑出二级菜单
+  
+  var sideMenuID;
+  $("[data-hsui=slide-menu]").click(function(){
+  	sideMenuID = $(this).attr("href");
+
+	$(".h-f-aside-slide-area").not($(sideMenuID)).animate({right:'0px'},500);
+	$(sideMenuID).animate({right:'-510px'},500);
+	
+	$(".h-f-aside-slide-mask").fadeTo(500,0.5);
+	$("[data-hsui=slide-menu]").removeClass("h-f-menu-item-active");
+	$(this).addClass("h-f-menu-item-active");
+  });
+  
+  //关闭二级菜
+  $("[data-hsui=slide-close]").click(function(){
+  	$(".h-f-aside-slide-area").animate({right:'0'},500);
+	$(".h-f-aside-slide-mask").fadeOut(500);
+	$("[data-hsui=slide-menu]").removeClass("h-f-menu-item-active");
+  });
+  
+});
+</script>
+</head>
+<body>
+<div class="h-f-wrapper">
+  <!--header-->
+  <div class="h-f-header">
+    <!--系统logo-->
+    <p class="h-f-logo">
+      	<!--
+          系统logo,分为以下两部份，
+          1，系统logo图片：默认为单独的烟草logo,可根据实际需要，把系统名称整合在logo图片里，那么需要隐藏下面的h-f-app-name
+          2，系统名称文字：以文字的形式单独显示系统名称。
+          此处显示的内容可通过后台进行配置
+          -->
+        <span class="h-f-logo-img"><img src="images/app-logo.png" alt=""/></span>
+        <span class="h-f-application-name">烟叶系统集成平台</span>
+      </p>
+    <!--间隔线-->
+    <span class="h-f-header-separate"></span>
+    <!--子系统下拉-->
+    <div class="h-f-subsystem h-f-has-pulldown">
+      <span class="h-f-icon-pull-arrow"></span>
+      <span class="h-f-pull-text">调拨系统</span>
+      <div class="h-f-pulldown">
+        <!--该iframe层用来修正浮层下方下拉控件等无法被遮罩的bug-->
+        <iframe class="h-f-pulldown-canvas" frameborder="0" scrolling="no"></iframe>
+        <div class="h-f-pulldown-content">
+          <a href="#" class="h-f-app-item  ">
+            <em><img src="../../../../doc/web/framework/themes-app/resources/images/icon-system-1.png"  alt=""/></em> 生产系统 </a>
+          <a href="#" class="h-f-app-item ">
+            <em><img src="../../../../doc/web/framework/themes-app/resources/images/icon-system-2.png"  alt=""/></em> 收购系统 </a>
+          <a href="#" class="h-f-app-item">
+            <em><img src="../../../../doc/web/framework/themes-app/resources/images/icon-system-3.png"  alt=""/></em> 仓储系统 </a>
+          <a href="#" class="h-f-app-item h-f-app-item-active">
+            <em><img src="../../../../doc/web/framework/themes-app/resources/images/icon-system-4.png"  alt=""/></em> 调拨系统 </a>
+          <a href="#" class="h-f-app-item ">
+            <em><img src="../../../../doc/web/framework/themes-app/resources/images/icon-system-5.png"  alt=""/></em> 销售系统 </a>
+        </div>
+      </div>
+    </div>
+    <!--间隔线-->
+    <span class="h-f-header-separate"></span>
+    <div class="h-f-header-nav">
+      <a href="#">打开应用</a>
+    </div>
+    <div class="h-f-header-nav">
+      <a href="#" >发布版本</a>
+    </div>
+    <div class="h-f-header-nav ">
+      <a href="#" class="h-f-active" >应用导入</a>
+    </div>
+    <div class="h-f-header-nav">
+      <a href="#">公共资源</a>
+    </div>
+    <div class="h-f-header-nav">
+      <a href="#">返回应用</a>
+    </div>
+    <div class="h-f-header-nav h-f-has-pulldown">
+      <a href="#" >带下拉
+        <span class="h-f-icon-pull-arrow"></span>
+      </a>
+      <div class="h-f-pulldown">
+        <span class="h-f-arrow"></span>
+        <div class="h-f-pulldown-content">
+          <a href="#" class="h-f-pull-item">中软海晟</a>
+          <span class="h-f-pull-item-separate"></span>
+          <a href="#" class="h-f-pull-item">版本更新</a>
+          <a href="#" class="h-f-pull-item">帮助中心</a>
+          <a href="#" class="h-f-pull-item">版权声明</a>
+        </div>
+      </div>
+    </div>
+    <div class="h-f-info">
+      <ul>
+        <!--用户登录信息-->
+        <li class="h-f-info-item">早上好，
+          <a href="#">Design4U</a>
+          <a href="../../../../doc/web/framework/themes-app/login.html">[退出]</a>
+        </li>
+        <!--问隔线-->
+        <li class="h-f-info-item-separate">&nbsp;</li>
+        <!--消息提醒-->
+        <li class="h-f-info-item h-f-has-pulldown">
+          <a href="#">
+            <span class="h-f-info-icon h-f-icon-notice"></span>
+          </a>
+          <em class="h-f-notice-num"> 5 </em>
+        </li>
+        <!--设置-->
+        <li class="h-f-info-item">
+          <a href="#">
+            <span class="h-f-info-icon h-f-icon-setting"></span>
+          </a>
+        </li>
+        <!--问隔线-->
+        <li class="h-f-info-item-separate">&nbsp;</li>
+        
+        <!--更多下拉框-->
+        <li class="h-f-info-item h-f-has-pulldown">
+          <span class="h-f-icon-pull-arrow"></span>
+          <span class="h-f-pull-text">更多</span>
+          <div class="h-f-pulldown">
+            <span class="h-f-arrow"></span>
+            <div class="h-f-pulldown-content">
+              <a href="#" class="h-f-pull-item">中软海晟</a>
+              <span class="h-f-pull-item-separate"></span>
+              <a href="#" class="h-f-pull-item">版本更新</a>
+              <a href="#" class="h-f-pull-item">帮助中心</a>
+              <a href="#" class="h-f-pull-item">版权声明</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="h-f-main">
+    <div class="h-f-aside h-f-aside-light h-f-aside-big h-f-aside-scroll">
+      <!--内容 区域--> 
+      content </div>
+    <!--滑出菜单遮罩层-->
+    <div class="h-f-aside-slide-mask h-f-hide "></div>
+    <!--内容页-->
+    <div class="h-f-content h-f-content-small">
+      <iframe src="portal.html" name="content-fram" frameborder="0" scrolling="auto"></iframe>
+    </div>
+  </div>
+</div>
+</body>
+</html>

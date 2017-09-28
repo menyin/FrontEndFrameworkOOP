@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>597Framework</title>
+<meta name="description" content="CNY-MUI for webapp">
+<meta name="keywords" content="CNY-MUI for webapp">
+<meta name="author" content="cny,email:845257580@qq.com,qq:845257580">
+<meta name="Copyright" Content="陈南阳 版权所有 2017">
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+<link rel="apple-touch-icon" href="doc/resources/icons/icon.png">
+<link rel="apple-touch-icon" href="doc/resources/icons/icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="doc/resources/icons/icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="doc/resources/icons/icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="doc/undefined">
+
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="mobile/project/resources/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="mobile/project/resources/css/global.css">
+<link rel="stylesheet" type="text/css" href="mobile/project/resources/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="mobile/project/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="mobile/project/resources/css/base.css">
+
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="doc/resources/css/docs.css">
+<script src="mobile/project/resources/js/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+  //框架头部下拉菜单
+  	var intervalID; 
+	var curSel; 
+	$(".docs-has-pulldown").mouseover(function(){ 
+		curSel=$(this); 
+		intervalID=setInterval(onMouseOver,250);//鼠标移入的时候有一定的延时才会滑出下拉菜单，防止用户不经意的操作 
+	}); 
+	function onMouseOver(){ 
+		curSel.addClass("docs-current"); 
+		if(curSel.hasClass("docs-subsystem")){
+				curSel.addClass("docs-subsystem-active")
+			}
+		curSel.find(".docs-pulldown").slideDown("fast");	
+	} 
+	$(".docs-has-pulldown").mouseout(function(){ 
+		clearInterval(intervalID); 
+	}); 
+	
+	$(".docs-has-pulldown").mouseleave(function(){ 
+		if($(this).hasClass("docs-subsystem-active")){
+				$(this).removeClass("docs-subsystem-active")
+			}
+		$(this).find(".docs-pulldown").hide();
+	}); 
+
+
+  
+});
+</script>
+</head>
+<body>
+<!--header-->
+<div class="docs-header">
+    <div class="docs-container"> 
+        <!--系统logo-->
+        <div class="docs-logo docs-has-pulldown">
+            <div><img src="doc/resources/images/logo.png" alt=""/></div>
+            <div class="docs-pulldown"> <span class="docs-arrow"></span>
+                <div class="docs-pulldown-content"> <a href="doc/web/docs-example.html" class="docs-pull-item">597 for web</a> <a href="#" class="docs-pull-item">597 for mobile</a> </div>
+            </div>
+        </div>
+        <div class="docs-header-welcome">您好，欢迎使用597Framework！</div>
+    </div>
+</div>
+
+<!--banner-->
+<div class="docs-banner-index">
+    <div class="docs-container"> <span class="docs-img-iphone animated bounceInDown" style="animation-delay:0.3s;-webkit-animation-delay:0.3s;"><img src="doc/resources/images/banner-img-iphone.png" alt=""/></span> <span class="docs-img-ipad animated  bounceInDown" style="animation-delay:0.2s;-webkit-animation-delay:0.2s;"><img src="doc/resources/images/banner-img-ipad.png" alt=""/></span> <span class="docs-img-macbook animated bounceInDown " style="animation-delay:0.1s;-webkit-animation-delay:0.1s;"><img src="doc/resources/images/banner-img-macbook.png" alt=""/></span> <span class="docs-img-macdisplay animated bounceInDown" ><img src="doc/resources/images/banner-img-macdisplay.png" alt=""/></span> </div>
+</div>
+
+<!--masthead-->
+<div class="docs-masthead" >
+    <div class="docs-container">
+        <div class="docs-design-for clearfix">
+            <div class="docs-design-for-item docs-design-for-pc"> <a href="doc/web/docs-getting-started.html"> <span class="docs-icon docs-icon-pc"></span>
+                <h2>WEB端</h2>
+                <p>更新于2017-09</p>
+                <div class="docs-info">
+                    <h2>web端</h2>
+                    <p>目前web端主要兼容I8E+、Chorme、Firfox等主流浏览器。</p>
+                </div>
+                </a> </div>
+            <div class="docs-design-for-item docs-design-for-mobile"> <a href="javascript:alert('移动端还未编写相关文档');"> <span class="docs-icon docs-icon-mobile"></span>
+                <h2>移动端</h2>
+                <p>更新于2017-09</p>
+                <div class="docs-info">
+                    <h2>移动端</h2>
+                    <p>移动端支持手机及平板，采用HTML5+CSS3，是针对兼容主流的HTML5浏览器和移动设备。</p>
+                </div>
+                </a> </div>
+        </div>
+        <p class="docs-lead" style="margin-top:40px;">597Framework适用于公司B/S项、Webapp项目前端开发。</p>
+        <!--
+    <p>HSUI根据不同的终端平台的人机交互特点及用户操作体验等，提供PC端、手机端、平板端三个版本。目前PC端主要兼容于IE+及各主流浏览器。手机端及平板端采用HTML5+CSS3，是针对兼容主流的HTML5浏览器和移动设
+    备。</p>-->
+        <p class="docs-version">文档更新于：2017-09-28 | 597团队出品</p>
+        
+    </div>
+</div>
+<!--features-->
+<div class="docs-features" >
+    <div class="docs-container clearfix">
+        <div class="docs-features-item"> <span class="docs-icon docs-icon-1"></span>
+            <h2>针对性强，复用性高</h2>
+            <p>针对公司产品特色，量身定制，并可复用于公司所有基于HTML开发的项目，WEB端兼容IE8+及其它主流浏览器，移动端针对拥有WebKit浏览器的操作系统（比如Android、iOS）。</p>
+        </div>
+        <div class="docs-features-item" > <span class="docs-icon docs-icon-2"></span>
+            <h2>可触摸，自适应</h2>
+            <p>界面元素全部采用百分比设计，可自动根据不同尺寸大小的屏幕进行自适应处理。同时针对移动端的触摸操作进行优化，有效的提升用户操作体验，更贴进于Native App的操作方式。</p>
+        </div>
+        <div class="docs-features-item" > <span class="docs-icon docs-icon-3"></span>
+            <h2>本地化支持</h2>
+            <p>相比国外框架，我们更关注中文排版，根据用户代理调整字体，实现更好的中文排版效果；兼顾国内主流浏览器及 App 内置浏览器兼容支持。</p>
+        </div>
+        <div class="docs-features-item" > <span class="docs-icon docs-icon-4"></span>
+            <h2>HTML5+CSS3</h2>
+            <p>目前主流的移动设备（Iphone、Android）的内置浏览器都是基于webkit内核的，对HTML5和CSS3技术有着很好的支持，所以移动端我们的界面将全部采用HTML5+CSS3。</p>
+        </div>
+    </div>
+</div>
+
+<!--footer-->
+<div class="docs-footer" >
+    <div class="docs-container">
+        <p class="docs-copyright">前端工程师 陈南阳
+            &copy;2017年 CNY</p>
+    </div>
+</div>
+</body>
+</html>

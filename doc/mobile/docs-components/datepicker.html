@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ICSSHS-MUI for webapp</title>
+  <meta name="description" content="ICSSHS-MUI for webapp">
+  <meta name="keywords" content="ICSSHS-MUI for webapp">
+  <meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+  <meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+  
+  <!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+  
+  <!--针对IOS 浏览器的设置-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon@72.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="icon@2x.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="icon@114.png" sizes="144x144">
+  <link rel="apple-touch-startup-image" href="undefined.png">
+  
+    <!--项目全局样式-->
+    <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+    <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+  <!--说明文档样式,实际应用中请不要引用-->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+  <script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+  <div class="docs-page-masthead">
+    <h1>日期时间选择(DatePicker)</h1>
+    <p>在触控设备上,主要是通过滚动选择年月日时分秒。同样适用于其它同形式的多项选择。 </p>
+  </div>
+  
+  <h2 >日期选择</h2>
+  <p>选择年月日。</p>
+  <div class="docs-example">
+    <!--滑动选择控件-->
+      <div class="hm-slidepicker">
+        <div class="hm-slidepicker-content">
+          <!--年-->
+          <div class="hm-slidepicker-item">
+            <div class="hm-slidepicker-item-content">
+              <div class="hm-item-title">年</div>
+              <div class="hm-item-content">
+                <div class="hm-item">
+                  <ul style="-webkit-transition: all 0s ease-out; transition: all 0s ease-out; -webkit-transform: translate3d(0px, -80px, 0px);">
+                  	<li>2011</li>
+                    <li>2012</li>
+                    <li>2013</li>
+                    <li >2014</li>
+                    <li class="hm-active">2015</li>
+                    <li>2016</li>
+                    <li>2017</li>
+                    <li>2018</li>
+                  </ul>
+                </div>
+                <div class="hm-item-mask"></div>
+              </div>
+              <div class="hm-item-current-display"></div>
+            </div>
+          </div>
+          <!--月-->
+          <div class="hm-slidepicker-item">
+            <div class="hm-slidepicker-item-content">
+              <div class="hm-item-title">月</div>
+              <div class="hm-item-content">
+                <div class="hm-item">
+                  <ul style="-webkit-transition: all 0s ease-out; transition: all 0s ease-out; -webkit-transform: translate3d(0px, -80px, 0px);">
+                  	<li>02</li>
+                    <li>03</li>
+                    <li>04</li>
+                    <li >05</li>
+                    <li class="hm-active">06</li>
+                    <li>07</li>
+                    <li>08</li>
+                    <li>09</li>
+                  </ul>
+                </div>
+                <div class="hm-item-mask"></div>
+              </div>
+              <div class="hm-item-current-display"></div>
+            </div>
+          </div>
+          <!--日-->
+          <div class="hm-slidepicker-item">
+            <div class="hm-slidepicker-item-content">
+              <div class="hm-item-title">日</div>
+              <div class="hm-item-content">
+                <div class="hm-item">
+                  <ul style="-webkit-transition: all 0s ease-out; transition: all 0s ease-out; -webkit-transform: translate3d(0px, -80px, 0px);">
+                  	<li>02</li>
+                    <li>03</li>
+                    <li>04</li>
+                    <li >05</li>
+                    <li class="hm-active">06</li>
+                    <li>07</li>
+                    <li>08</li>
+                    <li>09</li>
+                  </ul>
+                </div>
+                <div class="hm-item-mask"></div>
+              </div>
+              <div class="hm-item-current-display"></div>
+            </div>
+          </div>
+          
+          
+          
+        </div>
+      </div>
+  </div>
+  <div class="docs-highlight">
+    <pre><code>代码</code></pre>
+  </div>
+  
+  
+  <h2 >多项选择</h2>
+  <p>适用于其它同形式的自定义选择项。</p>
+  <div class="docs-example">
+    <!--滑动选择控件-->
+     <div class="hm-slidepicker">
+        <div class="hm-slidepicker-content">
+          <!--选项-->
+          <div class="hm-slidepicker-item">
+            <div class="hm-slidepicker-item-content">
+              <div class="hm-item-title">标题</div>
+              <div class="hm-item-content">
+                <div class="hm-item">
+                  <ul style="-webkit-transition: all 0s ease-out; transition: all 0s ease-out; -webkit-transform: translate3d(0px, -80px, 0px);">
+                  	<li>选项</li>
+                    <li>选项</li>
+                    <li>选项</li>
+                    <li >选项</li>
+                    <li class="hm-active">选项</li>
+                    <li>选项</li>
+                    <li>选项</li>
+                    <li>选项</li>
+                  </ul>
+                </div>
+                <div class="hm-item-mask"></div>
+              </div>
+              <div class="hm-item-current-display"></div>
+            </div>
+          </div>
+          <!--选项-->
+          <div class="hm-slidepicker-item">
+            <div class="hm-slidepicker-item-content">
+              <div class="hm-item-title">标题</div>
+              <div class="hm-item-content">
+                <div class="hm-item">
+                  <ul style="-webkit-transition: all 0s ease-out; transition: all 0s ease-out; -webkit-transform: translate3d(0px, -80px, 0px);">
+                  	<li>选项</li>
+                    <li>选项</li>
+                    <li>选项</li>
+                    <li >选项</li>
+                    <li class="hm-active">选项</li>
+                    <li>选项</li>
+                    <li>选项</li>
+                    <li>选项</li>
+                  </ul>
+                </div>
+                <div class="hm-item-mask"></div>
+              </div>
+              <div class="hm-item-current-display"></div>
+            </div>
+          </div>
+        </div>
+      </div> 
+  </div>
+  <div class="docs-highlight">
+    <pre><code>代码</code></pre>
+  </div>
+
+  
+  
+  
+  
+  
+ 
+</div>
+</body>
+</html>

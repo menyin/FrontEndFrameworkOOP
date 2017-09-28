@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICSSHS-MUI for webapp</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<meta name="x5-fullscreen" content="true">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon.png">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="../project/resources/css/images/icons/icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="../project/resources/css/images/icons/undefined">
+
+<!--项目全局样式-->
+<link href="../project/resources/css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/global.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/animate.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/base.css" rel="stylesheet" type="text/css" />
+<link href="../project/resources/css/iconfont.css" rel="stylesheet" type="text/css" />
+<script src="../project/resources/js/jquery-1.9.1.js"></script>
+  
+
+  <script type="text/javascript">
+	$(document).ready(function(){
+		//下拉菜单---------------------------------------
+		var curSel;
+		$("[data-action=dropdown]").click(function(){ 
+			curSel=$(this); 
+			curSel.toggleClass("hm-active"); //显示选中状态
+			curSel.next(".hm-dropdown-content").slideToggle("fast");//显示下拉菜单
+		});
+		
+		
+		$("[data-action=listview]").click(function(){ 
+			$("#view-modal").removeClass("hm-listview-card");
+			$("#view-modal").removeClass("hm-listview-gallery");
+			curSel.next(".hm-dropdown-content").slideUp("fast");//关闭下拉菜单
+		});
+		$("[data-action=listview-gallery]").click(function(){ 
+			$("#view-modal").addClass("hm-listview-gallery");
+			$("#view-modal").removeClass("hm-listview-card");
+			curSel.next(".hm-dropdown-content").slideUp("fast");//关闭下拉菜单
+		});
+		$("[data-action=listview-card]").click(function(){ 
+			$("#view-modal").addClass("hm-listview-card");
+			$("#view-modal").removeClass("hm-listview-gallery");
+			curSel.next(".hm-dropdown-content").slideUp("fast");//关闭下拉菜单
+			
+		});
+		
+		
+		
+		//同一页面存在多个弹窗控件时的调用方式
+	var curPopup;
+	var curAnimationIn;  //弹窗进入时的动画
+	var curAnimationOut;  //弹窗退出时的
+	$("[data-action^='popup-']").click(function(){
+		curPopup=$(this).attr("data-action");//获取所在显示的弹窗ID
+		curAnimationIn=$(this).attr("data-animation");//获取弹窗显示的动画方式
+		$("#"+curPopup).fadeIn("fast");//打开模态框
+		$("#"+curPopup).find(".hm-popup").addClass(curAnimationIn);//设定弹窗显示的动画方式
+		$("body").addClass("hm-ov-hide");//隐藏滚动条
+		$("#"+curPopup).find(".hm-popup").removeClass(curAnimationOut);//清除上次退出时的动画
+		
+		
+		//如果允许多个弹层同时存在，可去掉下面的代码
+		$(".hm-popup-wrapper").not("#"+curPopup).fadeOut("fast")//关闭其它弹层
+		$(".hm-popup-wrapper").not("#"+curPopup).find(".hm-popup").removeClass(curAnimationIn);//清除打开时的动画
+		
+		
+		
+  });
+	//关闭浮窗
+	$("[data-action=close-popup]").click(function() {
+		         curAnimationOut=$(this).attr("data-animation");//获取弹窗关闭的动画方式
+				$(this).parents(".hm-popup-wrapper").fadeOut("fast");//关闭弹层
+				$("#"+curPopup).find(".hm-popup").removeClass(curAnimationIn);//清除打开时的动画
+				$("#"+curPopup).find(".hm-popup").addClass(curAnimationOut);//设定关闭时的动画
+				$("body").removeClass("hm-ov-hide");//重新显示body的滚动条
+				
+	})
+		
+		
+		
+		 
+	});
+	</script>
+
+</head>
+<body class="hm-ov-x-hide">
+<!--page-->
+<div class="hm-page hm-page-active" >
+    <div class="hm-header hm-header-dark">
+        <a class="hm-btn" href="#" onclick="history.go(-1)"><i class="hm-icon-back"></i></a>
+        <div class="hm-flex-1" >
+        </div>
+        <a class="hm-btn" href="#"> <i class="hm-icon-more"></i> </a>
+        <div class="hm-title">
+            条件过滤
+        </div>
+    </div>
+    <!--工具栏-->
+    <div class="hm-bar hm-bar-filter ">
+        <a href="javascript:void(0);" class="hm-btn" data-action="popup-array" data-animation="fadeIn"> 综合排序<i class="hm-caret"></i> </a> 
+        <a href="#" class="hm-btn hm-active" data-action="popup-selector2" data-animation="hm-animation-slide-left"> 价格<i class="hm-icon-sm hm-icon-sort-down"></i> </a> 
+        <a href="#" class="hm-btn " data-action="popup-filter" data-animation="slideInRight"> 筛选<i class="hm-icon-sm hm-icon-filter"></i> </a>
+        <div class="hm-flex-1" ></div>
+        <div class="hm-dropdown ">
+        	<a class="hm-btn" href="#" data-action="dropdown"> <i class="hm-icon-viewlist"></i><span class="hm-caret"></span></a>
+         
+          <div class="hm-dropdown-content hm-align-right" >
+            <div class="hm-listview">
+                  <div class="hm-li" data-action="listview">
+                            <div class="hm-li-header"><i class="hm-icon-viewlist"></i></div>
+                            <div class="hm-li-content hm-flex-1">列表模式</div>
+                   </div>
+                   <div class="hm-li" data-action="listview-gallery">
+                            <div class="hm-li-header"><i class="hm-icon-viewgallery"></i></div>
+                            <div class="hm-li-content hm-flex-1">缩略图模式</div>
+                   </div>
+                   <div class="hm-li" data-action="listview-card">
+                            <div class="hm-li-header"><i class="hm-icon-image"></i></div>
+                            <div class="hm-li-content hm-flex-1">大图模式</div>
+                   </div>
+    			</div>
+          </div>
+        </div>
+        
+        
+        
+    </div>
+    <div class="hm-content" style="-webkit-box-flex:1;">
+        <div class="hm-listview" id="view-modal">
+            <a href="#" class="hm-li hm-li-link">
+                 <div class="hm-li-header">
+                            <img src="../../doc/resources/images/img-listview-big.jpg" alt="">
+                 </div>
+                <div class="hm-li-content hm-flex-1">
+                    <h2 class="hm-line-clamp">以用户为中心的一种设计手段以用户需求为目标而进行的设计</h2>
+                    <div class="hm-li-desc">
+                        <strong class="hm-color-danger hm-margin-right">¥1800</strong><del><span >¥</span><span >1280</span></del>
+                        <div class="hm-linearLayout-horizontal">
+                            <span>design4u</span> <span class="hm-flex-1"></span> <span>02-18</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hm-li-footer">
+                </div>
+            </a> 
+            <a href="#" class="hm-li hm-li-link">
+                 <div class="hm-li-header">
+                            <img src="../../doc/resources/images/img-listview-big.jpg" alt="">
+                 </div>
+                <div class="hm-li-content hm-flex-1">
+                    <h2 class="hm-line-clamp">以用户为中心的一种设计手段以用户需求为目标而进行的设计</h2>
+                    <div class="hm-li-desc">
+                        <strong class="hm-color-danger hm-margin-right">¥1800</strong><del><span >¥</span><span >1280</span></del>
+                        <div class="hm-linearLayout-horizontal">
+                            <span>design4u</span> <span class="hm-flex-1"></span> <span>02-18</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hm-li-footer">
+                </div>
+            </a> 
+            <a href="#" class="hm-li hm-li-link">
+                 <div class="hm-li-header">
+                            <img src="../../doc/resources/images/img-listview-big.jpg" alt="">
+                 </div>
+                <div class="hm-li-content hm-flex-1">
+                    <h2 class="hm-line-clamp">以用户为中心的一种设计手段以用户需求为目标而进行的设计</h2>
+                    <div class="hm-li-desc">
+                        <strong class="hm-color-danger hm-margin-right">¥1800</strong><del><span >¥</span><span >1280</span></del>
+                        <div class="hm-linearLayout-horizontal">
+                            <span>design4u</span> <span class="hm-flex-1"></span> <span>02-18</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hm-li-footer">
+                </div>
+            </a> 
+            <a href="#" class="hm-li hm-li-link">
+                 <div class="hm-li-header">
+                            <img src="../../doc/resources/images/img-listview-big.jpg" alt="">
+                 </div>
+                <div class="hm-li-content hm-flex-1">
+                    <h2 class="hm-line-clamp">以用户为中心的一种设计手段以用户需求为目标而进行的设计</h2>
+                    <div class="hm-li-desc">
+                        <strong class="hm-color-danger hm-margin-right">¥1800</strong><del><span >¥</span><span >1280</span></del>
+                        <div class="hm-linearLayout-horizontal">
+                            <span>design4u</span> <span class="hm-flex-1"></span> <span>02-18</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hm-li-footer">
+                </div>
+            </a> 
+             
+        </div>
+        
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+<!--page--> 
+<!--弹窗内容===============================开始-->
+<div class="hm-popup-wrapper" id="popup-array" style="top:96px;">
+    <div class="hm-mask" data-action="close-popup" data-animation="fadeOut">
+    </div>
+    <div class="hm-popup hm-popup-top">
+        <div class="hm-content">
+            <div class="hm-listview">
+                    <label class="hm-li">
+                    <div class="hm-li-content hm-flex-1">
+                        单选项一
+                    </div>
+                    <div class="hm-li-footer">
+                        <input type="radio" name="RadioGroup3" checked="checked" id="RadioGroup3_0">
+                        <i class="hm-icon-checked hm-color-primary"></i>
+                    </div>
+                    </label>
+                    <label class="hm-li">
+                    <div class="hm-li-content hm-flex-1">
+                        单选项二
+                    </div>
+                    <div class="hm-li-footer">
+                        <input type="radio" name="RadioGroup3" id="RadioGroup3_1">
+                        <i class="hm-icon-checked hm-color-primary"></i>
+                    </div>
+                    </label>
+                </div>
+        </div>
+    </div>
+</div>
+<div class="hm-popup-wrapper" id="popup-filter">
+    <div class="hm-mask" data-action="close-popup" data-animation="slideOutRight">
+    </div>
+    <div class="hm-popup hm-popup-right" style="width:280px;">
+        <div class="hm-header">
+            <a class="hm-btn" href="javascript:void(0);" data-action="close-popup" data-animation="slideOutRight"> <i class="hm-icon-close"></i> </a>
+            <div class="hm-flex-1">
+            </div>
+            <a class="hm-btn " href="javascript:void(0);" data-action="close-popup" data-animation="slideOutRight"> 确定 </a>
+            <h1 class="hm-title"> 对话窗口 </h1>
+        </div>
+        <div class="hm-content">
+            内容
+        </div>
+    </div>
+</div>
+<!--弹窗内容===============================结束-->
+</body>
+</html>

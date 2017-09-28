@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICSSHS-MUI for webapp</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u，email:66383210@qq.com，qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0，（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="undefined.png">
+
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+<!--说明文档样式，实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+<script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+  <div class="docs-page-masthead">
+    <h1>图标(icons)</h1>
+  </div>
+  <h2 >图标类型</h2>
+  <h3>字体图标(iconfont)</h3>
+  <p>图标字体化，字体图标除了图像清晰度之外，图标字体可以用过font-size属性设置其任何大小，还可以加各种文字效果，包括颜色、Hover状态、透明度、阴影和翻转等效果。图标字体兼容IE8及大部份的现代浏览器。</p>
+  <ul>
+    <li>图标字体只能被渲染成单色或者CSS3的渐变色。</li>
+    <li>建议统一通过
+      <a href="http://www.iconfont.cn/" class="hm-link" target="_blank">
+        http://www.iconfont.cn/
+      </a>
+      平台进行图标的制作及管理</li>
+  </ul>
+  <p>注：考虑到制作成本，暂时未采用该类型图标。</p>
+  <h3>图片图标</h3>
+  <p>传统的图片图标。</p>
+  <h2>基本使用</h2>
+  
+  
+  <h3>使用方法</h3>
+  <p>在元素标签上添加 <code>hm-icon-{图标名称}</code> class。</p>
+  <div class="docs-example">
+    <i class="hm-icon-download"></i>
+  </div>
+  
+  <h3>图标颜色</h3>
+  <p>字体图标的颜色取决于字体颜色，所以在字体图标元素标签上追加字体颜色样式 <code>hm-color-{颜色名称}</code>可改变图标颜色。</p>
+  <ul>
+    <li><code>.hm-color-muted</code></li>
+    <li><code>.hm-color-primary</code></li>
+    <li><code>.hm-color-info</code></li>
+    <li><code>.hm-color-success</code></li>
+    <li><code>.hm-color-warning</code></li>
+    <li><code>.hm-color-danger</code></li>
+  </ul>
+  <div class="docs-example">
+    <i class="hm-icon-download hm-color-muted"></i>
+    <i class="hm-icon-download hm-color-primary"></i>
+    <i class="hm-icon-download hm-color-info"></i>
+    <i class="hm-icon-download hm-color-success"></i>
+    <i class="hm-icon-download hm-color-warning"></i>
+    <i class="hm-icon-download hm-color-danger"></i>
+  </div>
+  
+  
+  <h3>图标大小</h3>
+  <p>图标默认为24X24PX大小，在图标元素标签上追加<code>hm-icon-{尺寸}</code>可调整图标大小。</p>
+  <ul>
+    <li><code>.hm-icon-sm</code>，显示为16X16</li>
+    <li><code>.hm-icon-lg</code>，显示为32X32</li>
+    <li><code>.hm-icon-xl</code>，显示为48X48</li>
+  </ul>
+  <div class="docs-example">
+    <p><i class="hm-icon-download hm-icon-sm"></i>hm-icon-sm</p>
+    <p><i class="hm-icon-download"></i>默认大小</p>
+    <p><i class="hm-icon-download hm-icon-lg"></i>hm-icon-lg</p>
+    <p><i class="hm-icon-download hm-icon-xl"></i>hm-icon-xl</p>
+  </div>
+  <div class="docs-highlight">
+    <pre><code></code></pre>
+  </div>
+  
+  
+  
+  <h3>图标形状</h3>
+  <h4>形状类型</h4>
+  <p>在元素标签上添加形状样式<code>hm-{形状名称}</code>。</p>
+  <ul>
+    <li><code>.hm-radius</code>，显示为圆角方形</li>
+    <li><code>.hm-circle</code>，显示为圆形</li>
+  </ul>
+  <div class="docs-example">
+    <i class="hm-icon-download hm-radius "></i>
+    <i class="hm-icon-download hm-circle "></i>
+  </div>
+  
+  
+  <h4>形状+尺寸</h4>
+  <p>在元素标签上添加形状样式<code>hm-{形状名称}</code>及尺寸样式<code>hm-icon-{尺寸}</code>。</p>
+  <ul>
+    <li><code>hm-radius hm-icon-lg</code>，显示为圆角方形大图标</li>
+    <li><code>hm-circle hm-icon-xl</code>，显示为圆形加大图标</li>
+  </ul>
+  <div class="docs-example">
+    <i class="hm-icon-download hm-icon-sm hm-radius"></i>
+    <i class="hm-icon-download hm-radius "></i>
+    <i class="hm-icon-download hm-icon-lg hm-radius"></i>
+    <i class="hm-icon-download hm-icon-xl hm-radius"></i>
+    <i class="hm-icon-download hm-icon-sm hm-circle"></i>
+    <i class="hm-icon-download hm-circle "></i>
+    <i class="hm-icon-download hm-icon-lg hm-circle"></i>
+    <i class="hm-icon-download hm-icon-xl hm-circle"></i>
+  </div>
+  
+  
+  
+  <h4>形状+背景颜色</h4>
+  <p>在元素标签上添加形状样式<code>hm-{形状名称}</code>及尺寸样式<code>hm-bg-{背景颜色}</code>。</p>
+  <ul>
+    <li><code>hm-circle hm-icon-lg hm-bg-primary</code>，显示为圆形的蓝色大图标</li>
+  </ul>
+  <div class="docs-example">
+    <i class="hm-icon-download hm-icon-lg hm-circle hm-bg-primary"></i>
+    <i class="hm-icon-delete hm-icon-lg hm-circle hm-bg-info"></i>
+    <i class="hm-icon-print hm-icon-lg hm-circle hm-bg-success"></i>
+    <i class="hm-icon-training hm-icon-lg hm-circle hm-bg-warning"></i>
+    <i class="hm-icon-calendar hm-icon-lg hm-circle hm-bg-danger"></i>
+  </div>
+ 
+  
+  
+  
+  
+  
+  
+  
+  <h2>图标实例</h2>
+  <div class="docs-example docs-example-icons">
+    <ul class="docs-icon-lists clearfix">
+      <li>
+        <i class="hm-icon-add"></i>
+        <div class="docs-name">
+          新增
+        </div>
+        <div class="fontclass">
+          hm-icon-add
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-delete"></i>
+        <div class="docs-name">
+          删除
+        </div>
+        <div class="fontclass">
+          hm-icon-delete
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-delete-character"></i>
+        <div class="docs-name">
+          删除字符
+        </div>
+        <div class="fontclass">
+          hm-icon-delete-character
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-edit"></i>
+        <div class="docs-name">
+          编辑
+        </div>
+        <div class="fontclass">
+          hm-icon-edit
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-close"></i>
+        <div class="docs-name">
+          关闭
+        </div>
+        <div class="fontclass">
+          hm-icon-close
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-search"></i>
+        <div class="docs-name">
+          搜索
+        </div>
+        <div class="fontclass">
+          hm-icon-search
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-setting"></i>
+        <div class="docs-name">
+          设置
+        </div>
+        <div class="fontclass">
+          hm-icon-setting
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-safe"></i>
+        <div class="docs-name">
+          保障
+        </div>
+        <div class="fontclass">
+          hm-icon-safe
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-server"></i>
+        <div class="docs-name">
+          客服
+        </div>
+        <div class="fontclass">
+          hm-icon-server
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-input"></i>
+        <div class="docs-name">
+          输入
+        </div>
+        <div class="fontclass">
+          hm-icon-input
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-print"></i>
+        <div class="docs-name">
+          打印
+        </div>
+        <div class="fontclass">
+          hm-icon-print
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-love-active"></i>
+        <div class="docs-name">
+          已关注
+        </div>
+        <div class="fontclass">
+          hm-icon-love-active
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-love"></i>
+        <div class="docs-name">
+          未关注
+        </div>
+        <div class="fontclass">
+          hm-icon-love
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-comment"></i>
+        <div class="docs-name">
+          评论
+        </div>
+        <div class="fontclass">
+          hm-icon-comment
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-copy"></i>
+        <div class="docs-name">
+          复制
+        </div>
+        <div class="fontclass">
+          hm-icon-copy
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-message"></i>
+        <div class="docs-name">
+          消息
+        </div>
+        <div class="fontclass">
+          hm-icon-message
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-photo"></i>
+        <div class="docs-name">
+          拍照
+        </div>
+        <div class="fontclass">
+          hm-icon-photo
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-more-vertical"></i>
+        <div class="docs-name">
+          更多操作
+        </div>
+        <div class="fontclass">
+          hm-icon-more-vertical
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-me"></i>
+        <div class="docs-name">
+          我的
+        </div>
+        <div class="fontclass">
+          hm-icon-me
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-pengyouquan"></i>
+        <div class="docs-name">
+          朋友圈
+        </div>
+        <div class="fontclass">
+          hm-icon-pengyouquan
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-weibo"></i>
+        <div class="docs-name">
+          微博
+        </div>
+        <div class="fontclass">
+          hm-icon-weibo
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-weixin"></i>
+        <div class="docs-name">
+          微信
+        </div>
+        <div class="fontclass">
+          hm-icon-weixin
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-code"></i>
+        <div class="docs-name">
+          二维码
+        </div>
+        <div class="fontclass">
+          hm-icon-code
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-more"></i>
+        <div class="docs-name">
+          更多
+        </div>
+        <div class="fontclass">
+          hm-icon-more
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-upload"></i>
+        <div class="docs-name-up">
+          上传
+        </div>
+        <div class="fontclass">
+          hm-icon-upload
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-download"></i>
+        <div class="docs-name">
+          下载
+        </div>
+        <div class="fontclass">
+          hm-icon-download
+        </div>
+      </li>
+      
+      <li>
+        <i class="hm-icon-email"></i>
+        <div class="docs-name">
+          信息
+        </div>
+        <div class="fontclass">
+          hm-icon-email
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-favorite"></i>
+        <div class="docs-name">
+          收藏
+        </div>
+        <div class="fontclass">
+          hm-icon-favorite
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-folder"></i>
+        <div class="docs-name">
+          文件夹
+        </div>
+        <div class="fontclass">
+          hm-icon-folder
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-form"></i>
+        <div class="docs-name">
+          单据
+        </div>
+        <div class="fontclass">
+          hm-icon-form
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-pic"></i>
+        <div class="docs-name">
+          图片
+        </div>
+        <div class="fontclass">
+          hm-icon-pic
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-refresh"></i>
+        <div class="docs-name">
+          刷新
+        </div>
+        <div class="fontclass">
+          hm-icon-refresh
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-training"></i>
+        <div class="docs-name">
+          培训
+        </div>
+        <div class="fontclass">
+          hm-icon-training
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-viewgallery"></i>
+        <div class="docs-name">
+          缩略图模式
+        </div>
+        <div class="fontclass">
+          hm-icon-viewgallery
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-viewlist"></i>
+        <div class="docs-name">
+          列表模式
+        </div>
+        <div class="fontclass">
+          hm-icon-viewlist
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-clock"></i>
+        <div class="docs-name">
+          闹钟
+        </div>
+        <div class="fontclass">
+          hm-icon-clock
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-remind"></i>
+        <div class="docs-name">
+          公告
+        </div>
+        <div class="fontclass">
+          hm-icon-remind
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-calendar"></i>
+        <div class="docs-name">
+          日程
+        </div>
+        <div class="fontclass">
+          hm-icon-calendar
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-quit"></i>
+        <div class="docs-name">
+          退出
+        </div>
+        <div class="fontclass">
+          hm-icon-quit
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-view"></i>
+        <div class="docs-name">
+          查看
+        </div>
+        <div class="fontclass">
+          hm-icon-view
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-scan"></i>
+        <div class="docs-name">
+          扫码
+        </div>
+        <div class="fontclass">
+          hm-icon-scan
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-attachment"></i>
+        <div class="docs-name">
+          附件
+        </div>
+        <div class="fontclass">
+          hm-icon-attachment
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-voice-active"></i>
+        <div class="docs-name">
+          语音-选中
+        </div>
+        <div class="fontclass">
+          hm-icon-voice-active
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-voice"></i>
+        <div class="docs-name">
+          语音
+        </div>
+        <div class="fontclass">
+          hm-icon-voice
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-checked"></i>
+        <div class="docs-name">
+          选择
+        </div>
+        <div class="fontclass">
+          hm-icon-checked
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-follow"></i>
+        <div class="docs-name">
+          关注
+        </div>
+        <div class="fontclass">
+          hm-icon-follow
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-good"></i>
+        <div class="docs-name">
+          点赞
+        </div>
+        <div class="fontclass">
+          hm-icon-good
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-share"></i>
+        <div class="docs-name">
+          分享
+        </div>
+        <div class="fontclass">
+          hm-icon-share
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-forward"></i>
+        <div class="docs-name">
+          转发
+        </div>
+        <div class="fontclass">
+          hm-icon-forward
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-image"></i>
+        <div class="docs-name">
+          大图模式
+        </div>
+        <div class="fontclass">
+          hm-icon-image
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-detail"></i>
+        <div class="docs-name">
+          详细
+        </div>
+        <div class="fontclass">
+          hm-icon-detail
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-location"></i>
+        <div class="docs-name">
+          定位
+        </div>
+        <div class="fontclass">
+          hm-icon-location
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-time"></i>
+        <div class="docs-name">
+          时间
+        </div>
+        <div class="fontclass">
+          hm-icon-time
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-arrow-up"></i>
+        <div class="docs-name">
+          收起、上箭头
+        </div>
+        <div class="fontclass">
+          hm-icon-arrow-up
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-arrow-down"></i>
+        <div class="docs-name">
+          下拉、下箭头
+        </div>
+        <div class="fontclass">
+          hm-icon-arrow-down
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-arrow-left"></i>
+        <div class="docs-name">
+          返回、左箭头
+        </div>
+        <div class="fontclass">
+          hm-icon-arrow-left
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-arrow-right"></i>
+        <div class="docs-name">
+          右箭头
+        </div>
+        <div class="fontclass">
+          hm-icon-arrow-right
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-info"></i>
+        <div class="docs-name">
+          提示
+        </div>
+        <div class="fontclass">
+          hm-icon-info
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-help"></i>
+        <div class="docs-name">
+          帮助
+        </div>
+        <div class="fontclass">
+          hm-icon-help
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-alert-success"></i>
+        <div class="docs-name">
+          成功提示
+        </div>
+        <div class="fontclass">
+          hm-icon-alert-success
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-alert-waiting"></i>
+        <div class="docs-name">
+          等待提示
+        </div>
+        <div class="fontclass">
+          hm-icon-alert-waiting
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-alert-warning"></i>
+        <div class="docs-name">
+          警示
+        </div>
+        <div class="fontclass">
+          hm-icon-alert-warning
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-alert-danger"></i>
+        <div class="docs-name">
+          警示
+        </div>
+        <div class="fontclass">
+          hm-icon-alert-danger
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-alert-info"></i>
+        <div class="docs-name">
+          alert信息
+        </div>
+        <div class="fontclass">
+          hm-icon-alert-info
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-plus"></i>
+        <div class="docs-name">
+          增加
+        </div>
+        <div class="fontclass">
+          hm-icon-plus
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-reduce"></i>
+        <div class="docs-name">
+          减少
+        </div>
+        <div class="fontclass">
+          hm-icon-reduce
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-filter"></i>
+        <div class="docs-name">
+          过滤
+        </div>
+        <div class="fontclass">
+          hm-icon-filter
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-home"></i>
+        <div class="docs-name">
+          首页
+        </div>
+        <div class="fontclass">
+          hm-icon-home
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-menu"></i>
+        <div class="docs-name">
+          菜单
+        </div>
+        <div class="fontclass">
+          hm-icon-menu
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-sort"></i>
+        <div class="docs-name">
+          排序
+        </div>
+        <div class="fontclass">
+          hm-icon-sort
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-sort-down"></i>
+        <div class="docs-name">
+          排序-降序
+        </div>
+        <div class="fontclass">
+          hm-icon-sort-down
+        </div>
+      </li>
+      <li>
+        <i class="hm-icon-sort-up"></i>
+        <div class="docs-name">
+          排序-升序
+        </div>
+        <div class="fontclass">
+          hm-icon-sort-up
+        </div>
+      </li>
+      <li><i class="hm-icon-password"></i><div class="docs-name">密码</div><div class="fontclass">hm-icon-password</div></li>
+      <li><i class="hm-icon-node-expand"></i><div class="docs-name">节点展开</div><div class="fontclass">hm-icon-node-expand</div></li>
+      <li><i class="hm-icon-node-collapse"></i><div class="docs-name">节点收缩</div><div class="fontclass">hm-icon-node-collapse</div></li>
+      <li><i class="hm-icon-dote"></i><div class="docs-name">节点</div><div class="fontclass">hm-icon-dote</div></li>
+      <li><i class="hm-icon-office"></i><div class="docs-name">办公楼</div><div class="fontclass">hm-icon-office</div></li>
+      <li><i class="hm-icon-news"></i><div class="docs-name">新闻</div><div class="fontclass">hm-icon-news</div></li>
+      <li><i class="hm-icon-music"></i><div class="docs-name">音乐</div><div class="fontclass">hm-icon-music</div></li>
+      <li><i class="hm-icon-headphone"></i><div class="docs-name">耳机</div><div class="fontclass">hm-icon-headphone</div></li>
+      <li><i class="hm-icon-video"></i><div class="docs-name">视频</div><div class="fontclass">hm-icon-video</div></li>
+      <li><i class="hm-icon-connection"></i><div class="docs-name">联接</div><div class="fontclass">hm-icon-connection</div></li>
+      <li><i class="hm-icon-podcast"></i><div class="docs-name">广播</div><div class="fontclass">hm-icon-podcast</div></li>
+      <li><i class="hm-icon-books"></i><div class="docs-name">书堆</div><div class="fontclass">hm-icon-books</div></li>
+      <li><i class="hm-icon-folder"></i><div class="docs-name">文件夹</div><div class="fontclass">hm-icon-folder</div></li>
+      <li><i class="hm-icon-folder-open"></i><div class="docs-name">文件夹打开</div><div class="fontclass">hm-icon-folder-open</div></li>
+      <li><i class="hm-icon-tag"></i><div class="docs-name">标签</div><div class="fontclass">hm-icon-tag</div></li>
+      <li><i class="hm-icon-tags"></i><div class="docs-name">多标签</div><div class="fontclass">hm-icon-tags</div></li>
+      <li><i class="hm-icon-barcode"></i><div class="docs-name">条形码</div><div class="fontclass">hm-icon-barcode</div></li>
+      <li><i class="hm-icon-qrcode"></i><div class="docs-name">二维码</div><div class="fontclass">hm-icon-qrcode</div></li>
+      <li><i class="hm-icon-cart"></i><div class="docs-name">购物车</div><div class="fontclass">hm-icon-cart</div></li>
+      <li><i class="hm-icon-credit"></i><div class="docs-name">信用卡</div><div class="fontclass">hm-icon-credit</div></li>
+      <li><i class="hm-icon-phone"></i><div class="docs-name">电话</div><div class="fontclass">hm-icon-phone</div></li>
+      <li><i class="hm-icon-pushpin"></i><div class="docs-name">图钉</div><div class="fontclass">hm-icon-pushpin</div></li>
+      <li><i class="hm-icon-compass"></i><div class="docs-name">指南针</div><div class="fontclass">hm-icon-compass</div></li>
+      <li><i class="hm-icon-map"></i><div class="docs-name">地图</div><div class="fontclass">hm-icon-map</div></li>
+      <li><i class="hm-icon-bell"></i><div class="docs-name">铃铛</div><div class="fontclass">hm-icon-bell</div></li>
+      <li><i class="hm-icon-screen"></i><div class="docs-name">屏幕</div><div class="fontclass">hm-icon-screen</div></li>
+      <li><i class="hm-icon-mobile"></i><div class="docs-name">手机</div><div class="fontclass">hm-icon-mobile</div></li>
+      <li><i class="hm-icon-tablet"></i><div class="docs-name">平板</div><div class="fontclass">hm-icon-tablet</div></li>
+      <li><i class="hm-icon-cabinet"></i><div class="docs-name">柜橱</div><div class="fontclass">hm-icon-cabinet</div></li>
+      <li><i class="hm-icon-drawer"></i><div class="docs-name">抽屉</div><div class="fontclass">hm-icon-drawer</div></li>
+      <li><i class="hm-icon-undo"></i><div class="docs-name">撤销</div><div class="fontclass">hm-icon-undo</div></li>
+      <li><i class="hm-icon-redo"></i><div class="docs-name">重做</div><div class="fontclass">hm-icon-redo</div></li>
+      <li><i class="hm-icon-bubble"></i><div class="docs-name">气泡</div><div class="fontclass">hm-icon-bubble</div></li>
+      <li><i class="hm-icon-bubbles"></i><div class="docs-name">多气泡</div><div class="fontclass">hm-icon-bubbles</div></li>
+      <li><i class="hm-icon-user"></i><div class="docs-name">用户</div><div class="fontclass">hm-icon-user</div></li>
+      <li><i class="hm-icon-users"></i><div class="docs-name">用户群</div><div class="fontclass">hm-icon-users</div></li>
+      <li><i class="hm-icon-expand"></i><div class="docs-name">展开</div><div class="fontclass">hm-icon-expand</div></li>
+      <li><i class="hm-icon-contract"></i><div class="docs-name">收缩</div><div class="fontclass">hm-icon-contract</div></li>
+      <li><i class="hm-icon-key"></i><div class="docs-name">钥匙</div><div class="fontclass">hm-icon-key</div></li>
+      <li><i class="hm-icon-lock"></i><div class="docs-name">锁定</div><div class="fontclass">hm-icon-lock</div></li>
+      <li><i class="hm-icon-unlocked"></i><div class="docs-name">解锁</div><div class="fontclass">hm-icon-unlocked</div></li>
+      <li><i class="hm-icon-wrench"></i><div class="docs-name">扳手</div><div class="fontclass">hm-icon-wrench</div></li>
+      <li><i class="hm-icon-cogs"></i><div class="docs-name">齿轮</div><div class="fontclass">hm-icon-cogs</div></li>
+      <li><i class="hm-icon-cog"></i><div class="docs-name">齿轮</div><div class="fontclass">hm-icon-cog</div></li>
+      <li><i class="hm-icon-hammer"></i><div class="docs-name">铁锤</div><div class="fontclass">hm-icon-hammer</div></li>
+      <li><i class="hm-icon-pie"></i><div class="docs-name">饼图</div><div class="fontclass">hm-icon-pie</div></li>
+      <li><i class="hm-icon-stats"></i><div class="docs-name">趋势图</div><div class="fontclass">hm-icon-stats</div></li>
+      <li><i class="hm-icon-bars"></i><div class="docs-name">柱状图</div><div class="fontclass">hm-icon-bars</div></li>
+      <li><i class="hm-icon-gift"></i><div class="docs-name">礼物</div><div class="fontclass">hm-icon-gift</div></li>
+      <li><i class="hm-icon-rocket"></i><div class="docs-name">火箭</div><div class="fontclass">hm-icon-rocket</div></li>
+      <li><i class="hm-icon-airplane"></i><div class="docs-name">飞机</div><div class="fontclass">hm-icon-airplane</div></li>
+      <li><i class="hm-icon-truck"></i><div class="docs-name">卡车</div><div class="fontclass">hm-icon-truck</div></li>
+      <li><i class="hm-icon-road"></i><div class="docs-name">路</div><div class="fontclass">hm-icon-road</div></li>
+      <li><i class="hm-icon-target"></i><div class="docs-name">目标</div><div class="fontclass">hm-icon-target</div></li>
+      <li><i class="hm-icon-switch"></i><div class="docs-name">开关</div><div class="fontclass">hm-icon-switch</div></li>
+      <li><i class="hm-icon-powercord"></i><div class="docs-name">电源线</div><div class="fontclass">hm-icon-powercord</div></li>
+      <li><i class="hm-icon-tree"></i><div class="docs-name">组织树</div><div class="fontclass">hm-icon-tree</div></li>
+      <li><i class="hm-icon-earth"></i><div class="docs-name">地球</div><div class="fontclass">hm-icon-earth</div></li>
+      <li><i class="hm-icon-attachment"></i><div class="docs-name">附件</div><div class="fontclass">hm-icon-attachment</div></li>
+      <li><i class="hm-icon-star"></i><div class="docs-name">星</div><div class="fontclass">hm-icon-star</div></li>
+      <li><i class="hm-icon-star-active"></i><div class="docs-name">星</div><div class="fontclass">hm-icon-star-active</div></li>
+      <li><i class="hm-icon-enter"></i><div class="docs-name">进入</div><div class="fontclass">hm-icon-enter</div></li>
+      <li><i class="hm-icon-exit"></i><div class="docs-name">退出</div><div class="fontclass">hm-icon-exit</div></li>
+      <li><i class="hm-icon-loop"></i><div class="docs-name">循环</div><div class="fontclass">hm-icon-loop</div></li>
+      
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

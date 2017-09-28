@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICSSHS-MUI for webapp</title>
+<meta name="description" content="ICSSHS-MUI for webapp">
+<meta name="keywords" content="ICSSHS-MUI for webapp">
+<meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+<meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+
+<!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+
+<!--针对IOS 浏览器的设置-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon@72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="icon@2x.png" sizes="114x114">
+<link rel="apple-touch-icon" href="icon@114.png" sizes="144x144">
+<link rel="apple-touch-startup-image" href="undefined.png">
+
+<!--项目全局样式-->
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+<!--说明文档样式,实际应用中请不要引用-->
+<link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+<script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+<div class="docs-page-masthead">
+  <h1> 反馈信息(feedback) </h1>
+  <p>对于用户的操作给于反馈，并提示相应的处理。一般用于弹窗或者整个页面区域的操作反馈。 </p>
+</div>
+
+<!--默认反馈-->
+<h2> 默认反馈</h2>
+<p>结合弹窗控件使用，内容水平居中。</p>
+<div class="docs-example docs-example-popup" >
+  <div class="hm-popup-wrapper">
+    <div class="hm-mask">
+      &nbsp;
+    </div>
+    <div class="hm-popup hm-popup-dialog">
+      <div class="hm-linearLayout">
+        <div class="hm-content">
+          <div class="hm-feedback ">
+            <div class="hm-feedback-title"> 你是否要执行该操作 </div>
+            <div  class="hm-feedback-desc"> 执行该操作将带来不可逆的后果，请再次确认你是否一定要执行该操作？ </div>
+          </div>
+        </div>
+        <div class="hm-footer">
+          <a href="#" class="hm-btn hm-btn-default hm-radius hm-flex-1">
+            取消
+          </a>
+          <a href="#" class="hm-btn hm-btn-primary hm-radius hm-flex-1">
+            确定
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h2> 带提示图标的对话窗 </h2>
+<p>能过<code>hm-feedback-img-图标名</code>来定义反馈图标</p>
+<div class="docs-example docs-example-popup-feedback" >
+	<ul class="hm-average-2">
+    <li>
+      <div class="hm-popup-wrapper">
+    <div class="hm-mask">
+      &nbsp;
+    </div>
+    <div class="hm-popup hm-popup-dialog">
+      <div class="hm-linearLayout">
+        <div class="hm-content">
+          <div class="hm-feedback">
+            <div class="hm-feedback-header hm-bg-success">
+            	<i class=" hm-icon-xl hm-icon-alert-success"></i>
+            </div>
+            <div class="hm-feedback-title"> 恭喜您，申请成功了！ </div>
+            <div class="hm-feedback-desc"> 您已成功申请了一张烟叶会员卡 </p>
+          </div>
+        </div>
+        </div>
+        <div class="hm-footer">
+          <a href="#" class="hm-btn hm-btn-default hm-radius hm-flex-1">
+            取消
+          </a>
+          <a href="#" class="hm-btn hm-btn-primary hm-radius hm-flex-1">
+            确定
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+    </li>
+    
+    <li>
+      <div class="hm-popup-wrapper">
+    <div class="hm-mask">
+      &nbsp;
+    </div>
+    <div class="hm-popup hm-popup-dialog">
+      <div class="hm-linearLayout">
+        <div class="hm-content">
+          <div class="hm-feedback ">
+            <div class="hm-feedback-header hm-bg-danger">
+            	<i class=" hm-icon-xl hm-icon-alert-danger"></i>
+            </div>
+            <div class="hm-feedback-title"> 对不起，申请失败！ </div>
+            <div class="hm-feedback-desc"> 您不能申请烟叶会员卡，你需要先成为会员，然后才能再次申请！ </div>
+          </div>
+        </div>
+        <div class="hm-footer">
+          <a href="#" class="hm-btn hm-btn-default hm-radius hm-flex-1">
+            取消
+          </a>
+          <a href="#" class="hm-btn hm-btn-danger hm-radius hm-flex-1">
+            继续
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+<h2> 带卡通人物的场景提示 </h2>
+<p>通过<code>hm-feedback-cartoon-图标名</code>来定义反馈卡通。</p>
+<div class="docs-example docs-example-feedback " style=" height:600px;" >
+  <ul class="hm-average-3">
+    <li>
+      <div class="hm-pull-full hm-vertical-align">
+        <div class="hm-feedback">
+          <div class="hm-feedback-cartoon-success"></div>
+          <div class="hm-feedback-title"> 恭喜您，申请成功了 </div>
+          <div class="hm-feedback-desc" > 您已成功申请了一张烟叶会员卡 </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="hm-pull-full hm-vertical-align">
+        <div class="hm-feedback">
+          <div class="hm-feedback-cartoon-danger"></div>
+          <div class="hm-feedback-title"> 加载失败 </div>
+          <div class="hm-feedback-desc"> 请点击屏幕重新加载 </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="hm-pull-full hm-vertical-align">
+        <div class="hm-feedback">
+          <div class="hm-feedback-cartoon-nodata"></div>
+          <div class="hm-feedback-title"> 暂无数据 </div>
+          <div class="hm-feedback-desc"> 请重新输入查询条件查询 </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="hm-pull-full hm-vertical-align">
+        <div class="hm-feedback">
+          <div class="hm-feedback-cartoon-loading"></div>
+          <div class="hm-feedback-title"> 努力加载中 </div>
+          <div class="hm-feedback-desc"> 正为为您加载数据，请稍候...</div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="hm-pull-full hm-vertical-align">
+        <div class="hm-feedback">
+          <div class="hm-feedback-cartoon-nowifi"></div>
+          <div class="hm-feedback-title"> 网络不给力哦 </div>
+          <div class="hm-feedback-desc"> 请检查网络设置后点击刷新 </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+<h2> 带css3动画的场景提示 </h2>
+<p>通过<code>hm-feedback-animation-图标名</code>来定义反馈动画。</p>
+<div class="docs-example docs-example-feedback " style=" height:400px;" >
+  <ul class="hm-average-4">
+    
+    <li>
+      <div class="hm-pull-full hm-vertical-align">
+        <div class="hm-feedback ">
+          <div class="hm-feedback-animation-success">
+            <span class="hm-img-sun"></span>
+            <span class="hm-img-leaf2"></span>
+          </div>
+          <div class="hm-feedback-title"> 恭喜您，申请成功了 </div>
+          <div class="hm-feedback-desc"> 您已成功申请了一张烟叶会员卡 </div>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="hm-pull-full hm-vertical-align">
+        <div class="hm-feedback ">
+          <div class="hm-feedback-animation-dange">
+            <span class="hm-img-dange-sign"></span>
+            <span class="hm-img-rain"></span>
+          </div>
+          <div class="hm-feedback-title"> 对不起，申请失败！ </div>
+          <div class="hm-feedback-desc"> 您不能申请烟叶会员卡，你需要先成为会员，然后才能再次申请！ </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="hm-pull-full hm-vertical-align">
+        <div class="hm-feedback ">
+          <div class="hm-feedback-animation-nodata">
+            <span class="hm-img-clound"></span>
+            <span class="hm-img-moon"></span>
+          </div>
+          <div class="hm-feedback-title"> 暂无数据！ </div>
+          <div class="hm-feedback-desc"> 您可以通过右上角的新增按钮新增内容 </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="hm-pull-full hm-vertical-align">
+        <div class="hm-feedback ">
+          <div class="hm-feedback-animation-loading">
+            <span class="hm-img-leaf"></span>
+          </div>
+          <div class="hm-feedback-title"> 正在加载 </div>
+          <div class="hm-feedback-desc"> 正在努力加载中,请稍候... </div>
+        </div>
+      </div>
+    </li>
+    
+    
+    
+    
+  </ul>
+</div>
+
+
+
+
+</body>
+</html>

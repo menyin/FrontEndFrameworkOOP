@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ICSSHS-UI</title>
+<!--公共-->
+<script src="../../themes-default/resources/js/jquery-1.9.1.js"></script>
+<link href="../../themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+ 
+<link rel="stylesheet" type="text/css" href="../../../dcresources/icons/action/themes-default/icon-action.css">
+
+<!--个性化样式-->
+<script type="text/javascript" src="js/jquery.royalslider.min.js"></script>
+
+<link  href="css/custom.css" rel="stylesheet" type="text/css"/>
+<link href="css/royalslider.css" rel="stylesheet" type="text/css" />
+<link href="css/rs-minimal-white.css" rel="stylesheet">
+<link href="css/rs-minimal-leftTab.css" rel="stylesheet">
+
+
+
+<script>
+//业务支撑--交互信息tab切换代码
+		 function switchTab(TabBtn, TabCon) {
+			 $("#tab1").toggleClass("h-p-tab-current");
+			 $("#tab2").toggleClass("h-p-tab-current");
+			  $("#con1").toggleClass("h-p-hide");
+			 $("#con2").toggleClass("h-p-hide");
+        }
+
+
+$(document).ready(function(){
+	 $("[data-hsui=open-show]").click(function(){
+	        $("#show").animate({height:document.body.clientHeight+10},300,"swing");
+ 	 });
+	  $("[data-hsui=open-show2]").click(function(){
+	        $("#show2").animate({height:document.body.clientHeight+10},300,"swing");
+ 	 });
+	  $("[data-hsui=close-show]").click(function(){
+	         $("#show").animate({height:'0'},300,"swing");
+			
+ 	 });
+ 	 $("[data-hsui=close-show2]").click(function(){
+	         $("#show2").animate({height:'0'},300,"swing");
+			
+ 	 });
+});
+
+</script>
+
+
+<!--页面高度需设置100%，并保证不出现滚动条；否则所包含的标签无法获取到100%的高度，会导致布局错乱 by 66383210@qq.com-->
+<style type="text/css">
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+html>body {	/*-- for !IE6.0 --*/
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+</style>
+
+</head>
+<body>
+<div class="h-p-wrapper h-p-slider-bluebg"   >
+
+        <ul id="h-p-leftTab" class="rsMinW rsTabs">
+          <li class="rsNavItem rsTab rsNavSelected">
+           <a  class="rsTmb h-p-tabbtn-left h-p-tabbtn-jcsx" ></a>
+          </li>
+           <li class="rsNavItem rsTab ">
+            <a  class="rsTmb h-p-tabbtn-left h-p-tabbtn-ywsw"></a>
+          </li>
+          
+           <li class="rsNavItem rsTab ">
+            <a  class="rsTmb h-p-tabbtn-left h-p-tabbtn-gwzz"></a>
+          </li>
+ 			<li class="rsNavItem rsTab ">
+             <a  class="rsTmb h-p-tabbtn-left h-p-tabbtn-xxjh"></a>
+          </li>
+        </ul>
+
+            <div class="h-p-panel h-p-leftTabcontant h-p-pad10"  >
+
+                  <div   id="con1" >
+                              <div  class="h-f-pad20 h-float-left">
+                                <img src="css/images/portal/temp_img_chart.png" alt="chart"  class="h-p-chart">
+                                <div  class="h-float-left  h-mar10">
+                                  <p  class="h-p-title-jhxx">交互的系统<span><em >10</em>个</span></p>
+                                  <p  class="h-p-info-jhxx" >从系统的维度看信息交互的内容</p>
+                                  <p class="h-p-sample-jhxx" ><span class="h-p-sample-blue"></span> 单方调用（被对方调用） <em>10</em>个 </p>
+                                  <p class="h-p-sample-jhxx" ><span class="h-p-sample-green" ></span> 单方调用（从对方调用）<em >10</em>个</p>
+                                  <p class="h-p-sample-jhxx" ><span class="h-p-sample-yellow" ></span> 双方相互调用 <em>10</em>个 </p>
+                                  <br>
+                                  <a class="h-p-btn-circle" data-hsui="open-show" href="#" ><span class="h-btn-content">查看详细</span></a>
+                                </div>
+                             </div>
+                              <div class="h-p-pad20 h-float-left">
+                                <img src="css/images/portal/temp_img_chart2.png" alt="chart" class="h-p-chart">
+                                <div class="h-float-left  h-mar10">
+                                  <p  class="h-p-title-jhxx">交互的接口<span><em >10</em>个</span></p>
+                                  <p  class="h-p-info-jhxx">从接口的维度看信息交互的内容</p>
+                                  <p  class="h-p-sample-jhxx"><span  class="h-p-sample-yellow" ></span> 开放的接口（被对方调用） <em >98</em>个 </p>
+                                  <p style="margin-bottom:30px;"  class="h-p-sample-jhxx"><span class="h-p-sample-green"></span> 调用的接口（从对方调用）<em >176</em>个</p>
+                                  <br>
+                                  <a class="h-p-btn-circle"   data-hsui="open-show2" href="#"  ><span class="h-btn-content">查看详细</span></a>
+                                </div>
+                             </div>
+                        </div>
+            
+             
+            </div>
+     
+     
+       
+           <div  id="show"  class="h-p-showdiv" > 
+           <p class="h-p-back-title">  <a class="h-p-btn-back" data-hsui="close-show"  href="#" >返回 <span></span></a> </p>
+           
+             <p  class="h-p-bigtitle">交互系统</p>
+             
+              <div class="h-p-tcenter h-p-mt30-">
+                 <p  class="h-p-logo-tobatcco"></p>
+                 <p class="h-p-logo-tobatcco-font">烟叶运行管理平台</p>
+                <div class="h-p-contactDiv">
+                 <ul  class="h-p-contactUL">
+                 <li  class="h-p-row-out" > 
+                 <img  src="css/images/portal/row-out.png" alt="调用">
+                 </li>
+                   <li>
+                  <span  class="h-p-contacticon h-p-contacticon-noin"></span>
+                  <div class="h-p-contact-fontdiv" >
+                  <p class="h-p-contact-no">无调用外部</p>
+                 
+                  </div>
+                   <div class="clear"></div> 
+                 </li>
+                 <li>
+                  <span  class="h-p-contacticon h-p-contacticon-in"></span>
+                  <div class="h-p-contact-fontdiv" >
+                  <p class="h-p-contact-system">用友财富系统</p>
+                  <p class="h-p-contact-company">用友科技股份有限公有限公司有限公司司</p>
+                  <p class="h-p-contact-number">被对方调用接口:<em>6</em>个</p>
+                  </div>
+                  <div class="clear"></div>
+                  
+                 </li>
+                 <li >
+                  <span  class="h-p-contacticon h-p-contacticon-in"></span>
+                  <div class="h-p-contact-fontdiv" >
+                  <p class="h-p-contact-system">用友财富系统</p>
+                  <p class="h-p-contact-company">用友科技股份有限公司</p>
+                  <p class="h-p-contact-number">被对方调用接口:<em>6</em>个</p>
+                  </div>
+                  <div class="clear"></div> 
+                 </li>
+                 </ul>
+                 <ul class="h-p-contactUL">
+                  <li class="h-p-row-inout" > 
+                 <img  src="css/images/portal/row-inout.png" alt="互调用">
+                 </li>
+                  <li>
+                  <span  class="h-p-contacticon h-p-contacticon-noinout"></span>
+                  <div class="h-p-contact-fontdiv" >
+                  <p class="h-p-contact-no">无相互调用</p>
+                 
+                  </div>
+                   <div class="clear"></div> 
+                 </li>
+                 <li>
+                  <span  class="h-p-contacticon h-p-contacticon-inout"></span>
+                  <div class="h-p-contact-fontdiv" >
+                   <p class="h-p-contact-system">用友财富系统</p>
+                  <p class="h-p-contact-company">用友科技股份有限公司</p>
+                  <p class="h-p-contact-number">被对方调用接口:<em>6</em>个</p>
+                 
+                  </div>
+                  
+                 </li>
+                 
+                 </ul>
+                <ul class="h-p-contactUL">
+                 <li > 
+                 <img src="css/images/portal/row-in.png" alt="被调用">
+                 </li>
+                   <li>
+                  <span  class="h-p-contacticon h-p-contacticon-noout"></span>
+                  <div class="h-p-contact-fontdiv" >
+                  <p class="h-p-contact-no">无被调用</p>
+                 
+                  </div>
+                   <div class="clear"></div> 
+                 </li>
+                 <li>
+                 <span  class="h-p-contacticon h-p-contacticon-out"></span>
+                  <div class="h-p-contact-fontdiv" >
+                  <p class="h-p-contact-system">用友财富系统</p>
+                  <p class="h-p-contact-company">用友科技股份有限公司</p>
+                  <p class="h-p-contact-number">被对方调用接口:<em>6</em>个</p>
+                  </div>
+                  
+                 </li>
+                 
+                 </ul>
+                 
+               </div>
+           </div>
+      </div>
+
+
+
+<div  id="show2"  class="h-p-showdiv" > 
+            <p class="h-p-back-title">  <a  class="h-p-btn-back"  data-hsui="close-show2"  href="#" >返回 <span></span></a> </p>
+          
+           <div class="h-panel h-mar20 h-p-widthauto"  >
+            <div class="h-tabbar h-p-bigtab">
+              <ul class="h-tab">
+                <li class=" h-tab-item">
+                  <a href="#">外部调用接口<em>221</em></a>
+                </li>
+                <li class=" h-tab-item h-active">
+                  <a href="#">内部调用接口<em>116</em></a>
+                </li>
+              </ul>
+            </div>
+            <div class="h-panel-body">
+              <div class="h-pad10">这里是内容</div>
+            </div>
+
+          </div>
+          
+      </div>
+     
+</body>
+</html>

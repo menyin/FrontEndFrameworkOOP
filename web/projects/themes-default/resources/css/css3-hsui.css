@@ -1,0 +1,171 @@
+/*======================================
+		HSIT-UI CSS
+		author:   cai xue feng
+		QQ:       66383210
+		Email:    66383210@qq.com
+		Date:     2014-08
+		
+		-----------------------------------------
+		
+		主要是对项目里的
+======================================*/
+
+
+
+/*按钮*/
+
+/*
+.h-btn,
+.h-input-clear,
+.h-form-control{
+	-webkit-box-shadow: 0px 1px 1px 0px rgba( 0, 0, 0,0.1);
+	-moz-box-shadow: 0px 1px 1px 0px rgba( 0, 0, 0,0.1);
+	box-shadow: 0px 1px 1px 0px rgba( 0, 0, 0,0.1);
+}
+
+*/
+
+.h-btn:hover,
+.h-btn:hover .h-btn-content,
+.h-btn-table:hover .h-btn-content,
+.h-btn:active,
+.h-btn:active .h-btn-content,
+.h-btn-table:active .h-btn-content,
+.h-form-control:hover,
+.h-form-control-hover,
+.h-form-control:focus,
+.h-form-control-focus,
+.h-form-control-danger:hover,
+.h-form-control-danger:focus{
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;}
+
+
+
+
+.h-btn:hover,
+.h-btn-table:hover .h-btn-content{
+	-webkit-box-shadow: 0px 2px 2px 0px rgba(132,184,229,0.2);
+	-moz-box-shadow: 0px 2px 2px 0px rgba(132,184,229, 0.2);
+	box-shadow: 0px 2px 2px 0px rgba(132,184,229,0.2);
+}
+
+.h-btn:active,
+.h-btn-table:active .h-btn-content {
+	-webkit-box-shadow: 0px 2px 2px 0px rgba( 132,184,229,0.6);
+	-moz-box-shadow: 0px 2px 2px 0px rgba( 132,184,229,0.6);
+	box-shadow: 0px 2px 2px 0px rgba(132,184,229,0.6);
+}
+
+
+.h-btn .h-icon{
+
+	}
+.h-btn:hover .h-icon {
+	/*
+	-webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  
+	-webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  */
+
+}
+
+
+
+.h-btn-table,
+.h-btn-nobg,
+.h-btn-toolbar,
+.h-btn-table:hover,
+.h-btn.h-disabled,
+.h-btn[disabled],
+.h-input-group .h-btn{ 
+-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow:none;}
+	
+
+.h-btn.h-disabled:hover .h-icon,
+.h-btn[disabled]:hover .h-icon {
+	-webkit-animation-name: none;
+  animation-name: none;
+}
+
+.h-btn-table .h-btn-content{border-radius: 3px;}
+
+
+
+
+/*	面板
+	重要面板
+*/
+.h-panel,
+.h-toolbar:not(.h-toolbar-footer){
+}
+.h-panel:hover,
+.h-toolbar:not(.h-toolbar-footer):hover{
+	transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	
+	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.08);
+	-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.08);
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.08);
+}
+
+.h-panel .h-panel,
+.h-panel .h-toolbar,
+.h-panel .h-toolbar:hover,
+.h-toolbar-footer{-webkit-box-shadow:none;
+	-moz-box-shadow: none;
+	box-shadow:none;}
+
+
+/*表单控件*/
+
+.h-form-control:hover,
+.h-form-control-hover{
+	-webkit-box-shadow: 0px 2px 2px 0px rgba(0,114,198,0.1);
+	-moz-box-shadow: 0px 2px 2px 0px rgba(0,114,198, 0.1);
+	box-shadow: 0px 2px 2px 0px rgba(0,114,198.1);
+	border-color:#7FBAE4;
+}
+
+.h-form-control:focus,
+.h-form-control-focus{
+
+	-webkit-box-shadow: 0px 0px 6px rgba(0,114,198,0.8), 0px 0px 0px 1px rgba(0,114,198,1);
+	-moz-box-shadow: 0px 0px 6px rgba(0, 114, 198, 0.8), 0px 0px 0px 1px rgba(0,114,198,1);
+	box-shadow: 0px 0px 6px rgba(0,114,198,0.8), 0px 0px 0px 1px rgba(0,114,198,1);
+}
+.h-form-control-danger:hover{
+	-webkit-box-shadow: 0px 4px 4px 0px rgba(217,83,79,0.1);
+	-moz-box-shadow: 0px 4px 4px 0px rgba(217,83,79, 0.1);
+	box-shadow: 0px 4px 4px 0px rgba(217,83,79.1);
+	border-color:#a6312d;
+	}
+.h-form-control-danger:focus {
+	-webkit-box-shadow: 0px 0px 6px rgba(217,83,79,0.8), 0px 0px 0px 1px rgba(217,83,79,1);
+	-moz-box-shadow: 0px 0px 6px rgba(217,83,79, 0.8), 0px 0px 0px 1px rgba(217,83,79,1);
+	box-shadow: 0px 0px 6px rgba(217,83,79,0.8), 0px 0px 0px 1px rgba(217,83,79,1);
+	border-color:#a6312d;
+}
+
+.h-form-control-disabled:not(.h-form-control-normal):hover,
+.h-form-control[disabled]:not(.h-form-control-normal):hover,
+.h-form-control[readonly]:not(.h-form-control-normal):hover,
+fieldset[disabled] .h-form-control:not(.h-form-control-normal):hover {
+	-webkit-animation-name: none;
+  animation-name: none;
+  -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow:none;
+	border-color:#ddd;
+}
+

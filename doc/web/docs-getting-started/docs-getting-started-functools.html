@@ -1,0 +1,525 @@
+<!doctype html>
+<html class="docs-html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>ICSSHS-UI</title>
+    <!--项目全局样式-->
+    <link href="../../../web/projects/themes-default/resources/css/global.css" rel="stylesheet" type="text/css">
+    <link href="../../../web/projects/themes-default/resources/css/css3-hsui.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../../../web/dcresources/icons/action/themes-default/icon-action.css">
+    <!--说明文档样式,实际应用中请不要引用-->
+    <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+    <script src="../../../web/projects/themes-default/resources/js/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div class="docs-content">
+    <div class="docs-page-masthead">
+        <h1>函数工具</h1>
+
+        <p class="docs-lead">提供优雅，高性能的常用函数</p>
+    </div>
+    <h2>util.js</h2>
+
+    <p>集成了大部分前端开发所需函数</p>
+
+    <p>通过<code>jpjs.use('base.util',function(until){ /*业务代码*/ })</code>即可通过util对象调用相关函数</p>
+
+    <div class="docs-example">
+        <div class="docs-area">
+            判断函数
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre><code>
+         <span class="docs-color-muted">
+         /**
+         * 对象类型判断
+         * @param obj {any} 任意
+         * @returns {boolean}
+         */
+        </span>
+            util.type.isArray(obj);
+            util.type.isObject(obj);
+            util.type.isString(obj);
+            util.type.isBoolean(obj);
+            util.type.isFunction(obj);
+            util.type.isFunction(obj);
+            util.type.isWindow(obj);
+            util.type.isDate(obj);
+            util.type.isNumber(obj);
+        </code></pre>
+        <pre><code>
+         <span class="docs-color-muted">
+         /**
+         * 判断是否是纯的js对象（即非dom对象）
+         * @param obj 对象
+         * @returns {boolean}
+         */
+        </span>
+            util.type.isPlainObject(obj);
+        </code></pre>
+        <pre><code>
+         <span class="docs-color-muted">
+		/**
+		 * 不是空对象或 是Dom对象或 是window对象都返回false
+		 * @param o
+		 * @returns {boolean}
+		 * @remark
+		 *  当传入o={}则得到结果为true
+		 */
+        </span>
+            util.type.isEmptyObject(obj);
+        </code></pre>
+   <pre><code>
+         <span class="docs-color-muted">
+		/**
+		 * 对象为null、空字符串、空数组、空对象（即{}）都反胃true
+		 * @param obj 对象
+		 * @returns {boolean|*}
+		 */
+        </span>
+       util.type.isEmptyAttrValue(obj);
+   </code></pre>
+   <pre><code>
+         <span class="docs-color-muted">
+		/**
+		 * 是否是空字符串
+		 * @param s 检测的字符串
+		 * @param rev 不传则为false
+		 * @returns {boolean} 当rev为false代表空字符串时返回true，当rev为true代表空字符串时返回false
+		 */
+        </span>
+       util.type.isEmptyString(s, rev);
+   </code></pre>
+   <pre><code>
+         <span class="docs-color-muted">
+		/**
+		 * 判断两个对象是否相等
+		 * @param a 对象1
+		 * @param b 对象2
+		 * @returns {boolean}
+		 */
+        </span>
+       util.type.isEqual(a, b);
+   </code></pre>
+
+    </div>
+
+    <div class="docs-example">
+        <div class="docs-area">
+            数组函数
+        </div>
+    </div>
+    <div class="docs-highlight">
+
+        <pre><code>
+         <span class="docs-color-muted">
+         /**
+         * 数组元素过滤
+         * @param arr {array} 数组对象
+         * @returns {function} 比较函数 function(value,i,arr){}
+         * @returns {obj} 比较函数内this对象
+         * @returns {array} 过滤后的数组
+         */
+        </span>
+            util.array.filter(arr, fn, scope);
+
+        </code></pre>
+                <pre><code>
+         <span class="docs-color-muted">
+         /**
+         * 指定数组元素索引查找
+         * @param el {obj} 数组元素对象
+         * @param arr {array} 数组对象
+         * @returns {number} 指定数组元素索引
+         */
+        </span>
+                    util.array.indexOf(el, arr);
+                </code></pre>
+                        <pre><code>
+         <span class="docs-color-muted">
+        /**
+         * 数组元素去重
+         * @param arr 数组
+         * @returns {array} 没有重复元素的数组
+         */
+        </span>
+                            util.array.unique(arr);
+                        </code></pre>
+    </div>
+
+    <div class="docs-example">
+        <div class="docs-area">
+            对象属性操作函数
+        </div>
+    </div>
+    <div class="docs-highlight">
+
+        <pre><code>
+         <span class="docs-color-muted">
+         /**
+         * 获取传入参数对象的非原型属性的属性名数组
+         * @param obj {object} 数组对象
+         * @returns {array}
+         */
+        </span>
+            util.object.keys(obj);
+
+        </code></pre>
+    </div>
+
+
+    <div class="docs-example">
+        <div class="docs-area">
+            字符串操作函数
+        </div>
+    </div>
+    <div class="docs-highlight">
+
+        <pre><code>
+         <span class="docs-color-muted">
+         /**
+         * 去除空格
+         * @param str {string} 字符串
+         * @returns {string}
+         */
+        </span>
+            util.string.trim(str);
+
+        </code></pre>
+
+         <pre><code>
+         <span class="docs-color-muted">
+		/**
+		 * 对传入字符串进行编码
+		 * @param val 字符串
+		 * @returns {string|XML} 编码后的字符串
+		 */
+        </span>
+             util.string.escape(val);
+
+         </code></pre>
+          <pre><code>
+         <span class="docs-color-muted">
+		/**
+		 * 对传入字符串进行解码
+		 * @param val 字符串
+		 * @returns {string|XML} 解码后的字符串
+		 */
+        </span>
+              util.string.unescape(val);
+
+          </code></pre>
+          <pre><code>
+         <span class="docs-color-muted">
+		/**
+		 * 字符串替换功能
+		 * @param string 模板字符串，其中用{name}来表示变量
+		 * @param obey 数据对象或被替换的字符串数组
+		 * @param aval 替换的付出数组
+		 * @returns {*} 被替换处理后的字符串
+		 * @remark
+		 *  1、当2个参数时，该函数类似但不等于art-template的功能，2个参数依次是模板字符串和数据对象或数组
+		 *  2、当3各参数时，该函数功能为：处理模板字符串，将该模板里和obey数组元素匹配的字符串依次
+		 *     替换成aval数组里的元素。此时obey和aval应该都是字符串数组，如果obey为字符串，则会被替
+		 *     换为[obey]的数组，如果aval为字符串，也是同理。
+		 *   注意：模板中只能替换obey和aval中为基本类型的第一层属性值
+		 */
+        </span>
+              util.string.replace(string, obey, aval);
+
+          </code></pre>
+          <pre><code>
+         <span class="docs-color-muted">
+		/**
+		 * 将参数对象参数转化为字符串
+		 * @param o 参数对象
+		 * @returns {string} 转化后的字符串
+		 * @example
+		 *  var str = util.string.param({name: 'cny', age: 11});//输出'name=cny&age=11'
+		 */
+        </span>
+              util.string.param(o);
+
+          </code></pre>
+          <pre><code>
+         <span class="docs-color-muted">
+		/**
+		 * 将参数字符串转化为对象
+		 * @param str 参数字符串
+		 * @param sep 参数项的分割符，不传默认'&'
+		 * @returns {{}} 生成的参数对象
+		 * @example
+		 * var str = util.string.unparam('name=cny&age=11');//输出{name: 'cny', age: 11}
+		 */
+        </span>
+              util.string.unparam(str, sep);
+
+          </code></pre>
+    </div>
+
+    <div class="docs-example">
+        <div class="docs-area">
+            对象扩展克隆操作函数
+        </div>
+    </div>
+    <div class="docs-highlight">
+
+        <pre><code>
+         <span class="docs-color-muted">
+        /**
+         * 在原有的t对象上拷贝s对象的属性，并可以指定是否同名覆盖和属性列表
+         * @param t 要拷贝的原有对象
+         * @param s 被拷贝属性的对象
+         * @param ov {boolea} 默认值true 为true时z表示s在wl指定的属性与t同名时，要用s覆盖t的
+         * @param wl 指定s对象要复制到t对象的属性的数组
+         * @returns {*}
+         * @remark
+         *  1、ov和wl应该要同时出现，用于指定复制的属性及是否覆盖
+         *  2、wl不指定时，则t会复制s所有属性，至于要不要同名覆盖则由ov决定
+         */
+        </span>
+            util.mix(t, s, ov, wl);
+        </code></pre>
+
+                <pre><code>
+         <span class="docs-color-muted">
+        /**
+         * 让t类型继承s类型
+         * @param t 目标子类
+         * @param s 目标父类
+         * @returns 返回t继承s后的对象
+         */
+        </span>
+                    util.extend(t, s);
+
+                </code></pre>
+        <pre><code>
+         <span class="docs-color-muted">
+        /**
+         * 合并两个对象的属性
+         * @param r
+         * @param s
+         * @returns {*}
+         * @remark
+         * 其中s对象的属性会覆盖r的同名属性
+         */
+        </span>
+            util.merge(r, s);
+
+        </code></pre>
+        <pre><code>
+         <span class="docs-color-muted">
+        /**
+         * 在r对象中拷贝s对象的属性
+         * @param r
+         * @param s
+         * @returns {*}
+         * @remark
+         *  1、r,s必须是纯js对象(非dom对象)
+         *  2、r的同名属性不会被s覆盖
+         *  3、注意以上两点是和merge函数的区别
+         *  4、如果r是数组则直接返回r
+         */
+        </span>
+            util.clone(r, s);
+
+        </code></pre>
+        <pre><code>
+         <span class="docs-color-muted">
+        /**
+         * 获取一个绑定具体对象的委托实例
+         * @param 自由参数，第1参为回调，第2参为对象
+         * @returns {Function}
+         * @example
+         * obj={};
+         * obj.myMethod=function(datas){
+         *   //这个函数相当于一个事件函数
+         *   //datas数组包含了几部分参数
+         *   //1、除了下面util.bind()调用时第一二参数以外的参数(一般没有传一二参以外的参数)
+         *   //2、以下callback所传递的data数组里的参数
+         * }
+         * $.get('test.php',{},function(data){
+         *  var callback= util.bind(obj.myMetod, obj);
+         *  callback(data);
+         * })
+         */
+        </span>
+            util.bind();
+
+        </code></pre>
+
+
+    </div>
+
+    <div class="docs-example">
+        <div class="docs-area">
+            Json操作函数
+        </div>
+    </div>
+    <div class="docs-highlight">
+
+        <pre><code>
+         <span class="docs-color-muted">
+        /**
+         * 将字符串转化为json对象的函数
+         * @param {string} str json格式字符串
+         */
+        </span>
+            util.json(str);
+        </code></pre>
+    </div>
+
+
+    <h2>common.js</h2>
+
+    <p>扩展了原生js类型对象常用功能函数</p>
+
+    <p>通过在页面引入common.js文件即可通过类型对象调用相关函数</p>
+
+    <div class="docs-example">
+        <div class="docs-area">
+            数组扩展函数
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre><code>
+         <span class="docs-color-muted">
+         /**
+         * 判断指定数组是否存在某元素
+         * @param item {object} 指定元素
+         * @returns {boolean}
+         */
+        </span>
+            arr.contains(item);
+        </code></pre>
+                <pre><code>
+         <span class="docs-color-muted">
+         /**
+         * 从指定数组移除某元素
+         * @param item {object} 指定元素
+         */
+        </span>
+                    arr.remove(item);
+                </code></pre>
+                        <pre><code>
+         <span class="docs-color-muted">
+         /**
+         * 从已有的数组中返回选定的元素
+         * @param arr {array} 已有数组
+         * @param startValue {object} 开始索引
+         * @param endValue {object} 结束索引
+         */
+        </span>
+                            arrayUtity.slice(arr,startValue,endValue);
+                        </code></pre>
+    </div>
+
+    <div class="docs-example">
+        <div class="docs-area">
+            时间扩展函数
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre><code>
+         <span class="docs-color-muted">
+        /**
+         *  @description  计算时间的间隔月（timeUtil对象方法）
+         *  @param  begin_date  开始时间
+         *  @param  end_date    结束时间
+         *  @retrun int
+         */
+        </span>
+            timeUtil.date_diff_month(begin_date,end_date);
+        </code></pre>
+                <pre><code>
+         <span class="docs-color-muted">
+        /**
+         * 扩展方法: 时间格式化
+         *  @param  fmt  格式化的字符串，如'yyyy-MM-dd hh:mm:ss'
+         */
+        </span>
+                    date.Format(fmt);
+                </code></pre>
+    </div>
+    <div class="docs-example">
+        <div class="docs-area">
+            字符串扩展函数
+        </div>
+    </div>
+    <div class="docs-highlight">
+        <pre><code>
+         <span class="docs-color-muted">
+        /**
+         *  字符串转为整数
+         *  @retrun int
+         */
+        </span>
+            str.toInt();
+        </code></pre>
+                <pre><code>
+         <span class="docs-color-muted">
+        /**
+         *  获取字符串的长度，区分全角与半角
+         *  @retrun {int}
+         */
+        </span>
+                    str.caseLength();
+                </code></pre>
+                <pre><code>
+         <span class="docs-color-muted">
+        /**
+         *  截取字符串长度，一个全角字符算两个长度
+         *  @param {int} start 开始索引
+         *  @param {int} len 截取长度
+         *  @retrun {string}
+         */
+        </span>
+                    str.caseSubStr(start, len);
+                </code></pre>
+
+                        <pre><code>
+         <span class="docs-color-muted">
+        /**
+         *  将日期字符串转换为日期类型，格式： '2010-11-5 16:00:00'
+         *  @retrun {date}
+         */
+        </span>
+                            str.toDate(start, len);
+                        </code></pre>
+                                <pre><code>
+         <span class="docs-color-muted">
+        /**
+         *  去掉字符串的前后空格
+         *  @retrun {string}
+         */
+        </span>
+                                    str.trim();
+                                </code></pre>
+                                        <pre><code>
+         <span class="docs-color-muted">
+        /**
+         *  应用于比较长的字符串清空空格
+         *  @retrun {string}
+         */
+        </span>
+                                            str.longTrim();
+                                        </code></pre>
+
+                                                <pre><code>
+         <span class="docs-color-muted">
+        /**
+         *  字符串StringBuilder类型扩展,使用如下
+         */
+        </span>
+                                                    var strBuild = new StringBuilder();
+                                                    strBuild.Append('aaaa');
+                                                    strBuild.Clear();
+                                                    strBuild.toString();
+                                                    strBuild.append('aaaa');
+                                                </code></pre>
+    </div>
+</div>
+</div>
+</body>
+</html>

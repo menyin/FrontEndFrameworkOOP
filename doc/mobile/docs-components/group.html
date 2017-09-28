@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="docs-html docs-html-mb">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ICSSHS-MUI for webapp</title>
+  <meta name="description" content="ICSSHS-MUI for webapp">
+  <meta name="keywords" content="ICSSHS-MUI for webapp">
+  <meta name="author" content="design4u,email:66383210@qq.com,qq:66383210">
+  <meta name="Copyright" Content="厦门中软海晟信息技术有限公司 版权所有 2014">
+  
+  <!--webapp网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0,（user-scalable）不允许用户缩放比例，IE9及以上浏览器支持-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+  
+  <!--针对IOS 浏览器的设置-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon@72.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="icon@2x.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="icon@114.png" sizes="144x144">
+  <link rel="apple-touch-startup-image" href="undefined.png">
+  
+  <!--项目全局样式-->
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/global.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="../../../mobile/project/resources/css/base.css">
+  <!--说明文档样式,实际应用中请不要引用-->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/docs.css">
+  <script src="../../../mobile/project/resources/js/jquery-1.9.1.js"></script>
+  <script type="text/javascript">
+$(document).ready(function(){
+	//可收缩展开列表
+     $("[data-action=accordion] .hm-card-header").click(function() {
+          $(this).next().slideToggle();
+          $(this).find("i").toggleClass("hm-icon-arrow-up");
+          $(this).find("i").toggleClass("hm-icon-arrow-down");
+		  
+		  $(this).parent().addClass("hm-active");
+		  
+		  $("[data-action=accordion] .hm-card-header").not(this).parent().removeClass("hm-active");;
+          $("[data-action=accordion] .hm-card-header").not(this).next().slideUp();
+          $("[data-action=accordion] .hm-card-header").not(this).find("i").removeClass("hm-icon-arrow-up").addClass("hm-icon-arrow-down");
+     })
+});
+</script>
+</head>
+<body>
+<div class="docs-content">
+  <div class="docs-page-masthead">
+    <h1>分组(group)</h1>
+    <p><code>.hm-group</code>通过将内容进行分组展现，从而获得更强大的自适应能力和更强的排版能力。</p>
+  </div>
+  <h2 >基本实例</h2>
+  
+  <h3>基本分组</h3>
+  <div class="docs-example docs-example-dark">
+    <div class="hm-group">
+      <div class="hm-group-header">
+        分组标题
+      </div>
+      <div class="hm-group-content">
+        分组内容
+      </div>
+    </div>
+  </div>
+  
+  
+  <h3>分组列表</h3>
+  <div class="docs-example docs-example-card">
+    <div class="hm-group hm-group-nopad">
+      <div class="hm-group-header">
+        基本信息
+      </div>
+      <div class="hm-group-content">
+        <div class="hm-listview">
+          <div class="hm-li">
+            <div class="hm-li-header">
+              <i class="hm-icon-me"></i>
+            </div>
+            <div class="hm-li-content hm-flex-1">
+              系统帐号
+            </div>
+            <div class="hm-li-footer">
+              design4u
+            </div>
+          </div>
+          <div class="hm-li">
+            <div class="hm-li-header">
+              <i class="hm-icon-comment"></i>
+            </div>
+            <div class="hm-li-content hm-flex-1">
+              我的评论
+            </div>
+            <div class="hm-li-footer">
+              32条
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hm-group hm-group-nopad">
+      <div class="hm-group-header">
+        应用管理
+      </div>
+      <div class="hm-group-content">
+        <div class="hm-listview">
+          <div class="hm-li">
+            <div class="hm-li-header">
+              <i class="hm-icon-download"></i>
+            </div>
+            <div class="hm-li-content hm-flex-1">
+              云服务
+            </div>
+            <div class="hm-li-footer">
+              剩余：0.1MB
+            </div>
+          </div>
+          <div class="hm-li">
+            <div class="hm-li-header">
+              <i class="hm-icon-calendar "></i>
+            </div>
+            <div class="hm-li-content hm-flex-1">
+              日程管理
+            </div>
+            <div class="hm-li-footer">
+              今日无安排
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+</div>
+</body>
+</html>
